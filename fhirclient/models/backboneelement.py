@@ -25,7 +25,7 @@ class BackboneElement(element.Element):
         """ Extensions that cannot be ignored even if unrecognized.
         List of `Extension` items (represented as `dict` in JSON). """
         self._modifierExtension = None
-        """ Primitive extension for modifierExtension. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifierExtension. List of `FHIRPrimitiveExtension` """
         
         super(BackboneElement, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -33,7 +33,7 @@ class BackboneElement(element.Element):
         js = super(BackboneElement, self).elementProperties()
         js.extend([
             ("modifierExtension", "modifierExtension", extension.Extension, True, None, False),
-            ("_modifierExtension", "_modifierExtension", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifierExtension", "_modifierExtension", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

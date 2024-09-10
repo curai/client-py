@@ -25,7 +25,7 @@ class RequestGroup(domainresource.DomainResource):
         """ Proposed actions, if any.
         List of `RequestGroupAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.author = None
         """ Device or practitioner that authored the request group.
@@ -43,7 +43,7 @@ class RequestGroup(domainresource.DomainResource):
         """ Fulfills plan, proposal, or order.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ What's being requested/ordered.
@@ -67,19 +67,19 @@ class RequestGroup(domainresource.DomainResource):
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.intent = None
         """ proposal | plan | directive | order | original-order | reflex-order
@@ -92,7 +92,7 @@ class RequestGroup(domainresource.DomainResource):
         """ Additional notes about the response.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -104,19 +104,19 @@ class RequestGroup(domainresource.DomainResource):
         """ Why the request group is needed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why the request group is needed.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.replaces = None
         """ Request(s) replaced by this request.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._replaces = None
-        """ Primitive extension for replaces. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for replaces. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | on-hold | revoked | completed | entered-in-error |
@@ -137,13 +137,13 @@ class RequestGroup(domainresource.DomainResource):
         js = super(RequestGroup, self).elementProperties()
         js.extend([
             ("action", "action", RequestGroupAction, True, None, False),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("author", "author", fhirreference.FHIRReference, False, None, False),
             ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("authoredOn", "authoredOn", fhirdatetime.FHIRDateTime, False, None, False),
             ("_authoredOn", "_authoredOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
@@ -151,23 +151,23 @@ class RequestGroup(domainresource.DomainResource):
             ("groupIdentifier", "groupIdentifier", identifier.Identifier, False, None, False),
             ("_groupIdentifier", "_groupIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intent", "intent", str, False, None, True),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("replaces", "replaces", fhirreference.FHIRReference, True, None, False),
-            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),
@@ -198,7 +198,7 @@ class RequestGroupAction(backboneelement.BackboneElement):
         """ Sub action.
         List of `RequestGroupAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.cardinalityBehavior = None
         """ single | multiple.
@@ -210,13 +210,13 @@ class RequestGroupAction(backboneelement.BackboneElement):
         """ Code representing the meaning of the action or sub-actions.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.condition = None
         """ Whether or not the action is applicable.
         List of `RequestGroupActionCondition` items (represented as `dict` in JSON). """
         self._condition = None
-        """ Primitive extension for condition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for condition. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Short description of the action.
@@ -228,7 +228,7 @@ class RequestGroupAction(backboneelement.BackboneElement):
         """ Supporting documentation for the intended performer of the action.
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._documentation = None
-        """ Primitive extension for documentation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for documentation. List of `FHIRPrimitiveExtension` """
         
         self.groupingBehavior = None
         """ visual-group | logical-group | sentence-group.
@@ -240,7 +240,7 @@ class RequestGroupAction(backboneelement.BackboneElement):
         """ Who should perform the action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.precheckBehavior = None
         """ yes | no.
@@ -264,7 +264,7 @@ class RequestGroupAction(backboneelement.BackboneElement):
         """ Relationship to another action.
         List of `RequestGroupActionRelatedAction` items (represented as `dict` in JSON). """
         self._relatedAction = None
-        """ Primitive extension for relatedAction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedAction. List of `FHIRPrimitiveExtension` """
         
         self.requiredBehavior = None
         """ must | could | must-unless-documented.
@@ -345,21 +345,21 @@ class RequestGroupAction(backboneelement.BackboneElement):
         js = super(RequestGroupAction, self).elementProperties()
         js.extend([
             ("action", "action", RequestGroupAction, True, None, False),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("cardinalityBehavior", "cardinalityBehavior", str, False, None, False),
             ("_cardinalityBehavior", "_cardinalityBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("condition", "condition", RequestGroupActionCondition, True, None, False),
-            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("documentation", "documentation", relatedartifact.RelatedArtifact, True, None, False),
-            ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("groupingBehavior", "groupingBehavior", str, False, None, False),
             ("_groupingBehavior", "_groupingBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("participant", "participant", fhirreference.FHIRReference, True, None, False),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("precheckBehavior", "precheckBehavior", str, False, None, False),
             ("_precheckBehavior", "_precheckBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prefix", "prefix", str, False, None, False),
@@ -367,7 +367,7 @@ class RequestGroupAction(backboneelement.BackboneElement):
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedAction", "relatedAction", RequestGroupActionRelatedAction, True, None, False),
-            ("_relatedAction", "_relatedAction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedAction", "_relatedAction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requiredBehavior", "requiredBehavior", str, False, None, False),
             ("_requiredBehavior", "_requiredBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("resource", "resource", fhirreference.FHIRReference, False, None, False),

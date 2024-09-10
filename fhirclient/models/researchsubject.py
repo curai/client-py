@@ -43,7 +43,7 @@ class ResearchSubject(domainresource.DomainResource):
         """ Business Identifier for research subject in a study.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.individual = None
         """ Who is part of study.
@@ -83,7 +83,7 @@ class ResearchSubject(domainresource.DomainResource):
             ("consent", "consent", fhirreference.FHIRReference, False, None, False),
             ("_consent", "_consent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("individual", "individual", fhirreference.FHIRReference, False, None, True),
             ("_individual", "_individual", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),

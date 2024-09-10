@@ -29,7 +29,7 @@ class ImagingStudy(domainresource.DomainResource):
         """ Request fulfilled.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Institution-generated description.
@@ -47,19 +47,19 @@ class ImagingStudy(domainresource.DomainResource):
         """ Study access endpoint.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Identifiers for the whole study.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.interpreter = None
         """ Who interpreted images.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._interpreter = None
-        """ Primitive extension for interpreter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for interpreter. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Where ImagingStudy occurred.
@@ -71,13 +71,13 @@ class ImagingStudy(domainresource.DomainResource):
         """ All series modality if actual acquisition modalities.
         List of `Coding` items (represented as `dict` in JSON). """
         self._modality = None
-        """ Primitive extension for modality. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modality. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ User-defined comments.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.numberOfInstances = None
         """ Number of Study Related Instances.
@@ -95,7 +95,7 @@ class ImagingStudy(domainresource.DomainResource):
         """ The performed procedure code.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._procedureCode = None
-        """ Primitive extension for procedureCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for procedureCode. List of `FHIRPrimitiveExtension` """
         
         self.procedureReference = None
         """ The performed Procedure reference.
@@ -107,13 +107,13 @@ class ImagingStudy(domainresource.DomainResource):
         """ Why the study was requested.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why was study performed.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.referrer = None
         """ Referring physician.
@@ -125,7 +125,7 @@ class ImagingStudy(domainresource.DomainResource):
         """ Each study has one or more series of instances.
         List of `ImagingStudySeries` items (represented as `dict` in JSON). """
         self._series = None
-        """ Primitive extension for series. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for series. List of `FHIRPrimitiveExtension` """
         
         self.started = None
         """ When the study was started.
@@ -151,39 +151,39 @@ class ImagingStudy(domainresource.DomainResource):
         js = super(ImagingStudy, self).elementProperties()
         js.extend([
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("interpreter", "interpreter", fhirreference.FHIRReference, True, None, False),
-            ("_interpreter", "_interpreter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_interpreter", "_interpreter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modality", "modality", coding.Coding, True, None, False),
-            ("_modality", "_modality", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modality", "_modality", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("numberOfInstances", "numberOfInstances", int, False, None, False),
             ("_numberOfInstances", "_numberOfInstances", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("numberOfSeries", "numberOfSeries", int, False, None, False),
             ("_numberOfSeries", "_numberOfSeries", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("procedureCode", "procedureCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_procedureCode", "_procedureCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_procedureCode", "_procedureCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("procedureReference", "procedureReference", fhirreference.FHIRReference, False, None, False),
             ("_procedureReference", "_procedureReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("referrer", "referrer", fhirreference.FHIRReference, False, None, False),
             ("_referrer", "_referrer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("series", "series", ImagingStudySeries, True, None, False),
-            ("_series", "_series", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_series", "_series", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("started", "started", fhirdatetime.FHIRDateTime, False, None, False),
             ("_started", "_started", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
@@ -228,13 +228,13 @@ class ImagingStudySeries(backboneelement.BackboneElement):
         """ Series access endpoint.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.instance = None
         """ A single SOP instance from the series.
         List of `ImagingStudySeriesInstance` items (represented as `dict` in JSON). """
         self._instance = None
-        """ Primitive extension for instance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instance. List of `FHIRPrimitiveExtension` """
         
         self.laterality = None
         """ Body part laterality.
@@ -264,13 +264,13 @@ class ImagingStudySeries(backboneelement.BackboneElement):
         """ Who performed the series.
         List of `ImagingStudySeriesPerformer` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.specimen = None
         """ Specimen imaged.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._specimen = None
-        """ Primitive extension for specimen. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specimen. List of `FHIRPrimitiveExtension` """
         
         self.started = None
         """ When the series started.
@@ -294,9 +294,9 @@ class ImagingStudySeries(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instance", "instance", ImagingStudySeriesInstance, True, None, False),
-            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("laterality", "laterality", coding.Coding, False, None, False),
             ("_laterality", "_laterality", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modality", "modality", coding.Coding, False, None, True),
@@ -306,9 +306,9 @@ class ImagingStudySeries(backboneelement.BackboneElement):
             ("numberOfInstances", "numberOfInstances", int, False, None, False),
             ("_numberOfInstances", "_numberOfInstances", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performer", "performer", ImagingStudySeriesPerformer, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specimen", "specimen", fhirreference.FHIRReference, True, None, False),
-            ("_specimen", "_specimen", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specimen", "_specimen", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("started", "started", fhirdatetime.FHIRDateTime, False, None, False),
             ("_started", "_started", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("uid", "uid", str, False, None, True),

@@ -37,7 +37,7 @@ class EnrollmentResponse(domainresource.DomainResource):
         """ Business Identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.organization = None
         """ Insurer.
@@ -79,7 +79,7 @@ class EnrollmentResponse(domainresource.DomainResource):
             ("disposition", "disposition", str, False, None, False),
             ("_disposition", "_disposition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("organization", "organization", fhirreference.FHIRReference, False, None, False),
             ("_organization", "_organization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("outcome", "outcome", str, False, None, False),

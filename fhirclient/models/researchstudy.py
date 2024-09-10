@@ -29,25 +29,25 @@ class ResearchStudy(domainresource.DomainResource):
         """ Defined path through the study for a subject.
         List of `ResearchStudyArm` items (represented as `dict` in JSON). """
         self._arm = None
-        """ Primitive extension for arm. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for arm. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Classifications for the study.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.condition = None
         """ Condition being studied.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._condition = None
-        """ Primitive extension for condition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for condition. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the study.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ What this is study doing.
@@ -59,49 +59,49 @@ class ResearchStudy(domainresource.DomainResource):
         """ Inclusion & exclusion criteria.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._enrollment = None
-        """ Primitive extension for enrollment. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for enrollment. List of `FHIRPrimitiveExtension` """
         
         self.focus = None
         """ Drugs, devices, etc. under study.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._focus = None
-        """ Primitive extension for focus. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for focus. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business Identifier for study.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.keyword = None
         """ Used to search for the study.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._keyword = None
-        """ Primitive extension for keyword. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for keyword. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Geographic region(s) for study.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._location = None
-        """ Primitive extension for location. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for location. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments made about the study.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.objective = None
         """ A goal for the study.
         List of `ResearchStudyObjective` items (represented as `dict` in JSON). """
         self._objective = None
-        """ Primitive extension for objective. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for objective. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Part of larger study.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ When the study began and ended.
@@ -133,7 +133,7 @@ class ResearchStudy(domainresource.DomainResource):
         """ Steps followed in executing study.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._protocol = None
-        """ Primitive extension for protocol. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for protocol. List of `FHIRPrimitiveExtension` """
         
         self.reasonStopped = None
         """ accrual-goal-met | closed-due-to-toxicity | closed-due-to-lack-of-
@@ -146,13 +146,13 @@ class ResearchStudy(domainresource.DomainResource):
         """ References and dependencies.
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.site = None
         """ Facility where study activities are conducted.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._site = None
-        """ Primitive extension for site. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for site. List of `FHIRPrimitiveExtension` """
         
         self.sponsor = None
         """ Organization that initiates and is legally responsible for the
@@ -182,31 +182,31 @@ class ResearchStudy(domainresource.DomainResource):
         js = super(ResearchStudy, self).elementProperties()
         js.extend([
             ("arm", "arm", ResearchStudyArm, True, None, False),
-            ("_arm", "_arm", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_arm", "_arm", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("condition", "condition", codeableconcept.CodeableConcept, True, None, False),
-            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("enrollment", "enrollment", fhirreference.FHIRReference, True, None, False),
-            ("_enrollment", "_enrollment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_enrollment", "_enrollment", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("focus", "focus", codeableconcept.CodeableConcept, True, None, False),
-            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("keyword", "keyword", codeableconcept.CodeableConcept, True, None, False),
-            ("_keyword", "_keyword", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_keyword", "_keyword", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", codeableconcept.CodeableConcept, True, None, False),
-            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("objective", "objective", ResearchStudyObjective, True, None, False),
-            ("_objective", "_objective", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_objective", "_objective", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("phase", "phase", codeableconcept.CodeableConcept, False, None, False),
@@ -216,13 +216,13 @@ class ResearchStudy(domainresource.DomainResource):
             ("principalInvestigator", "principalInvestigator", fhirreference.FHIRReference, False, None, False),
             ("_principalInvestigator", "_principalInvestigator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("protocol", "protocol", fhirreference.FHIRReference, True, None, False),
-            ("_protocol", "_protocol", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_protocol", "_protocol", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonStopped", "reasonStopped", codeableconcept.CodeableConcept, False, None, False),
             ("_reasonStopped", "_reasonStopped", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("site", "site", fhirreference.FHIRReference, True, None, False),
-            ("_site", "_site", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_site", "_site", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sponsor", "sponsor", fhirreference.FHIRReference, False, None, False),
             ("_sponsor", "_sponsor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),

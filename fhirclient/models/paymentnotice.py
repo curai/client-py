@@ -37,7 +37,7 @@ class PaymentNotice(domainresource.DomainResource):
         """ Business Identifier for the payment noctice.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.payee = None
         """ Party being paid.
@@ -103,7 +103,7 @@ class PaymentNotice(domainresource.DomainResource):
             ("created", "created", fhirdatetime.FHIRDateTime, False, None, True),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("payee", "payee", fhirreference.FHIRReference, False, None, False),
             ("_payee", "_payee", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("payment", "payment", fhirreference.FHIRReference, False, None, True),

@@ -31,7 +31,7 @@ class Immunization(domainresource.DomainResource):
         """ Educational material presented to patient.
         List of `ImmunizationEducation` items (represented as `dict` in JSON). """
         self._education = None
-        """ Primitive extension for education. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for education. List of `FHIRPrimitiveExtension` """
         
         self.encounter = None
         """ Encounter immunization was part of.
@@ -55,7 +55,7 @@ class Immunization(domainresource.DomainResource):
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.isSubpotent = None
         """ Dose potency.
@@ -85,7 +85,7 @@ class Immunization(domainresource.DomainResource):
         """ Additional immunization notes.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ Vaccine administration date.
@@ -109,7 +109,7 @@ class Immunization(domainresource.DomainResource):
         """ Who performed event.
         List of `ImmunizationPerformer` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.primarySource = None
         """ Indicates context the data was recorded in.
@@ -121,31 +121,31 @@ class Immunization(domainresource.DomainResource):
         """ Patient eligibility for a vaccination program.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._programEligibility = None
-        """ Primitive extension for programEligibility. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for programEligibility. List of `FHIRPrimitiveExtension` """
         
         self.protocolApplied = None
         """ Protocol followed by the provider.
         List of `ImmunizationProtocolApplied` items (represented as `dict` in JSON). """
         self._protocolApplied = None
-        """ Primitive extension for protocolApplied. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for protocolApplied. List of `FHIRPrimitiveExtension` """
         
         self.reaction = None
         """ Details of a reaction that follows immunization.
         List of `ImmunizationReaction` items (represented as `dict` in JSON). """
         self._reaction = None
-        """ Primitive extension for reaction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reaction. List of `FHIRPrimitiveExtension` """
         
         self.reasonCode = None
         """ Why immunization occurred.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why immunization occurred.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.recorded = None
         """ When the immunization was first captured in the subject's record.
@@ -187,7 +187,7 @@ class Immunization(domainresource.DomainResource):
         """ Reason for being subpotent.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subpotentReason = None
-        """ Primitive extension for subpotentReason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subpotentReason. List of `FHIRPrimitiveExtension` """
         
         self.vaccineCode = None
         """ Vaccine product administered.
@@ -203,7 +203,7 @@ class Immunization(domainresource.DomainResource):
             ("doseQuantity", "doseQuantity", quantity.Quantity, False, None, False),
             ("_doseQuantity", "_doseQuantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("education", "education", ImmunizationEducation, True, None, False),
-            ("_education", "_education", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_education", "_education", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("expirationDate", "expirationDate", fhirdate.FHIRDate, False, None, False),
@@ -211,7 +211,7 @@ class Immunization(domainresource.DomainResource):
             ("fundingSource", "fundingSource", codeableconcept.CodeableConcept, False, None, False),
             ("_fundingSource", "_fundingSource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("isSubpotent", "isSubpotent", bool, False, None, False),
             ("_isSubpotent", "_isSubpotent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
@@ -221,7 +221,7 @@ class Immunization(domainresource.DomainResource):
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, False, None, False),
             ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", True),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrenceString", "occurrenceString", str, False, "occurrence", True),
@@ -229,19 +229,19 @@ class Immunization(domainresource.DomainResource):
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performer", "performer", ImmunizationPerformer, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("primarySource", "primarySource", bool, False, None, False),
             ("_primarySource", "_primarySource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("programEligibility", "programEligibility", codeableconcept.CodeableConcept, True, None, False),
-            ("_programEligibility", "_programEligibility", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_programEligibility", "_programEligibility", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("protocolApplied", "protocolApplied", ImmunizationProtocolApplied, True, None, False),
-            ("_protocolApplied", "_protocolApplied", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_protocolApplied", "_protocolApplied", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reaction", "reaction", ImmunizationReaction, True, None, False),
-            ("_reaction", "_reaction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reaction", "_reaction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recorded", "recorded", fhirdatetime.FHIRDateTime, False, None, False),
             ("_recorded", "_recorded", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reportOrigin", "reportOrigin", codeableconcept.CodeableConcept, False, None, False),
@@ -255,7 +255,7 @@ class Immunization(domainresource.DomainResource):
             ("statusReason", "statusReason", codeableconcept.CodeableConcept, False, None, False),
             ("_statusReason", "_statusReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subpotentReason", "subpotentReason", codeableconcept.CodeableConcept, True, None, False),
-            ("_subpotentReason", "_subpotentReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subpotentReason", "_subpotentReason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("vaccineCode", "vaccineCode", codeableconcept.CodeableConcept, False, None, True),
             ("_vaccineCode", "_vaccineCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -420,7 +420,7 @@ class ImmunizationProtocolApplied(backboneelement.BackboneElement):
         """ Vaccine preventatable disease being targetted.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._targetDisease = None
-        """ Primitive extension for targetDisease. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for targetDisease. List of `FHIRPrimitiveExtension` """
         
         super(ImmunizationProtocolApplied, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -440,7 +440,7 @@ class ImmunizationProtocolApplied(backboneelement.BackboneElement):
             ("seriesDosesString", "seriesDosesString", str, False, "seriesDoses", False),
             ("_seriesDosesString", "_seriesDosesString", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("targetDisease", "targetDisease", codeableconcept.CodeableConcept, True, None, False),
-            ("_targetDisease", "_targetDisease", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_targetDisease", "_targetDisease", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

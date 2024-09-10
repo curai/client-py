@@ -45,7 +45,7 @@ class DetectedIssue(domainresource.DomainResource):
         """ Supporting evidence.
         List of `DetectedIssueEvidence` items (represented as `dict` in JSON). """
         self._evidence = None
-        """ Primitive extension for evidence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for evidence. List of `FHIRPrimitiveExtension` """
         
         self.identifiedDateTime = None
         """ When identified.
@@ -63,19 +63,19 @@ class DetectedIssue(domainresource.DomainResource):
         """ Unique id for the detected issue.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.implicated = None
         """ Problem resource.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._implicated = None
-        """ Primitive extension for implicated. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for implicated. List of `FHIRPrimitiveExtension` """
         
         self.mitigation = None
         """ Step taken to address.
         List of `DetectedIssueMitigation` items (represented as `dict` in JSON). """
         self._mitigation = None
-        """ Primitive extension for mitigation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for mitigation. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Associated patient.
@@ -113,17 +113,17 @@ class DetectedIssue(domainresource.DomainResource):
             ("detail", "detail", str, False, None, False),
             ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("evidence", "evidence", DetectedIssueEvidence, True, None, False),
-            ("_evidence", "_evidence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_evidence", "_evidence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifiedDateTime", "identifiedDateTime", fhirdatetime.FHIRDateTime, False, "identified", False),
             ("_identifiedDateTime", "_identifiedDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifiedPeriod", "identifiedPeriod", period.Period, False, "identified", False),
             ("_identifiedPeriod", "_identifiedPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("implicated", "implicated", fhirreference.FHIRReference, True, None, False),
-            ("_implicated", "_implicated", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_implicated", "_implicated", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("mitigation", "mitigation", DetectedIssueMitigation, True, None, False),
-            ("_mitigation", "_mitigation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_mitigation", "_mitigation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, False),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reference", "reference", str, False, None, False),
@@ -159,13 +159,13 @@ class DetectedIssueEvidence(backboneelement.BackboneElement):
         """ Manifestation.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.detail = None
         """ Supporting information.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         super(DetectedIssueEvidence, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -173,9 +173,9 @@ class DetectedIssueEvidence(backboneelement.BackboneElement):
         js = super(DetectedIssueEvidence, self).elementProperties()
         js.extend([
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detail", "detail", fhirreference.FHIRReference, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

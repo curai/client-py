@@ -44,7 +44,7 @@ class Basic(domainresource.DomainResource):
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ Identifies the focus of this resource.
@@ -64,7 +64,7 @@ class Basic(domainresource.DomainResource):
             ("created", "created", fhirdate.FHIRDate, False, None, False),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

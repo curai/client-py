@@ -26,25 +26,25 @@ class Encounter(domainresource.DomainResource):
         """ The set of accounts that may be used for billing for this Encounter.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._account = None
-        """ Primitive extension for account. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for account. List of `FHIRPrimitiveExtension` """
         
         self.appointment = None
         """ The appointment that scheduled this encounter.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._appointment = None
-        """ Primitive extension for appointment. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for appointment. List of `FHIRPrimitiveExtension` """
         
         self.basedOn = None
         """ The ServiceRequest that initiated this encounter.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.classHistory = None
         """ List of past encounter classes.
         List of `EncounterClassHistory` items (represented as `dict` in JSON). """
         self._classHistory = None
-        """ Primitive extension for classHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for classHistory. List of `FHIRPrimitiveExtension` """
         
         self.class_fhir = None
         """ Classification of patient encounter.
@@ -56,13 +56,13 @@ class Encounter(domainresource.DomainResource):
         """ The list of diagnosis relevant to this encounter.
         List of `EncounterDiagnosis` items (represented as `dict` in JSON). """
         self._diagnosis = None
-        """ Primitive extension for diagnosis. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for diagnosis. List of `FHIRPrimitiveExtension` """
         
         self.episodeOfCare = None
         """ Episode(s) of care that this encounter should be recorded against.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._episodeOfCare = None
-        """ Primitive extension for episodeOfCare. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for episodeOfCare. List of `FHIRPrimitiveExtension` """
         
         self.hospitalization = None
         """ Details about the admission to a healthcare service.
@@ -74,7 +74,7 @@ class Encounter(domainresource.DomainResource):
         """ Identifier(s) by which this encounter is known.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.length = None
         """ Quantity of time the encounter lasted (less time absent).
@@ -86,7 +86,7 @@ class Encounter(domainresource.DomainResource):
         """ List of locations where the patient has been.
         List of `EncounterLocation` items (represented as `dict` in JSON). """
         self._location = None
-        """ Primitive extension for location. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for location. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Another Encounter this encounter is part of.
@@ -98,7 +98,7 @@ class Encounter(domainresource.DomainResource):
         """ List of participants involved in the encounter.
         List of `EncounterParticipant` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ The start and end time of the encounter.
@@ -116,13 +116,13 @@ class Encounter(domainresource.DomainResource):
         """ Coded reason the encounter takes place.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Reason the encounter takes place (reference).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.serviceProvider = None
         """ The organization (facility) responsible for this encounter.
@@ -147,7 +147,7 @@ class Encounter(domainresource.DomainResource):
         """ List of past encounter statuses.
         List of `EncounterStatusHistory` items (represented as `dict` in JSON). """
         self._statusHistory = None
-        """ Primitive extension for statusHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for statusHistory. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ The patient or group present at the encounter.
@@ -159,7 +159,7 @@ class Encounter(domainresource.DomainResource):
         """ Specific type of encounter.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(Encounter, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -167,39 +167,39 @@ class Encounter(domainresource.DomainResource):
         js = super(Encounter, self).elementProperties()
         js.extend([
             ("account", "account", fhirreference.FHIRReference, True, None, False),
-            ("_account", "_account", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_account", "_account", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("appointment", "appointment", fhirreference.FHIRReference, True, None, False),
-            ("_appointment", "_appointment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_appointment", "_appointment", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("classHistory", "classHistory", EncounterClassHistory, True, None, False),
-            ("_classHistory", "_classHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_classHistory", "_classHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("class_fhir", "class", coding.Coding, False, None, True),
             ("_class_fhir", "_class_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("diagnosis", "diagnosis", EncounterDiagnosis, True, None, False),
-            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("episodeOfCare", "episodeOfCare", fhirreference.FHIRReference, True, None, False),
-            ("_episodeOfCare", "_episodeOfCare", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_episodeOfCare", "_episodeOfCare", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("hospitalization", "hospitalization", EncounterHospitalization, False, None, False),
             ("_hospitalization", "_hospitalization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("length", "length", duration.Duration, False, None, False),
             ("_length", "_length", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("location", "location", EncounterLocation, True, None, False),
-            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, False, None, False),
             ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("participant", "participant", EncounterParticipant, True, None, False),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("priority", "priority", codeableconcept.CodeableConcept, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serviceProvider", "serviceProvider", fhirreference.FHIRReference, False, None, False),
             ("_serviceProvider", "_serviceProvider", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("serviceType", "serviceType", codeableconcept.CodeableConcept, False, None, False),
@@ -207,11 +207,11 @@ class Encounter(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusHistory", "statusHistory", EncounterStatusHistory, True, None, False),
-            ("_statusHistory", "_statusHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_statusHistory", "_statusHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -343,7 +343,7 @@ class EncounterHospitalization(backboneelement.BackboneElement):
         """ Diet preferences reported by the patient.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._dietPreference = None
-        """ Primitive extension for dietPreference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dietPreference. List of `FHIRPrimitiveExtension` """
         
         self.dischargeDisposition = None
         """ Category or kind of location after discharge.
@@ -375,13 +375,13 @@ class EncounterHospitalization(backboneelement.BackboneElement):
         """ Wheelchair, translator, stretcher, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialArrangement = None
-        """ Primitive extension for specialArrangement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialArrangement. List of `FHIRPrimitiveExtension` """
         
         self.specialCourtesy = None
         """ Special courtesies (VIP, board member).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialCourtesy = None
-        """ Primitive extension for specialCourtesy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialCourtesy. List of `FHIRPrimitiveExtension` """
         
         super(EncounterHospitalization, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -393,7 +393,7 @@ class EncounterHospitalization(backboneelement.BackboneElement):
             ("destination", "destination", fhirreference.FHIRReference, False, None, False),
             ("_destination", "_destination", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("dietPreference", "dietPreference", codeableconcept.CodeableConcept, True, None, False),
-            ("_dietPreference", "_dietPreference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dietPreference", "_dietPreference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dischargeDisposition", "dischargeDisposition", codeableconcept.CodeableConcept, False, None, False),
             ("_dischargeDisposition", "_dischargeDisposition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("origin", "origin", fhirreference.FHIRReference, False, None, False),
@@ -403,9 +403,9 @@ class EncounterHospitalization(backboneelement.BackboneElement):
             ("reAdmission", "reAdmission", codeableconcept.CodeableConcept, False, None, False),
             ("_reAdmission", "_reAdmission", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("specialArrangement", "specialArrangement", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialArrangement", "_specialArrangement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialArrangement", "_specialArrangement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialCourtesy", "specialCourtesy", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialCourtesy", "_specialCourtesy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialCourtesy", "_specialCourtesy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -501,7 +501,7 @@ class EncounterParticipant(backboneelement.BackboneElement):
         """ Role of participant in encounter.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(EncounterParticipant, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -513,7 +513,7 @@ class EncounterParticipant(backboneelement.BackboneElement):
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -32,7 +32,7 @@ class BiologicallyDerivedProduct(domainresource.DomainResource):
         """ External ids for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.manipulation = None
         """ Any manipulation of product post-collection.
@@ -44,13 +44,13 @@ class BiologicallyDerivedProduct(domainresource.DomainResource):
         """ BiologicallyDerivedProduct parent.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._parent = None
-        """ Primitive extension for parent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parent. List of `FHIRPrimitiveExtension` """
         
         self.processing = None
         """ Any processing of the product during collection.
         List of `BiologicallyDerivedProductProcessing` items (represented as `dict` in JSON). """
         self._processing = None
-        """ Primitive extension for processing. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for processing. List of `FHIRPrimitiveExtension` """
         
         self.productCategory = None
         """ organ | tissue | fluid | cells | biologicalAgent.
@@ -74,7 +74,7 @@ class BiologicallyDerivedProduct(domainresource.DomainResource):
         """ Procedure request.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._request = None
-        """ Primitive extension for request. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for request. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ available | unavailable.
@@ -86,7 +86,7 @@ class BiologicallyDerivedProduct(domainresource.DomainResource):
         """ Product storage.
         List of `BiologicallyDerivedProductStorage` items (represented as `dict` in JSON). """
         self._storage = None
-        """ Primitive extension for storage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for storage. List of `FHIRPrimitiveExtension` """
         
         super(BiologicallyDerivedProduct, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -96,13 +96,13 @@ class BiologicallyDerivedProduct(domainresource.DomainResource):
             ("collection", "collection", BiologicallyDerivedProductCollection, False, None, False),
             ("_collection", "_collection", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("manipulation", "manipulation", BiologicallyDerivedProductManipulation, False, None, False),
             ("_manipulation", "_manipulation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parent", "parent", fhirreference.FHIRReference, True, None, False),
-            ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("processing", "processing", BiologicallyDerivedProductProcessing, True, None, False),
-            ("_processing", "_processing", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_processing", "_processing", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productCategory", "productCategory", str, False, None, False),
             ("_productCategory", "_productCategory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("productCode", "productCode", codeableconcept.CodeableConcept, False, None, False),
@@ -110,11 +110,11 @@ class BiologicallyDerivedProduct(domainresource.DomainResource):
             ("quantity", "quantity", int, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("request", "request", fhirreference.FHIRReference, True, None, False),
-            ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("storage", "storage", BiologicallyDerivedProductStorage, True, None, False),
-            ("_storage", "_storage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_storage", "_storage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -30,7 +30,7 @@ class HumanName(element.Element):
         """ Given names (not always 'first'). Includes middle names.
         List of `str` items. """
         self._given = None
-        """ Primitive extension for given. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for given. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ Time period when name was/is in use.
@@ -42,13 +42,13 @@ class HumanName(element.Element):
         """ Parts that come before the name.
         List of `str` items. """
         self._prefix = None
-        """ Primitive extension for prefix. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for prefix. List of `FHIRPrimitiveExtension` """
         
         self.suffix = None
         """ Parts that come after the name.
         List of `str` items. """
         self._suffix = None
-        """ Primitive extension for suffix. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for suffix. List of `FHIRPrimitiveExtension` """
         
         self.text = None
         """ Text representation of the full name.
@@ -70,13 +70,13 @@ class HumanName(element.Element):
             ("family", "family", str, False, None, False),
             ("_family", "_family", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("given", "given", str, True, None, False),
-            ("_given", "_given", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_given", "_given", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prefix", "prefix", str, True, None, False),
-            ("_prefix", "_prefix", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_prefix", "_prefix", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("suffix", "suffix", str, True, None, False),
-            ("_suffix", "_suffix", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_suffix", "_suffix", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("text", "text", str, False, None, False),
             ("_text", "_text", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("use", "use", str, False, None, False),

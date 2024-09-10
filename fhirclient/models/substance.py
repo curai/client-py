@@ -22,7 +22,7 @@ class Substance(domainresource.DomainResource):
         """ What class/type of substance this is.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ What substance this is.
@@ -40,19 +40,19 @@ class Substance(domainresource.DomainResource):
         """ Unique identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.ingredient = None
         """ Composition information about the substance.
         List of `SubstanceIngredient` items (represented as `dict` in JSON). """
         self._ingredient = None
-        """ Primitive extension for ingredient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for ingredient. List of `FHIRPrimitiveExtension` """
         
         self.instance = None
         """ If this describes a specific package/container of the substance.
         List of `SubstanceInstance` items (represented as `dict` in JSON). """
         self._instance = None
-        """ Primitive extension for instance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instance. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ active | inactive | entered-in-error.
@@ -66,17 +66,17 @@ class Substance(domainresource.DomainResource):
         js = super(Substance, self).elementProperties()
         js.extend([
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("ingredient", "ingredient", SubstanceIngredient, True, None, False),
-            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instance", "instance", SubstanceInstance, True, None, False),
-            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

@@ -33,7 +33,7 @@ class ValueSet(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -69,7 +69,7 @@ class ValueSet(domainresource.DomainResource):
         """ Additional identifier for the value set (business identifier).
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.immutable = None
         """ Indicates whether or not any change to the content logical
@@ -82,7 +82,7 @@ class ValueSet(domainresource.DomainResource):
         """ Intended jurisdiction for value set (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this value set (computer friendly).
@@ -125,7 +125,7 @@ class ValueSet(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the value set.
@@ -141,7 +141,7 @@ class ValueSet(domainresource.DomainResource):
             ("compose", "compose", ValueSetCompose, False, None, False),
             ("_compose", "_compose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -153,11 +153,11 @@ class ValueSet(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("immutable", "immutable", bool, False, None, False),
             ("_immutable", "_immutable", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -171,7 +171,7 @@ class ValueSet(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -202,7 +202,7 @@ class ValueSetCompose(backboneelement.BackboneElement):
         """ Explicitly exclude codes from a code system or other value sets.
         List of `ValueSetComposeInclude` items (represented as `dict` in JSON). """
         self._exclude = None
-        """ Primitive extension for exclude. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for exclude. List of `FHIRPrimitiveExtension` """
         
         self.inactive = None
         """ Whether inactive codes are in the value set.
@@ -214,7 +214,7 @@ class ValueSetCompose(backboneelement.BackboneElement):
         """ Include one or more codes from a code system or other value set(s).
         List of `ValueSetComposeInclude` items (represented as `dict` in JSON). """
         self._include = None
-        """ Primitive extension for include. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for include. List of `FHIRPrimitiveExtension` """
         
         self.lockedDate = None
         """ Fixed date for references with no specified version (transitive).
@@ -228,11 +228,11 @@ class ValueSetCompose(backboneelement.BackboneElement):
         js = super(ValueSetCompose, self).elementProperties()
         js.extend([
             ("exclude", "exclude", ValueSetComposeInclude, True, None, False),
-            ("_exclude", "_exclude", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_exclude", "_exclude", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("inactive", "inactive", bool, False, None, False),
             ("_inactive", "_inactive", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("include", "include", ValueSetComposeInclude, True, None, True),
-            ("_include", "_include", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_include", "_include", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lockedDate", "lockedDate", fhirdate.FHIRDate, False, None, False),
             ("_lockedDate", "_lockedDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -257,13 +257,13 @@ class ValueSetComposeInclude(backboneelement.BackboneElement):
         """ A concept defined in the system.
         List of `ValueSetComposeIncludeConcept` items (represented as `dict` in JSON). """
         self._concept = None
-        """ Primitive extension for concept. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for concept. List of `FHIRPrimitiveExtension` """
         
         self.filter = None
         """ Select codes/concepts by their properties (including relationships).
         List of `ValueSetComposeIncludeFilter` items (represented as `dict` in JSON). """
         self._filter = None
-        """ Primitive extension for filter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for filter. List of `FHIRPrimitiveExtension` """
         
         self.system = None
         """ The system the codes come from.
@@ -275,7 +275,7 @@ class ValueSetComposeInclude(backboneelement.BackboneElement):
         """ Select the contents included in this value set.
         List of `str` items. """
         self._valueSet = None
-        """ Primitive extension for valueSet. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for valueSet. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Specific version of the code system referred to.
@@ -289,13 +289,13 @@ class ValueSetComposeInclude(backboneelement.BackboneElement):
         js = super(ValueSetComposeInclude, self).elementProperties()
         js.extend([
             ("concept", "concept", ValueSetComposeIncludeConcept, True, None, False),
-            ("_concept", "_concept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_concept", "_concept", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("filter", "filter", ValueSetComposeIncludeFilter, True, None, False),
-            ("_filter", "_filter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_filter", "_filter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("system", "system", str, False, None, False),
             ("_system", "_system", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("valueSet", "valueSet", str, True, None, False),
-            ("_valueSet", "_valueSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_valueSet", "_valueSet", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -328,7 +328,7 @@ class ValueSetComposeIncludeConcept(backboneelement.BackboneElement):
         """ Additional representations for this concept.
         List of `ValueSetComposeIncludeConceptDesignation` items (represented as `dict` in JSON). """
         self._designation = None
-        """ Primitive extension for designation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for designation. List of `FHIRPrimitiveExtension` """
         
         self.display = None
         """ Text to display for this code for this value set in this valueset.
@@ -344,7 +344,7 @@ class ValueSetComposeIncludeConcept(backboneelement.BackboneElement):
             ("code", "code", str, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("designation", "designation", ValueSetComposeIncludeConceptDesignation, True, None, False),
-            ("_designation", "_designation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_designation", "_designation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("display", "display", str, False, None, False),
             ("_display", "_display", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -477,7 +477,7 @@ class ValueSetExpansion(backboneelement.BackboneElement):
         """ Codes in the value set.
         List of `ValueSetExpansionContains` items (represented as `dict` in JSON). """
         self._contains = None
-        """ Primitive extension for contains. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contains. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Identifies the value set expansion (business identifier).
@@ -495,7 +495,7 @@ class ValueSetExpansion(backboneelement.BackboneElement):
         """ Parameter that controlled the expansion process.
         List of `ValueSetExpansionParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.timestamp = None
         """ Time ValueSet expansion happened.
@@ -515,13 +515,13 @@ class ValueSetExpansion(backboneelement.BackboneElement):
         js = super(ValueSetExpansion, self).elementProperties()
         js.extend([
             ("contains", "contains", ValueSetExpansionContains, True, None, False),
-            ("_contains", "_contains", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contains", "_contains", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", str, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("offset", "offset", int, False, None, False),
             ("_offset", "_offset", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameter", "parameter", ValueSetExpansionParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("timestamp", "timestamp", fhirdatetime.FHIRDateTime, False, None, True),
             ("_timestamp", "_timestamp", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("total", "total", int, False, None, False),
@@ -562,13 +562,13 @@ class ValueSetExpansionContains(backboneelement.BackboneElement):
         """ Codes contained under this entry.
         List of `ValueSetExpansionContains` items (represented as `dict` in JSON). """
         self._contains = None
-        """ Primitive extension for contains. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contains. List of `FHIRPrimitiveExtension` """
         
         self.designation = None
         """ Additional representations for this item.
         List of `ValueSetComposeIncludeConceptDesignation` items (represented as `dict` in JSON). """
         self._designation = None
-        """ Primitive extension for designation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for designation. List of `FHIRPrimitiveExtension` """
         
         self.display = None
         """ User display for the concept.
@@ -604,9 +604,9 @@ class ValueSetExpansionContains(backboneelement.BackboneElement):
             ("code", "code", str, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contains", "contains", ValueSetExpansionContains, True, None, False),
-            ("_contains", "_contains", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contains", "_contains", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("designation", "designation", ValueSetComposeIncludeConceptDesignation, True, None, False),
-            ("_designation", "_designation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_designation", "_designation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("display", "display", str, False, None, False),
             ("_display", "_display", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("inactive", "inactive", bool, False, None, False),

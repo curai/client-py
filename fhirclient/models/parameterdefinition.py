@@ -88,4 +88,3 @@ class ParameterDefinition(element.Element):
         return js
 
 from . import fhirprimitiveextension
-

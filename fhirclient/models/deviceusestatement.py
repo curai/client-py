@@ -25,7 +25,7 @@ class DeviceUseStatement(domainresource.DomainResource):
         """ Fulfills plan, proposal or order.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ Target body site.
@@ -37,7 +37,7 @@ class DeviceUseStatement(domainresource.DomainResource):
         """ Supporting information.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._derivedFrom = None
-        """ Primitive extension for derivedFrom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for derivedFrom. List of `FHIRPrimitiveExtension` """
         
         self.device = None
         """ Reference to device used.
@@ -49,25 +49,25 @@ class DeviceUseStatement(domainresource.DomainResource):
         """ External identifier for this record.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Addition details (comments, instructions).
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.reasonCode = None
         """ Why device was used.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why was DeviceUseStatement performed?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.recordedOn = None
         """ When statement was recorded.
@@ -117,21 +117,21 @@ class DeviceUseStatement(domainresource.DomainResource):
         js = super(DeviceUseStatement, self).elementProperties()
         js.extend([
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, False, None, False),
             ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("derivedFrom", "derivedFrom", fhirreference.FHIRReference, True, None, False),
-            ("_derivedFrom", "_derivedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_derivedFrom", "_derivedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("device", "device", fhirreference.FHIRReference, False, None, True),
             ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recordedOn", "recordedOn", fhirdatetime.FHIRDateTime, False, None, False),
             ("_recordedOn", "_recordedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, False, None, False),

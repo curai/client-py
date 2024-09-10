@@ -43,4 +43,3 @@ class Money(element.Element):
         return js
 
 from . import fhirprimitiveextension
-

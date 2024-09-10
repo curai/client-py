@@ -36,37 +36,37 @@ class Specimen(domainresource.DomainResource):
         """ State of the specimen.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._condition = None
-        """ Primitive extension for condition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for condition. List of `FHIRPrimitiveExtension` """
         
         self.container = None
         """ Direct container of specimen (tube/slide, etc.).
         List of `SpecimenContainer` items (represented as `dict` in JSON). """
         self._container = None
-        """ Primitive extension for container. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for container. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ External Identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.parent = None
         """ Specimen from which this specimen originated.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._parent = None
-        """ Primitive extension for parent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parent. List of `FHIRPrimitiveExtension` """
         
         self.processing = None
         """ Processing and processing step details.
         List of `SpecimenProcessing` items (represented as `dict` in JSON). """
         self._processing = None
-        """ Primitive extension for processing. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for processing. List of `FHIRPrimitiveExtension` """
         
         self.receivedTime = None
         """ The time when specimen was received for processing.
@@ -78,7 +78,7 @@ class Specimen(domainresource.DomainResource):
         """ Why the specimen was collected.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._request = None
-        """ Primitive extension for request. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for request. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ available | unavailable | unsatisfactory | entered-in-error.
@@ -110,21 +110,21 @@ class Specimen(domainresource.DomainResource):
             ("collection", "collection", SpecimenCollection, False, None, False),
             ("_collection", "_collection", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("condition", "condition", codeableconcept.CodeableConcept, True, None, False),
-            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("container", "container", SpecimenContainer, True, None, False),
-            ("_container", "_container", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_container", "_container", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("parent", "parent", fhirreference.FHIRReference, True, None, False),
-            ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("processing", "processing", SpecimenProcessing, True, None, False),
-            ("_processing", "_processing", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_processing", "_processing", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("receivedTime", "receivedTime", fhirdatetime.FHIRDateTime, False, None, False),
             ("_receivedTime", "_receivedTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("request", "request", fhirreference.FHIRReference, True, None, False),
-            ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),
@@ -279,7 +279,7 @@ class SpecimenContainer(backboneelement.BackboneElement):
         """ Id for the container.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.specimenQuantity = None
         """ Quantity of specimen within container.
@@ -307,7 +307,7 @@ class SpecimenContainer(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specimenQuantity", "specimenQuantity", quantity.Quantity, False, None, False),
             ("_specimenQuantity", "_specimenQuantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
@@ -336,7 +336,7 @@ class SpecimenProcessing(backboneelement.BackboneElement):
         """ Material used in the processing step.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._additive = None
-        """ Primitive extension for additive. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for additive. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Textual description of procedure.
@@ -368,7 +368,7 @@ class SpecimenProcessing(backboneelement.BackboneElement):
         js = super(SpecimenProcessing, self).elementProperties()
         js.extend([
             ("additive", "additive", fhirreference.FHIRReference, True, None, False),
-            ("_additive", "_additive", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_additive", "_additive", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("procedure", "procedure", codeableconcept.CodeableConcept, False, None, False),

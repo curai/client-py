@@ -39,19 +39,19 @@ class Endpoint(domainresource.DomainResource):
         """ Contact details for source (e.g. troubleshooting).
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.header = None
         """ Usage depends on the channel type.
         List of `str` items. """
         self._header = None
-        """ Primitive extension for header. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for header. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Identifies this endpoint across multiple systems.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.managingOrganization = None
         """ Organization that manages this endpoint (might not be the
@@ -71,14 +71,14 @@ class Endpoint(domainresource.DomainResource):
         (including no payload, if the connectionType defined this).
         List of `str` items. """
         self._payloadMimeType = None
-        """ Primitive extension for payloadMimeType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for payloadMimeType. List of `FHIRPrimitiveExtension` """
         
         self.payloadType = None
         """ The type of content that may be used at this endpoint (e.g. XDS
         Discharge summaries).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._payloadType = None
-        """ Primitive extension for payloadType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for payloadType. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ Interval the endpoint is expected to be operational.
@@ -102,19 +102,19 @@ class Endpoint(domainresource.DomainResource):
             ("connectionType", "connectionType", coding.Coding, False, None, True),
             ("_connectionType", "_connectionType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactpoint.ContactPoint, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("header", "header", str, True, None, False),
-            ("_header", "_header", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_header", "_header", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("managingOrganization", "managingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_managingOrganization", "_managingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("payloadMimeType", "payloadMimeType", str, True, None, False),
-            ("_payloadMimeType", "_payloadMimeType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_payloadMimeType", "_payloadMimeType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("payloadType", "payloadType", codeableconcept.CodeableConcept, True, None, True),
-            ("_payloadType", "_payloadType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_payloadType", "_payloadType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),

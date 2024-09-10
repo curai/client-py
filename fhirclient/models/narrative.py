@@ -47,4 +47,3 @@ class Narrative(element.Element):
         return js
 
 from . import fhirprimitiveextension
-

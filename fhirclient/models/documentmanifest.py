@@ -25,13 +25,13 @@ class DocumentManifest(domainresource.DomainResource):
         """ Who and/or what authored the DocumentManifest.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.content = None
         """ Items in manifest.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._content = None
-        """ Primitive extension for content. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for content. List of `FHIRPrimitiveExtension` """
         
         self.created = None
         """ When this document manifest created.
@@ -49,7 +49,7 @@ class DocumentManifest(domainresource.DomainResource):
         """ Other identifiers for the manifest.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.masterIdentifier = None
         """ Unique Identifier for the set of documents.
@@ -61,13 +61,13 @@ class DocumentManifest(domainresource.DomainResource):
         """ Intended to get notified about this set of documents.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._recipient = None
-        """ Primitive extension for recipient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for recipient. List of `FHIRPrimitiveExtension` """
         
         self.related = None
         """ Related things.
         List of `DocumentManifestRelated` items (represented as `dict` in JSON). """
         self._related = None
-        """ Primitive extension for related. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for related. List of `FHIRPrimitiveExtension` """
         
         self.source = None
         """ The source system/application/software.
@@ -99,21 +99,21 @@ class DocumentManifest(domainresource.DomainResource):
         js = super(DocumentManifest, self).elementProperties()
         js.extend([
             ("author", "author", fhirreference.FHIRReference, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("content", "content", fhirreference.FHIRReference, True, None, True),
-            ("_content", "_content", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_content", "_content", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("created", "created", fhirdatetime.FHIRDateTime, False, None, False),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("masterIdentifier", "masterIdentifier", identifier.Identifier, False, None, False),
             ("_masterIdentifier", "_masterIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("recipient", "recipient", fhirreference.FHIRReference, True, None, False),
-            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("related", "related", DocumentManifestRelated, True, None, False),
-            ("_related", "_related", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_related", "_related", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("source", "source", str, False, None, False),
             ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),

@@ -23,7 +23,7 @@ class SubstanceSpecification(domainresource.DomainResource):
         """ Codes associated with the substance.
         List of `SubstanceSpecificationstr` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.comment = None
         """ Textual comment about this record of a substance.
@@ -53,20 +53,20 @@ class SubstanceSpecification(domainresource.DomainResource):
         """ Moiety, for structural modifications.
         List of `SubstanceSpecificationMoiety` items (represented as `dict` in JSON). """
         self._moiety = None
-        """ Primitive extension for moiety. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for moiety. List of `FHIRPrimitiveExtension` """
         
         self.molecularWeight = None
         """ The molecular weight or weight range (for proteins, polymers or
         nucleic acids).
         List of `SubstanceSpecificationStructureIsotopeMolecularWeight` items (represented as `dict` in JSON). """
         self._molecularWeight = None
-        """ Primitive extension for molecularWeight. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for molecularWeight. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Names applicable to this substance.
         List of `SubstanceSpecificationName` items (represented as `dict` in JSON). """
         self._name = None
-        """ Primitive extension for name. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for name. List of `FHIRPrimitiveExtension` """
         
         self.nucleicAcid = None
         """ Data items specific to nucleic acids.
@@ -85,7 +85,7 @@ class SubstanceSpecification(domainresource.DomainResource):
         related to other substances.
         List of `SubstanceSpecificationProperty` items (represented as `dict` in JSON). """
         self._property = None
-        """ Primitive extension for property. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for property. List of `FHIRPrimitiveExtension` """
         
         self.protein = None
         """ Data items specific to proteins.
@@ -104,13 +104,13 @@ class SubstanceSpecification(domainresource.DomainResource):
         relationship.
         List of `SubstanceSpecificationRelationship` items (represented as `dict` in JSON). """
         self._relationship = None
-        """ Primitive extension for relationship. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relationship. List of `FHIRPrimitiveExtension` """
         
         self.source = None
         """ Supporting literature.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.sourceMaterial = None
         """ Material or taxonomic/anatomical source for the substance.
@@ -142,7 +142,7 @@ class SubstanceSpecification(domainresource.DomainResource):
         js = super(SubstanceSpecification, self).elementProperties()
         js.extend([
             ("code", "code", SubstanceSpecificationstr, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -152,25 +152,25 @@ class SubstanceSpecification(domainresource.DomainResource):
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("moiety", "moiety", SubstanceSpecificationMoiety, True, None, False),
-            ("_moiety", "_moiety", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_moiety", "_moiety", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("molecularWeight", "molecularWeight", SubstanceSpecificationStructureIsotopeMolecularWeight, True, None, False),
-            ("_molecularWeight", "_molecularWeight", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_molecularWeight", "_molecularWeight", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", SubstanceSpecificationName, True, None, False),
-            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("nucleicAcid", "nucleicAcid", fhirreference.FHIRReference, False, None, False),
             ("_nucleicAcid", "_nucleicAcid", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("polymer", "polymer", fhirreference.FHIRReference, False, None, False),
             ("_polymer", "_polymer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("property", "property", SubstanceSpecificationProperty, True, None, False),
-            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("protein", "protein", fhirreference.FHIRReference, False, None, False),
             ("_protein", "_protein", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referenceInformation", "referenceInformation", fhirreference.FHIRReference, False, None, False),
             ("_referenceInformation", "_referenceInformation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relationship", "relationship", SubstanceSpecificationRelationship, True, None, False),
-            ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sourceMaterial", "sourceMaterial", fhirreference.FHIRReference, False, None, False),
             ("_sourceMaterial", "_sourceMaterial", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", codeableconcept.CodeableConcept, False, None, False),
@@ -291,19 +291,19 @@ class SubstanceSpecificationName(backboneelement.BackboneElement):
         name a drug active ingredient as opposed to a food colour additive.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._domain = None
-        """ Primitive extension for domain. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for domain. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ The jurisdiction where this name applies.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.language = None
         """ Language of the name.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._language = None
-        """ Primitive extension for language. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for language. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ The actual name.
@@ -315,7 +315,7 @@ class SubstanceSpecificationName(backboneelement.BackboneElement):
         """ Details of the official nature of this name.
         List of `SubstanceSpecificationNameOfficial` items (represented as `dict` in JSON). """
         self._official = None
-        """ Primitive extension for official. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for official. List of `FHIRPrimitiveExtension` """
         
         self.preferred = None
         """ If this is the preferred name for this substance.
@@ -327,7 +327,7 @@ class SubstanceSpecificationName(backboneelement.BackboneElement):
         """ Supporting literature.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ The status of the name.
@@ -339,13 +339,13 @@ class SubstanceSpecificationName(backboneelement.BackboneElement):
         """ A synonym of this name.
         List of `SubstanceSpecificationName` items (represented as `dict` in JSON). """
         self._synonym = None
-        """ Primitive extension for synonym. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for synonym. List of `FHIRPrimitiveExtension` """
         
         self.translation = None
         """ A translation for this name.
         List of `SubstanceSpecificationName` items (represented as `dict` in JSON). """
         self._translation = None
-        """ Primitive extension for translation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for translation. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Name type.
@@ -359,25 +359,25 @@ class SubstanceSpecificationName(backboneelement.BackboneElement):
         js = super(SubstanceSpecificationName, self).elementProperties()
         js.extend([
             ("domain", "domain", codeableconcept.CodeableConcept, True, None, False),
-            ("_domain", "_domain", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_domain", "_domain", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("language", "language", codeableconcept.CodeableConcept, True, None, False),
-            ("_language", "_language", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_language", "_language", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("official", "official", SubstanceSpecificationNameOfficial, True, None, False),
-            ("_official", "_official", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_official", "_official", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("preferred", "preferred", bool, False, None, False),
             ("_preferred", "_preferred", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", codeableconcept.CodeableConcept, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("synonym", "synonym", SubstanceSpecificationName, True, None, False),
-            ("_synonym", "_synonym", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_synonym", "_synonym", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("translation", "translation", SubstanceSpecificationName, True, None, False),
-            ("_translation", "_translation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_translation", "_translation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -591,7 +591,7 @@ class SubstanceSpecificationRelationship(backboneelement.BackboneElement):
         """ Supporting literature.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.substanceCodeableConcept = None
         """ A pointer to another substance, as a resource or just a
@@ -629,7 +629,7 @@ class SubstanceSpecificationRelationship(backboneelement.BackboneElement):
             ("relationship", "relationship", codeableconcept.CodeableConcept, False, None, False),
             ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("substanceCodeableConcept", "substanceCodeableConcept", codeableconcept.CodeableConcept, False, "substance", False),
             ("_substanceCodeableConcept", "_substanceCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("substanceReference", "substanceReference", fhirreference.FHIRReference, False, "substance", False),
@@ -657,7 +657,7 @@ class SubstanceSpecificationStructure(backboneelement.BackboneElement):
         non-natural isotopic ratio.
         List of `SubstanceSpecificationStructureIsotope` items (represented as `dict` in JSON). """
         self._isotope = None
-        """ Primitive extension for isotope. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for isotope. List of `FHIRPrimitiveExtension` """
         
         self.molecularFormula = None
         """ Molecular formula.
@@ -689,13 +689,13 @@ class SubstanceSpecificationStructure(backboneelement.BackboneElement):
         """ Molecular structural representation.
         List of `SubstanceSpecificationStructureRepresentation` items (represented as `dict` in JSON). """
         self._representation = None
-        """ Primitive extension for representation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for representation. List of `FHIRPrimitiveExtension` """
         
         self.source = None
         """ Supporting literature.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.stereochemistry = None
         """ Stereochemistry type.
@@ -709,7 +709,7 @@ class SubstanceSpecificationStructure(backboneelement.BackboneElement):
         js = super(SubstanceSpecificationStructure, self).elementProperties()
         js.extend([
             ("isotope", "isotope", SubstanceSpecificationStructureIsotope, True, None, False),
-            ("_isotope", "_isotope", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_isotope", "_isotope", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("molecularFormula", "molecularFormula", str, False, None, False),
             ("_molecularFormula", "_molecularFormula", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("molecularFormulaByMoiety", "molecularFormulaByMoiety", str, False, None, False),
@@ -719,9 +719,9 @@ class SubstanceSpecificationStructure(backboneelement.BackboneElement):
             ("opticalActivity", "opticalActivity", codeableconcept.CodeableConcept, False, None, False),
             ("_opticalActivity", "_opticalActivity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("representation", "representation", SubstanceSpecificationStructureRepresentation, True, None, False),
-            ("_representation", "_representation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_representation", "_representation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("stereochemistry", "stereochemistry", codeableconcept.CodeableConcept, False, None, False),
             ("_stereochemistry", "_stereochemistry", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -923,7 +923,7 @@ class SubstanceSpecificationstr(backboneelement.BackboneElement):
         """ Supporting literature.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ Status of the code assignment.
@@ -948,7 +948,7 @@ class SubstanceSpecificationstr(backboneelement.BackboneElement):
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", codeableconcept.CodeableConcept, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusDate", "statusDate", fhirdatetime.FHIRDateTime, False, None, False),

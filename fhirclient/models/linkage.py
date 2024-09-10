@@ -37,7 +37,7 @@ class Linkage(domainresource.DomainResource):
         """ Item to be linked.
         List of `LinkageItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         super(Linkage, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -49,7 +49,7 @@ class Linkage(domainresource.DomainResource):
             ("author", "author", fhirreference.FHIRReference, False, None, False),
             ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", LinkageItem, True, None, True),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

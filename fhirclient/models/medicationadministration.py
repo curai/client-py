@@ -40,7 +40,7 @@ class MedicationAdministration(domainresource.DomainResource):
         """ Device used to administer.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._device = None
-        """ Primitive extension for device. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for device. List of `FHIRPrimitiveExtension` """
         
         self.dosage = None
         """ Details of how medication was taken.
@@ -64,19 +64,19 @@ class MedicationAdministration(domainresource.DomainResource):
         """ A list of events of interest in the lifecycle.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._eventHistory = None
-        """ Primitive extension for eventHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for eventHistory. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ External identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiates = None
         """ Instantiates protocol or definition.
         List of `str` items. """
         self._instantiates = None
-        """ Primitive extension for instantiates. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiates. List of `FHIRPrimitiveExtension` """
         
         self.medicationCodeableConcept = None
         """ What was administered.
@@ -94,32 +94,32 @@ class MedicationAdministration(domainresource.DomainResource):
         """ Information about the administration.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Part of referenced event.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.performer = None
         """ Who performed the medication administration and what they did.
         List of `MedicationAdministrationPerformer` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.reasonCode = None
         """ Reason administration performed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Condition or observation that supports why the medication was
         administered.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.request = None
         """ Request administration performed against.
@@ -138,7 +138,7 @@ class MedicationAdministration(domainresource.DomainResource):
         """ Reason administration not performed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._statusReason = None
-        """ Primitive extension for statusReason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for statusReason. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ Who received medication.
@@ -150,7 +150,7 @@ class MedicationAdministration(domainresource.DomainResource):
         """ Additional information to support administration.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInformation = None
-        """ Primitive extension for supportingInformation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInformation. List of `FHIRPrimitiveExtension` """
         
         super(MedicationAdministration, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -162,7 +162,7 @@ class MedicationAdministration(domainresource.DomainResource):
             ("context", "context", fhirreference.FHIRReference, False, None, False),
             ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("device", "device", fhirreference.FHIRReference, True, None, False),
-            ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dosage", "dosage", MedicationAdministrationDosage, False, None, False),
             ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("effectiveDateTime", "effectiveDateTime", fhirdatetime.FHIRDateTime, False, "effective", True),
@@ -170,35 +170,35 @@ class MedicationAdministration(domainresource.DomainResource):
             ("effectivePeriod", "effectivePeriod", period.Period, False, "effective", True),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("eventHistory", "eventHistory", fhirreference.FHIRReference, True, None, False),
-            ("_eventHistory", "_eventHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_eventHistory", "_eventHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiates", "instantiates", str, True, None, False),
-            ("_instantiates", "_instantiates", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiates", "_instantiates", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("medicationCodeableConcept", "medicationCodeableConcept", codeableconcept.CodeableConcept, False, "medication", True),
             ("_medicationCodeableConcept", "_medicationCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("medicationReference", "medicationReference", fhirreference.FHIRReference, False, "medication", True),
             ("_medicationReference", "_medicationReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performer", "performer", MedicationAdministrationPerformer, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("request", "request", fhirreference.FHIRReference, False, None, False),
             ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusReason", "statusReason", codeableconcept.CodeableConcept, True, None, False),
-            ("_statusReason", "_statusReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_statusReason", "_statusReason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInformation", "supportingInformation", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInformation", "_supportingInformation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInformation", "_supportingInformation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

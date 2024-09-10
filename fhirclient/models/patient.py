@@ -31,7 +31,7 @@ class Patient(domainresource.DomainResource):
         """ An address for the individual.
         List of `Address` items (represented as `dict` in JSON). """
         self._address = None
-        """ Primitive extension for address. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for address. List of `FHIRPrimitiveExtension` """
         
         self.birthDate = None
         """ The date of birth for the individual.
@@ -44,13 +44,13 @@ class Patient(domainresource.DomainResource):
         his or her health.
         List of `PatientCommunication` items (represented as `dict` in JSON). """
         self._communication = None
-        """ Primitive extension for communication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for communication. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ A contact party (e.g. guardian, partner, friend) for the patient.
         List of `PatientContact` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.deceasedBoolean = None
         """ Indicates if the individual is deceased or not.
@@ -74,20 +74,20 @@ class Patient(domainresource.DomainResource):
         """ Patient's nominated primary care provider.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._generalPractitioner = None
-        """ Primitive extension for generalPractitioner. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for generalPractitioner. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ An identifier for this patient.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.link = None
         """ Link to another patient resource that concerns the same actual
         person.
         List of `PatientLink` items (represented as `dict` in JSON). """
         self._link = None
-        """ Primitive extension for link. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for link. List of `FHIRPrimitiveExtension` """
         
         self.managingOrganization = None
         """ Organization that is the custodian of the patient record.
@@ -117,19 +117,19 @@ class Patient(domainresource.DomainResource):
         """ A name associated with the patient.
         List of `HumanName` items (represented as `dict` in JSON). """
         self._name = None
-        """ Primitive extension for name. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for name. List of `FHIRPrimitiveExtension` """
         
         self.photo = None
         """ Image of the patient.
         List of `Attachment` items (represented as `dict` in JSON). """
         self._photo = None
-        """ Primitive extension for photo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for photo. List of `FHIRPrimitiveExtension` """
         
         self.telecom = None
         """ A contact detail for the individual.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(Patient, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -139,13 +139,13 @@ class Patient(domainresource.DomainResource):
             ("active", "active", bool, False, None, False),
             ("_active", "_active", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("address", "address", address.Address, True, None, False),
-            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("birthDate", "birthDate", fhirdate.FHIRDate, False, None, False),
             ("_birthDate", "_birthDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("communication", "communication", PatientCommunication, True, None, False),
-            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", PatientContact, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("deceasedBoolean", "deceasedBoolean", bool, False, "deceased", False),
             ("_deceasedBoolean", "_deceasedBoolean", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("deceasedDateTime", "deceasedDateTime", fhirdatetime.FHIRDateTime, False, "deceased", False),
@@ -153,11 +153,11 @@ class Patient(domainresource.DomainResource):
             ("gender", "gender", str, False, None, False),
             ("_gender", "_gender", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("generalPractitioner", "generalPractitioner", fhirreference.FHIRReference, True, None, False),
-            ("_generalPractitioner", "_generalPractitioner", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_generalPractitioner", "_generalPractitioner", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("link", "link", PatientLink, True, None, False),
-            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("managingOrganization", "managingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_managingOrganization", "_managingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("maritalStatus", "maritalStatus", codeableconcept.CodeableConcept, False, None, False),
@@ -167,11 +167,11 @@ class Patient(domainresource.DomainResource):
             ("multipleBirthInteger", "multipleBirthInteger", int, False, "multipleBirth", False),
             ("_multipleBirthInteger", "_multipleBirthInteger", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", humanname.HumanName, True, None, False),
-            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("photo", "photo", attachment.Attachment, True, None, False),
-            ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -268,13 +268,13 @@ class PatientContact(backboneelement.BackboneElement):
         """ The kind of relationship.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._relationship = None
-        """ Primitive extension for relationship. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relationship. List of `FHIRPrimitiveExtension` """
         
         self.telecom = None
         """ A contact detail for the person.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(PatientContact, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -292,9 +292,9 @@ class PatientContact(backboneelement.BackboneElement):
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relationship", "relationship", codeableconcept.CodeableConcept, True, None, False),
-            ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

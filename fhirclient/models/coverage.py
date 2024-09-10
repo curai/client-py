@@ -31,19 +31,19 @@ class Coverage(domainresource.DomainResource):
         """ Additional coverage classifications.
         List of `CoverageClass` items (represented as `dict` in JSON). """
         self._class_fhir = None
-        """ Primitive extension for class_fhir. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for class_fhir. List of `FHIRPrimitiveExtension` """
         
         self.contract = None
         """ Contract details.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._contract = None
-        """ Primitive extension for contract. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contract. List of `FHIRPrimitiveExtension` """
         
         self.costToBeneficiary = None
         """ Patient payments for services/products.
         List of `CoverageCostToBeneficiary` items (represented as `dict` in JSON). """
         self._costToBeneficiary = None
-        """ Primitive extension for costToBeneficiary. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for costToBeneficiary. List of `FHIRPrimitiveExtension` """
         
         self.dependent = None
         """ Dependent number.
@@ -55,7 +55,7 @@ class Coverage(domainresource.DomainResource):
         """ Business Identifier for the coverage.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.network = None
         """ Insurer network.
@@ -73,7 +73,7 @@ class Coverage(domainresource.DomainResource):
         """ Issuer of the policy.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._payor = None
-        """ Primitive extension for payor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for payor. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ Coverage start and end dates.
@@ -131,21 +131,21 @@ class Coverage(domainresource.DomainResource):
             ("beneficiary", "beneficiary", fhirreference.FHIRReference, False, None, True),
             ("_beneficiary", "_beneficiary", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("class_fhir", "class", CoverageClass, True, None, False),
-            ("_class_fhir", "_class_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_class_fhir", "_class_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contract", "contract", fhirreference.FHIRReference, True, None, False),
-            ("_contract", "_contract", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contract", "_contract", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("costToBeneficiary", "costToBeneficiary", CoverageCostToBeneficiary, True, None, False),
-            ("_costToBeneficiary", "_costToBeneficiary", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_costToBeneficiary", "_costToBeneficiary", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dependent", "dependent", str, False, None, False),
             ("_dependent", "_dependent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("network", "network", str, False, None, False),
             ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("order", "order", int, False, None, False),
             ("_order", "_order", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("payor", "payor", fhirreference.FHIRReference, True, None, True),
-            ("_payor", "_payor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_payor", "_payor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("policyHolder", "policyHolder", fhirreference.FHIRReference, False, None, False),
@@ -239,7 +239,7 @@ class CoverageCostToBeneficiary(backboneelement.BackboneElement):
         """ Exceptions for patient payments.
         List of `CoverageCostToBeneficiaryException` items (represented as `dict` in JSON). """
         self._exception = None
-        """ Primitive extension for exception. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for exception. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Cost category.
@@ -265,7 +265,7 @@ class CoverageCostToBeneficiary(backboneelement.BackboneElement):
         js = super(CoverageCostToBeneficiary, self).elementProperties()
         js.extend([
             ("exception", "exception", CoverageCostToBeneficiaryException, True, None, False),
-            ("_exception", "_exception", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_exception", "_exception", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("valueMoney", "valueMoney", money.Money, False, "value", True),

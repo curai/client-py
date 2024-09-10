@@ -60,7 +60,7 @@ class SubstanceNucleicAcid(domainresource.DomainResource):
         identical sequences will be repeated multiple times.
         List of `SubstanceNucleicAcidSubunit` items (represented as `dict` in JSON). """
         self._subunit = None
-        """ Primitive extension for subunit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subunit. List of `FHIRPrimitiveExtension` """
         
         super(SubstanceNucleicAcid, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -76,7 +76,7 @@ class SubstanceNucleicAcid(domainresource.DomainResource):
             ("sequenceType", "sequenceType", codeableconcept.CodeableConcept, False, None, False),
             ("_sequenceType", "_sequenceType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subunit", "subunit", SubstanceNucleicAcidSubunit, True, None, False),
-            ("_subunit", "_subunit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subunit", "_subunit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -119,7 +119,7 @@ class SubstanceNucleicAcidSubunit(backboneelement.BackboneElement):
         """ The linkages between sugar residues will also be captured.
         List of `SubstanceNucleicAcidSubunitLinkage` items (represented as `dict` in JSON). """
         self._linkage = None
-        """ Primitive extension for linkage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for linkage. List of `FHIRPrimitiveExtension` """
         
         self.sequence = None
         """ Actual nucleotide sequence notation from 5' to 3' end using
@@ -149,7 +149,7 @@ class SubstanceNucleicAcidSubunit(backboneelement.BackboneElement):
         """ 5.3.6.8.1 Sugar ID (Mandatory).
         List of `SubstanceNucleicAcidSubunitSugar` items (represented as `dict` in JSON). """
         self._sugar = None
-        """ Primitive extension for sugar. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for sugar. List of `FHIRPrimitiveExtension` """
         
         self.threePrime = None
         """ The nucleotide present at the 3’ terminal shall be specified based
@@ -171,7 +171,7 @@ class SubstanceNucleicAcidSubunit(backboneelement.BackboneElement):
             ("length", "length", int, False, None, False),
             ("_length", "_length", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("linkage", "linkage", SubstanceNucleicAcidSubunitLinkage, True, None, False),
-            ("_linkage", "_linkage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_linkage", "_linkage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sequence", "sequence", str, False, None, False),
             ("_sequence", "_sequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sequenceAttachment", "sequenceAttachment", attachment.Attachment, False, None, False),
@@ -179,7 +179,7 @@ class SubstanceNucleicAcidSubunit(backboneelement.BackboneElement):
             ("subunit", "subunit", int, False, None, False),
             ("_subunit", "_subunit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sugar", "sugar", SubstanceNucleicAcidSubunitSugar, True, None, False),
-            ("_sugar", "_sugar", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_sugar", "_sugar", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("threePrime", "threePrime", codeableconcept.CodeableConcept, False, None, False),
             ("_threePrime", "_threePrime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

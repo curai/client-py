@@ -26,7 +26,7 @@ class NamingSystem(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ Date last changed.
@@ -44,7 +44,7 @@ class NamingSystem(domainresource.DomainResource):
         """ Intended jurisdiction for naming system (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ codesystem | identifier | root.
@@ -86,7 +86,7 @@ class NamingSystem(domainresource.DomainResource):
         """ Unique identifiers used for system.
         List of `NamingSystemUniqueId` items (represented as `dict` in JSON). """
         self._uniqueId = None
-        """ Primitive extension for uniqueId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for uniqueId. List of `FHIRPrimitiveExtension` """
         
         self.usage = None
         """ How/where is it used.
@@ -98,7 +98,7 @@ class NamingSystem(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         super(NamingSystem, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -106,13 +106,13 @@ class NamingSystem(domainresource.DomainResource):
         js = super(NamingSystem, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, True),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, True),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, True),
@@ -126,11 +126,11 @@ class NamingSystem(domainresource.DomainResource):
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("uniqueId", "uniqueId", NamingSystemUniqueId, True, None, True),
-            ("_uniqueId", "_uniqueId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_uniqueId", "_uniqueId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("usage", "usage", str, False, None, False),
             ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -33,7 +33,7 @@ class RelatedPerson(domainresource.DomainResource):
         """ Address where the related person can be contacted or visited.
         List of `Address` items (represented as `dict` in JSON). """
         self._address = None
-        """ Primitive extension for address. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for address. List of `FHIRPrimitiveExtension` """
         
         self.birthDate = None
         """ The date on which the related person was born.
@@ -46,7 +46,7 @@ class RelatedPerson(domainresource.DomainResource):
         patient's health.
         List of `RelatedPersonCommunication` items (represented as `dict` in JSON). """
         self._communication = None
-        """ Primitive extension for communication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for communication. List of `FHIRPrimitiveExtension` """
         
         self.gender = None
         """ male | female | other | unknown.
@@ -58,13 +58,13 @@ class RelatedPerson(domainresource.DomainResource):
         """ A human identifier for this person.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ A name associated with the person.
         List of `HumanName` items (represented as `dict` in JSON). """
         self._name = None
-        """ Primitive extension for name. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for name. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ The patient this person is related to.
@@ -82,19 +82,19 @@ class RelatedPerson(domainresource.DomainResource):
         """ Image of the person.
         List of `Attachment` items (represented as `dict` in JSON). """
         self._photo = None
-        """ Primitive extension for photo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for photo. List of `FHIRPrimitiveExtension` """
         
         self.relationship = None
         """ The nature of the relationship.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._relationship = None
-        """ Primitive extension for relationship. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relationship. List of `FHIRPrimitiveExtension` """
         
         self.telecom = None
         """ A contact detail for the person.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(RelatedPerson, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -104,27 +104,27 @@ class RelatedPerson(domainresource.DomainResource):
             ("active", "active", bool, False, None, False),
             ("_active", "_active", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("address", "address", address.Address, True, None, False),
-            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("birthDate", "birthDate", fhirdate.FHIRDate, False, None, False),
             ("_birthDate", "_birthDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("communication", "communication", RelatedPersonCommunication, True, None, False),
-            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("gender", "gender", str, False, None, False),
             ("_gender", "_gender", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", humanname.HumanName, True, None, False),
-            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("photo", "photo", attachment.Attachment, True, None, False),
-            ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("relationship", "relationship", codeableconcept.CodeableConcept, True, None, False),
-            ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

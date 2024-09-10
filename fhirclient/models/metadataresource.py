@@ -23,7 +23,7 @@ class MetadataResource(object):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ Date last changed.
@@ -47,7 +47,7 @@ class MetadataResource(object):
         """ Intended jurisdiction for metadata resource (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this metadata resource (computer friendly).
@@ -84,7 +84,7 @@ class MetadataResource(object):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the metadata resource.
@@ -98,7 +98,7 @@ class MetadataResource(object):
         js = super(MetadataResource, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -106,7 +106,7 @@ class MetadataResource(object):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -118,7 +118,7 @@ class MetadataResource(object):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

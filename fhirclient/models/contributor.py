@@ -25,7 +25,7 @@ class Contributor(element.Element):
         """ Contact details of the contributor.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Who contributed the content.
@@ -45,7 +45,7 @@ class Contributor(element.Element):
         js = super(Contributor, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", str, False, None, True),

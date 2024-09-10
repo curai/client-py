@@ -33,33 +33,33 @@ class Organization(domainresource.DomainResource):
         """ An address for the organization.
         List of `Address` items (represented as `dict` in JSON). """
         self._address = None
-        """ Primitive extension for address. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for address. List of `FHIRPrimitiveExtension` """
         
         self.alias = None
         """ A list of alternate names that the organization is known as, or was
         known as in the past.
         List of `str` items. """
         self._alias = None
-        """ Primitive extension for alias. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alias. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact for the organization for a certain purpose.
         List of `OrganizationContact` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.endpoint = None
         """ Technical endpoints providing access to services operated for the
         organization.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Identifies this organization  across multiple systems.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name used for the organization.
@@ -77,13 +77,13 @@ class Organization(domainresource.DomainResource):
         """ A contact detail for the organization.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Kind of organization.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(Organization, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -93,23 +93,23 @@ class Organization(domainresource.DomainResource):
             ("active", "active", bool, False, None, False),
             ("_active", "_active", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("address", "address", address.Address, True, None, False),
-            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("alias", "alias", str, True, None, False),
-            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", OrganizationContact, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, False, None, False),
             ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -152,7 +152,7 @@ class OrganizationContact(backboneelement.BackboneElement):
         """ Contact details (telephone, email, etc.)  for a contact.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(OrganizationContact, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -166,7 +166,7 @@ class OrganizationContact(backboneelement.BackboneElement):
             ("purpose", "purpose", codeableconcept.CodeableConcept, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

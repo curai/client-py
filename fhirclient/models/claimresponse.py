@@ -25,19 +25,19 @@ class ClaimResponse(domainresource.DomainResource):
         """ Insurer added line items.
         List of `ClaimResponseAddItem` items (represented as `dict` in JSON). """
         self._addItem = None
-        """ Primitive extension for addItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for addItem. List of `FHIRPrimitiveExtension` """
         
         self.adjudication = None
         """ Header-level adjudication.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.communicationRequest = None
         """ Request for additional information.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._communicationRequest = None
-        """ Primitive extension for communicationRequest. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for communicationRequest. List of `FHIRPrimitiveExtension` """
         
         self.created = None
         """ Response creation date.
@@ -55,7 +55,7 @@ class ClaimResponse(domainresource.DomainResource):
         """ Processing errors.
         List of `ClaimResponseError` items (represented as `dict` in JSON). """
         self._error = None
-        """ Primitive extension for error. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for error. List of `FHIRPrimitiveExtension` """
         
         self.form = None
         """ Printed reference or actual form.
@@ -79,13 +79,13 @@ class ClaimResponse(domainresource.DomainResource):
         """ Business Identifier for a claim response.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.insurance = None
         """ Patient insurance information.
         List of `ClaimResponseInsurance` items (represented as `dict` in JSON). """
         self._insurance = None
-        """ Primitive extension for insurance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for insurance. List of `FHIRPrimitiveExtension` """
         
         self.insurer = None
         """ Party responsible for reimbursement.
@@ -97,7 +97,7 @@ class ClaimResponse(domainresource.DomainResource):
         """ Adjudication for claim line items.
         List of `ClaimResponseItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.outcome = None
         """ queued | complete | error | partial.
@@ -139,7 +139,7 @@ class ClaimResponse(domainresource.DomainResource):
         """ Note concerning adjudication.
         List of `ClaimResponseProcessNote` items (represented as `dict` in JSON). """
         self._processNote = None
-        """ Primitive extension for processNote. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for processNote. List of `FHIRPrimitiveExtension` """
         
         self.request = None
         """ Id of resource triggering adjudication.
@@ -169,7 +169,7 @@ class ClaimResponse(domainresource.DomainResource):
         """ Adjudication totals.
         List of `ClaimResponseTotal` items (represented as `dict` in JSON). """
         self._total = None
-        """ Primitive extension for total. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for total. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ More granular claim type.
@@ -189,17 +189,17 @@ class ClaimResponse(domainresource.DomainResource):
         js = super(ClaimResponse, self).elementProperties()
         js.extend([
             ("addItem", "addItem", ClaimResponseAddItem, True, None, False),
-            ("_addItem", "_addItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_addItem", "_addItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("communicationRequest", "communicationRequest", fhirreference.FHIRReference, True, None, False),
-            ("_communicationRequest", "_communicationRequest", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_communicationRequest", "_communicationRequest", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("created", "created", fhirdatetime.FHIRDateTime, False, None, True),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("disposition", "disposition", str, False, None, False),
             ("_disposition", "_disposition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("error", "error", ClaimResponseError, True, None, False),
-            ("_error", "_error", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_error", "_error", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("form", "form", attachment.Attachment, False, None, False),
             ("_form", "_form", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("formCode", "formCode", codeableconcept.CodeableConcept, False, None, False),
@@ -207,13 +207,13 @@ class ClaimResponse(domainresource.DomainResource):
             ("fundsReserve", "fundsReserve", codeableconcept.CodeableConcept, False, None, False),
             ("_fundsReserve", "_fundsReserve", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurance", "insurance", ClaimResponseInsurance, True, None, False),
-            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurer", "insurer", fhirreference.FHIRReference, False, None, True),
             ("_insurer", "_insurer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", ClaimResponseItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcome", "outcome", str, False, None, True),
             ("_outcome", "_outcome", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
@@ -227,7 +227,7 @@ class ClaimResponse(domainresource.DomainResource):
             ("preAuthRef", "preAuthRef", str, False, None, False),
             ("_preAuthRef", "_preAuthRef", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("processNote", "processNote", ClaimResponseProcessNote, True, None, False),
-            ("_processNote", "_processNote", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_processNote", "_processNote", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("request", "request", fhirreference.FHIRReference, False, None, False),
             ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("requestor", "requestor", fhirreference.FHIRReference, False, None, False),
@@ -237,7 +237,7 @@ class ClaimResponse(domainresource.DomainResource):
             ("subType", "subType", codeableconcept.CodeableConcept, False, None, False),
             ("_subType", "_subType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("total", "total", ClaimResponseTotal, True, None, False),
-            ("_total", "_total", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_total", "_total", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("use", "use", str, False, None, True),
@@ -269,7 +269,7 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Added items adjudication.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ Anatomical location.
@@ -281,13 +281,13 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Insurer added line details.
         List of `ClaimResponseAddItemDetail` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.detailSequence = None
         """ Detail sequence number.
         List of `int` items. """
         self._detailSequence = None
-        """ Primitive extension for detailSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detailSequence. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -299,7 +299,7 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Item sequence number.
         List of `int` items. """
         self._itemSequence = None
-        """ Primitive extension for itemSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for itemSequence. List of `FHIRPrimitiveExtension` """
         
         self.locationAddress = None
         """ Place of service or where product was supplied.
@@ -323,7 +323,7 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -335,7 +335,7 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -347,13 +347,13 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Program the product or service is provided under.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._programCode = None
-        """ Primitive extension for programCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for programCode. List of `FHIRPrimitiveExtension` """
         
         self.provider = None
         """ Authorized providers.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._provider = None
-        """ Primitive extension for provider. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for provider. List of `FHIRPrimitiveExtension` """
         
         self.quantity = None
         """ Count of products or services.
@@ -377,13 +377,13 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         """ Anatomical sub-location.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subSite = None
-        """ Primitive extension for subSite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subSite. List of `FHIRPrimitiveExtension` """
         
         self.subdetailSequence = None
         """ Subdetail sequence number.
         List of `int` items. """
         self._subdetailSequence = None
-        """ Primitive extension for subdetailSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subdetailSequence. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -397,17 +397,17 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
         js = super(ClaimResponseAddItem, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, True),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, False, None, False),
             ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detail", "detail", ClaimResponseAddItemDetail, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detailSequence", "detailSequence", int, True, None, False),
-            ("_detailSequence", "_detailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detailSequence", "_detailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("itemSequence", "itemSequence", int, True, None, False),
-            ("_itemSequence", "_itemSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_itemSequence", "_itemSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("locationAddress", "locationAddress", address.Address, False, "location", False),
             ("_locationAddress", "_locationAddress", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("locationCodeableConcept", "locationCodeableConcept", codeableconcept.CodeableConcept, False, "location", False),
@@ -415,17 +415,17 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
             ("locationReference", "locationReference", fhirreference.FHIRReference, False, "location", False),
             ("_locationReference", "_locationReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("programCode", "programCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("provider", "provider", fhirreference.FHIRReference, True, None, False),
-            ("_provider", "_provider", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_provider", "_provider", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("servicedDate", "servicedDate", fhirdate.FHIRDate, False, "serviced", False),
@@ -433,9 +433,9 @@ class ClaimResponseAddItem(backboneelement.BackboneElement):
             ("servicedPeriod", "servicedPeriod", period.Period, False, "serviced", False),
             ("_servicedPeriod", "_servicedPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subSite", "subSite", codeableconcept.CodeableConcept, True, None, False),
-            ("_subSite", "_subSite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subSite", "_subSite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subdetailSequence", "subdetailSequence", int, True, None, False),
-            ("_subdetailSequence", "_subdetailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subdetailSequence", "_subdetailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -462,7 +462,7 @@ class ClaimResponseAddItemDetail(backboneelement.BackboneElement):
         """ Added items detail adjudication.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -474,7 +474,7 @@ class ClaimResponseAddItemDetail(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -486,7 +486,7 @@ class ClaimResponseAddItemDetail(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -504,7 +504,7 @@ class ClaimResponseAddItemDetail(backboneelement.BackboneElement):
         """ Insurer added line items.
         List of `ClaimResponseAddItemDetailSubDetail` items (represented as `dict` in JSON). """
         self._subDetail = None
-        """ Primitive extension for subDetail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subDetail. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -518,21 +518,21 @@ class ClaimResponseAddItemDetail(backboneelement.BackboneElement):
         js = super(ClaimResponseAddItemDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, True),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subDetail", "subDetail", ClaimResponseAddItemDetailSubDetail, True, None, False),
-            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -559,7 +559,7 @@ class ClaimResponseAddItemDetailSubDetail(backboneelement.BackboneElement):
         """ Added items detail adjudication.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -571,7 +571,7 @@ class ClaimResponseAddItemDetailSubDetail(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -583,7 +583,7 @@ class ClaimResponseAddItemDetailSubDetail(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -609,15 +609,15 @@ class ClaimResponseAddItemDetailSubDetail(backboneelement.BackboneElement):
         js = super(ClaimResponseAddItemDetailSubDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, True),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
@@ -772,13 +772,13 @@ class ClaimResponseItem(backboneelement.BackboneElement):
         """ Adjudication details.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.detail = None
         """ Adjudication for claim details.
         List of `ClaimResponseItemDetail` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.itemSequence = None
         """ Claim item instance identifier.
@@ -790,7 +790,7 @@ class ClaimResponseItem(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         super(ClaimResponseItem, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -798,13 +798,13 @@ class ClaimResponseItem(backboneelement.BackboneElement):
         js = super(ClaimResponseItem, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, True),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detail", "detail", ClaimResponseItemDetail, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("itemSequence", "itemSequence", int, False, None, True),
             ("_itemSequence", "_itemSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -889,7 +889,7 @@ class ClaimResponseItemDetail(backboneelement.BackboneElement):
         """ Detail level adjudication details.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.detailSequence = None
         """ Claim detail instance identifier.
@@ -901,13 +901,13 @@ class ClaimResponseItemDetail(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.subDetail = None
         """ Adjudication for claim sub-details.
         List of `ClaimResponseItemDetailSubDetail` items (represented as `dict` in JSON). """
         self._subDetail = None
-        """ Primitive extension for subDetail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subDetail. List of `FHIRPrimitiveExtension` """
         
         super(ClaimResponseItemDetail, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -915,13 +915,13 @@ class ClaimResponseItemDetail(backboneelement.BackboneElement):
         js = super(ClaimResponseItemDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, True),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detailSequence", "detailSequence", int, False, None, True),
             ("_detailSequence", "_detailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subDetail", "subDetail", ClaimResponseItemDetailSubDetail, True, None, False),
-            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -946,13 +946,13 @@ class ClaimResponseItemDetailSubDetail(backboneelement.BackboneElement):
         """ Subdetail level adjudication details.
         List of `ClaimResponseItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.noteNumber = None
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.subDetailSequence = None
         """ Claim sub-detail instance identifier.
@@ -966,9 +966,9 @@ class ClaimResponseItemDetailSubDetail(backboneelement.BackboneElement):
         js = super(ClaimResponseItemDetailSubDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ClaimResponseItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subDetailSequence", "subDetailSequence", int, False, None, True),
             ("_subDetailSequence", "_subDetailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

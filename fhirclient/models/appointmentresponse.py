@@ -47,7 +47,7 @@ class AppointmentResponse(domainresource.DomainResource):
         """ External Ids for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.participantStatus = None
         """ accepted | declined | tentative | needs-action.
@@ -59,7 +59,7 @@ class AppointmentResponse(domainresource.DomainResource):
         """ Role of participant in the appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._participantType = None
-        """ Primitive extension for participantType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participantType. List of `FHIRPrimitiveExtension` """
         
         self.start = None
         """ Time from appointment, or requested new start time.
@@ -81,11 +81,11 @@ class AppointmentResponse(domainresource.DomainResource):
             ("end", "end", fhirinstant.FHIRInstant, False, None, False),
             ("_end", "_end", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("participantStatus", "participantStatus", str, False, None, True),
             ("_participantStatus", "_participantStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("participantType", "participantType", codeableconcept.CodeableConcept, True, None, False),
-            ("_participantType", "_participantType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participantType", "_participantType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("start", "start", fhirinstant.FHIRInstant, False, None, False),
             ("_start", "_start", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

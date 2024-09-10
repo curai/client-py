@@ -37,7 +37,7 @@ class CoverageEligibilityResponse(domainresource.DomainResource):
         """ Processing errors.
         List of `CoverageEligibilityResponseError` items (represented as `dict` in JSON). """
         self._error = None
-        """ Primitive extension for error. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for error. List of `FHIRPrimitiveExtension` """
         
         self.form = None
         """ Printed form identifier.
@@ -49,13 +49,13 @@ class CoverageEligibilityResponse(domainresource.DomainResource):
         """ Business Identifier for coverage eligiblity request.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.insurance = None
         """ Patient insurance information.
         List of `CoverageEligibilityResponseInsurance` items (represented as `dict` in JSON). """
         self._insurance = None
-        """ Primitive extension for insurance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for insurance. List of `FHIRPrimitiveExtension` """
         
         self.insurer = None
         """ Coverage issuer.
@@ -85,7 +85,7 @@ class CoverageEligibilityResponse(domainresource.DomainResource):
         """ auth-requirements | benefits | discovery | validation.
         List of `str` items. """
         self._purpose = None
-        """ Primitive extension for purpose. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for purpose. List of `FHIRPrimitiveExtension` """
         
         self.request = None
         """ Eligibility request reference.
@@ -127,13 +127,13 @@ class CoverageEligibilityResponse(domainresource.DomainResource):
             ("disposition", "disposition", str, False, None, False),
             ("_disposition", "_disposition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("error", "error", CoverageEligibilityResponseError, True, None, False),
-            ("_error", "_error", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_error", "_error", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("form", "form", codeableconcept.CodeableConcept, False, None, False),
             ("_form", "_form", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurance", "insurance", CoverageEligibilityResponseInsurance, True, None, False),
-            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurer", "insurer", fhirreference.FHIRReference, False, None, True),
             ("_insurer", "_insurer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("outcome", "outcome", str, False, None, True),
@@ -143,7 +143,7 @@ class CoverageEligibilityResponse(domainresource.DomainResource):
             ("preAuthRef", "preAuthRef", str, False, None, False),
             ("_preAuthRef", "_preAuthRef", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, True, None, True),
-            ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("request", "request", fhirreference.FHIRReference, False, None, True),
             ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("requestor", "requestor", fhirreference.FHIRReference, False, None, False),
@@ -232,7 +232,7 @@ class CoverageEligibilityResponseInsurance(backboneelement.BackboneElement):
         """ Benefits and authorization details.
         List of `CoverageEligibilityResponseInsuranceItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         super(CoverageEligibilityResponseInsurance, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -246,7 +246,7 @@ class CoverageEligibilityResponseInsurance(backboneelement.BackboneElement):
             ("inforce", "inforce", bool, False, None, False),
             ("_inforce", "_inforce", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", CoverageEligibilityResponseInsuranceItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -278,7 +278,7 @@ class CoverageEligibilityResponseInsuranceItem(backboneelement.BackboneElement):
         """ Type of required supporting materials.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._authorizationSupporting = None
-        """ Primitive extension for authorizationSupporting. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for authorizationSupporting. List of `FHIRPrimitiveExtension` """
         
         self.authorizationUrl = None
         """ Preauthorization requirements endpoint.
@@ -290,7 +290,7 @@ class CoverageEligibilityResponseInsuranceItem(backboneelement.BackboneElement):
         """ Benefit Summary.
         List of `CoverageEligibilityResponseInsuranceItemBenefit` items (represented as `dict` in JSON). """
         self._benefit = None
-        """ Primitive extension for benefit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for benefit. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Benefit classification.
@@ -314,7 +314,7 @@ class CoverageEligibilityResponseInsuranceItem(backboneelement.BackboneElement):
         """ Product or service billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Short name for the benefit.
@@ -360,11 +360,11 @@ class CoverageEligibilityResponseInsuranceItem(backboneelement.BackboneElement):
             ("authorizationRequired", "authorizationRequired", bool, False, None, False),
             ("_authorizationRequired", "_authorizationRequired", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("authorizationSupporting", "authorizationSupporting", codeableconcept.CodeableConcept, True, None, False),
-            ("_authorizationSupporting", "_authorizationSupporting", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_authorizationSupporting", "_authorizationSupporting", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("authorizationUrl", "authorizationUrl", str, False, None, False),
             ("_authorizationUrl", "_authorizationUrl", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("benefit", "benefit", CoverageEligibilityResponseInsuranceItemBenefit, True, None, False),
-            ("_benefit", "_benefit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_benefit", "_benefit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -372,7 +372,7 @@ class CoverageEligibilityResponseInsuranceItem(backboneelement.BackboneElement):
             ("excluded", "excluded", bool, False, None, False),
             ("_excluded", "_excluded", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("network", "network", codeableconcept.CodeableConcept, False, None, False),

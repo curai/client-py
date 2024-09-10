@@ -26,13 +26,13 @@ class CarePlan(domainresource.DomainResource):
         """ Action to occur as part of plan.
         List of `CarePlanActivity` items (represented as `dict` in JSON). """
         self._activity = None
-        """ Primitive extension for activity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for activity. List of `FHIRPrimitiveExtension` """
         
         self.addresses = None
         """ Health issues this plan addresses.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._addresses = None
-        """ Primitive extension for addresses. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for addresses. List of `FHIRPrimitiveExtension` """
         
         self.author = None
         """ Who is the designated responsible party.
@@ -44,25 +44,25 @@ class CarePlan(domainresource.DomainResource):
         """ Fulfills CarePlan.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.careTeam = None
         """ Who's involved in plan?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._careTeam = None
-        """ Primitive extension for careTeam. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for careTeam. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Type of plan.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.contributor = None
         """ Who provided the content of the care plan.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._contributor = None
-        """ Primitive extension for contributor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contributor. List of `FHIRPrimitiveExtension` """
         
         self.created = None
         """ Date record was first recorded.
@@ -86,25 +86,25 @@ class CarePlan(domainresource.DomainResource):
         """ Desired outcome of plan.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._goal = None
-        """ Primitive extension for goal. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for goal. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ External Ids for this plan.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.intent = None
         """ proposal | plan | order | option.
@@ -116,13 +116,13 @@ class CarePlan(domainresource.DomainResource):
         """ Comments about the plan.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Part of referenced CarePlan.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ Time period plan covers.
@@ -134,7 +134,7 @@ class CarePlan(domainresource.DomainResource):
         """ CarePlan replaced by this CarePlan.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._replaces = None
-        """ Primitive extension for replaces. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for replaces. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | on-hold | revoked | completed | entered-in-error |
@@ -153,7 +153,7 @@ class CarePlan(domainresource.DomainResource):
         """ Information considered as part of plan.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInfo = None
-        """ Primitive extension for supportingInfo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfo. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Human-friendly name for the care plan.
@@ -167,19 +167,19 @@ class CarePlan(domainresource.DomainResource):
         js = super(CarePlan, self).elementProperties()
         js.extend([
             ("activity", "activity", CarePlanActivity, True, None, False),
-            ("_activity", "_activity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_activity", "_activity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("addresses", "addresses", fhirreference.FHIRReference, True, None, False),
-            ("_addresses", "_addresses", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_addresses", "_addresses", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("author", "author", fhirreference.FHIRReference, False, None, False),
             ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("careTeam", "careTeam", fhirreference.FHIRReference, True, None, False),
-            ("_careTeam", "_careTeam", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_careTeam", "_careTeam", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contributor", "contributor", fhirreference.FHIRReference, True, None, False),
-            ("_contributor", "_contributor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contributor", "_contributor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("created", "created", fhirdatetime.FHIRDateTime, False, None, False),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -187,29 +187,29 @@ class CarePlan(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("goal", "goal", fhirreference.FHIRReference, True, None, False),
-            ("_goal", "_goal", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_goal", "_goal", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intent", "intent", str, False, None, True),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("replaces", "replaces", fhirreference.FHIRReference, True, None, False),
-            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfo", "supportingInfo", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -246,19 +246,19 @@ class CarePlanActivity(backboneelement.BackboneElement):
         """ Results of the activity.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._outcomeCodeableConcept = None
-        """ Primitive extension for outcomeCodeableConcept. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for outcomeCodeableConcept. List of `FHIRPrimitiveExtension` """
         
         self.outcomeReference = None
         """ Appointment, Encounter, Procedure, etc..
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._outcomeReference = None
-        """ Primitive extension for outcomeReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for outcomeReference. List of `FHIRPrimitiveExtension` """
         
         self.progress = None
         """ Comments about the activity status/progress.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._progress = None
-        """ Primitive extension for progress. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for progress. List of `FHIRPrimitiveExtension` """
         
         self.reference = None
         """ Activity details defined in specific resource.
@@ -274,11 +274,11 @@ class CarePlanActivity(backboneelement.BackboneElement):
             ("detail", "detail", CarePlanActivityDetail, False, None, False),
             ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("outcomeCodeableConcept", "outcomeCodeableConcept", codeableconcept.CodeableConcept, True, None, False),
-            ("_outcomeCodeableConcept", "_outcomeCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_outcomeCodeableConcept", "_outcomeCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcomeReference", "outcomeReference", fhirreference.FHIRReference, True, None, False),
-            ("_outcomeReference", "_outcomeReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_outcomeReference", "_outcomeReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("progress", "progress", annotation.Annotation, True, None, False),
-            ("_progress", "_progress", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_progress", "_progress", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reference", "reference", fhirreference.FHIRReference, False, None, False),
             ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -331,19 +331,19 @@ class CarePlanActivityDetail(backboneelement.BackboneElement):
         """ Goals this activity relates to.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._goal = None
-        """ Primitive extension for goal. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for goal. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ Appointment | CommunicationRequest | DeviceRequest |
@@ -363,7 +363,7 @@ class CarePlanActivityDetail(backboneelement.BackboneElement):
         """ Who will be responsible?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.productCodeableConcept = None
         """ What is to be administered/supplied.
@@ -387,13 +387,13 @@ class CarePlanActivityDetail(backboneelement.BackboneElement):
         """ Why activity should be done or why activity was prohibited.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why activity is needed.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.scheduledPeriod = None
         """ When activity is to occur.
@@ -440,17 +440,17 @@ class CarePlanActivityDetail(backboneelement.BackboneElement):
             ("doNotPerform", "doNotPerform", bool, False, None, False),
             ("_doNotPerform", "_doNotPerform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("goal", "goal", fhirreference.FHIRReference, True, None, False),
-            ("_goal", "_goal", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_goal", "_goal", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, False),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performer", "performer", fhirreference.FHIRReference, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productCodeableConcept", "productCodeableConcept", codeableconcept.CodeableConcept, False, "product", False),
             ("_productCodeableConcept", "_productCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("productReference", "productReference", fhirreference.FHIRReference, False, "product", False),
@@ -458,9 +458,9 @@ class CarePlanActivityDetail(backboneelement.BackboneElement):
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("scheduledPeriod", "scheduledPeriod", period.Period, False, "scheduled", False),
             ("_scheduledPeriod", "_scheduledPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("scheduledString", "scheduledString", str, False, "scheduled", False),

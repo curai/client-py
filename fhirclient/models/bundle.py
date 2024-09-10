@@ -24,7 +24,7 @@ class Bundle(resource.Resource):
         """ Entry in the bundle - will have a resource or information.
         List of `BundleEntry` items (represented as `dict` in JSON). """
         self._entry = None
-        """ Primitive extension for entry. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for entry. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Persistent identifier for the bundle.
@@ -36,7 +36,7 @@ class Bundle(resource.Resource):
         """ Links related to this Bundle.
         List of `BundleLink` items (represented as `dict` in JSON). """
         self._link = None
-        """ Primitive extension for link. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for link. List of `FHIRPrimitiveExtension` """
         
         self.signature = None
         """ Digital Signature.
@@ -69,11 +69,11 @@ class Bundle(resource.Resource):
         js = super(Bundle, self).elementProperties()
         js.extend([
             ("entry", "entry", BundleEntry, True, None, False),
-            ("_entry", "_entry", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_entry", "_entry", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("link", "link", BundleLink, True, None, False),
-            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("signature", "signature", signature.Signature, False, None, False),
             ("_signature", "_signature", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("timestamp", "timestamp", fhirinstant.FHIRInstant, False, None, False),
@@ -115,7 +115,7 @@ class BundleEntry(backboneelement.BackboneElement):
         """ Links related to this entry.
         List of `BundleLink` items (represented as `dict` in JSON). """
         self._link = None
-        """ Primitive extension for link. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for link. List of `FHIRPrimitiveExtension` """
         
         self.request = None
         """ Additional execution information (transaction/batch/history).
@@ -149,7 +149,7 @@ class BundleEntry(backboneelement.BackboneElement):
             ("fullUrl", "fullUrl", str, False, None, False),
             ("_fullUrl", "_fullUrl", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("link", "link", BundleLink, True, None, False),
-            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("request", "request", BundleEntryRequest, False, None, False),
             ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("resource", "resource", resource.Resource, False, None, False),

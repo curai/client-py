@@ -26,7 +26,7 @@ class GuidanceResponse(domainresource.DomainResource):
         """ Additional required data.
         List of `DataRequirement` items (represented as `dict` in JSON). """
         self._dataRequirement = None
-        """ Primitive extension for dataRequirement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dataRequirement. List of `FHIRPrimitiveExtension` """
         
         self.encounter = None
         """ Encounter during which the response was returned.
@@ -38,13 +38,13 @@ class GuidanceResponse(domainresource.DomainResource):
         """ Messages resulting from the evaluation of the artifact or artifacts.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._evaluationMessage = None
-        """ Primitive extension for evaluationMessage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for evaluationMessage. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.moduleCanonical = None
         """ What guidance was requested.
@@ -68,7 +68,7 @@ class GuidanceResponse(domainresource.DomainResource):
         """ Additional notes about the response.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ When the guidance response was processed.
@@ -92,13 +92,13 @@ class GuidanceResponse(domainresource.DomainResource):
         """ Why guidance is needed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why guidance is needed.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.requestIdentifier = None
         """ The identifier of the request associated with this response, if any.
@@ -131,13 +131,13 @@ class GuidanceResponse(domainresource.DomainResource):
         js = super(GuidanceResponse, self).elementProperties()
         js.extend([
             ("dataRequirement", "dataRequirement", datarequirement.DataRequirement, True, None, False),
-            ("_dataRequirement", "_dataRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dataRequirement", "_dataRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("evaluationMessage", "evaluationMessage", fhirreference.FHIRReference, True, None, False),
-            ("_evaluationMessage", "_evaluationMessage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_evaluationMessage", "_evaluationMessage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("moduleCanonical", "moduleCanonical", str, False, "module", True),
             ("_moduleCanonical", "_moduleCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("moduleCodeableConcept", "moduleCodeableConcept", codeableconcept.CodeableConcept, False, "module", True),
@@ -145,7 +145,7 @@ class GuidanceResponse(domainresource.DomainResource):
             ("moduleUri", "moduleUri", str, False, "module", True),
             ("_moduleUri", "_moduleUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, None, False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("outputParameters", "outputParameters", fhirreference.FHIRReference, False, None, False),
@@ -153,9 +153,9 @@ class GuidanceResponse(domainresource.DomainResource):
             ("performer", "performer", fhirreference.FHIRReference, False, None, False),
             ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requestIdentifier", "requestIdentifier", identifier.Identifier, False, None, False),
             ("_requestIdentifier", "_requestIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("result", "result", fhirreference.FHIRReference, False, None, False),

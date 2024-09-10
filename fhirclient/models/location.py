@@ -33,7 +33,7 @@ class Location(domainresource.DomainResource):
         known as, in the past.
         List of `str` items. """
         self._alias = None
-        """ Primitive extension for alias. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alias. List of `FHIRPrimitiveExtension` """
         
         self.availabilityExceptions = None
         """ Description of availability exceptions.
@@ -53,19 +53,19 @@ class Location(domainresource.DomainResource):
         location.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.hoursOfOperation = None
         """ What days/times during a week is this location usually open.
         List of `LocationHoursOfOperation` items (represented as `dict` in JSON). """
         self._hoursOfOperation = None
-        """ Primitive extension for hoursOfOperation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for hoursOfOperation. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Unique code or number identifying the location to its users.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.managingOrganization = None
         """ Organization responsible for provisioning and upkeep.
@@ -120,13 +120,13 @@ class Location(domainresource.DomainResource):
         """ Contact details of the location.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of function performed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(Location, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -136,17 +136,17 @@ class Location(domainresource.DomainResource):
             ("address", "address", address.Address, False, None, False),
             ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("alias", "alias", str, True, None, False),
-            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("availabilityExceptions", "availabilityExceptions", str, False, None, False),
             ("_availabilityExceptions", "_availabilityExceptions", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("hoursOfOperation", "hoursOfOperation", LocationHoursOfOperation, True, None, False),
-            ("_hoursOfOperation", "_hoursOfOperation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_hoursOfOperation", "_hoursOfOperation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("managingOrganization", "managingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_managingOrganization", "_managingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("mode", "mode", str, False, None, False),
@@ -164,9 +164,9 @@ class Location(domainresource.DomainResource):
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -203,7 +203,7 @@ class LocationHoursOfOperation(backboneelement.BackboneElement):
         """ mon | tue | wed | thu | fri | sat | sun.
         List of `str` items. """
         self._daysOfWeek = None
-        """ Primitive extension for daysOfWeek. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for daysOfWeek. List of `FHIRPrimitiveExtension` """
         
         self.openingTime = None
         """ Time that the Location opens.
@@ -221,7 +221,7 @@ class LocationHoursOfOperation(backboneelement.BackboneElement):
             ("closingTime", "closingTime", fhirtime.FHIRTime, False, None, False),
             ("_closingTime", "_closingTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("daysOfWeek", "daysOfWeek", str, True, None, False),
-            ("_daysOfWeek", "_daysOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_daysOfWeek", "_daysOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("openingTime", "openingTime", fhirtime.FHIRTime, False, None, False),
             ("_openingTime", "_openingTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

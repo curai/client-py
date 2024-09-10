@@ -46,13 +46,13 @@ class List(domainresource.DomainResource):
         """ Entries in the list.
         List of `ListEntry` items (represented as `dict` in JSON). """
         self._entry = None
-        """ Primitive extension for entry. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for entry. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.mode = None
         """ working | snapshot | changes.
@@ -64,7 +64,7 @@ class List(domainresource.DomainResource):
         """ Comments about the list.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.orderedBy = None
         """ What order the list has.
@@ -110,13 +110,13 @@ class List(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("entry", "entry", ListEntry, True, None, False),
-            ("_entry", "_entry", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_entry", "_entry", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("mode", "mode", str, False, None, True),
             ("_mode", "_mode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("orderedBy", "orderedBy", codeableconcept.CodeableConcept, False, None, False),
             ("_orderedBy", "_orderedBy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, False, None, False),

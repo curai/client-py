@@ -49,7 +49,7 @@ class OperationDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ Date last changed.
@@ -85,7 +85,7 @@ class OperationDefinition(domainresource.DomainResource):
         """ Intended jurisdiction for operation definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ operation | query.
@@ -109,13 +109,13 @@ class OperationDefinition(domainresource.DomainResource):
         """ Define overloaded variants for when  generating code.
         List of `OperationDefinitionOverload` items (represented as `dict` in JSON). """
         self._overload = None
-        """ Primitive extension for overload. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for overload. List of `FHIRPrimitiveExtension` """
         
         self.parameter = None
         """ Parameters for the operation/query.
         List of `OperationDefinitionParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -133,7 +133,7 @@ class OperationDefinition(domainresource.DomainResource):
         """ Types this operation applies to.
         List of `str` items. """
         self._resource = None
-        """ Primitive extension for resource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resource. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -170,7 +170,7 @@ class OperationDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the operation definition.
@@ -192,7 +192,7 @@ class OperationDefinition(domainresource.DomainResource):
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -204,7 +204,7 @@ class OperationDefinition(domainresource.DomainResource):
             ("instance", "instance", bool, False, None, True),
             ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, True),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, True),
@@ -212,15 +212,15 @@ class OperationDefinition(domainresource.DomainResource):
             ("outputProfile", "outputProfile", str, False, None, False),
             ("_outputProfile", "_outputProfile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("overload", "overload", OperationDefinitionOverload, True, None, False),
-            ("_overload", "_overload", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_overload", "_overload", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("parameter", "parameter", OperationDefinitionParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("resource", "resource", str, True, None, False),
-            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("system", "system", bool, False, None, True),
@@ -232,7 +232,7 @@ class OperationDefinition(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -269,7 +269,7 @@ class OperationDefinitionOverload(backboneelement.BackboneElement):
         """ Name of parameter to include in overload.
         List of `str` items. """
         self._parameterName = None
-        """ Primitive extension for parameterName. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameterName. List of `FHIRPrimitiveExtension` """
         
         super(OperationDefinitionOverload, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -279,7 +279,7 @@ class OperationDefinitionOverload(backboneelement.BackboneElement):
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameterName", "parameterName", str, True, None, False),
-            ("_parameterName", "_parameterName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameterName", "_parameterName", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -334,13 +334,13 @@ class OperationDefinitionParameter(backboneelement.BackboneElement):
         """ Parts of a nested Parameter.
         List of `OperationDefinitionParameter` items (represented as `dict` in JSON). """
         self._part = None
-        """ Primitive extension for part. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for part. List of `FHIRPrimitiveExtension` """
         
         self.referencedFrom = None
         """ References to this parameter.
         List of `OperationDefinitionParameterReferencedFrom` items (represented as `dict` in JSON). """
         self._referencedFrom = None
-        """ Primitive extension for referencedFrom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referencedFrom. List of `FHIRPrimitiveExtension` """
         
         self.searchType = None
         """ number | date | string | token | reference | composite | quantity |
@@ -353,7 +353,7 @@ class OperationDefinitionParameter(backboneelement.BackboneElement):
         """ If type is Reference | canonical, allowed targets.
         List of `str` items. """
         self._targetProfile = None
-        """ Primitive extension for targetProfile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for targetProfile. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ What type this parameter has.
@@ -383,13 +383,13 @@ class OperationDefinitionParameter(backboneelement.BackboneElement):
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("part", "part", OperationDefinitionParameter, True, None, False),
-            ("_part", "_part", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_part", "_part", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("referencedFrom", "referencedFrom", OperationDefinitionParameterReferencedFrom, True, None, False),
-            ("_referencedFrom", "_referencedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referencedFrom", "_referencedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("searchType", "searchType", str, False, None, False),
             ("_searchType", "_searchType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("targetProfile", "targetProfile", str, True, None, False),
-            ("_targetProfile", "_targetProfile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_targetProfile", "_targetProfile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", str, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("use", "use", str, False, None, True),

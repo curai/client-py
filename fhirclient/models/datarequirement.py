@@ -25,13 +25,13 @@ class DataRequirement(element.Element):
         """ What codes are expected.
         List of `DataRequirementCodeFilter` items (represented as `dict` in JSON). """
         self._codeFilter = None
-        """ Primitive extension for codeFilter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for codeFilter. List of `FHIRPrimitiveExtension` """
         
         self.dateFilter = None
         """ What dates/date ranges are expected.
         List of `DataRequirementDateFilter` items (represented as `dict` in JSON). """
         self._dateFilter = None
-        """ Primitive extension for dateFilter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dateFilter. List of `FHIRPrimitiveExtension` """
         
         self.limit = None
         """ Number of results.
@@ -44,19 +44,19 @@ class DataRequirement(element.Element):
         knowledge module.
         List of `str` items. """
         self._mustSupport = None
-        """ Primitive extension for mustSupport. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for mustSupport. List of `FHIRPrimitiveExtension` """
         
         self.profile = None
         """ The profile of the required data.
         List of `str` items. """
         self._profile = None
-        """ Primitive extension for profile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for profile. List of `FHIRPrimitiveExtension` """
         
         self.sort = None
         """ Order of the results.
         List of `DataRequirementSort` items (represented as `dict` in JSON). """
         self._sort = None
-        """ Primitive extension for sort. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for sort. List of `FHIRPrimitiveExtension` """
         
         self.subjectCodeableConcept = None
         """ E.g. Patient, Practitioner, RelatedPerson, Organization, Location,
@@ -84,17 +84,17 @@ class DataRequirement(element.Element):
         js = super(DataRequirement, self).elementProperties()
         js.extend([
             ("codeFilter", "codeFilter", DataRequirementCodeFilter, True, None, False),
-            ("_codeFilter", "_codeFilter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_codeFilter", "_codeFilter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dateFilter", "dateFilter", DataRequirementDateFilter, True, None, False),
-            ("_dateFilter", "_dateFilter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dateFilter", "_dateFilter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("limit", "limit", int, False, None, False),
             ("_limit", "_limit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("mustSupport", "mustSupport", str, True, None, False),
-            ("_mustSupport", "_mustSupport", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_mustSupport", "_mustSupport", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("profile", "profile", str, True, None, False),
-            ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sort", "sort", DataRequirementSort, True, None, False),
-            ("_sort", "_sort", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_sort", "_sort", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subjectCodeableConcept", "subjectCodeableConcept", codeableconcept.CodeableConcept, False, "subject", False),
             ("_subjectCodeableConcept", "_subjectCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subjectReference", "subjectReference", fhirreference.FHIRReference, False, "subject", False),
@@ -128,7 +128,7 @@ class DataRequirementCodeFilter(element.Element):
         """ What code is expected.
         List of `Coding` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.path = None
         """ A code-valued attribute to filter on.
@@ -154,7 +154,7 @@ class DataRequirementCodeFilter(element.Element):
         js = super(DataRequirementCodeFilter, self).elementProperties()
         js.extend([
             ("code", "code", coding.Coding, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("path", "path", str, False, None, False),
             ("_path", "_path", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("searchParam", "searchParam", str, False, None, False),

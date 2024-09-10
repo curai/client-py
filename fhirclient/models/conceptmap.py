@@ -26,7 +26,7 @@ class ConceptMap(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -56,7 +56,7 @@ class ConceptMap(domainresource.DomainResource):
         """ Same source and target systems.
         List of `ConceptMapGroup` items (represented as `dict` in JSON). """
         self._group = None
-        """ Primitive extension for group. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for group. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Additional identifier for the concept map.
@@ -68,7 +68,7 @@ class ConceptMap(domainresource.DomainResource):
         """ Intended jurisdiction for concept map (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this concept map (computer friendly).
@@ -137,7 +137,7 @@ class ConceptMap(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the concept map.
@@ -151,7 +151,7 @@ class ConceptMap(domainresource.DomainResource):
         js = super(ConceptMap, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -161,11 +161,11 @@ class ConceptMap(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("group", "group", ConceptMapGroup, True, None, False),
-            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -187,7 +187,7 @@ class ConceptMap(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -216,7 +216,7 @@ class ConceptMapGroup(backboneelement.BackboneElement):
         """ Mappings for a concept from the source set.
         List of `ConceptMapGroupElement` items (represented as `dict` in JSON). """
         self._element = None
-        """ Primitive extension for element. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for element. List of `FHIRPrimitiveExtension` """
         
         self.source = None
         """ Source system where concepts to be mapped are defined.
@@ -254,7 +254,7 @@ class ConceptMapGroup(backboneelement.BackboneElement):
         js = super(ConceptMapGroup, self).elementProperties()
         js.extend([
             ("element", "element", ConceptMapGroupElement, True, None, True),
-            ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("source", "source", str, False, None, False),
             ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sourceVersion", "sourceVersion", str, False, None, False),
@@ -302,7 +302,7 @@ class ConceptMapGroupElement(backboneelement.BackboneElement):
         """ Concept in target system for element.
         List of `ConceptMapGroupElementTarget` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(ConceptMapGroupElement, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -314,7 +314,7 @@ class ConceptMapGroupElement(backboneelement.BackboneElement):
             ("display", "display", str, False, None, False),
             ("_display", "_display", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("target", "target", ConceptMapGroupElementTarget, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -351,7 +351,7 @@ class ConceptMapGroupElementTarget(backboneelement.BackboneElement):
         """ Other elements required for this mapping (from context).
         List of `ConceptMapGroupElementTargetDependsOn` items (represented as `dict` in JSON). """
         self._dependsOn = None
-        """ Primitive extension for dependsOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dependsOn. List of `FHIRPrimitiveExtension` """
         
         self.display = None
         """ Display for the code.
@@ -370,7 +370,7 @@ class ConceptMapGroupElementTarget(backboneelement.BackboneElement):
         """ Other concepts that this mapping also produces.
         List of `ConceptMapGroupElementTargetDependsOn` items (represented as `dict` in JSON). """
         self._product = None
-        """ Primitive extension for product. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for product. List of `FHIRPrimitiveExtension` """
         
         super(ConceptMapGroupElementTarget, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -382,13 +382,13 @@ class ConceptMapGroupElementTarget(backboneelement.BackboneElement):
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("dependsOn", "dependsOn", ConceptMapGroupElementTargetDependsOn, True, None, False),
-            ("_dependsOn", "_dependsOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dependsOn", "_dependsOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("display", "display", str, False, None, False),
             ("_display", "_display", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("equivalence", "equivalence", str, False, None, True),
             ("_equivalence", "_equivalence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("product", "product", ConceptMapGroupElementTargetDependsOn, True, None, False),
-            ("_product", "_product", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_product", "_product", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -33,7 +33,7 @@ class Practitioner(domainresource.DomainResource):
         (typically home address).
         List of `Address` items (represented as `dict` in JSON). """
         self._address = None
-        """ Primitive extension for address. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for address. List of `FHIRPrimitiveExtension` """
         
         self.birthDate = None
         """ The date  on which the practitioner was born.
@@ -45,7 +45,7 @@ class Practitioner(domainresource.DomainResource):
         """ A language the practitioner can use in patient communication.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._communication = None
-        """ Primitive extension for communication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for communication. List of `FHIRPrimitiveExtension` """
         
         self.gender = None
         """ male | female | other | unknown.
@@ -57,32 +57,32 @@ class Practitioner(domainresource.DomainResource):
         """ An identifier for the person as this agent.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ The name(s) associated with the practitioner.
         List of `HumanName` items (represented as `dict` in JSON). """
         self._name = None
-        """ Primitive extension for name. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for name. List of `FHIRPrimitiveExtension` """
         
         self.photo = None
         """ Image of the person.
         List of `Attachment` items (represented as `dict` in JSON). """
         self._photo = None
-        """ Primitive extension for photo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for photo. List of `FHIRPrimitiveExtension` """
         
         self.qualification = None
         """ Certification, licenses, or training pertaining to the provision of
         care.
         List of `PractitionerQualification` items (represented as `dict` in JSON). """
         self._qualification = None
-        """ Primitive extension for qualification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for qualification. List of `FHIRPrimitiveExtension` """
         
         self.telecom = None
         """ A contact detail for the practitioner (that apply to all roles).
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(Practitioner, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -92,23 +92,23 @@ class Practitioner(domainresource.DomainResource):
             ("active", "active", bool, False, None, False),
             ("_active", "_active", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("address", "address", address.Address, True, None, False),
-            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("birthDate", "birthDate", fhirdate.FHIRDate, False, None, False),
             ("_birthDate", "_birthDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("communication", "communication", codeableconcept.CodeableConcept, True, None, False),
-            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("gender", "gender", str, False, None, False),
             ("_gender", "_gender", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", humanname.HumanName, True, None, False),
-            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("photo", "photo", attachment.Attachment, True, None, False),
-            ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("qualification", "qualification", PractitionerQualification, True, None, False),
-            ("_qualification", "_qualification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_qualification", "_qualification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -144,7 +144,7 @@ class PractitionerQualification(backboneelement.BackboneElement):
         """ An identifier for this qualification for the practitioner.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.issuer = None
         """ Organization that regulates and issues the qualification.
@@ -166,7 +166,7 @@ class PractitionerQualification(backboneelement.BackboneElement):
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("issuer", "issuer", fhirreference.FHIRReference, False, None, False),
             ("_issuer", "_issuer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),

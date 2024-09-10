@@ -24,7 +24,7 @@ class SupplyDelivery(domainresource.DomainResource):
         """ Fulfills plan, proposal or order.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.destination = None
         """ Where the Supply was sent.
@@ -36,7 +36,7 @@ class SupplyDelivery(domainresource.DomainResource):
         """ External identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ When event occurred.
@@ -60,7 +60,7 @@ class SupplyDelivery(domainresource.DomainResource):
         """ Part of referenced event.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Patient for whom the item is supplied.
@@ -72,7 +72,7 @@ class SupplyDelivery(domainresource.DomainResource):
         """ Who collected the Supply.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._receiver = None
-        """ Primitive extension for receiver. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for receiver. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ in-progress | completed | abandoned | entered-in-error.
@@ -104,11 +104,11 @@ class SupplyDelivery(domainresource.DomainResource):
         js = super(SupplyDelivery, self).elementProperties()
         js.extend([
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("destination", "destination", fhirreference.FHIRReference, False, None, False),
             ("_destination", "_destination", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrencePeriod", "occurrencePeriod", period.Period, False, "occurrence", False),
@@ -116,11 +116,11 @@ class SupplyDelivery(domainresource.DomainResource):
             ("occurrenceTiming", "occurrenceTiming", timing.Timing, False, "occurrence", False),
             ("_occurrenceTiming", "_occurrenceTiming", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, False),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("receiver", "receiver", fhirreference.FHIRReference, True, None, False),
-            ("_receiver", "_receiver", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_receiver", "_receiver", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("suppliedItem", "suppliedItem", SupplyDeliverySuppliedItem, False, None, False),

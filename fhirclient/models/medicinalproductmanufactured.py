@@ -22,7 +22,7 @@ class MedicinalProductManufactured(domainresource.DomainResource):
         """ Ingredient.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._ingredient = None
-        """ Primitive extension for ingredient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for ingredient. List of `FHIRPrimitiveExtension` """
         
         self.manufacturedDoseForm = None
         """ Dose form as manufactured and before any transformation into the
@@ -36,13 +36,13 @@ class MedicinalProductManufactured(domainresource.DomainResource):
         "manufacturer" but it currently causes technical issues).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._manufacturer = None
-        """ Primitive extension for manufacturer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturer. List of `FHIRPrimitiveExtension` """
         
         self.otherCharacteristics = None
         """ Other codeable characteristics.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._otherCharacteristics = None
-        """ Primitive extension for otherCharacteristics. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for otherCharacteristics. List of `FHIRPrimitiveExtension` """
         
         self.physicalCharacteristics = None
         """ Dimensions, color etc..
@@ -69,13 +69,13 @@ class MedicinalProductManufactured(domainresource.DomainResource):
         js = super(MedicinalProductManufactured, self).elementProperties()
         js.extend([
             ("ingredient", "ingredient", fhirreference.FHIRReference, True, None, False),
-            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("manufacturedDoseForm", "manufacturedDoseForm", codeableconcept.CodeableConcept, False, None, True),
             ("_manufacturedDoseForm", "_manufacturedDoseForm", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, True, None, False),
-            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("otherCharacteristics", "otherCharacteristics", codeableconcept.CodeableConcept, True, None, False),
-            ("_otherCharacteristics", "_otherCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_otherCharacteristics", "_otherCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("physicalCharacteristics", "physicalCharacteristics", prodcharacteristic.ProdCharacteristic, False, None, False),
             ("_physicalCharacteristics", "_physicalCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, True),

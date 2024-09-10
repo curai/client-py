@@ -34,19 +34,19 @@ class DocumentReference(domainresource.DomainResource):
         """ Who and/or what authored the document.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Categorization of document.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.content = None
         """ Document referenced.
         List of `DocumentReferenceContent` items (represented as `dict` in JSON). """
         self._content = None
-        """ Primitive extension for content. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for content. List of `FHIRPrimitiveExtension` """
         
         self.context = None
         """ Clinical context of document.
@@ -82,7 +82,7 @@ class DocumentReference(domainresource.DomainResource):
         """ Other identifiers for the document.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.masterIdentifier = None
         """ Master Version Specific Identifier.
@@ -94,13 +94,13 @@ class DocumentReference(domainresource.DomainResource):
         """ Relationships to other documents.
         List of `DocumentReferenceRelatesTo` items (represented as `dict` in JSON). """
         self._relatesTo = None
-        """ Primitive extension for relatesTo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatesTo. List of `FHIRPrimitiveExtension` """
         
         self.securityLabel = None
         """ Document security-tags.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._securityLabel = None
-        """ Primitive extension for securityLabel. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabel. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ current | superseded | entered-in-error.
@@ -128,11 +128,11 @@ class DocumentReference(domainresource.DomainResource):
             ("authenticator", "authenticator", fhirreference.FHIRReference, False, None, False),
             ("_authenticator", "_authenticator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", fhirreference.FHIRReference, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("content", "content", DocumentReferenceContent, True, None, True),
-            ("_content", "_content", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_content", "_content", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("context", "context", DocumentReferenceContext, False, None, False),
             ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("custodian", "custodian", fhirreference.FHIRReference, False, None, False),
@@ -144,13 +144,13 @@ class DocumentReference(domainresource.DomainResource):
             ("docStatus", "docStatus", str, False, None, False),
             ("_docStatus", "_docStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("masterIdentifier", "masterIdentifier", identifier.Identifier, False, None, False),
             ("_masterIdentifier", "_masterIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatesTo", "relatesTo", DocumentReferenceRelatesTo, True, None, False),
-            ("_relatesTo", "_relatesTo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatesTo", "_relatesTo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("securityLabel", "securityLabel", codeableconcept.CodeableConcept, True, None, False),
-            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),
@@ -225,13 +225,13 @@ class DocumentReferenceContext(backboneelement.BackboneElement):
         """ Context of the document  content.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._encounter = None
-        """ Primitive extension for encounter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for encounter. List of `FHIRPrimitiveExtension` """
         
         self.event = None
         """ Main clinical acts documented.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._event = None
-        """ Primitive extension for event. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for event. List of `FHIRPrimitiveExtension` """
         
         self.facilityType = None
         """ Kind of facility where patient was seen.
@@ -256,7 +256,7 @@ class DocumentReferenceContext(backboneelement.BackboneElement):
         """ Related identifiers or resources.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._related = None
-        """ Primitive extension for related. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for related. List of `FHIRPrimitiveExtension` """
         
         self.sourcePatientInfo = None
         """ Patient demographics from source.
@@ -270,9 +270,9 @@ class DocumentReferenceContext(backboneelement.BackboneElement):
         js = super(DocumentReferenceContext, self).elementProperties()
         js.extend([
             ("encounter", "encounter", fhirreference.FHIRReference, True, None, False),
-            ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("event", "event", codeableconcept.CodeableConcept, True, None, False),
-            ("_event", "_event", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_event", "_event", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("facilityType", "facilityType", codeableconcept.CodeableConcept, False, None, False),
             ("_facilityType", "_facilityType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),
@@ -280,7 +280,7 @@ class DocumentReferenceContext(backboneelement.BackboneElement):
             ("practiceSetting", "practiceSetting", codeableconcept.CodeableConcept, False, None, False),
             ("_practiceSetting", "_practiceSetting", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("related", "related", fhirreference.FHIRReference, True, None, False),
-            ("_related", "_related", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_related", "_related", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sourcePatientInfo", "sourcePatientInfo", fhirreference.FHIRReference, False, None, False),
             ("_sourcePatientInfo", "_sourcePatientInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

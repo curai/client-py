@@ -52,7 +52,7 @@ class Signature(element.Element):
         """ Indication of the reason the entity signed the object(s).
         List of `Coding` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         self.when = None
         """ When the signature was created.
@@ -80,7 +80,7 @@ class Signature(element.Element):
             ("targetFormat", "targetFormat", str, False, None, False),
             ("_targetFormat", "_targetFormat", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", coding.Coding, True, None, True),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("when", "when", fhirinstant.FHIRInstant, False, None, True),
             ("_when", "_when", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("who", "who", fhirreference.FHIRReference, False, None, True),

@@ -31,7 +31,7 @@ class CompartmentDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ Date last changed.
@@ -73,7 +73,7 @@ class CompartmentDefinition(domainresource.DomainResource):
         """ How a resource is related to the compartment.
         List of `CompartmentDefinitionResource` items (represented as `dict` in JSON). """
         self._resource = None
-        """ Primitive extension for resource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resource. List of `FHIRPrimitiveExtension` """
         
         self.search = None
         """ Whether the search syntax is supported.
@@ -98,7 +98,7 @@ class CompartmentDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the compartment definition.
@@ -114,7 +114,7 @@ class CompartmentDefinition(domainresource.DomainResource):
             ("code", "code", str, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -128,7 +128,7 @@ class CompartmentDefinition(domainresource.DomainResource):
             ("purpose", "purpose", str, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("resource", "resource", CompartmentDefinitionResource, True, None, False),
-            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("search", "search", bool, False, None, True),
             ("_search", "_search", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
@@ -136,7 +136,7 @@ class CompartmentDefinition(domainresource.DomainResource):
             ("url", "url", str, False, None, True),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -177,7 +177,7 @@ class CompartmentDefinitionResource(backboneelement.BackboneElement):
         """ Search Parameter Name, or chained parameters.
         List of `str` items. """
         self._param = None
-        """ Primitive extension for param. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for param. List of `FHIRPrimitiveExtension` """
         
         super(CompartmentDefinitionResource, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -189,7 +189,7 @@ class CompartmentDefinitionResource(backboneelement.BackboneElement):
             ("documentation", "documentation", str, False, None, False),
             ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("param", "param", str, True, None, False),
-            ("_param", "_param", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_param", "_param", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

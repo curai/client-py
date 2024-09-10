@@ -29,7 +29,7 @@ class ChargeItemDefinition(domainresource.DomainResource):
         """ Whether or not the billing code is applicable.
         List of `ChargeItemDefinitionApplicability` items (represented as `dict` in JSON). """
         self._applicability = None
-        """ Primitive extension for applicability. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for applicability. List of `FHIRPrimitiveExtension` """
         
         self.approvalDate = None
         """ When the charge item definition was approved by publisher.
@@ -47,7 +47,7 @@ class ChargeItemDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -65,7 +65,7 @@ class ChargeItemDefinition(domainresource.DomainResource):
         """ Underlying externally-defined charge item definition.
         List of `str` items. """
         self._derivedFromUri = None
-        """ Primitive extension for derivedFromUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for derivedFromUri. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Natural language description of the charge item definition.
@@ -89,19 +89,19 @@ class ChargeItemDefinition(domainresource.DomainResource):
         """ Additional identifier for the charge item definition.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instance = None
         """ Instances this definition applies to.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._instance = None
-        """ Primitive extension for instance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instance. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for charge item definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the charge item definition was last reviewed.
@@ -114,13 +114,13 @@ class ChargeItemDefinition(domainresource.DomainResource):
         component or step.
         List of `str` items. """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.propertyGroup = None
         """ Group of properties which are applicable under the same conditions.
         List of `ChargeItemDefinitionPropertyGroup` items (represented as `dict` in JSON). """
         self._propertyGroup = None
-        """ Primitive extension for propertyGroup. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for propertyGroup. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -133,7 +133,7 @@ class ChargeItemDefinition(domainresource.DomainResource):
         new request.
         List of `str` items. """
         self._replaces = None
-        """ Primitive extension for replaces. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for replaces. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -158,7 +158,7 @@ class ChargeItemDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the charge item definition.
@@ -172,19 +172,19 @@ class ChargeItemDefinition(domainresource.DomainResource):
         js = super(ChargeItemDefinition, self).elementProperties()
         js.extend([
             ("applicability", "applicability", ChargeItemDefinitionApplicability, True, None, False),
-            ("_applicability", "_applicability", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_applicability", "_applicability", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("derivedFromUri", "derivedFromUri", str, True, None, False),
-            ("_derivedFromUri", "_derivedFromUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_derivedFromUri", "_derivedFromUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
@@ -192,21 +192,21 @@ class ChargeItemDefinition(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instance", "instance", fhirreference.FHIRReference, True, None, False),
-            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", str, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("propertyGroup", "propertyGroup", ChargeItemDefinitionPropertyGroup, True, None, False),
-            ("_propertyGroup", "_propertyGroup", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_propertyGroup", "_propertyGroup", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("replaces", "replaces", str, True, None, False),
-            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("title", "title", str, False, None, False),
@@ -214,7 +214,7 @@ class ChargeItemDefinition(domainresource.DomainResource):
             ("url", "url", str, False, None, True),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -294,13 +294,13 @@ class ChargeItemDefinitionPropertyGroup(backboneelement.BackboneElement):
         """ Conditions under which the priceComponent is applicable.
         List of `ChargeItemDefinitionApplicability` items (represented as `dict` in JSON). """
         self._applicability = None
-        """ Primitive extension for applicability. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for applicability. List of `FHIRPrimitiveExtension` """
         
         self.priceComponent = None
         """ Components of total line item price.
         List of `ChargeItemDefinitionPropertyGroupPriceComponent` items (represented as `dict` in JSON). """
         self._priceComponent = None
-        """ Primitive extension for priceComponent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for priceComponent. List of `FHIRPrimitiveExtension` """
         
         super(ChargeItemDefinitionPropertyGroup, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -308,9 +308,9 @@ class ChargeItemDefinitionPropertyGroup(backboneelement.BackboneElement):
         js = super(ChargeItemDefinitionPropertyGroup, self).elementProperties()
         js.extend([
             ("applicability", "applicability", ChargeItemDefinitionApplicability, True, None, False),
-            ("_applicability", "_applicability", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_applicability", "_applicability", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priceComponent", "priceComponent", ChargeItemDefinitionPropertyGroupPriceComponent, True, None, False),
-            ("_priceComponent", "_priceComponent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_priceComponent", "_priceComponent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -49,7 +49,7 @@ class SupplyRequest(domainresource.DomainResource):
         """ Business Identifier for SupplyRequest.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.itemCodeableConcept = None
         """ Medication, Substance, or Device requested to be supplied.
@@ -85,7 +85,7 @@ class SupplyRequest(domainresource.DomainResource):
         """ Ordered item details.
         List of `SupplyRequestParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -103,13 +103,13 @@ class SupplyRequest(domainresource.DomainResource):
         """ The reason why the supply item was requested.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ The reason why the supply item was requested.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.requester = None
         """ Individual making the request.
@@ -127,7 +127,7 @@ class SupplyRequest(domainresource.DomainResource):
         """ Who is intended to fulfill the request.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supplier = None
-        """ Primitive extension for supplier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supplier. List of `FHIRPrimitiveExtension` """
         
         super(SupplyRequest, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -143,7 +143,7 @@ class SupplyRequest(domainresource.DomainResource):
             ("deliverTo", "deliverTo", fhirreference.FHIRReference, False, None, False),
             ("_deliverTo", "_deliverTo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("itemCodeableConcept", "itemCodeableConcept", codeableconcept.CodeableConcept, False, "item", True),
             ("_itemCodeableConcept", "_itemCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("itemReference", "itemReference", fhirreference.FHIRReference, False, "item", True),
@@ -155,21 +155,21 @@ class SupplyRequest(domainresource.DomainResource):
             ("occurrenceTiming", "occurrenceTiming", timing.Timing, False, "occurrence", False),
             ("_occurrenceTiming", "_occurrenceTiming", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameter", "parameter", SupplyRequestParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, True),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requester", "requester", fhirreference.FHIRReference, False, None, False),
             ("_requester", "_requester", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supplier", "supplier", fhirreference.FHIRReference, True, None, False),
-            ("_supplier", "_supplier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supplier", "_supplier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

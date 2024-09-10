@@ -32,7 +32,7 @@ class ObservationDefinition(domainresource.DomainResource):
         """ Category of observation.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Type of observation (code / type).
@@ -51,7 +51,7 @@ class ObservationDefinition(domainresource.DomainResource):
         """ Business identifier for this ObservationDefinition instance.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.method = None
         """ Method used to produce the observation.
@@ -77,7 +77,7 @@ class ObservationDefinition(domainresource.DomainResource):
         Ratio | SampledData | time | dateTime | Period.
         List of `str` items. """
         self._permittedDataType = None
-        """ Primitive extension for permittedDataType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for permittedDataType. List of `FHIRPrimitiveExtension` """
         
         self.preferredReportName = None
         """ Preferred report name.
@@ -89,7 +89,7 @@ class ObservationDefinition(domainresource.DomainResource):
         """ Qualified range for continuous and ordinal observation results.
         List of `ObservationDefinitionQualifiedInterval` items (represented as `dict` in JSON). """
         self._qualifiedInterval = None
-        """ Primitive extension for qualifiedInterval. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for qualifiedInterval. List of `FHIRPrimitiveExtension` """
         
         self.quantitativeDetails = None
         """ Characteristics of quantitative results.
@@ -112,13 +112,13 @@ class ObservationDefinition(domainresource.DomainResource):
             ("abnormalCodedValueSet", "abnormalCodedValueSet", fhirreference.FHIRReference, False, None, False),
             ("_abnormalCodedValueSet", "_abnormalCodedValueSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("criticalCodedValueSet", "criticalCodedValueSet", fhirreference.FHIRReference, False, None, False),
             ("_criticalCodedValueSet", "_criticalCodedValueSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("method", "method", codeableconcept.CodeableConcept, False, None, False),
             ("_method", "_method", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("multipleResultsAllowed", "multipleResultsAllowed", bool, False, None, False),
@@ -126,11 +126,11 @@ class ObservationDefinition(domainresource.DomainResource):
             ("normalCodedValueSet", "normalCodedValueSet", fhirreference.FHIRReference, False, None, False),
             ("_normalCodedValueSet", "_normalCodedValueSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("permittedDataType", "permittedDataType", str, True, None, False),
-            ("_permittedDataType", "_permittedDataType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_permittedDataType", "_permittedDataType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("preferredReportName", "preferredReportName", str, False, None, False),
             ("_preferredReportName", "_preferredReportName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("qualifiedInterval", "qualifiedInterval", ObservationDefinitionQualifiedInterval, True, None, False),
-            ("_qualifiedInterval", "_qualifiedInterval", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_qualifiedInterval", "_qualifiedInterval", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantitativeDetails", "quantitativeDetails", ObservationDefinitionQuantitativeDetails, False, None, False),
             ("_quantitativeDetails", "_quantitativeDetails", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("validCodedValueSet", "validCodedValueSet", fhirreference.FHIRReference, False, None, False),
@@ -168,7 +168,7 @@ class ObservationDefinitionQualifiedInterval(backboneelement.BackboneElement):
         """ Targetted population of the range.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._appliesTo = None
-        """ Primitive extension for appliesTo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for appliesTo. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ reference | critical | absolute.
@@ -214,7 +214,7 @@ class ObservationDefinitionQualifiedInterval(backboneelement.BackboneElement):
             ("age", "age", range.Range, False, None, False),
             ("_age", "_age", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("appliesTo", "appliesTo", codeableconcept.CodeableConcept, True, None, False),
-            ("_appliesTo", "_appliesTo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_appliesTo", "_appliesTo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", str, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("condition", "condition", str, False, None, False),

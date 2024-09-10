@@ -31,7 +31,7 @@ class TriggerDefinition(element.Element):
         """ Triggering data of the event (multiple = 'and').
         List of `DataRequirement` items (represented as `dict` in JSON). """
         self._data = None
-        """ Primitive extension for data. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for data. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name or URI that identifies the event.
@@ -78,7 +78,7 @@ class TriggerDefinition(element.Element):
             ("condition", "condition", expression.Expression, False, None, False),
             ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("data", "data", datarequirement.DataRequirement, True, None, False),
-            ("_data", "_data", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_data", "_data", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("timingDate", "timingDate", fhirdate.FHIRDate, False, "timing", False),

@@ -41,7 +41,7 @@ class ProductShelfLife(backboneelement.BackboneElement):
         controlled term identifier shall be specified.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialPrecautionsForStorage = None
-        """ Primitive extension for specialPrecautionsForStorage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialPrecautionsForStorage. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ This describes the shelf life, taking into account various
@@ -65,7 +65,7 @@ class ProductShelfLife(backboneelement.BackboneElement):
             ("period", "period", quantity.Quantity, False, None, True),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("specialPrecautionsForStorage", "specialPrecautionsForStorage", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialPrecautionsForStorage", "_specialPrecautionsForStorage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialPrecautionsForStorage", "_specialPrecautionsForStorage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

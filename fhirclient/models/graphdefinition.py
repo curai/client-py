@@ -26,7 +26,7 @@ class GraphDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ Date last changed.
@@ -50,13 +50,13 @@ class GraphDefinition(domainresource.DomainResource):
         """ Intended jurisdiction for graph definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.link = None
         """ Links this graph makes rules about.
         List of `GraphDefinitionLink` items (represented as `dict` in JSON). """
         self._link = None
-        """ Primitive extension for link. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for link. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this graph definition (computer friendly).
@@ -105,7 +105,7 @@ class GraphDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the graph definition.
@@ -119,7 +119,7 @@ class GraphDefinition(domainresource.DomainResource):
         js = super(GraphDefinition, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -127,9 +127,9 @@ class GraphDefinition(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("link", "link", GraphDefinitionLink, True, None, False),
-            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("profile", "profile", str, False, None, False),
@@ -145,7 +145,7 @@ class GraphDefinition(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -202,7 +202,7 @@ class GraphDefinitionLink(backboneelement.BackboneElement):
         """ Potential target for the link.
         List of `GraphDefinitionLinkTarget` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(GraphDefinitionLink, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -220,7 +220,7 @@ class GraphDefinitionLink(backboneelement.BackboneElement):
             ("sliceName", "sliceName", str, False, None, False),
             ("_sliceName", "_sliceName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("target", "target", GraphDefinitionLinkTarget, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -243,13 +243,13 @@ class GraphDefinitionLinkTarget(backboneelement.BackboneElement):
         """ Compartment Consistency Rules.
         List of `GraphDefinitionLinkTargetCompartment` items (represented as `dict` in JSON). """
         self._compartment = None
-        """ Primitive extension for compartment. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for compartment. List of `FHIRPrimitiveExtension` """
         
         self.link = None
         """ Additional links from target resource.
         List of `GraphDefinitionLink` items (represented as `dict` in JSON). """
         self._link = None
-        """ Primitive extension for link. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for link. List of `FHIRPrimitiveExtension` """
         
         self.params = None
         """ Criteria for reverse lookup.
@@ -275,9 +275,9 @@ class GraphDefinitionLinkTarget(backboneelement.BackboneElement):
         js = super(GraphDefinitionLinkTarget, self).elementProperties()
         js.extend([
             ("compartment", "compartment", GraphDefinitionLinkTargetCompartment, True, None, False),
-            ("_compartment", "_compartment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_compartment", "_compartment", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("link", "link", GraphDefinitionLink, True, None, False),
-            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("params", "params", str, False, None, False),
             ("_params", "_params", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("profile", "profile", str, False, None, False),

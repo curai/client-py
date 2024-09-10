@@ -32,19 +32,19 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Insurer added line items.
         List of `ExplanationOfBenefitAddItem` items (represented as `dict` in JSON). """
         self._addItem = None
-        """ Primitive extension for addItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for addItem. List of `FHIRPrimitiveExtension` """
         
         self.adjudication = None
         """ Header-level adjudication.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.benefitBalance = None
         """ Balance by Benefit Category.
         List of `ExplanationOfBenefitBenefitBalance` items (represented as `dict` in JSON). """
         self._benefitBalance = None
-        """ Primitive extension for benefitBalance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for benefitBalance. List of `FHIRPrimitiveExtension` """
         
         self.benefitPeriod = None
         """ When the benefits are applicable.
@@ -62,7 +62,7 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Care Team members.
         List of `ExplanationOfBenefitCareTeam` items (represented as `dict` in JSON). """
         self._careTeam = None
-        """ Primitive extension for careTeam. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for careTeam. List of `FHIRPrimitiveExtension` """
         
         self.claim = None
         """ Claim reference.
@@ -86,7 +86,7 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Pertinent diagnosis information.
         List of `ExplanationOfBenefitDiagnosis` items (represented as `dict` in JSON). """
         self._diagnosis = None
-        """ Primitive extension for diagnosis. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for diagnosis. List of `FHIRPrimitiveExtension` """
         
         self.disposition = None
         """ Disposition Message.
@@ -134,13 +134,13 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Business Identifier for the resource.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.insurance = None
         """ Patient insurance information.
         List of `ExplanationOfBenefitInsurance` items (represented as `dict` in JSON). """
         self._insurance = None
-        """ Primitive extension for insurance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for insurance. List of `FHIRPrimitiveExtension` """
         
         self.insurer = None
         """ Party responsible for reimbursement.
@@ -152,7 +152,7 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Product or service provided.
         List of `ExplanationOfBenefitItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.originalPrescription = None
         """ Original prescription if superceded by fulfiller.
@@ -188,13 +188,13 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Preauthorization reference.
         List of `str` items. """
         self._preAuthRef = None
-        """ Primitive extension for preAuthRef. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for preAuthRef. List of `FHIRPrimitiveExtension` """
         
         self.preAuthRefPeriod = None
         """ Preauthorization in-effect period.
         List of `Period` items (represented as `dict` in JSON). """
         self._preAuthRefPeriod = None
-        """ Primitive extension for preAuthRefPeriod. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for preAuthRefPeriod. List of `FHIRPrimitiveExtension` """
         
         self.precedence = None
         """ Precedence (primary, secondary, etc.).
@@ -218,13 +218,13 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Clinical procedures performed.
         List of `ExplanationOfBenefitProcedure` items (represented as `dict` in JSON). """
         self._procedure = None
-        """ Primitive extension for procedure. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for procedure. List of `FHIRPrimitiveExtension` """
         
         self.processNote = None
         """ Note concerning adjudication.
         List of `ExplanationOfBenefitProcessNote` items (represented as `dict` in JSON). """
         self._processNote = None
-        """ Primitive extension for processNote. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for processNote. List of `FHIRPrimitiveExtension` """
         
         self.provider = None
         """ Party responsible for the claim.
@@ -242,7 +242,7 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Prior or corollary claims.
         List of `ExplanationOfBenefitRelated` items (represented as `dict` in JSON). """
         self._related = None
-        """ Primitive extension for related. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for related. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ active | cancelled | draft | entered-in-error.
@@ -260,13 +260,13 @@ class ExplanationOfBenefit(domainresource.DomainResource):
         """ Supporting information.
         List of `ExplanationOfBenefitSupportingInfo` items (represented as `dict` in JSON). """
         self._supportingInfo = None
-        """ Primitive extension for supportingInfo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfo. List of `FHIRPrimitiveExtension` """
         
         self.total = None
         """ Adjudication totals.
         List of `ExplanationOfBenefitTotal` items (represented as `dict` in JSON). """
         self._total = None
-        """ Primitive extension for total. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for total. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Category or discipline.
@@ -288,17 +288,17 @@ class ExplanationOfBenefit(domainresource.DomainResource):
             ("accident", "accident", ExplanationOfBenefitAccident, False, None, False),
             ("_accident", "_accident", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("addItem", "addItem", ExplanationOfBenefitAddItem, True, None, False),
-            ("_addItem", "_addItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_addItem", "_addItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("benefitBalance", "benefitBalance", ExplanationOfBenefitBenefitBalance, True, None, False),
-            ("_benefitBalance", "_benefitBalance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_benefitBalance", "_benefitBalance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("benefitPeriod", "benefitPeriod", period.Period, False, None, False),
             ("_benefitPeriod", "_benefitPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("billablePeriod", "billablePeriod", period.Period, False, None, False),
             ("_billablePeriod", "_billablePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("careTeam", "careTeam", ExplanationOfBenefitCareTeam, True, None, False),
-            ("_careTeam", "_careTeam", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_careTeam", "_careTeam", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("claim", "claim", fhirreference.FHIRReference, False, None, False),
             ("_claim", "_claim", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("claimResponse", "claimResponse", fhirreference.FHIRReference, False, None, False),
@@ -306,7 +306,7 @@ class ExplanationOfBenefit(domainresource.DomainResource):
             ("created", "created", fhirdatetime.FHIRDateTime, False, None, True),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("diagnosis", "diagnosis", ExplanationOfBenefitDiagnosis, True, None, False),
-            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("disposition", "disposition", str, False, None, False),
             ("_disposition", "_disposition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("enterer", "enterer", fhirreference.FHIRReference, False, None, False),
@@ -322,13 +322,13 @@ class ExplanationOfBenefit(domainresource.DomainResource):
             ("fundsReserveRequested", "fundsReserveRequested", codeableconcept.CodeableConcept, False, None, False),
             ("_fundsReserveRequested", "_fundsReserveRequested", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurance", "insurance", ExplanationOfBenefitInsurance, True, None, True),
-            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurer", "insurer", fhirreference.FHIRReference, False, None, True),
             ("_insurer", "_insurer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", ExplanationOfBenefitItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("originalPrescription", "originalPrescription", fhirreference.FHIRReference, False, None, False),
             ("_originalPrescription", "_originalPrescription", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("outcome", "outcome", str, False, None, True),
@@ -340,9 +340,9 @@ class ExplanationOfBenefit(domainresource.DomainResource):
             ("payment", "payment", ExplanationOfBenefitPayment, False, None, False),
             ("_payment", "_payment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("preAuthRef", "preAuthRef", str, True, None, False),
-            ("_preAuthRef", "_preAuthRef", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_preAuthRef", "_preAuthRef", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("preAuthRefPeriod", "preAuthRefPeriod", period.Period, True, None, False),
-            ("_preAuthRefPeriod", "_preAuthRefPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_preAuthRefPeriod", "_preAuthRefPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("precedence", "precedence", int, False, None, False),
             ("_precedence", "_precedence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prescription", "prescription", fhirreference.FHIRReference, False, None, False),
@@ -350,23 +350,23 @@ class ExplanationOfBenefit(domainresource.DomainResource):
             ("priority", "priority", codeableconcept.CodeableConcept, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("procedure", "procedure", ExplanationOfBenefitProcedure, True, None, False),
-            ("_procedure", "_procedure", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_procedure", "_procedure", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("processNote", "processNote", ExplanationOfBenefitProcessNote, True, None, False),
-            ("_processNote", "_processNote", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_processNote", "_processNote", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("provider", "provider", fhirreference.FHIRReference, False, None, True),
             ("_provider", "_provider", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referral", "referral", fhirreference.FHIRReference, False, None, False),
             ("_referral", "_referral", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("related", "related", ExplanationOfBenefitRelated, True, None, False),
-            ("_related", "_related", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_related", "_related", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subType", "subType", codeableconcept.CodeableConcept, False, None, False),
             ("_subType", "_subType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfo", "supportingInfo", ExplanationOfBenefitSupportingInfo, True, None, False),
-            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("total", "total", ExplanationOfBenefitTotal, True, None, False),
-            ("_total", "_total", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_total", "_total", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("use", "use", str, False, None, True),
@@ -456,7 +456,7 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Added items adjudication.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ Anatomical location.
@@ -468,13 +468,13 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Insurer added line items.
         List of `ExplanationOfBenefitAddItemDetail` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.detailSequence = None
         """ Detail sequence number.
         List of `int` items. """
         self._detailSequence = None
-        """ Primitive extension for detailSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detailSequence. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -486,7 +486,7 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Item sequence number.
         List of `int` items. """
         self._itemSequence = None
-        """ Primitive extension for itemSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for itemSequence. List of `FHIRPrimitiveExtension` """
         
         self.locationAddress = None
         """ Place of service or where product was supplied.
@@ -510,7 +510,7 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -522,7 +522,7 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -534,13 +534,13 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Program the product or service is provided under.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._programCode = None
-        """ Primitive extension for programCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for programCode. List of `FHIRPrimitiveExtension` """
         
         self.provider = None
         """ Authorized providers.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._provider = None
-        """ Primitive extension for provider. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for provider. List of `FHIRPrimitiveExtension` """
         
         self.quantity = None
         """ Count of products or services.
@@ -564,13 +564,13 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         """ Subdetail sequence number.
         List of `int` items. """
         self._subDetailSequence = None
-        """ Primitive extension for subDetailSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subDetailSequence. List of `FHIRPrimitiveExtension` """
         
         self.subSite = None
         """ Anatomical sub-location.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subSite = None
-        """ Primitive extension for subSite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subSite. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -584,17 +584,17 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
         js = super(ExplanationOfBenefitAddItem, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, False, None, False),
             ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detail", "detail", ExplanationOfBenefitAddItemDetail, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detailSequence", "detailSequence", int, True, None, False),
-            ("_detailSequence", "_detailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detailSequence", "_detailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("itemSequence", "itemSequence", int, True, None, False),
-            ("_itemSequence", "_itemSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_itemSequence", "_itemSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("locationAddress", "locationAddress", address.Address, False, "location", False),
             ("_locationAddress", "_locationAddress", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("locationCodeableConcept", "locationCodeableConcept", codeableconcept.CodeableConcept, False, "location", False),
@@ -602,17 +602,17 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
             ("locationReference", "locationReference", fhirreference.FHIRReference, False, "location", False),
             ("_locationReference", "_locationReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("programCode", "programCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("provider", "provider", fhirreference.FHIRReference, True, None, False),
-            ("_provider", "_provider", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_provider", "_provider", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("servicedDate", "servicedDate", fhirdate.FHIRDate, False, "serviced", False),
@@ -620,9 +620,9 @@ class ExplanationOfBenefitAddItem(backboneelement.BackboneElement):
             ("servicedPeriod", "servicedPeriod", period.Period, False, "serviced", False),
             ("_servicedPeriod", "_servicedPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subDetailSequence", "subDetailSequence", int, True, None, False),
-            ("_subDetailSequence", "_subDetailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subDetailSequence", "_subDetailSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subSite", "subSite", codeableconcept.CodeableConcept, True, None, False),
-            ("_subSite", "_subSite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subSite", "_subSite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -649,7 +649,7 @@ class ExplanationOfBenefitAddItemDetail(backboneelement.BackboneElement):
         """ Added items adjudication.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -661,7 +661,7 @@ class ExplanationOfBenefitAddItemDetail(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -673,7 +673,7 @@ class ExplanationOfBenefitAddItemDetail(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -691,7 +691,7 @@ class ExplanationOfBenefitAddItemDetail(backboneelement.BackboneElement):
         """ Insurer added line items.
         List of `ExplanationOfBenefitAddItemDetailSubDetail` items (represented as `dict` in JSON). """
         self._subDetail = None
-        """ Primitive extension for subDetail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subDetail. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -705,21 +705,21 @@ class ExplanationOfBenefitAddItemDetail(backboneelement.BackboneElement):
         js = super(ExplanationOfBenefitAddItemDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subDetail", "subDetail", ExplanationOfBenefitAddItemDetailSubDetail, True, None, False),
-            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -746,7 +746,7 @@ class ExplanationOfBenefitAddItemDetailSubDetail(backboneelement.BackboneElement
         """ Added items adjudication.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -758,7 +758,7 @@ class ExplanationOfBenefitAddItemDetailSubDetail(backboneelement.BackboneElement
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -770,7 +770,7 @@ class ExplanationOfBenefitAddItemDetailSubDetail(backboneelement.BackboneElement
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -796,15 +796,15 @@ class ExplanationOfBenefitAddItemDetailSubDetail(backboneelement.BackboneElement
         js = super(ExplanationOfBenefitAddItemDetailSubDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
@@ -851,7 +851,7 @@ class ExplanationOfBenefitBenefitBalance(backboneelement.BackboneElement):
         """ Benefit Summary.
         List of `ExplanationOfBenefitBenefitBalanceFinancial` items (represented as `dict` in JSON). """
         self._financial = None
-        """ Primitive extension for financial. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for financial. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Short name for the benefit.
@@ -889,7 +889,7 @@ class ExplanationOfBenefitBenefitBalance(backboneelement.BackboneElement):
             ("excluded", "excluded", bool, False, None, False),
             ("_excluded", "_excluded", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("financial", "financial", ExplanationOfBenefitBenefitBalanceFinancial, True, None, False),
-            ("_financial", "_financial", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_financial", "_financial", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("network", "network", codeableconcept.CodeableConcept, False, None, False),
@@ -1090,7 +1090,7 @@ class ExplanationOfBenefitDiagnosis(backboneelement.BackboneElement):
         """ Timing or nature of the diagnosis.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(ExplanationOfBenefitDiagnosis, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -1108,7 +1108,7 @@ class ExplanationOfBenefitDiagnosis(backboneelement.BackboneElement):
             ("sequence", "sequence", int, False, None, True),
             ("_sequence", "_sequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -1146,7 +1146,7 @@ class ExplanationOfBenefitInsurance(backboneelement.BackboneElement):
         """ Prior authorization reference number.
         List of `str` items. """
         self._preAuthRef = None
-        """ Primitive extension for preAuthRef. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for preAuthRef. List of `FHIRPrimitiveExtension` """
         
         super(ExplanationOfBenefitInsurance, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -1158,7 +1158,7 @@ class ExplanationOfBenefitInsurance(backboneelement.BackboneElement):
             ("focal", "focal", bool, False, None, True),
             ("_focal", "_focal", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("preAuthRef", "preAuthRef", str, True, None, False),
-            ("_preAuthRef", "_preAuthRef", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_preAuthRef", "_preAuthRef", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -1184,7 +1184,7 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Adjudication details.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ Anatomical location.
@@ -1196,7 +1196,7 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Applicable care team members.
         List of `int` items. """
         self._careTeamSequence = None
-        """ Primitive extension for careTeamSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for careTeamSequence. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Benefit classification.
@@ -1208,19 +1208,19 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Additional items.
         List of `ExplanationOfBenefitItemDetail` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.diagnosisSequence = None
         """ Applicable diagnoses.
         List of `int` items. """
         self._diagnosisSequence = None
-        """ Primitive extension for diagnosisSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for diagnosisSequence. List of `FHIRPrimitiveExtension` """
         
         self.encounter = None
         """ Encounters related to this billed item.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._encounter = None
-        """ Primitive extension for encounter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for encounter. List of `FHIRPrimitiveExtension` """
         
         self.factor = None
         """ Price scaling factor.
@@ -1232,7 +1232,7 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Applicable exception and supporting information.
         List of `int` items. """
         self._informationSequence = None
-        """ Primitive extension for informationSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for informationSequence. List of `FHIRPrimitiveExtension` """
         
         self.locationAddress = None
         """ Place of service or where product was supplied.
@@ -1256,7 +1256,7 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Product or service billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -1268,13 +1268,13 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.procedureSequence = None
         """ Applicable procedures.
         List of `int` items. """
         self._procedureSequence = None
-        """ Primitive extension for procedureSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for procedureSequence. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -1286,7 +1286,7 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Program the product or service is provided under.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._programCode = None
-        """ Primitive extension for programCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for programCode. List of `FHIRPrimitiveExtension` """
         
         self.quantity = None
         """ Count of products or services.
@@ -1322,13 +1322,13 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         """ Anatomical sub-location.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subSite = None
-        """ Primitive extension for subSite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subSite. List of `FHIRPrimitiveExtension` """
         
         self.udi = None
         """ Unique device identifier.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._udi = None
-        """ Primitive extension for udi. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for udi. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -1342,23 +1342,23 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
         js = super(ExplanationOfBenefitItem, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, False, None, False),
             ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("careTeamSequence", "careTeamSequence", int, True, None, False),
-            ("_careTeamSequence", "_careTeamSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_careTeamSequence", "_careTeamSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detail", "detail", ExplanationOfBenefitItemDetail, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("diagnosisSequence", "diagnosisSequence", int, True, None, False),
-            ("_diagnosisSequence", "_diagnosisSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_diagnosisSequence", "_diagnosisSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, True, None, False),
-            ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("informationSequence", "informationSequence", int, True, None, False),
-            ("_informationSequence", "_informationSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_informationSequence", "_informationSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("locationAddress", "locationAddress", address.Address, False, "location", False),
             ("_locationAddress", "_locationAddress", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("locationCodeableConcept", "locationCodeableConcept", codeableconcept.CodeableConcept, False, "location", False),
@@ -1366,17 +1366,17 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
             ("locationReference", "locationReference", fhirreference.FHIRReference, False, "location", False),
             ("_locationReference", "_locationReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("procedureSequence", "procedureSequence", int, True, None, False),
-            ("_procedureSequence", "_procedureSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_procedureSequence", "_procedureSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("programCode", "programCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("revenue", "revenue", codeableconcept.CodeableConcept, False, None, False),
@@ -1388,9 +1388,9 @@ class ExplanationOfBenefitItem(backboneelement.BackboneElement):
             ("servicedPeriod", "servicedPeriod", period.Period, False, "serviced", False),
             ("_servicedPeriod", "_servicedPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subSite", "subSite", codeableconcept.CodeableConcept, True, None, False),
-            ("_subSite", "_subSite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subSite", "_subSite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("udi", "udi", fhirreference.FHIRReference, True, None, False),
-            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -1476,7 +1476,7 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
         """ Detail level adjudication details.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Benefit classification.
@@ -1494,7 +1494,7 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -1506,7 +1506,7 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -1518,7 +1518,7 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
         """ Program the product or service is provided under.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._programCode = None
-        """ Primitive extension for programCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for programCode. List of `FHIRPrimitiveExtension` """
         
         self.quantity = None
         """ Count of products or services.
@@ -1542,13 +1542,13 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
         """ Additional items.
         List of `ExplanationOfBenefitItemDetailSubDetail` items (represented as `dict` in JSON). """
         self._subDetail = None
-        """ Primitive extension for subDetail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subDetail. List of `FHIRPrimitiveExtension` """
         
         self.udi = None
         """ Unique device identifier.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._udi = None
-        """ Primitive extension for udi. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for udi. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -1562,21 +1562,21 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
         js = super(ExplanationOfBenefitItemDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("programCode", "programCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("revenue", "revenue", codeableconcept.CodeableConcept, False, None, False),
@@ -1584,9 +1584,9 @@ class ExplanationOfBenefitItemDetail(backboneelement.BackboneElement):
             ("sequence", "sequence", int, False, None, True),
             ("_sequence", "_sequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subDetail", "subDetail", ExplanationOfBenefitItemDetailSubDetail, True, None, False),
-            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subDetail", "_subDetail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("udi", "udi", fhirreference.FHIRReference, True, None, False),
-            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -1613,7 +1613,7 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
         """ Subdetail level adjudication details.
         List of `ExplanationOfBenefitItemAdjudication` items (represented as `dict` in JSON). """
         self._adjudication = None
-        """ Primitive extension for adjudication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for adjudication. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Benefit classification.
@@ -1631,7 +1631,7 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
         """ Service/Product billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total item cost.
@@ -1643,7 +1643,7 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
         """ Applicable note numbers.
         List of `int` items. """
         self._noteNumber = None
-        """ Primitive extension for noteNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for noteNumber. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -1655,7 +1655,7 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
         """ Program the product or service is provided under.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._programCode = None
-        """ Primitive extension for programCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for programCode. List of `FHIRPrimitiveExtension` """
         
         self.quantity = None
         """ Count of products or services.
@@ -1679,7 +1679,7 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
         """ Unique device identifier.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._udi = None
-        """ Primitive extension for udi. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for udi. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -1693,21 +1693,21 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
         js = super(ExplanationOfBenefitItemDetailSubDetail, self).elementProperties()
         js.extend([
             ("adjudication", "adjudication", ExplanationOfBenefitItemAdjudication, True, None, False),
-            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_adjudication", "_adjudication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("factor", "factor", float, False, None, False),
             ("_factor", "_factor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("noteNumber", "noteNumber", int, True, None, False),
-            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_noteNumber", "_noteNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, True),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("programCode", "programCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_programCode", "_programCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("revenue", "revenue", codeableconcept.CodeableConcept, False, None, False),
@@ -1715,7 +1715,7 @@ class ExplanationOfBenefitItemDetailSubDetail(backboneelement.BackboneElement):
             ("sequence", "sequence", int, False, None, True),
             ("_sequence", "_sequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("udi", "udi", fhirreference.FHIRReference, True, None, False),
-            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -1882,13 +1882,13 @@ class ExplanationOfBenefitProcedure(backboneelement.BackboneElement):
         """ Category of Procedure.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         self.udi = None
         """ Unique device identifier.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._udi = None
-        """ Primitive extension for udi. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for udi. List of `FHIRPrimitiveExtension` """
         
         super(ExplanationOfBenefitProcedure, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -1904,9 +1904,9 @@ class ExplanationOfBenefitProcedure(backboneelement.BackboneElement):
             ("sequence", "sequence", int, False, None, True),
             ("_sequence", "_sequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("udi", "udi", fhirreference.FHIRReference, True, None, False),
-            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_udi", "_udi", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

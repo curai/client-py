@@ -43,7 +43,7 @@ class Invoice(domainresource.DomainResource):
         """ Business Identifier for item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.issuer = None
         """ Issuing Organization of Invoice.
@@ -55,19 +55,19 @@ class Invoice(domainresource.DomainResource):
         """ Line items of this Invoice.
         List of `InvoiceLineItem` items (represented as `dict` in JSON). """
         self._lineItem = None
-        """ Primitive extension for lineItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for lineItem. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments made about the invoice.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.participant = None
         """ Participant in creation of this Invoice.
         List of `InvoiceParticipant` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.paymentTerms = None
         """ Payment details.
@@ -109,7 +109,7 @@ class Invoice(domainresource.DomainResource):
         """ Components of Invoice total.
         List of `InvoiceLineItemPriceComponent` items (represented as `dict` in JSON). """
         self._totalPriceComponent = None
-        """ Primitive extension for totalPriceComponent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for totalPriceComponent. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of Invoice.
@@ -129,15 +129,15 @@ class Invoice(domainresource.DomainResource):
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("issuer", "issuer", fhirreference.FHIRReference, False, None, False),
             ("_issuer", "_issuer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("lineItem", "lineItem", InvoiceLineItem, True, None, False),
-            ("_lineItem", "_lineItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_lineItem", "_lineItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("participant", "participant", InvoiceParticipant, True, None, False),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("paymentTerms", "paymentTerms", str, False, None, False),
             ("_paymentTerms", "_paymentTerms", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("recipient", "recipient", fhirreference.FHIRReference, False, None, False),
@@ -151,7 +151,7 @@ class Invoice(domainresource.DomainResource):
             ("totalNet", "totalNet", money.Money, False, None, False),
             ("_totalNet", "_totalNet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("totalPriceComponent", "totalPriceComponent", InvoiceLineItemPriceComponent, True, None, False),
-            ("_totalPriceComponent", "_totalPriceComponent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_totalPriceComponent", "_totalPriceComponent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -196,7 +196,7 @@ class InvoiceLineItem(backboneelement.BackboneElement):
         """ Components of total line item price.
         List of `InvoiceLineItemPriceComponent` items (represented as `dict` in JSON). """
         self._priceComponent = None
-        """ Primitive extension for priceComponent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for priceComponent. List of `FHIRPrimitiveExtension` """
         
         self.sequence = None
         """ Sequence number of line item.
@@ -214,7 +214,7 @@ class InvoiceLineItem(backboneelement.BackboneElement):
             ("chargeItemReference", "chargeItemReference", fhirreference.FHIRReference, False, "chargeItem", True),
             ("_chargeItemReference", "_chargeItemReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("priceComponent", "priceComponent", InvoiceLineItemPriceComponent, True, None, False),
-            ("_priceComponent", "_priceComponent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_priceComponent", "_priceComponent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sequence", "sequence", int, False, None, False),
             ("_sequence", "_sequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

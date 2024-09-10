@@ -31,13 +31,13 @@ class EventDefinition(domainresource.DomainResource):
         """ Who authored the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -61,7 +61,7 @@ class EventDefinition(domainresource.DomainResource):
         """ Who edited the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._editor = None
-        """ Primitive extension for editor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for editor. List of `FHIRPrimitiveExtension` """
         
         self.effectivePeriod = None
         """ When the event definition is expected to be used.
@@ -73,7 +73,7 @@ class EventDefinition(domainresource.DomainResource):
         """ Who endorsed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._endorser = None
-        """ Primitive extension for endorser. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endorser. List of `FHIRPrimitiveExtension` """
         
         self.experimental = None
         """ For testing purposes, not real usage.
@@ -85,13 +85,13 @@ class EventDefinition(domainresource.DomainResource):
         """ Additional identifier for the event definition.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for event definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the event definition was last reviewed.
@@ -121,13 +121,13 @@ class EventDefinition(domainresource.DomainResource):
         """ Additional documentation, citations, etc..
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.reviewer = None
         """ Who reviewed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._reviewer = None
-        """ Primitive extension for reviewer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reviewer. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -163,13 +163,13 @@ class EventDefinition(domainresource.DomainResource):
         """ E.g. Education, Treatment, Assessment, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._topic = None
-        """ Primitive extension for topic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for topic. List of `FHIRPrimitiveExtension` """
         
         self.trigger = None
         """ "when" the event occurs (multiple = 'or').
         List of `TriggerDefinition` items (represented as `dict` in JSON). """
         self._trigger = None
-        """ Primitive extension for trigger. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for trigger. List of `FHIRPrimitiveExtension` """
         
         self.url = None
         """ Canonical identifier for this event definition, represented as a
@@ -188,7 +188,7 @@ class EventDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the event definition.
@@ -204,9 +204,9 @@ class EventDefinition(domainresource.DomainResource):
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", contactdetail.ContactDetail, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -214,17 +214,17 @@ class EventDefinition(domainresource.DomainResource):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("editor", "editor", contactdetail.ContactDetail, True, None, False),
-            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endorser", "endorser", contactdetail.ContactDetail, True, None, False),
-            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
@@ -234,9 +234,9 @@ class EventDefinition(domainresource.DomainResource):
             ("purpose", "purpose", str, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reviewer", "reviewer", contactdetail.ContactDetail, True, None, False),
-            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subjectCodeableConcept", "subjectCodeableConcept", codeableconcept.CodeableConcept, False, "subject", False),
@@ -248,15 +248,15 @@ class EventDefinition(domainresource.DomainResource):
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", codeableconcept.CodeableConcept, True, None, False),
-            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("trigger", "trigger", triggerdefinition.TriggerDefinition, True, None, True),
-            ("_trigger", "_trigger", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_trigger", "_trigger", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("usage", "usage", str, False, None, False),
             ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

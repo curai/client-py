@@ -31,19 +31,19 @@ class EvidenceVariable(domainresource.DomainResource):
         """ Who authored the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.characteristic = None
         """ What defines the members of the evidence element.
         List of `EvidenceVariableCharacteristic` items (represented as `dict` in JSON). """
         self._characteristic = None
-        """ Primitive extension for characteristic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for characteristic. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -67,7 +67,7 @@ class EvidenceVariable(domainresource.DomainResource):
         """ Who edited the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._editor = None
-        """ Primitive extension for editor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for editor. List of `FHIRPrimitiveExtension` """
         
         self.effectivePeriod = None
         """ When the evidence variable is expected to be used.
@@ -79,19 +79,19 @@ class EvidenceVariable(domainresource.DomainResource):
         """ Who endorsed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._endorser = None
-        """ Primitive extension for endorser. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endorser. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Additional identifier for the evidence variable.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for evidence variable (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the evidence variable was last reviewed.
@@ -109,7 +109,7 @@ class EvidenceVariable(domainresource.DomainResource):
         """ Used for footnotes or explanatory notes.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -121,13 +121,13 @@ class EvidenceVariable(domainresource.DomainResource):
         """ Additional documentation, citations, etc..
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.reviewer = None
         """ Who reviewed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._reviewer = None
-        """ Primitive extension for reviewer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reviewer. List of `FHIRPrimitiveExtension` """
         
         self.shortTitle = None
         """ Title for use in informal contexts.
@@ -158,7 +158,7 @@ class EvidenceVariable(domainresource.DomainResource):
         Assessment, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._topic = None
-        """ Primitive extension for topic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for topic. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ dichotomous | continuous | descriptive.
@@ -177,7 +177,7 @@ class EvidenceVariable(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the evidence variable.
@@ -193,11 +193,11 @@ class EvidenceVariable(domainresource.DomainResource):
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", contactdetail.ContactDetail, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("characteristic", "characteristic", EvidenceVariableCharacteristic, True, None, True),
-            ("_characteristic", "_characteristic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_characteristic", "_characteristic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -205,27 +205,27 @@ class EvidenceVariable(domainresource.DomainResource):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("editor", "editor", contactdetail.ContactDetail, True, None, False),
-            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endorser", "endorser", contactdetail.ContactDetail, True, None, False),
-            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reviewer", "reviewer", contactdetail.ContactDetail, True, None, False),
-            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("shortTitle", "shortTitle", str, False, None, False),
             ("_shortTitle", "_shortTitle", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
@@ -235,13 +235,13 @@ class EvidenceVariable(domainresource.DomainResource):
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", codeableconcept.CodeableConcept, True, None, False),
-            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", str, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -356,7 +356,7 @@ class EvidenceVariableCharacteristic(backboneelement.BackboneElement):
         """ What code/value pairs define members?.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._usageContext = None
-        """ Primitive extension for usageContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for usageContext. List of `FHIRPrimitiveExtension` """
         
         super(EvidenceVariableCharacteristic, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -392,7 +392,7 @@ class EvidenceVariableCharacteristic(backboneelement.BackboneElement):
             ("timeFromStart", "timeFromStart", duration.Duration, False, None, False),
             ("_timeFromStart", "_timeFromStart", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("usageContext", "usageContext", usagecontext.UsageContext, True, None, False),
-            ("_usageContext", "_usageContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_usageContext", "_usageContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

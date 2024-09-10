@@ -44,7 +44,7 @@ class MedicinalProductInteraction(domainresource.DomainResource):
         """ The specific medication, food or laboratory test that interacts.
         List of `MedicinalProductInteractionInteractant` items (represented as `dict` in JSON). """
         self._interactant = None
-        """ Primitive extension for interactant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for interactant. List of `FHIRPrimitiveExtension` """
         
         self.management = None
         """ Actions for managing the interaction.
@@ -56,7 +56,7 @@ class MedicinalProductInteraction(domainresource.DomainResource):
         """ The medication for which this is a described interaction.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ The type of the interaction e.g. drug-drug interaction, drug-food
@@ -77,11 +77,11 @@ class MedicinalProductInteraction(domainresource.DomainResource):
             ("incidence", "incidence", codeableconcept.CodeableConcept, False, None, False),
             ("_incidence", "_incidence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("interactant", "interactant", MedicinalProductInteractionInteractant, True, None, False),
-            ("_interactant", "_interactant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_interactant", "_interactant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("management", "management", codeableconcept.CodeableConcept, False, None, False),
             ("_management", "_management", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

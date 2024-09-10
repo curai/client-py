@@ -24,7 +24,7 @@ class SpecimenDefinition(domainresource.DomainResource):
         """ Specimen collection procedure.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._collection = None
-        """ Primitive extension for collection. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for collection. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business identifier of a kind of specimen.
@@ -36,7 +36,7 @@ class SpecimenDefinition(domainresource.DomainResource):
         """ Patient preparation for collection.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._patientPreparation = None
-        """ Primitive extension for patientPreparation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for patientPreparation. List of `FHIRPrimitiveExtension` """
         
         self.timeAspect = None
         """ Time aspect for collection.
@@ -54,7 +54,7 @@ class SpecimenDefinition(domainresource.DomainResource):
         """ Specimen in container intended for testing by lab.
         List of `SpecimenDefinitionTypeTested` items (represented as `dict` in JSON). """
         self._typeTested = None
-        """ Primitive extension for typeTested. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for typeTested. List of `FHIRPrimitiveExtension` """
         
         super(SpecimenDefinition, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -62,17 +62,17 @@ class SpecimenDefinition(domainresource.DomainResource):
         js = super(SpecimenDefinition, self).elementProperties()
         js.extend([
             ("collection", "collection", codeableconcept.CodeableConcept, True, None, False),
-            ("_collection", "_collection", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_collection", "_collection", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patientPreparation", "patientPreparation", codeableconcept.CodeableConcept, True, None, False),
-            ("_patientPreparation", "_patientPreparation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_patientPreparation", "_patientPreparation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("timeAspect", "timeAspect", str, False, None, False),
             ("_timeAspect", "_timeAspect", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("typeCollected", "typeCollected", codeableconcept.CodeableConcept, False, None, False),
             ("_typeCollected", "_typeCollected", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("typeTested", "typeTested", SpecimenDefinitionTypeTested, True, None, False),
-            ("_typeTested", "_typeTested", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_typeTested", "_typeTested", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -105,7 +105,7 @@ class SpecimenDefinitionTypeTested(backboneelement.BackboneElement):
         """ Specimen handling before testing.
         List of `SpecimenDefinitionTypeTestedHandling` items (represented as `dict` in JSON). """
         self._handling = None
-        """ Primitive extension for handling. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for handling. List of `FHIRPrimitiveExtension` """
         
         self.isDerived = None
         """ Primary or secondary specimen.
@@ -123,7 +123,7 @@ class SpecimenDefinitionTypeTested(backboneelement.BackboneElement):
         """ Rejection criterion.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._rejectionCriterion = None
-        """ Primitive extension for rejectionCriterion. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rejectionCriterion. List of `FHIRPrimitiveExtension` """
         
         self.requirement = None
         """ Specimen requirements.
@@ -151,13 +151,13 @@ class SpecimenDefinitionTypeTested(backboneelement.BackboneElement):
             ("container", "container", SpecimenDefinitionTypeTestedContainer, False, None, False),
             ("_container", "_container", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("handling", "handling", SpecimenDefinitionTypeTestedHandling, True, None, False),
-            ("_handling", "_handling", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_handling", "_handling", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("isDerived", "isDerived", bool, False, None, False),
             ("_isDerived", "_isDerived", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("preference", "preference", str, False, None, True),
             ("_preference", "_preference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("rejectionCriterion", "rejectionCriterion", codeableconcept.CodeableConcept, True, None, False),
-            ("_rejectionCriterion", "_rejectionCriterion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rejectionCriterion", "_rejectionCriterion", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requirement", "requirement", str, False, None, False),
             ("_requirement", "_requirement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("retentionTime", "retentionTime", duration.Duration, False, None, False),
@@ -186,7 +186,7 @@ class SpecimenDefinitionTypeTestedContainer(backboneelement.BackboneElement):
         """ Additive associated with container.
         List of `SpecimenDefinitionTypeTestedContainerAdditive` items (represented as `dict` in JSON). """
         self._additive = None
-        """ Primitive extension for additive. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for additive. List of `FHIRPrimitiveExtension` """
         
         self.cap = None
         """ Color of container cap.
@@ -242,7 +242,7 @@ class SpecimenDefinitionTypeTestedContainer(backboneelement.BackboneElement):
         js = super(SpecimenDefinitionTypeTestedContainer, self).elementProperties()
         js.extend([
             ("additive", "additive", SpecimenDefinitionTypeTestedContainerAdditive, True, None, False),
-            ("_additive", "_additive", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_additive", "_additive", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("cap", "cap", codeableconcept.CodeableConcept, False, None, False),
             ("_cap", "_cap", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("capacity", "capacity", quantity.Quantity, False, None, False),

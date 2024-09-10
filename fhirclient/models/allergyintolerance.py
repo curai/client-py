@@ -31,7 +31,7 @@ class AllergyIntolerance(domainresource.DomainResource):
         """ food | medication | environment | biologic.
         List of `str` items. """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.clinicalStatus = None
         """ active | inactive | resolved.
@@ -61,7 +61,7 @@ class AllergyIntolerance(domainresource.DomainResource):
         """ External ids for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.lastOccurrence = None
         """ Date(/time) of last known occurrence of a reaction.
@@ -73,7 +73,7 @@ class AllergyIntolerance(domainresource.DomainResource):
         """ Additional text not captured in other fields.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.onsetAge = None
         """ When allergy or intolerance was identified.
@@ -115,7 +115,7 @@ class AllergyIntolerance(domainresource.DomainResource):
         """ Adverse Reaction Events linked to exposure to substance.
         List of `AllergyIntoleranceReaction` items (represented as `dict` in JSON). """
         self._reaction = None
-        """ Primitive extension for reaction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reaction. List of `FHIRPrimitiveExtension` """
         
         self.recordedDate = None
         """ Date first version of the resource instance was recorded.
@@ -149,7 +149,7 @@ class AllergyIntolerance(domainresource.DomainResource):
             ("asserter", "asserter", fhirreference.FHIRReference, False, None, False),
             ("_asserter", "_asserter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("category", "category", str, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("clinicalStatus", "clinicalStatus", codeableconcept.CodeableConcept, False, None, False),
             ("_clinicalStatus", "_clinicalStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
@@ -159,11 +159,11 @@ class AllergyIntolerance(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastOccurrence", "lastOccurrence", fhirdatetime.FHIRDateTime, False, None, False),
             ("_lastOccurrence", "_lastOccurrence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("onsetAge", "onsetAge", age.Age, False, "onset", False),
             ("_onsetAge", "_onsetAge", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("onsetDateTime", "onsetDateTime", fhirdatetime.FHIRDateTime, False, "onset", False),
@@ -177,7 +177,7 @@ class AllergyIntolerance(domainresource.DomainResource):
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reaction", "reaction", AllergyIntoleranceReaction, True, None, False),
-            ("_reaction", "_reaction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reaction", "_reaction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recordedDate", "recordedDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_recordedDate", "_recordedDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("recorder", "recorder", fhirreference.FHIRReference, False, None, False),
@@ -225,13 +225,13 @@ class AllergyIntoleranceReaction(backboneelement.BackboneElement):
         """ Clinical symptoms/signs associated with the Event.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._manifestation = None
-        """ Primitive extension for manifestation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manifestation. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Text about event not captured in other fields.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.onset = None
         """ Date(/time) when manifestations showed.
@@ -262,9 +262,9 @@ class AllergyIntoleranceReaction(backboneelement.BackboneElement):
             ("exposureRoute", "exposureRoute", codeableconcept.CodeableConcept, False, None, False),
             ("_exposureRoute", "_exposureRoute", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manifestation", "manifestation", codeableconcept.CodeableConcept, True, None, True),
-            ("_manifestation", "_manifestation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manifestation", "_manifestation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("onset", "onset", fhirdatetime.FHIRDateTime, False, None, False),
             ("_onset", "_onset", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("severity", "severity", str, False, None, False),

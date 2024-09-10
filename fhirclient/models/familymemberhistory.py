@@ -61,7 +61,7 @@ class FamilyMemberHistory(domainresource.DomainResource):
         """ Condition that the related person had.
         List of `FamilyMemberHistoryCondition` items (represented as `dict` in JSON). """
         self._condition = None
-        """ Primitive extension for condition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for condition. List of `FHIRPrimitiveExtension` """
         
         self.dataAbsentReason = None
         """ subject-unknown | withheld | unable-to-obtain | deferred.
@@ -115,19 +115,19 @@ class FamilyMemberHistory(domainresource.DomainResource):
         """ External Id(s) for this record.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ The family member described.
@@ -139,7 +139,7 @@ class FamilyMemberHistory(domainresource.DomainResource):
         """ General note about related person.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Patient history is about.
@@ -151,13 +151,13 @@ class FamilyMemberHistory(domainresource.DomainResource):
         """ Why was family member history performed?.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why was family member history performed?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.relationship = None
         """ Relationship to the subject.
@@ -195,7 +195,7 @@ class FamilyMemberHistory(domainresource.DomainResource):
             ("bornString", "bornString", str, False, "born", False),
             ("_bornString", "_bornString", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("condition", "condition", FamilyMemberHistoryCondition, True, None, False),
-            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dataAbsentReason", "dataAbsentReason", codeableconcept.CodeableConcept, False, None, False),
             ("_dataAbsentReason", "_dataAbsentReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -213,21 +213,21 @@ class FamilyMemberHistory(domainresource.DomainResource):
             ("estimatedAge", "estimatedAge", bool, False, None, False),
             ("_estimatedAge", "_estimatedAge", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("relationship", "relationship", codeableconcept.CodeableConcept, False, None, True),
             ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sex", "sex", codeableconcept.CodeableConcept, False, None, False),
@@ -275,7 +275,7 @@ class FamilyMemberHistoryCondition(backboneelement.BackboneElement):
         """ Extra information about condition.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.onsetAge = None
         """ When condition first manifested.
@@ -317,7 +317,7 @@ class FamilyMemberHistoryCondition(backboneelement.BackboneElement):
             ("contributedToDeath", "contributedToDeath", bool, False, None, False),
             ("_contributedToDeath", "_contributedToDeath", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("onsetAge", "onsetAge", age.Age, False, "onset", False),
             ("_onsetAge", "_onsetAge", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("onsetPeriod", "onsetPeriod", period.Period, False, "onset", False),

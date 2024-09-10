@@ -36,13 +36,13 @@ class MedicinalProductUndesirableEffect(domainresource.DomainResource):
         """ The population group to which this applies.
         List of `Population` items (represented as `dict` in JSON). """
         self._population = None
-        """ Primitive extension for population. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for population. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ The medication for which this is an indication.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         self.symptomConditionEffect = None
         """ The symptom, condition or undesirable effect.
@@ -60,9 +60,9 @@ class MedicinalProductUndesirableEffect(domainresource.DomainResource):
             ("frequencyOfOccurrence", "frequencyOfOccurrence", codeableconcept.CodeableConcept, False, None, False),
             ("_frequencyOfOccurrence", "_frequencyOfOccurrence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("population", "population", population.Population, True, None, False),
-            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("symptomConditionEffect", "symptomConditionEffect", codeableconcept.CodeableConcept, False, None, False),
             ("_symptomConditionEffect", "_symptomConditionEffect", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

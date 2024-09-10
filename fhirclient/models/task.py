@@ -28,7 +28,7 @@ class Task(domainresource.DomainResource):
         """ Request fulfilled by this task.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.businessStatus = None
         """ E.g. "Specimen collected", "IV prepped".
@@ -82,13 +82,13 @@ class Task(domainresource.DomainResource):
         """ Task Instance Identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.input = None
         """ Information used to perform task.
         List of `TaskInput` items (represented as `dict` in JSON). """
         self._input = None
-        """ Primitive extension for input. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for input. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Formal definition of task.
@@ -106,7 +106,7 @@ class Task(domainresource.DomainResource):
         """ Associated insurance coverage.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._insurance = None
-        """ Primitive extension for insurance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for insurance. List of `FHIRPrimitiveExtension` """
         
         self.intent = None
         """ unknown | proposal | plan | order | original-order | reflex-order |
@@ -131,31 +131,29 @@ class Task(domainresource.DomainResource):
         """ Comments made about the task.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.output = None
         """ Information produced as part of task.
         List of `TaskOutput` items (represented as `dict` in JSON). """
         self._output = None
-        """ Primitive extension for output. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for output. List of `FHIRPrimitiveExtension` """
         
         self.owner = None
         """ Responsible individual.
         Type `FHIRReference` (represented as `dict` in JSON). """
-        self._owner = None
-        """ Primitive extension for owner. Type `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Composite task.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.performerType = None
         """ Requested performer.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._performerType = None
-        """ Primitive extension for performerType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performerType. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -179,7 +177,7 @@ class Task(domainresource.DomainResource):
         """ Key events in history of the Task.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._relevantHistory = None
-        """ Primitive extension for relevantHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relevantHistory. List of `FHIRPrimitiveExtension` """
         
         self.requester = None
         """ Who is asking for task to be done.
@@ -213,7 +211,7 @@ class Task(domainresource.DomainResource):
             ("authoredOn", "authoredOn", fhirdatetime.FHIRDateTime, False, None, False),
             ("_authoredOn", "_authoredOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("businessStatus", "businessStatus", codeableconcept.CodeableConcept, False, None, False),
             ("_businessStatus", "_businessStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
@@ -231,15 +229,15 @@ class Task(domainresource.DomainResource):
             ("groupIdentifier", "groupIdentifier", identifier.Identifier, False, None, False),
             ("_groupIdentifier", "_groupIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("input", "input", TaskInput, True, None, False),
-            ("_input", "_input", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_input", "_input", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, False, None, False),
             ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("instantiatesUri", "instantiatesUri", str, False, None, False),
             ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("insurance", "insurance", fhirreference.FHIRReference, True, None, False),
-            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intent", "intent", str, False, None, True),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("lastModified", "lastModified", fhirdatetime.FHIRDateTime, False, None, False),
@@ -247,15 +245,14 @@ class Task(domainresource.DomainResource):
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("output", "output", TaskOutput, True, None, False),
-            ("_output", "_output", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_output", "_output", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("owner", "owner", fhirreference.FHIRReference, False, None, False),
-            ("_owner", "_owner", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performerType", "performerType", codeableconcept.CodeableConcept, True, None, False),
-            ("_performerType", "_performerType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performerType", "_performerType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, False, None, False),
@@ -263,7 +260,7 @@ class Task(domainresource.DomainResource):
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, False, None, False),
             ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relevantHistory", "relevantHistory", fhirreference.FHIRReference, True, None, False),
-            ("_relevantHistory", "_relevantHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relevantHistory", "_relevantHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requester", "requester", fhirreference.FHIRReference, False, None, False),
             ("_requester", "_requester", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("restriction", "restriction", TaskRestriction, False, None, False),
@@ -1172,7 +1169,7 @@ class TaskRestriction(backboneelement.BackboneElement):
         """ For whom is fulfillment sought?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._recipient = None
-        """ Primitive extension for recipient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for recipient. List of `FHIRPrimitiveExtension` """
         
         self.repetitions = None
         """ How many times to repeat.
@@ -1188,7 +1185,7 @@ class TaskRestriction(backboneelement.BackboneElement):
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("recipient", "recipient", fhirreference.FHIRReference, True, None, False),
-            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("repetitions", "repetitions", int, False, None, False),
             ("_repetitions", "_repetitions", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

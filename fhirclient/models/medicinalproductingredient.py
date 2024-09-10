@@ -34,7 +34,7 @@ class MedicinalProductIngredient(domainresource.DomainResource):
         """ Manufacturer of this Ingredient.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._manufacturer = None
-        """ Primitive extension for manufacturer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturer. List of `FHIRPrimitiveExtension` """
         
         self.role = None
         """ Ingredient role e.g. Active ingredient, excipient.
@@ -46,7 +46,7 @@ class MedicinalProductIngredient(domainresource.DomainResource):
         """ A specified substance that comprises this ingredient.
         List of `MedicinalProductIngredientSpecifiedSubstance` items (represented as `dict` in JSON). """
         self._specifiedSubstance = None
-        """ Primitive extension for specifiedSubstance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specifiedSubstance. List of `FHIRPrimitiveExtension` """
         
         self.substance = None
         """ The ingredient substance.
@@ -64,11 +64,11 @@ class MedicinalProductIngredient(domainresource.DomainResource):
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, True, None, False),
-            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("role", "role", codeableconcept.CodeableConcept, False, None, True),
             ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("specifiedSubstance", "specifiedSubstance", MedicinalProductIngredientSpecifiedSubstance, True, None, False),
-            ("_specifiedSubstance", "_specifiedSubstance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specifiedSubstance", "_specifiedSubstance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("substance", "substance", MedicinalProductIngredientSubstance, False, None, False),
             ("_substance", "_substance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -114,7 +114,7 @@ class MedicinalProductIngredientSpecifiedSubstance(backboneelement.BackboneEleme
         manufactured item or pharmaceutical product.
         List of `MedicinalProductIngredientSpecifiedSubstanceStrength` items (represented as `dict` in JSON). """
         self._strength = None
-        """ Primitive extension for strength. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for strength. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductIngredientSpecifiedSubstance, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -128,7 +128,7 @@ class MedicinalProductIngredientSpecifiedSubstance(backboneelement.BackboneEleme
             ("group", "group", codeableconcept.CodeableConcept, False, None, True),
             ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("strength", "strength", MedicinalProductIngredientSpecifiedSubstanceStrength, True, None, False),
-            ("_strength", "_strength", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_strength", "_strength", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -166,7 +166,7 @@ class MedicinalProductIngredientSpecifiedSubstanceStrength(backboneelement.Backb
         """ The country or countries for which the strength range applies.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._country = None
-        """ Primitive extension for country. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for country. List of `FHIRPrimitiveExtension` """
         
         self.measurementPoint = None
         """ For when strength is measured at a particular point or distance.
@@ -195,7 +195,7 @@ class MedicinalProductIngredientSpecifiedSubstanceStrength(backboneelement.Backb
         """ Strength expressed in terms of a reference substance.
         List of `MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength` items (represented as `dict` in JSON). """
         self._referenceStrength = None
-        """ Primitive extension for referenceStrength. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referenceStrength. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductIngredientSpecifiedSubstanceStrength, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -207,7 +207,7 @@ class MedicinalProductIngredientSpecifiedSubstanceStrength(backboneelement.Backb
             ("concentrationLowLimit", "concentrationLowLimit", ratio.Ratio, False, None, False),
             ("_concentrationLowLimit", "_concentrationLowLimit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("country", "country", codeableconcept.CodeableConcept, True, None, False),
-            ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("measurementPoint", "measurementPoint", str, False, None, False),
             ("_measurementPoint", "_measurementPoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("presentation", "presentation", ratio.Ratio, False, None, True),
@@ -215,7 +215,7 @@ class MedicinalProductIngredientSpecifiedSubstanceStrength(backboneelement.Backb
             ("presentationLowLimit", "presentationLowLimit", ratio.Ratio, False, None, False),
             ("_presentationLowLimit", "_presentationLowLimit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referenceStrength", "referenceStrength", MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, True, None, False),
-            ("_referenceStrength", "_referenceStrength", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referenceStrength", "_referenceStrength", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -238,7 +238,7 @@ class MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength(back
         """ The country or countries for which the strength range applies.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._country = None
-        """ Primitive extension for country. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for country. List of `FHIRPrimitiveExtension` """
         
         self.measurementPoint = None
         """ For when strength is measured at a particular point or distance.
@@ -270,7 +270,7 @@ class MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength(back
         js = super(MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, self).elementProperties()
         js.extend([
             ("country", "country", codeableconcept.CodeableConcept, True, None, False),
-            ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("measurementPoint", "measurementPoint", str, False, None, False),
             ("_measurementPoint", "_measurementPoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("strength", "strength", ratio.Ratio, False, None, True),
@@ -308,7 +308,7 @@ class MedicinalProductIngredientSubstance(backboneelement.BackboneElement):
         manufactured item or pharmaceutical product.
         List of `MedicinalProductIngredientSpecifiedSubstanceStrength` items (represented as `dict` in JSON). """
         self._strength = None
-        """ Primitive extension for strength. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for strength. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductIngredientSubstance, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -318,7 +318,7 @@ class MedicinalProductIngredientSubstance(backboneelement.BackboneElement):
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("strength", "strength", MedicinalProductIngredientSpecifiedSubstanceStrength, True, None, False),
-            ("_strength", "_strength", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_strength", "_strength", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

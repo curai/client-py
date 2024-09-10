@@ -30,13 +30,13 @@ class MedicinalProduct(domainresource.DomainResource):
         """ Supporting documentation, typically for regulatory submission.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._attachedDocument = None
-        """ Primitive extension for attachedDocument. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for attachedDocument. List of `FHIRPrimitiveExtension` """
         
         self.clinicalTrial = None
         """ Clinical trials or studies that this product is involved in.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._clinicalTrial = None
-        """ Primitive extension for clinicalTrial. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for clinicalTrial. List of `FHIRPrimitiveExtension` """
         
         self.combinedPharmaceuticalDoseForm = None
         """ The dose form for a single part product, or combined form of a
@@ -49,14 +49,14 @@ class MedicinalProduct(domainresource.DomainResource):
         """ A product specific contact, person (in a role), or an organization.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.crossReference = None
         """ Reference to another product, e.g. for linking authorised to
         investigational product.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._crossReference = None
-        """ Primitive extension for crossReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for crossReference. List of `FHIRPrimitiveExtension` """
         
         self.domain = None
         """ If this medicine applies to human or veterinary uses.
@@ -68,7 +68,7 @@ class MedicinalProduct(domainresource.DomainResource):
         """ Business identifier for this product. Could be an MPID.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.legalStatusOfSupply = None
         """ The legal status of supply of the medicinal product as classified
@@ -82,33 +82,33 @@ class MedicinalProduct(domainresource.DomainResource):
         adminsitrative purpose.
         List of `MedicinalProductManufacturingBusinessOperation` items (represented as `dict` in JSON). """
         self._manufacturingBusinessOperation = None
-        """ Primitive extension for manufacturingBusinessOperation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturingBusinessOperation. List of `FHIRPrimitiveExtension` """
         
         self.marketingStatus = None
         """ Marketing status of the medicinal product, in contrast to marketing
         authorizaton.
         List of `MarketingStatus` items (represented as `dict` in JSON). """
         self._marketingStatus = None
-        """ Primitive extension for marketingStatus. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for marketingStatus. List of `FHIRPrimitiveExtension` """
         
         self.masterFile = None
         """ A master file for to the medicinal product (e.g. Pharmacovigilance
         System Master File).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._masterFile = None
-        """ Primitive extension for masterFile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for masterFile. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ The product's name, including full name and possibly coded parts.
         List of `MedicinalProductName` items (represented as `dict` in JSON). """
         self._name = None
-        """ Primitive extension for name. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for name. List of `FHIRPrimitiveExtension` """
         
         self.packagedMedicinalProduct = None
         """ Package representation for the product.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._packagedMedicinalProduct = None
-        """ Primitive extension for packagedMedicinalProduct. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for packagedMedicinalProduct. List of `FHIRPrimitiveExtension` """
         
         self.paediatricUseIndicator = None
         """ If authorised for use in children.
@@ -120,27 +120,27 @@ class MedicinalProduct(domainresource.DomainResource):
         """ Pharmaceutical aspects of product.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._pharmaceuticalProduct = None
-        """ Primitive extension for pharmaceuticalProduct. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for pharmaceuticalProduct. List of `FHIRPrimitiveExtension` """
         
         self.productClassification = None
         """ Allows the product to be classified by various systems.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._productClassification = None
-        """ Primitive extension for productClassification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for productClassification. List of `FHIRPrimitiveExtension` """
         
         self.specialDesignation = None
         """ Indicates if the medicinal product has an orphan designation for
         the treatment of a rare disease.
         List of `MedicinalProductSpecialDesignation` items (represented as `dict` in JSON). """
         self._specialDesignation = None
-        """ Primitive extension for specialDesignation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialDesignation. List of `FHIRPrimitiveExtension` """
         
         self.specialMeasures = None
         """ Whether the Medicinal Product is subject to special measures for
         regulatory reasons.
         List of `str` items. """
         self._specialMeasures = None
-        """ Primitive extension for specialMeasures. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialMeasures. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Regulatory type, e.g. Investigational or Authorized.
@@ -156,41 +156,41 @@ class MedicinalProduct(domainresource.DomainResource):
             ("additionalMonitoringIndicator", "additionalMonitoringIndicator", codeableconcept.CodeableConcept, False, None, False),
             ("_additionalMonitoringIndicator", "_additionalMonitoringIndicator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("attachedDocument", "attachedDocument", fhirreference.FHIRReference, True, None, False),
-            ("_attachedDocument", "_attachedDocument", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_attachedDocument", "_attachedDocument", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("clinicalTrial", "clinicalTrial", fhirreference.FHIRReference, True, None, False),
-            ("_clinicalTrial", "_clinicalTrial", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_clinicalTrial", "_clinicalTrial", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("combinedPharmaceuticalDoseForm", "combinedPharmaceuticalDoseForm", codeableconcept.CodeableConcept, False, None, False),
             ("_combinedPharmaceuticalDoseForm", "_combinedPharmaceuticalDoseForm", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", fhirreference.FHIRReference, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("crossReference", "crossReference", identifier.Identifier, True, None, False),
-            ("_crossReference", "_crossReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_crossReference", "_crossReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("domain", "domain", coding.Coding, False, None, False),
             ("_domain", "_domain", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("legalStatusOfSupply", "legalStatusOfSupply", codeableconcept.CodeableConcept, False, None, False),
             ("_legalStatusOfSupply", "_legalStatusOfSupply", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manufacturingBusinessOperation", "manufacturingBusinessOperation", MedicinalProductManufacturingBusinessOperation, True, None, False),
-            ("_manufacturingBusinessOperation", "_manufacturingBusinessOperation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturingBusinessOperation", "_manufacturingBusinessOperation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("marketingStatus", "marketingStatus", marketingstatus.MarketingStatus, True, None, False),
-            ("_marketingStatus", "_marketingStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_marketingStatus", "_marketingStatus", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("masterFile", "masterFile", fhirreference.FHIRReference, True, None, False),
-            ("_masterFile", "_masterFile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_masterFile", "_masterFile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", MedicinalProductName, True, None, True),
-            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("packagedMedicinalProduct", "packagedMedicinalProduct", fhirreference.FHIRReference, True, None, False),
-            ("_packagedMedicinalProduct", "_packagedMedicinalProduct", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_packagedMedicinalProduct", "_packagedMedicinalProduct", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("paediatricUseIndicator", "paediatricUseIndicator", codeableconcept.CodeableConcept, False, None, False),
             ("_paediatricUseIndicator", "_paediatricUseIndicator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("pharmaceuticalProduct", "pharmaceuticalProduct", fhirreference.FHIRReference, True, None, False),
-            ("_pharmaceuticalProduct", "_pharmaceuticalProduct", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_pharmaceuticalProduct", "_pharmaceuticalProduct", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productClassification", "productClassification", codeableconcept.CodeableConcept, True, None, False),
-            ("_productClassification", "_productClassification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_productClassification", "_productClassification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialDesignation", "specialDesignation", MedicinalProductSpecialDesignation, True, None, False),
-            ("_specialDesignation", "_specialDesignation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialDesignation", "_specialDesignation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialMeasures", "specialMeasures", str, True, None, False),
-            ("_specialMeasures", "_specialMeasures", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialMeasures", "_specialMeasures", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -236,7 +236,7 @@ class MedicinalProductManufacturingBusinessOperation(backboneelement.BackboneEle
         """ The manufacturer or establishment associated with the process.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._manufacturer = None
-        """ Primitive extension for manufacturer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturer. List of `FHIRPrimitiveExtension` """
         
         self.operationType = None
         """ The type of manufacturing operation.
@@ -262,7 +262,7 @@ class MedicinalProductManufacturingBusinessOperation(backboneelement.BackboneEle
             ("effectiveDate", "effectiveDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_effectiveDate", "_effectiveDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, True, None, False),
-            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("operationType", "operationType", codeableconcept.CodeableConcept, False, None, False),
             ("_operationType", "_operationType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("regulator", "regulator", fhirreference.FHIRReference, False, None, False),
@@ -289,13 +289,13 @@ class MedicinalProductName(backboneelement.BackboneElement):
         """ Country where the name applies.
         List of `MedicinalProductNameCountryLanguage` items (represented as `dict` in JSON). """
         self._countryLanguage = None
-        """ Primitive extension for countryLanguage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for countryLanguage. List of `FHIRPrimitiveExtension` """
         
         self.namePart = None
         """ Coding words or phrases of the name.
         List of `MedicinalProductNameNamePart` items (represented as `dict` in JSON). """
         self._namePart = None
-        """ Primitive extension for namePart. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for namePart. List of `FHIRPrimitiveExtension` """
         
         self.productName = None
         """ The full product name.
@@ -309,9 +309,9 @@ class MedicinalProductName(backboneelement.BackboneElement):
         js = super(MedicinalProductName, self).elementProperties()
         js.extend([
             ("countryLanguage", "countryLanguage", MedicinalProductNameCountryLanguage, True, None, False),
-            ("_countryLanguage", "_countryLanguage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_countryLanguage", "_countryLanguage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("namePart", "namePart", MedicinalProductNameNamePart, True, None, False),
-            ("_namePart", "_namePart", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_namePart", "_namePart", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productName", "productName", str, False, None, True),
             ("_productName", "_productName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -429,7 +429,7 @@ class MedicinalProductSpecialDesignation(backboneelement.BackboneElement):
         """ Identifier for the designation, or procedure number.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.indicationCodeableConcept = None
         """ Condition for which the medicinal use applies.
@@ -475,7 +475,7 @@ class MedicinalProductSpecialDesignation(backboneelement.BackboneElement):
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("indicationCodeableConcept", "indicationCodeableConcept", codeableconcept.CodeableConcept, False, "indication", False),
             ("_indicationCodeableConcept", "_indicationCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("indicationReference", "indicationReference", fhirreference.FHIRReference, False, "indication", False),

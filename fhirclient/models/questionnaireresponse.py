@@ -38,7 +38,7 @@ class QuestionnaireResponse(domainresource.DomainResource):
         """ Request fulfilled by this QuestionnaireResponse.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.encounter = None
         """ Encounter created as part of.
@@ -56,13 +56,13 @@ class QuestionnaireResponse(domainresource.DomainResource):
         """ Groups and questions.
         List of `QuestionnaireResponseItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Part of this action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.questionnaire = None
         """ Form being answered.
@@ -98,15 +98,15 @@ class QuestionnaireResponse(domainresource.DomainResource):
             ("authored", "authored", fhirdatetime.FHIRDateTime, False, None, False),
             ("_authored", "_authored", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", QuestionnaireResponseItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("questionnaire", "questionnaire", str, False, None, False),
             ("_questionnaire", "_questionnaire", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, False, None, False),
@@ -142,7 +142,7 @@ class QuestionnaireResponseItem(backboneelement.BackboneElement):
         """ The response(s) to the question.
         List of `QuestionnaireResponseItemAnswer` items (represented as `dict` in JSON). """
         self._answer = None
-        """ Primitive extension for answer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for answer. List of `FHIRPrimitiveExtension` """
         
         self.definition = None
         """ ElementDefinition - details for the item.
@@ -154,7 +154,7 @@ class QuestionnaireResponseItem(backboneelement.BackboneElement):
         """ Nested questionnaire response items.
         List of `QuestionnaireResponseItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.linkId = None
         """ Pointer to specific item from Questionnaire.
@@ -174,11 +174,11 @@ class QuestionnaireResponseItem(backboneelement.BackboneElement):
         js = super(QuestionnaireResponseItem, self).elementProperties()
         js.extend([
             ("answer", "answer", QuestionnaireResponseItemAnswer, True, None, False),
-            ("_answer", "_answer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_answer", "_answer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("definition", "definition", str, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", QuestionnaireResponseItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("linkId", "linkId", str, False, None, True),
             ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("text", "text", str, False, None, False),
@@ -207,7 +207,7 @@ class QuestionnaireResponseItemAnswer(backboneelement.BackboneElement):
         """ Nested groups and questions.
         List of `QuestionnaireResponseItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.valueAttachment = None
         """ Single-valued answer to the question.
@@ -287,7 +287,7 @@ class QuestionnaireResponseItemAnswer(backboneelement.BackboneElement):
         js = super(QuestionnaireResponseItemAnswer, self).elementProperties()
         js.extend([
             ("item", "item", QuestionnaireResponseItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("valueAttachment", "valueAttachment", attachment.Attachment, False, "value", False),
             ("_valueAttachment", "_valueAttachment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("valueBoolean", "valueBoolean", bool, False, "value", False),

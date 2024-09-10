@@ -26,7 +26,7 @@ class DeviceMetric(domainresource.DomainResource):
         required to be performed.
         List of `DeviceMetricCalibration` items (represented as `dict` in JSON). """
         self._calibration = None
-        """ Primitive extension for calibration. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for calibration. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ measurement | setting | calculation | unspecified.
@@ -44,7 +44,7 @@ class DeviceMetric(domainresource.DomainResource):
         """ Instance identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.measurementPeriod = None
         """ Describes the measurement repetition time.
@@ -88,13 +88,13 @@ class DeviceMetric(domainresource.DomainResource):
         js = super(DeviceMetric, self).elementProperties()
         js.extend([
             ("calibration", "calibration", DeviceMetricCalibration, True, None, False),
-            ("_calibration", "_calibration", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_calibration", "_calibration", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", str, False, None, True),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("color", "color", str, False, None, False),
             ("_color", "_color", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("measurementPeriod", "measurementPeriod", timing.Timing, False, None, False),
             ("_measurementPeriod", "_measurementPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("operationalStatus", "operationalStatus", str, False, None, False),

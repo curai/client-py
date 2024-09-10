@@ -43,7 +43,7 @@ class TestReport(domainresource.DomainResource):
         client, or a server.
         List of `TestReportParticipant` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.result = None
         """ pass | fail | pending.
@@ -81,7 +81,7 @@ class TestReport(domainresource.DomainResource):
         """ A test executed from the test script.
         List of `TestReportTest` items (represented as `dict` in JSON). """
         self._test = None
-        """ Primitive extension for test. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for test. List of `FHIRPrimitiveExtension` """
         
         self.testScript = None
         """ Reference to the  version-specific TestScript that was executed to
@@ -109,7 +109,7 @@ class TestReport(domainresource.DomainResource):
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("participant", "participant", TestReportParticipant, True, None, False),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("result", "result", str, False, None, True),
             ("_result", "_result", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("score", "score", float, False, None, False),
@@ -121,7 +121,7 @@ class TestReport(domainresource.DomainResource):
             ("teardown", "teardown", TestReportTeardown, False, None, False),
             ("_teardown", "_teardown", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("test", "test", TestReportTest, True, None, False),
-            ("_test", "_test", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_test", "_test", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("testScript", "testScript", fhirreference.FHIRReference, False, None, True),
             ("_testScript", "_testScript", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("tester", "tester", str, False, None, False),
@@ -199,7 +199,7 @@ class TestReportSetup(backboneelement.BackboneElement):
         """ A setup operation or assert that was executed.
         List of `TestReportSetupAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         super(TestReportSetup, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -207,7 +207,7 @@ class TestReportSetup(backboneelement.BackboneElement):
         js = super(TestReportSetup, self).elementProperties()
         js.extend([
             ("action", "action", TestReportSetupAction, True, None, True),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -372,7 +372,7 @@ class TestReportTeardown(backboneelement.BackboneElement):
         """ One or more teardown operations performed.
         List of `TestReportTeardownAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         super(TestReportTeardown, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -380,7 +380,7 @@ class TestReportTeardown(backboneelement.BackboneElement):
         js = super(TestReportTeardown, self).elementProperties()
         js.extend([
             ("action", "action", TestReportTeardownAction, True, None, True),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -436,7 +436,7 @@ class TestReportTest(backboneelement.BackboneElement):
         """ A test operation or assert that was performed.
         List of `TestReportTestAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Tracking/reporting short description of the test.
@@ -456,7 +456,7 @@ class TestReportTest(backboneelement.BackboneElement):
         js = super(TestReportTest, self).elementProperties()
         js.extend([
             ("action", "action", TestReportTestAction, True, None, True),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),

@@ -24,7 +24,7 @@ class MedicationKnowledge(domainresource.DomainResource):
         """ Guidelines for administration of the medication.
         List of `MedicationKnowledgeAdministrationGuidelines` items (represented as `dict` in JSON). """
         self._administrationGuidelines = None
-        """ Primitive extension for administrationGuidelines. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for administrationGuidelines. List of `FHIRPrimitiveExtension` """
         
         self.amount = None
         """ Amount of drug in package.
@@ -36,7 +36,7 @@ class MedicationKnowledge(domainresource.DomainResource):
         """ A medication resource that is associated with this medication.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._associatedMedication = None
-        """ Primitive extension for associatedMedication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for associatedMedication. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Code that identifies this medication.
@@ -48,13 +48,13 @@ class MedicationKnowledge(domainresource.DomainResource):
         """ Potential clinical issue with or between medication(s).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._contraindication = None
-        """ Primitive extension for contraindication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contraindication. List of `FHIRPrimitiveExtension` """
         
         self.cost = None
         """ The pricing of the medication.
         List of `MedicationKnowledgeCost` items (represented as `dict` in JSON). """
         self._cost = None
-        """ Primitive extension for cost. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for cost. List of `FHIRPrimitiveExtension` """
         
         self.doseForm = None
         """ powder | tablets | capsule +.
@@ -66,26 +66,26 @@ class MedicationKnowledge(domainresource.DomainResource):
         """ Specifies descriptive properties of the medicine.
         List of `MedicationKnowledgeDrugCharacteristic` items (represented as `dict` in JSON). """
         self._drugCharacteristic = None
-        """ Primitive extension for drugCharacteristic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for drugCharacteristic. List of `FHIRPrimitiveExtension` """
         
         self.ingredient = None
         """ Active or inactive ingredient.
         List of `MedicationKnowledgeIngredient` items (represented as `dict` in JSON). """
         self._ingredient = None
-        """ Primitive extension for ingredient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for ingredient. List of `FHIRPrimitiveExtension` """
         
         self.intendedRoute = None
         """ The intended or approved route of administration.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._intendedRoute = None
-        """ Primitive extension for intendedRoute. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for intendedRoute. List of `FHIRPrimitiveExtension` """
         
         self.kinetics = None
         """ The time course of drug absorption, distribution, metabolism and
         excretion of a medication from the body.
         List of `MedicationKnowledgeKinetics` items (represented as `dict` in JSON). """
         self._kinetics = None
-        """ Primitive extension for kinetics. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for kinetics. List of `FHIRPrimitiveExtension` """
         
         self.manufacturer = None
         """ Manufacturer of the item.
@@ -98,19 +98,19 @@ class MedicationKnowledge(domainresource.DomainResource):
         classification system.
         List of `MedicationKnowledgeMedicineClassification` items (represented as `dict` in JSON). """
         self._medicineClassification = None
-        """ Primitive extension for medicineClassification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for medicineClassification. List of `FHIRPrimitiveExtension` """
         
         self.monitoringProgram = None
         """ Program under which a medication is reviewed.
         List of `MedicationKnowledgeMonitoringProgram` items (represented as `dict` in JSON). """
         self._monitoringProgram = None
-        """ Primitive extension for monitoringProgram. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for monitoringProgram. List of `FHIRPrimitiveExtension` """
         
         self.monograph = None
         """ Associated documentation about the medication.
         List of `MedicationKnowledgeMonograph` items (represented as `dict` in JSON). """
         self._monograph = None
-        """ Primitive extension for monograph. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for monograph. List of `FHIRPrimitiveExtension` """
         
         self.packaging = None
         """ Details about packaged medications.
@@ -128,19 +128,19 @@ class MedicationKnowledge(domainresource.DomainResource):
         """ Category of the medication or product.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._productType = None
-        """ Primitive extension for productType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for productType. List of `FHIRPrimitiveExtension` """
         
         self.regulatory = None
         """ Regulatory information about a medication.
         List of `MedicationKnowledgeRegulatory` items (represented as `dict` in JSON). """
         self._regulatory = None
-        """ Primitive extension for regulatory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for regulatory. List of `FHIRPrimitiveExtension` """
         
         self.relatedMedicationKnowledge = None
         """ Associated or related medication information.
         List of `MedicationKnowledgeRelatedMedicationKnowledge` items (represented as `dict` in JSON). """
         self._relatedMedicationKnowledge = None
-        """ Primitive extension for relatedMedicationKnowledge. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedMedicationKnowledge. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ active | inactive | entered-in-error.
@@ -152,7 +152,7 @@ class MedicationKnowledge(domainresource.DomainResource):
         """ Additional names for a medication.
         List of `str` items. """
         self._synonym = None
-        """ Primitive extension for synonym. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for synonym. List of `FHIRPrimitiveExtension` """
         
         super(MedicationKnowledge, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -160,49 +160,49 @@ class MedicationKnowledge(domainresource.DomainResource):
         js = super(MedicationKnowledge, self).elementProperties()
         js.extend([
             ("administrationGuidelines", "administrationGuidelines", MedicationKnowledgeAdministrationGuidelines, True, None, False),
-            ("_administrationGuidelines", "_administrationGuidelines", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_administrationGuidelines", "_administrationGuidelines", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("amount", "amount", quantity.Quantity, False, None, False),
             ("_amount", "_amount", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("associatedMedication", "associatedMedication", fhirreference.FHIRReference, True, None, False),
-            ("_associatedMedication", "_associatedMedication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_associatedMedication", "_associatedMedication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contraindication", "contraindication", fhirreference.FHIRReference, True, None, False),
-            ("_contraindication", "_contraindication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contraindication", "_contraindication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("cost", "cost", MedicationKnowledgeCost, True, None, False),
-            ("_cost", "_cost", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_cost", "_cost", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("doseForm", "doseForm", codeableconcept.CodeableConcept, False, None, False),
             ("_doseForm", "_doseForm", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("drugCharacteristic", "drugCharacteristic", MedicationKnowledgeDrugCharacteristic, True, None, False),
-            ("_drugCharacteristic", "_drugCharacteristic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_drugCharacteristic", "_drugCharacteristic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("ingredient", "ingredient", MedicationKnowledgeIngredient, True, None, False),
-            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intendedRoute", "intendedRoute", codeableconcept.CodeableConcept, True, None, False),
-            ("_intendedRoute", "_intendedRoute", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_intendedRoute", "_intendedRoute", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kinetics", "kinetics", MedicationKnowledgeKinetics, True, None, False),
-            ("_kinetics", "_kinetics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_kinetics", "_kinetics", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, False, None, False),
             ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("medicineClassification", "medicineClassification", MedicationKnowledgeMedicineClassification, True, None, False),
-            ("_medicineClassification", "_medicineClassification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_medicineClassification", "_medicineClassification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("monitoringProgram", "monitoringProgram", MedicationKnowledgeMonitoringProgram, True, None, False),
-            ("_monitoringProgram", "_monitoringProgram", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_monitoringProgram", "_monitoringProgram", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("monograph", "monograph", MedicationKnowledgeMonograph, True, None, False),
-            ("_monograph", "_monograph", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_monograph", "_monograph", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("packaging", "packaging", MedicationKnowledgePackaging, False, None, False),
             ("_packaging", "_packaging", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("preparationInstruction", "preparationInstruction", str, False, None, False),
             ("_preparationInstruction", "_preparationInstruction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("productType", "productType", codeableconcept.CodeableConcept, True, None, False),
-            ("_productType", "_productType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_productType", "_productType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("regulatory", "regulatory", MedicationKnowledgeRegulatory, True, None, False),
-            ("_regulatory", "_regulatory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_regulatory", "_regulatory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("relatedMedicationKnowledge", "relatedMedicationKnowledge", MedicationKnowledgeRelatedMedicationKnowledge, True, None, False),
-            ("_relatedMedicationKnowledge", "_relatedMedicationKnowledge", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedMedicationKnowledge", "_relatedMedicationKnowledge", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("synonym", "synonym", str, True, None, False),
-            ("_synonym", "_synonym", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_synonym", "_synonym", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -229,7 +229,7 @@ class MedicationKnowledgeAdministrationGuidelines(backboneelement.BackboneElemen
         """ Dosage for the medication for the specific guidelines.
         List of `MedicationKnowledgeAdministrationGuidelinesDosage` items (represented as `dict` in JSON). """
         self._dosage = None
-        """ Primitive extension for dosage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dosage. List of `FHIRPrimitiveExtension` """
         
         self.indicationCodeableConcept = None
         """ Indication for use that apply to the specific administration
@@ -250,7 +250,7 @@ class MedicationKnowledgeAdministrationGuidelines(backboneelement.BackboneElemen
         administration guidelines.
         List of `MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics` items (represented as `dict` in JSON). """
         self._patientCharacteristics = None
-        """ Primitive extension for patientCharacteristics. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for patientCharacteristics. List of `FHIRPrimitiveExtension` """
         
         super(MedicationKnowledgeAdministrationGuidelines, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -258,13 +258,13 @@ class MedicationKnowledgeAdministrationGuidelines(backboneelement.BackboneElemen
         js = super(MedicationKnowledgeAdministrationGuidelines, self).elementProperties()
         js.extend([
             ("dosage", "dosage", MedicationKnowledgeAdministrationGuidelinesDosage, True, None, False),
-            ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("indicationCodeableConcept", "indicationCodeableConcept", codeableconcept.CodeableConcept, False, "indication", False),
             ("_indicationCodeableConcept", "_indicationCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("indicationReference", "indicationReference", fhirreference.FHIRReference, False, "indication", False),
             ("_indicationReference", "_indicationReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patientCharacteristics", "patientCharacteristics", MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, True, None, False),
-            ("_patientCharacteristics", "_patientCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_patientCharacteristics", "_patientCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -287,7 +287,7 @@ class MedicationKnowledgeAdministrationGuidelinesDosage(backboneelement.Backbone
         """ Dosage for the medication for the specific guidelines.
         List of `Dosage` items (represented as `dict` in JSON). """
         self._dosage = None
-        """ Primitive extension for dosage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dosage. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of dosage.
@@ -301,7 +301,7 @@ class MedicationKnowledgeAdministrationGuidelinesDosage(backboneelement.Backbone
         js = super(MedicationKnowledgeAdministrationGuidelinesDosage, self).elementProperties()
         js.extend([
             ("dosage", "dosage", dosage.Dosage, True, None, True),
-            ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -344,7 +344,7 @@ class MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics(backbone
         """ The specific characteristic.
         List of `str` items. """
         self._value = None
-        """ Primitive extension for value. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for value. List of `FHIRPrimitiveExtension` """
         
         super(MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -356,7 +356,7 @@ class MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics(backbone
             ("characteristicQuantity", "characteristicQuantity", quantity.Quantity, False, "characteristic", True),
             ("_characteristicQuantity", "_characteristicQuantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("value", "value", str, True, None, False),
-            ("_value", "_value", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_value", "_value", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -552,7 +552,7 @@ class MedicationKnowledgeKinetics(backboneelement.BackboneElement):
         """ The drug concentration measured at certain discrete points in time.
         List of `Quantity` items (represented as `dict` in JSON). """
         self._areaUnderCurve = None
-        """ Primitive extension for areaUnderCurve. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for areaUnderCurve. List of `FHIRPrimitiveExtension` """
         
         self.halfLifePeriod = None
         """ Time required for concentration in the body to decrease by half.
@@ -564,7 +564,7 @@ class MedicationKnowledgeKinetics(backboneelement.BackboneElement):
         """ The median lethal dose of a drug.
         List of `Quantity` items (represented as `dict` in JSON). """
         self._lethalDose50 = None
-        """ Primitive extension for lethalDose50. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for lethalDose50. List of `FHIRPrimitiveExtension` """
         
         super(MedicationKnowledgeKinetics, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -572,11 +572,11 @@ class MedicationKnowledgeKinetics(backboneelement.BackboneElement):
         js = super(MedicationKnowledgeKinetics, self).elementProperties()
         js.extend([
             ("areaUnderCurve", "areaUnderCurve", quantity.Quantity, True, None, False),
-            ("_areaUnderCurve", "_areaUnderCurve", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_areaUnderCurve", "_areaUnderCurve", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("halfLifePeriod", "halfLifePeriod", duration.Duration, False, None, False),
             ("_halfLifePeriod", "_halfLifePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("lethalDose50", "lethalDose50", quantity.Quantity, True, None, False),
-            ("_lethalDose50", "_lethalDose50", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_lethalDose50", "_lethalDose50", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -600,7 +600,7 @@ class MedicationKnowledgeMedicineClassification(backboneelement.BackboneElement)
         """ Specific category assigned to the medication.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._classification = None
-        """ Primitive extension for classification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for classification. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ The type of category for the medication (for example, therapeutic
@@ -615,7 +615,7 @@ class MedicationKnowledgeMedicineClassification(backboneelement.BackboneElement)
         js = super(MedicationKnowledgeMedicineClassification, self).elementProperties()
         js.extend([
             ("classification", "classification", codeableconcept.CodeableConcept, True, None, False),
-            ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -776,14 +776,14 @@ class MedicationKnowledgeRegulatory(backboneelement.BackboneElement):
         """ Specifies the schedule of a medication in jurisdiction.
         List of `MedicationKnowledgeRegulatorySchedule` items (represented as `dict` in JSON). """
         self._schedule = None
-        """ Primitive extension for schedule. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for schedule. List of `FHIRPrimitiveExtension` """
         
         self.substitution = None
         """ Specifies if changes are allowed when dispensing a medication from
         a regulatory perspective.
         List of `MedicationKnowledgeRegulatorySubstitution` items (represented as `dict` in JSON). """
         self._substitution = None
-        """ Primitive extension for substitution. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for substitution. List of `FHIRPrimitiveExtension` """
         
         super(MedicationKnowledgeRegulatory, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -795,9 +795,9 @@ class MedicationKnowledgeRegulatory(backboneelement.BackboneElement):
             ("regulatoryAuthority", "regulatoryAuthority", fhirreference.FHIRReference, False, None, True),
             ("_regulatoryAuthority", "_regulatoryAuthority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("schedule", "schedule", MedicationKnowledgeRegulatorySchedule, True, None, False),
-            ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("substitution", "substitution", MedicationKnowledgeRegulatorySubstitution, True, None, False),
-            ("_substitution", "_substitution", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_substitution", "_substitution", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -934,7 +934,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge(backboneelement.BackboneElem
         """ Associated documentation about the associated medication knowledge.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reference = None
-        """ Primitive extension for reference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reference. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Category of medicationKnowledge.
@@ -948,7 +948,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge(backboneelement.BackboneElem
         js = super(MedicationKnowledgeRelatedMedicationKnowledge, self).elementProperties()
         js.extend([
             ("reference", "reference", fhirreference.FHIRReference, True, None, True),
-            ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

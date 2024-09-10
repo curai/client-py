@@ -46,13 +46,13 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
         """ Business Identifier for coverage eligiblity request.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.insurance = None
         """ Patient insurance information.
         List of `CoverageEligibilityRequestInsurance` items (represented as `dict` in JSON). """
         self._insurance = None
-        """ Primitive extension for insurance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for insurance. List of `FHIRPrimitiveExtension` """
         
         self.insurer = None
         """ Coverage issuer.
@@ -64,7 +64,7 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
         """ Item to be evaluated for eligibiity.
         List of `CoverageEligibilityRequestItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Intended recipient of products and services.
@@ -88,7 +88,7 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
         """ auth-requirements | benefits | discovery | validation.
         List of `str` items. """
         self._purpose = None
-        """ Primitive extension for purpose. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for purpose. List of `FHIRPrimitiveExtension` """
         
         self.servicedDate = None
         """ Estimated date or dates of service.
@@ -112,7 +112,7 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
         """ Supporting information.
         List of `CoverageEligibilityRequestSupportingInfo` items (represented as `dict` in JSON). """
         self._supportingInfo = None
-        """ Primitive extension for supportingInfo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfo. List of `FHIRPrimitiveExtension` """
         
         super(CoverageEligibilityRequest, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -126,13 +126,13 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
             ("facility", "facility", fhirreference.FHIRReference, False, None, False),
             ("_facility", "_facility", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurance", "insurance", CoverageEligibilityRequestInsurance, True, None, False),
-            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurer", "insurer", fhirreference.FHIRReference, False, None, True),
             ("_insurer", "_insurer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", CoverageEligibilityRequestItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("priority", "priority", codeableconcept.CodeableConcept, False, None, False),
@@ -140,7 +140,7 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
             ("provider", "provider", fhirreference.FHIRReference, False, None, False),
             ("_provider", "_provider", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, True, None, True),
-            ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("servicedDate", "servicedDate", fhirdate.FHIRDate, False, "serviced", False),
             ("_servicedDate", "_servicedDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("servicedPeriod", "servicedPeriod", period.Period, False, "serviced", False),
@@ -148,7 +148,7 @@ class CoverageEligibilityRequest(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfo", "supportingInfo", CoverageEligibilityRequestSupportingInfo, True, None, False),
-            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -232,13 +232,13 @@ class CoverageEligibilityRequestItem(backboneelement.BackboneElement):
         """ Product or service details.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.diagnosis = None
         """ Applicable diagnosis.
         List of `CoverageEligibilityRequestItemDiagnosis` items (represented as `dict` in JSON). """
         self._diagnosis = None
-        """ Primitive extension for diagnosis. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for diagnosis. List of `FHIRPrimitiveExtension` """
         
         self.facility = None
         """ Servicing facility.
@@ -250,7 +250,7 @@ class CoverageEligibilityRequestItem(backboneelement.BackboneElement):
         """ Product or service billing modifiers.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.productOrService = None
         """ Billing, service, product, or drug code.
@@ -274,7 +274,7 @@ class CoverageEligibilityRequestItem(backboneelement.BackboneElement):
         """ Applicable exception or supporting information.
         List of `int` items. """
         self._supportingInfoSequence = None
-        """ Primitive extension for supportingInfoSequence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfoSequence. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Fee, charge or cost per item.
@@ -290,13 +290,13 @@ class CoverageEligibilityRequestItem(backboneelement.BackboneElement):
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detail", "detail", fhirreference.FHIRReference, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("diagnosis", "diagnosis", CoverageEligibilityRequestItemDiagnosis, True, None, False),
-            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("facility", "facility", fhirreference.FHIRReference, False, None, False),
             ("_facility", "_facility", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modifier", "modifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("productOrService", "productOrService", codeableconcept.CodeableConcept, False, None, False),
             ("_productOrService", "_productOrService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("provider", "provider", fhirreference.FHIRReference, False, None, False),
@@ -304,7 +304,7 @@ class CoverageEligibilityRequestItem(backboneelement.BackboneElement):
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfoSequence", "supportingInfoSequence", int, True, None, False),
-            ("_supportingInfoSequence", "_supportingInfoSequence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfoSequence", "_supportingInfoSequence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

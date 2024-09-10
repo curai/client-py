@@ -40,19 +40,19 @@ class HealthcareService(domainresource.DomainResource):
         """ Times the Service Site is available.
         List of `HealthcareServiceAvailableTime` items (represented as `dict` in JSON). """
         self._availableTime = None
-        """ Primitive extension for availableTime. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for availableTime. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Broad category of service being performed or delivered.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.characteristic = None
         """ Collection of characteristics (attributes).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._characteristic = None
-        """ Primitive extension for characteristic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for characteristic. List of `FHIRPrimitiveExtension` """
         
         self.comment = None
         """ Additional description and/or any specific issues not covered
@@ -65,26 +65,26 @@ class HealthcareService(domainresource.DomainResource):
         """ The language that this service is offered in.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._communication = None
-        """ Primitive extension for communication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for communication. List of `FHIRPrimitiveExtension` """
         
         self.coverageArea = None
         """ Location(s) service is intended for/available to.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._coverageArea = None
-        """ Primitive extension for coverageArea. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for coverageArea. List of `FHIRPrimitiveExtension` """
         
         self.eligibility = None
         """ Specific eligibility requirements required to use the service.
         List of `HealthcareServiceEligibility` items (represented as `dict` in JSON). """
         self._eligibility = None
-        """ Primitive extension for eligibility. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for eligibility. List of `FHIRPrimitiveExtension` """
         
         self.endpoint = None
         """ Technical endpoints providing access to electronic services
         operated for the healthcare service.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.extraDetails = None
         """ Extra details about the service that can't be placed in the other
@@ -97,13 +97,13 @@ class HealthcareService(domainresource.DomainResource):
         """ External identifiers for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Location(s) where service may be provided.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._location = None
-        """ Primitive extension for location. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for location. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Description of service as presented to a consumer while searching.
@@ -115,7 +115,7 @@ class HealthcareService(domainresource.DomainResource):
         """ Not available during this time due to provided reason.
         List of `HealthcareServiceNotAvailable` items (represented as `dict` in JSON). """
         self._notAvailable = None
-        """ Primitive extension for notAvailable. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for notAvailable. List of `FHIRPrimitiveExtension` """
         
         self.photo = None
         """ Facilitates quick identification of the service.
@@ -127,7 +127,7 @@ class HealthcareService(domainresource.DomainResource):
         """ Programs that this service is applicable to.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._program = None
-        """ Primitive extension for program. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for program. List of `FHIRPrimitiveExtension` """
         
         self.providedBy = None
         """ Organization that provides this service.
@@ -139,31 +139,31 @@ class HealthcareService(domainresource.DomainResource):
         """ Ways that the service accepts referrals.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._referralMethod = None
-        """ Primitive extension for referralMethod. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referralMethod. List of `FHIRPrimitiveExtension` """
         
         self.serviceProvisionCode = None
         """ Conditions under which service is available/offered.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceProvisionCode = None
-        """ Primitive extension for serviceProvisionCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceProvisionCode. List of `FHIRPrimitiveExtension` """
         
         self.specialty = None
         """ Specialties handled by the HealthcareService.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialty = None
-        """ Primitive extension for specialty. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialty. List of `FHIRPrimitiveExtension` """
         
         self.telecom = None
         """ Contacts related to the healthcare service.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of service that may be delivered or performed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(HealthcareService, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -177,47 +177,47 @@ class HealthcareService(domainresource.DomainResource):
             ("availabilityExceptions", "availabilityExceptions", str, False, None, False),
             ("_availabilityExceptions", "_availabilityExceptions", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("availableTime", "availableTime", HealthcareServiceAvailableTime, True, None, False),
-            ("_availableTime", "_availableTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_availableTime", "_availableTime", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("characteristic", "characteristic", codeableconcept.CodeableConcept, True, None, False),
-            ("_characteristic", "_characteristic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_characteristic", "_characteristic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("communication", "communication", codeableconcept.CodeableConcept, True, None, False),
-            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_communication", "_communication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("coverageArea", "coverageArea", fhirreference.FHIRReference, True, None, False),
-            ("_coverageArea", "_coverageArea", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_coverageArea", "_coverageArea", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("eligibility", "eligibility", HealthcareServiceEligibility, True, None, False),
-            ("_eligibility", "_eligibility", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_eligibility", "_eligibility", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("extraDetails", "extraDetails", str, False, None, False),
             ("_extraDetails", "_extraDetails", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, True, None, False),
-            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("notAvailable", "notAvailable", HealthcareServiceNotAvailable, True, None, False),
-            ("_notAvailable", "_notAvailable", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_notAvailable", "_notAvailable", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("photo", "photo", attachment.Attachment, False, None, False),
             ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("program", "program", codeableconcept.CodeableConcept, True, None, False),
-            ("_program", "_program", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_program", "_program", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("providedBy", "providedBy", fhirreference.FHIRReference, False, None, False),
             ("_providedBy", "_providedBy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referralMethod", "referralMethod", codeableconcept.CodeableConcept, True, None, False),
-            ("_referralMethod", "_referralMethod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referralMethod", "_referralMethod", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serviceProvisionCode", "serviceProvisionCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceProvisionCode", "_serviceProvisionCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceProvisionCode", "_serviceProvisionCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialty", "specialty", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -262,7 +262,7 @@ class HealthcareServiceAvailableTime(backboneelement.BackboneElement):
         """ mon | tue | wed | thu | fri | sat | sun.
         List of `str` items. """
         self._daysOfWeek = None
-        """ Primitive extension for daysOfWeek. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for daysOfWeek. List of `FHIRPrimitiveExtension` """
         
         super(HealthcareServiceAvailableTime, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -276,7 +276,7 @@ class HealthcareServiceAvailableTime(backboneelement.BackboneElement):
             ("availableStartTime", "availableStartTime", fhirtime.FHIRTime, False, None, False),
             ("_availableStartTime", "_availableStartTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("daysOfWeek", "daysOfWeek", str, True, None, False),
-            ("_daysOfWeek", "_daysOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_daysOfWeek", "_daysOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

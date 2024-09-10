@@ -29,13 +29,13 @@ class DiagnosticReport(domainresource.DomainResource):
         """ What was requested.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Service category.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Name/Code for this diagnostic report.
@@ -53,7 +53,7 @@ class DiagnosticReport(domainresource.DomainResource):
         """ Codes for the clinical conclusion of test results.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._conclusionCode = None
-        """ Primitive extension for conclusionCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for conclusionCode. List of `FHIRPrimitiveExtension` """
         
         self.effectiveDateTime = None
         """ Clinically relevant time/time-period for report.
@@ -77,14 +77,14 @@ class DiagnosticReport(domainresource.DomainResource):
         """ Business identifier for report.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.imagingStudy = None
         """ Reference to full details of imaging associated with the diagnostic
         report.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._imagingStudy = None
-        """ Primitive extension for imagingStudy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for imagingStudy. List of `FHIRPrimitiveExtension` """
         
         self.issued = None
         """ DateTime this version was made.
@@ -96,37 +96,37 @@ class DiagnosticReport(domainresource.DomainResource):
         """ Key images associated with this report.
         List of `DiagnosticReportMedia` items (represented as `dict` in JSON). """
         self._media = None
-        """ Primitive extension for media. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for media. List of `FHIRPrimitiveExtension` """
         
         self.performer = None
         """ Responsible Diagnostic Service.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.presentedForm = None
         """ Entire report as issued.
         List of `Attachment` items (represented as `dict` in JSON). """
         self._presentedForm = None
-        """ Primitive extension for presentedForm. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for presentedForm. List of `FHIRPrimitiveExtension` """
         
         self.result = None
         """ Observations.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._result = None
-        """ Primitive extension for result. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for result. List of `FHIRPrimitiveExtension` """
         
         self.resultsInterpreter = None
         """ Primary result interpreter.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._resultsInterpreter = None
-        """ Primitive extension for resultsInterpreter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resultsInterpreter. List of `FHIRPrimitiveExtension` """
         
         self.specimen = None
         """ Specimens this report is based on.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._specimen = None
-        """ Primitive extension for specimen. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specimen. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ registered | partial | preliminary | final +.
@@ -146,15 +146,15 @@ class DiagnosticReport(domainresource.DomainResource):
         js = super(DiagnosticReport, self).elementProperties()
         js.extend([
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("conclusion", "conclusion", str, False, None, False),
             ("_conclusion", "_conclusion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("conclusionCode", "conclusionCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_conclusionCode", "_conclusionCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_conclusionCode", "_conclusionCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectiveDateTime", "effectiveDateTime", fhirdatetime.FHIRDateTime, False, "effective", False),
             ("_effectiveDateTime", "_effectiveDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, "effective", False),
@@ -162,23 +162,23 @@ class DiagnosticReport(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("imagingStudy", "imagingStudy", fhirreference.FHIRReference, True, None, False),
-            ("_imagingStudy", "_imagingStudy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_imagingStudy", "_imagingStudy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("issued", "issued", fhirinstant.FHIRInstant, False, None, False),
             ("_issued", "_issued", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("media", "media", DiagnosticReportMedia, True, None, False),
-            ("_media", "_media", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_media", "_media", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performer", "performer", fhirreference.FHIRReference, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("presentedForm", "presentedForm", attachment.Attachment, True, None, False),
-            ("_presentedForm", "_presentedForm", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_presentedForm", "_presentedForm", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("result", "result", fhirreference.FHIRReference, True, None, False),
-            ("_result", "_result", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_result", "_result", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("resultsInterpreter", "resultsInterpreter", fhirreference.FHIRReference, True, None, False),
-            ("_resultsInterpreter", "_resultsInterpreter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resultsInterpreter", "_resultsInterpreter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specimen", "specimen", fhirreference.FHIRReference, True, None, False),
-            ("_specimen", "_specimen", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specimen", "_specimen", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),

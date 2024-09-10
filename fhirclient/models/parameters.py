@@ -26,7 +26,7 @@ class Parameters(resource.Resource):
         """ Operation Parameter.
         List of `ParametersParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         super(Parameters, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -34,7 +34,7 @@ class Parameters(resource.Resource):
         js = super(Parameters, self).elementProperties()
         js.extend([
             ("parameter", "parameter", ParametersParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -67,7 +67,7 @@ class ParametersParameter(backboneelement.BackboneElement):
         """ Named part of a multi-part parameter.
         List of `ParametersParameter` items (represented as `dict` in JSON). """
         self._part = None
-        """ Primitive extension for part. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for part. List of `FHIRPrimitiveExtension` """
         
         self.resource = None
         """ If parameter is a whole resource.
@@ -383,7 +383,7 @@ class ParametersParameter(backboneelement.BackboneElement):
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("part", "part", ParametersParameter, True, None, False),
-            ("_part", "_part", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_part", "_part", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("resource", "resource", resource.Resource, False, None, False),
             ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("valueAddress", "valueAddress", address.Address, False, "value", False),

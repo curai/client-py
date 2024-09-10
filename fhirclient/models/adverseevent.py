@@ -38,14 +38,14 @@ class AdverseEvent(domainresource.DomainResource):
         manufacturer | unsafe-physical-environment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.contributor = None
         """ Who  was involved in the adverse event or the potential adverse
         event.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._contributor = None
-        """ Primitive extension for contributor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contributor. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ When the event occurred.
@@ -106,13 +106,13 @@ class AdverseEvent(domainresource.DomainResource):
         """ AdverseEvent.referenceDocument.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._referenceDocument = None
-        """ Primitive extension for referenceDocument. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referenceDocument. List of `FHIRPrimitiveExtension` """
         
         self.resultingCondition = None
         """ Effect on the subject due to this event.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._resultingCondition = None
-        """ Primitive extension for resultingCondition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resultingCondition. List of `FHIRPrimitiveExtension` """
         
         self.seriousness = None
         """ Seriousness of the event.
@@ -130,7 +130,7 @@ class AdverseEvent(domainresource.DomainResource):
         """ AdverseEvent.study.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._study = None
-        """ Primitive extension for study. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for study. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ Subject impacted by event.
@@ -142,13 +142,13 @@ class AdverseEvent(domainresource.DomainResource):
         """ AdverseEvent.subjectMedicalHistory.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subjectMedicalHistory = None
-        """ Primitive extension for subjectMedicalHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subjectMedicalHistory. List of `FHIRPrimitiveExtension` """
         
         self.suspectEntity = None
         """ The suspected agent causing the adverse event.
         List of `AdverseEventSuspectEntity` items (represented as `dict` in JSON). """
         self._suspectEntity = None
-        """ Primitive extension for suspectEntity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for suspectEntity. List of `FHIRPrimitiveExtension` """
         
         super(AdverseEvent, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -158,9 +158,9 @@ class AdverseEvent(domainresource.DomainResource):
             ("actuality", "actuality", str, False, None, True),
             ("_actuality", "_actuality", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contributor", "contributor", fhirreference.FHIRReference, True, None, False),
-            ("_contributor", "_contributor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contributor", "_contributor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detected", "detected", fhirdatetime.FHIRDateTime, False, None, False),
@@ -180,21 +180,21 @@ class AdverseEvent(domainresource.DomainResource):
             ("recorder", "recorder", fhirreference.FHIRReference, False, None, False),
             ("_recorder", "_recorder", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referenceDocument", "referenceDocument", fhirreference.FHIRReference, True, None, False),
-            ("_referenceDocument", "_referenceDocument", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referenceDocument", "_referenceDocument", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("resultingCondition", "resultingCondition", fhirreference.FHIRReference, True, None, False),
-            ("_resultingCondition", "_resultingCondition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resultingCondition", "_resultingCondition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("seriousness", "seriousness", codeableconcept.CodeableConcept, False, None, False),
             ("_seriousness", "_seriousness", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("severity", "severity", codeableconcept.CodeableConcept, False, None, False),
             ("_severity", "_severity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("study", "study", fhirreference.FHIRReference, True, None, False),
-            ("_study", "_study", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_study", "_study", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subjectMedicalHistory", "subjectMedicalHistory", fhirreference.FHIRReference, True, None, False),
-            ("_subjectMedicalHistory", "_subjectMedicalHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subjectMedicalHistory", "_subjectMedicalHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("suspectEntity", "suspectEntity", AdverseEventSuspectEntity, True, None, False),
-            ("_suspectEntity", "_suspectEntity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_suspectEntity", "_suspectEntity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -221,7 +221,7 @@ class AdverseEventSuspectEntity(backboneelement.BackboneElement):
         """ Information on the possible cause of the event.
         List of `AdverseEventSuspectEntityCausality` items (represented as `dict` in JSON). """
         self._causality = None
-        """ Primitive extension for causality. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for causality. List of `FHIRPrimitiveExtension` """
         
         self.instance = None
         """ Refers to the specific entity that caused the adverse event.
@@ -235,7 +235,7 @@ class AdverseEventSuspectEntity(backboneelement.BackboneElement):
         js = super(AdverseEventSuspectEntity, self).elementProperties()
         js.extend([
             ("causality", "causality", AdverseEventSuspectEntityCausality, True, None, False),
-            ("_causality", "_causality", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_causality", "_causality", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instance", "instance", fhirreference.FHIRReference, False, None, True),
             ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

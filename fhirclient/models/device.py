@@ -26,7 +26,7 @@ class Device(domainresource.DomainResource):
         """ Details for human/organization for support.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.definition = None
         """ The reference to the definition for the device.
@@ -38,7 +38,7 @@ class Device(domainresource.DomainResource):
         """ The name of the device as given by the manufacturer.
         List of `DeviceDeviceName` items (represented as `dict` in JSON). """
         self._deviceName = None
-        """ Primitive extension for deviceName. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for deviceName. List of `FHIRPrimitiveExtension` """
         
         self.distinctIdentifier = None
         """ The distinct identification string.
@@ -56,7 +56,7 @@ class Device(domainresource.DomainResource):
         """ Instance identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Where the device is found.
@@ -92,13 +92,11 @@ class Device(domainresource.DomainResource):
         """ Device notes and comments.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.owner = None
         """ Organization responsible for device.
         Type `FHIRReference` (represented as `dict` in JSON). """
-        self._owner = None
-        """ Primitive extension for owner. Type `FHIRPrimitiveExtension` """
         
         self.parent = None
         """ The parent device.
@@ -123,13 +121,13 @@ class Device(domainresource.DomainResource):
         operates, e.g., regulation status, time properties.
         List of `DeviceProperty` items (represented as `dict` in JSON). """
         self._property = None
-        """ Primitive extension for property. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for property. List of `FHIRPrimitiveExtension` """
         
         self.safety = None
         """ Safety Characteristics of Device.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._safety = None
-        """ Primitive extension for safety. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for safety. List of `FHIRPrimitiveExtension` """
         
         self.serialNumber = None
         """ Serial number assigned by the manufacturer.
@@ -143,7 +141,7 @@ class Device(domainresource.DomainResource):
         communication.
         List of `DeviceSpecialization` items (represented as `dict` in JSON). """
         self._specialization = None
-        """ Primitive extension for specialization. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialization. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ active | inactive | entered-in-error | unknown.
@@ -156,7 +154,7 @@ class Device(domainresource.DomainResource):
         hw-discon | off.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._statusReason = None
-        """ Primitive extension for statusReason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for statusReason. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ The kind or type of device.
@@ -168,7 +166,7 @@ class Device(domainresource.DomainResource):
         """ Unique Device Identifier (UDI) Barcode string.
         List of `DeviceUdiCarrier` items (represented as `dict` in JSON). """
         self._udiCarrier = None
-        """ Primitive extension for udiCarrier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for udiCarrier. List of `FHIRPrimitiveExtension` """
         
         self.url = None
         """ Network address to contact device.
@@ -181,7 +179,7 @@ class Device(domainresource.DomainResource):
         device.
         List of `DeviceVersion` items (represented as `dict` in JSON). """
         self._version = None
-        """ Primitive extension for version. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for version. List of `FHIRPrimitiveExtension` """
         
         super(Device, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -189,17 +187,17 @@ class Device(domainresource.DomainResource):
         js = super(Device, self).elementProperties()
         js.extend([
             ("contact", "contact", contactpoint.ContactPoint, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("definition", "definition", fhirreference.FHIRReference, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("deviceName", "deviceName", DeviceDeviceName, True, None, False),
-            ("_deviceName", "_deviceName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_deviceName", "_deviceName", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("distinctIdentifier", "distinctIdentifier", str, False, None, False),
             ("_distinctIdentifier", "_distinctIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("expirationDate", "expirationDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_expirationDate", "_expirationDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("lotNumber", "lotNumber", str, False, None, False),
@@ -211,9 +209,8 @@ class Device(domainresource.DomainResource):
             ("modelNumber", "modelNumber", str, False, None, False),
             ("_modelNumber", "_modelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("owner", "owner", fhirreference.FHIRReference, False, None, False),
-            ("_owner", "_owner", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parent", "parent", fhirreference.FHIRReference, False, None, False),
             ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partNumber", "partNumber", str, False, None, False),
@@ -221,25 +218,25 @@ class Device(domainresource.DomainResource):
             ("patient", "patient", fhirreference.FHIRReference, False, None, False),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("property", "property", DeviceProperty, True, None, False),
-            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("safety", "safety", codeableconcept.CodeableConcept, True, None, False),
-            ("_safety", "_safety", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_safety", "_safety", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serialNumber", "serialNumber", str, False, None, False),
             ("_serialNumber", "_serialNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("specialization", "specialization", DeviceSpecialization, True, None, False),
-            ("_specialization", "_specialization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialization", "_specialization", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusReason", "statusReason", codeableconcept.CodeableConcept, True, None, False),
-            ("_statusReason", "_statusReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_statusReason", "_statusReason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("udiCarrier", "udiCarrier", DeviceUdiCarrier, True, None, False),
-            ("_udiCarrier", "_udiCarrier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_udiCarrier", "_udiCarrier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("version", "version", DeviceVersion, True, None, False),
-            ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -317,13 +314,13 @@ class DeviceProperty(backboneelement.BackboneElement):
         """ Property value as a code, e.g., NTP4 (synced to NTP).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._valueCode = None
-        """ Primitive extension for valueCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for valueCode. List of `FHIRPrimitiveExtension` """
         
         self.valueQuantity = None
         """ Property value as a quantity.
         List of `Quantity` items (represented as `dict` in JSON). """
         self._valueQuantity = None
-        """ Primitive extension for valueQuantity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for valueQuantity. List of `FHIRPrimitiveExtension` """
         
         super(DeviceProperty, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -333,9 +330,9 @@ class DeviceProperty(backboneelement.BackboneElement):
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("valueCode", "valueCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_valueCode", "_valueCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_valueCode", "_valueCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("valueQuantity", "valueQuantity", quantity.Quantity, True, None, False),
-            ("_valueQuantity", "_valueQuantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_valueQuantity", "_valueQuantity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

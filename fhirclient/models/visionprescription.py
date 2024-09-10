@@ -43,13 +43,13 @@ class VisionPrescription(domainresource.DomainResource):
         """ Business Identifier for vision prescription.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.lensSpecification = None
         """ Vision lens authorization.
         List of `VisionPrescriptionLensSpecification` items (represented as `dict` in JSON). """
         self._lensSpecification = None
-        """ Primitive extension for lensSpecification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for lensSpecification. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Who prescription is for.
@@ -81,9 +81,9 @@ class VisionPrescription(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lensSpecification", "lensSpecification", VisionPrescriptionLensSpecification, True, None, True),
-            ("_lensSpecification", "_lensSpecification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_lensSpecification", "_lensSpecification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prescriber", "prescriber", fhirreference.FHIRReference, False, None, True),
@@ -171,7 +171,7 @@ class VisionPrescriptionLensSpecification(backboneelement.BackboneElement):
         """ Notes for coatings.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.power = None
         """ Contact lens power.
@@ -183,7 +183,7 @@ class VisionPrescriptionLensSpecification(backboneelement.BackboneElement):
         """ Eye alignment compensation.
         List of `VisionPrescriptionLensSpecificationPrism` items (represented as `dict` in JSON). """
         self._prism = None
-        """ Primitive extension for prism. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for prism. List of `FHIRPrimitiveExtension` """
         
         self.product = None
         """ Product to be supplied.
@@ -221,11 +221,11 @@ class VisionPrescriptionLensSpecification(backboneelement.BackboneElement):
             ("eye", "eye", str, False, None, True),
             ("_eye", "_eye", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("power", "power", float, False, None, False),
             ("_power", "_power", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prism", "prism", VisionPrescriptionLensSpecificationPrism, True, None, False),
-            ("_prism", "_prism", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_prism", "_prism", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("product", "product", codeableconcept.CodeableConcept, False, None, True),
             ("_product", "_product", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sphere", "sphere", float, False, None, False),

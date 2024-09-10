@@ -34,7 +34,7 @@ class Subscription(domainresource.DomainResource):
         """ Contact details for source (e.g. troubleshooting).
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.criteria = None
         """ Rule for server push.
@@ -74,7 +74,7 @@ class Subscription(domainresource.DomainResource):
             ("channel", "channel", SubscriptionChannel, False, None, True),
             ("_channel", "_channel", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactpoint.ContactPoint, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("criteria", "criteria", str, False, None, True),
             ("_criteria", "_criteria", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("end", "end", fhirinstant.FHIRInstant, False, None, False),
@@ -118,7 +118,7 @@ class SubscriptionChannel(backboneelement.BackboneElement):
         """ Usage depends on the channel type.
         List of `str` items. """
         self._header = None
-        """ Primitive extension for header. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for header. List of `FHIRPrimitiveExtension` """
         
         self.payload = None
         """ MIME type to send, or omit for no payload.
@@ -140,7 +140,7 @@ class SubscriptionChannel(backboneelement.BackboneElement):
             ("endpoint", "endpoint", str, False, None, False),
             ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("header", "header", str, True, None, False),
-            ("_header", "_header", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_header", "_header", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("payload", "payload", str, False, None, False),
             ("_payload", "_payload", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", str, False, None, True),

@@ -21,4 +21,3 @@ class Duration(quantity.Quantity):
         super(Duration, self).__init__(jsondict=jsondict, strict=strict)
 
 from . import fhirprimitiveextension
-

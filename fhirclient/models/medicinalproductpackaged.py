@@ -22,7 +22,7 @@ class MedicinalProductPackaged(domainresource.DomainResource):
         """ Batch numbering.
         List of `MedicinalProductPackagedBatchIdentifier` items (represented as `dict` in JSON). """
         self._batchIdentifier = None
-        """ Primitive extension for batchIdentifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for batchIdentifier. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Textual description.
@@ -34,7 +34,7 @@ class MedicinalProductPackaged(domainresource.DomainResource):
         """ Unique identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.legalStatusOfSupply = None
         """ The legal status of supply of the medicinal product as classified
@@ -47,7 +47,7 @@ class MedicinalProductPackaged(domainresource.DomainResource):
         """ Manufacturer of this Package Item.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._manufacturer = None
-        """ Primitive extension for manufacturer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturer. List of `FHIRPrimitiveExtension` """
         
         self.marketingAuthorization = None
         """ Manufacturer of this Package Item.
@@ -59,20 +59,20 @@ class MedicinalProductPackaged(domainresource.DomainResource):
         """ Marketing information.
         List of `MarketingStatus` items (represented as `dict` in JSON). """
         self._marketingStatus = None
-        """ Primitive extension for marketingStatus. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for marketingStatus. List of `FHIRPrimitiveExtension` """
         
         self.packageItem = None
         """ A packaging item, as a contained for medicine, possibly with other
         packaging items within.
         List of `MedicinalProductPackagedPackageItem` items (represented as `dict` in JSON). """
         self._packageItem = None
-        """ Primitive extension for packageItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for packageItem. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ The product with this is a pack for.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductPackaged, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -80,23 +80,23 @@ class MedicinalProductPackaged(domainresource.DomainResource):
         js = super(MedicinalProductPackaged, self).elementProperties()
         js.extend([
             ("batchIdentifier", "batchIdentifier", MedicinalProductPackagedBatchIdentifier, True, None, False),
-            ("_batchIdentifier", "_batchIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_batchIdentifier", "_batchIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("legalStatusOfSupply", "legalStatusOfSupply", codeableconcept.CodeableConcept, False, None, False),
             ("_legalStatusOfSupply", "_legalStatusOfSupply", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, True, None, False),
-            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("marketingAuthorization", "marketingAuthorization", fhirreference.FHIRReference, False, None, False),
             ("_marketingAuthorization", "_marketingAuthorization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("marketingStatus", "marketingStatus", marketingstatus.MarketingStatus, True, None, False),
-            ("_marketingStatus", "_marketingStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_marketingStatus", "_marketingStatus", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("packageItem", "packageItem", MedicinalProductPackagedPackageItem, True, None, True),
-            ("_packageItem", "_packageItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_packageItem", "_packageItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -162,50 +162,50 @@ class MedicinalProductPackagedPackageItem(backboneelement.BackboneElement):
         """ A possible alternate material for the packaging.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._alternateMaterial = None
-        """ Primitive extension for alternateMaterial. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alternateMaterial. List of `FHIRPrimitiveExtension` """
         
         self.device = None
         """ A device accompanying a medicinal product.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._device = None
-        """ Primitive extension for device. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for device. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Including possibly Data Carrier Identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.manufacturedItem = None
         """ The manufactured item as contained in the packaged medicinal
         product.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._manufacturedItem = None
-        """ Primitive extension for manufacturedItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturedItem. List of `FHIRPrimitiveExtension` """
         
         self.manufacturer = None
         """ Manufacturer of this Package Item.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._manufacturer = None
-        """ Primitive extension for manufacturer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for manufacturer. List of `FHIRPrimitiveExtension` """
         
         self.material = None
         """ Material type of the package item.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._material = None
-        """ Primitive extension for material. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for material. List of `FHIRPrimitiveExtension` """
         
         self.otherCharacteristics = None
         """ Other codeable characteristics.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._otherCharacteristics = None
-        """ Primitive extension for otherCharacteristics. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for otherCharacteristics. List of `FHIRPrimitiveExtension` """
         
         self.packageItem = None
         """ Allows containers within containers.
         List of `MedicinalProductPackagedPackageItem` items (represented as `dict` in JSON). """
         self._packageItem = None
-        """ Primitive extension for packageItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for packageItem. List of `FHIRPrimitiveExtension` """
         
         self.physicalCharacteristics = None
         """ Dimensions, color etc..
@@ -224,7 +224,7 @@ class MedicinalProductPackagedPackageItem(backboneelement.BackboneElement):
         """ Shelf Life and storage information.
         List of `ProductShelfLife` items (represented as `dict` in JSON). """
         self._shelfLifeStorage = None
-        """ Primitive extension for shelfLifeStorage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for shelfLifeStorage. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ The physical type of the container of the medicine.
@@ -238,27 +238,27 @@ class MedicinalProductPackagedPackageItem(backboneelement.BackboneElement):
         js = super(MedicinalProductPackagedPackageItem, self).elementProperties()
         js.extend([
             ("alternateMaterial", "alternateMaterial", codeableconcept.CodeableConcept, True, None, False),
-            ("_alternateMaterial", "_alternateMaterial", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alternateMaterial", "_alternateMaterial", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("device", "device", fhirreference.FHIRReference, True, None, False),
-            ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("manufacturedItem", "manufacturedItem", fhirreference.FHIRReference, True, None, False),
-            ("_manufacturedItem", "_manufacturedItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturedItem", "_manufacturedItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, True, None, False),
-            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("material", "material", codeableconcept.CodeableConcept, True, None, False),
-            ("_material", "_material", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_material", "_material", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("otherCharacteristics", "otherCharacteristics", codeableconcept.CodeableConcept, True, None, False),
-            ("_otherCharacteristics", "_otherCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_otherCharacteristics", "_otherCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("packageItem", "packageItem", MedicinalProductPackagedPackageItem, True, None, False),
-            ("_packageItem", "_packageItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_packageItem", "_packageItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("physicalCharacteristics", "physicalCharacteristics", prodcharacteristic.ProdCharacteristic, False, None, False),
             ("_physicalCharacteristics", "_physicalCharacteristics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, True),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("shelfLifeStorage", "shelfLifeStorage", productshelflife.ProductShelfLife, True, None, False),
-            ("_shelfLifeStorage", "_shelfLifeStorage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_shelfLifeStorage", "_shelfLifeStorage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

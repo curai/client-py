@@ -27,7 +27,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -51,7 +51,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ Document definition.
         List of `CapabilityStatementDocument` items (represented as `dict` in JSON). """
         self._document = None
-        """ Primitive extension for document. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for document. List of `FHIRPrimitiveExtension` """
         
         self.experimental = None
         """ For testing purposes, not real usage.
@@ -69,7 +69,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ formats supported (xml | json | ttl | mime type).
         List of `str` items. """
         self._format = None
-        """ Primitive extension for format. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for format. List of `FHIRPrimitiveExtension` """
         
         self.implementation = None
         """ If this describes a specific instance.
@@ -81,25 +81,25 @@ class CapabilityStatement(domainresource.DomainResource):
         """ Implementation guides supported.
         List of `str` items. """
         self._implementationGuide = None
-        """ Primitive extension for implementationGuide. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for implementationGuide. List of `FHIRPrimitiveExtension` """
         
         self.imports = None
         """ Canonical URL of another capability statement this adds to.
         List of `str` items. """
         self._imports = None
-        """ Primitive extension for imports. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for imports. List of `FHIRPrimitiveExtension` """
         
         self.instantiates = None
         """ Canonical URL of another capability statement this implements.
         List of `str` items. """
         self._instantiates = None
-        """ Primitive extension for instantiates. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiates. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for capability statement (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ instance | capability | requirements.
@@ -111,7 +111,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ If messaging is supported.
         List of `CapabilityStatementMessaging` items (represented as `dict` in JSON). """
         self._messaging = None
-        """ Primitive extension for messaging. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for messaging. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this capability statement (computer friendly).
@@ -123,7 +123,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ Patch formats supported.
         List of `str` items. """
         self._patchFormat = None
-        """ Primitive extension for patchFormat. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for patchFormat. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -141,7 +141,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ If the endpoint is a RESTful one.
         List of `CapabilityStatementRest` items (represented as `dict` in JSON). """
         self._rest = None
-        """ Primitive extension for rest. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rest. List of `FHIRPrimitiveExtension` """
         
         self.software = None
         """ Software that is covered by this capability statement.
@@ -172,7 +172,7 @@ class CapabilityStatement(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the capability statement.
@@ -186,7 +186,7 @@ class CapabilityStatement(domainresource.DomainResource):
         js = super(CapabilityStatement, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, True),
@@ -194,37 +194,37 @@ class CapabilityStatement(domainresource.DomainResource):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("document", "document", CapabilityStatementDocument, True, None, False),
-            ("_document", "_document", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_document", "_document", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("fhirVersion", "fhirVersion", str, False, None, True),
             ("_fhirVersion", "_fhirVersion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("format", "format", str, True, None, True),
-            ("_format", "_format", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_format", "_format", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("implementation", "implementation", CapabilityStatementImplementation, False, None, False),
             ("_implementation", "_implementation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("implementationGuide", "implementationGuide", str, True, None, False),
-            ("_implementationGuide", "_implementationGuide", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_implementationGuide", "_implementationGuide", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("imports", "imports", str, True, None, False),
-            ("_imports", "_imports", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_imports", "_imports", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiates", "instantiates", str, True, None, False),
-            ("_instantiates", "_instantiates", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiates", "_instantiates", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, True),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("messaging", "messaging", CapabilityStatementMessaging, True, None, False),
-            ("_messaging", "_messaging", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_messaging", "_messaging", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patchFormat", "patchFormat", str, True, None, False),
-            ("_patchFormat", "_patchFormat", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_patchFormat", "_patchFormat", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("rest", "rest", CapabilityStatementRest, True, None, False),
-            ("_rest", "_rest", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rest", "_rest", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("software", "software", CapabilityStatementSoftware, False, None, False),
             ("_software", "_software", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
@@ -234,7 +234,7 @@ class CapabilityStatement(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -369,7 +369,7 @@ class CapabilityStatementMessaging(backboneelement.BackboneElement):
         """ Where messages should be sent.
         List of `CapabilityStatementMessagingEndpoint` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.reliableCache = None
         """ Reliable Message Cache Length (min).
@@ -381,7 +381,7 @@ class CapabilityStatementMessaging(backboneelement.BackboneElement):
         """ Messages supported by this system.
         List of `CapabilityStatementMessagingSupportedMessage` items (represented as `dict` in JSON). """
         self._supportedMessage = None
-        """ Primitive extension for supportedMessage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportedMessage. List of `FHIRPrimitiveExtension` """
         
         super(CapabilityStatementMessaging, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -391,11 +391,11 @@ class CapabilityStatementMessaging(backboneelement.BackboneElement):
             ("documentation", "documentation", str, False, None, False),
             ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endpoint", "endpoint", CapabilityStatementMessagingEndpoint, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reliableCache", "reliableCache", int, False, None, False),
             ("_reliableCache", "_reliableCache", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportedMessage", "supportedMessage", CapabilityStatementMessagingSupportedMessage, True, None, False),
-            ("_supportedMessage", "_supportedMessage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportedMessage", "_supportedMessage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -504,7 +504,7 @@ class CapabilityStatementRest(backboneelement.BackboneElement):
         """ Compartments served/used by system.
         List of `str` items. """
         self._compartment = None
-        """ Primitive extension for compartment. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for compartment. List of `FHIRPrimitiveExtension` """
         
         self.documentation = None
         """ General description of implementation.
@@ -516,7 +516,7 @@ class CapabilityStatementRest(backboneelement.BackboneElement):
         """ What operations are supported?.
         List of `CapabilityStatementRestInteraction` items (represented as `dict` in JSON). """
         self._interaction = None
-        """ Primitive extension for interaction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for interaction. List of `FHIRPrimitiveExtension` """
         
         self.mode = None
         """ client | server.
@@ -528,19 +528,19 @@ class CapabilityStatementRest(backboneelement.BackboneElement):
         """ Definition of a system level operation.
         List of `CapabilityStatementRestResourceOperation` items (represented as `dict` in JSON). """
         self._operation = None
-        """ Primitive extension for operation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for operation. List of `FHIRPrimitiveExtension` """
         
         self.resource = None
         """ Resource served on the REST interface.
         List of `CapabilityStatementRestResource` items (represented as `dict` in JSON). """
         self._resource = None
-        """ Primitive extension for resource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resource. List of `FHIRPrimitiveExtension` """
         
         self.searchParam = None
         """ Search parameters for searching all resources.
         List of `CapabilityStatementRestResourceSearchParam` items (represented as `dict` in JSON). """
         self._searchParam = None
-        """ Primitive extension for searchParam. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for searchParam. List of `FHIRPrimitiveExtension` """
         
         self.security = None
         """ Information about security of implementation.
@@ -554,19 +554,19 @@ class CapabilityStatementRest(backboneelement.BackboneElement):
         js = super(CapabilityStatementRest, self).elementProperties()
         js.extend([
             ("compartment", "compartment", str, True, None, False),
-            ("_compartment", "_compartment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_compartment", "_compartment", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("documentation", "documentation", str, False, None, False),
             ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("interaction", "interaction", CapabilityStatementRestInteraction, True, None, False),
-            ("_interaction", "_interaction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_interaction", "_interaction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("mode", "mode", str, False, None, True),
             ("_mode", "_mode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("operation", "operation", CapabilityStatementRestResourceOperation, True, None, False),
-            ("_operation", "_operation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_operation", "_operation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("resource", "resource", CapabilityStatementRestResource, True, None, False),
-            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("searchParam", "searchParam", CapabilityStatementRestResourceSearchParam, True, None, False),
-            ("_searchParam", "_searchParam", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_searchParam", "_searchParam", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("security", "security", CapabilityStatementRestSecurity, False, None, False),
             ("_security", "_security", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -666,13 +666,13 @@ class CapabilityStatementRestResource(backboneelement.BackboneElement):
         """ What operations are supported?.
         List of `CapabilityStatementRestResourceInteraction` items (represented as `dict` in JSON). """
         self._interaction = None
-        """ Primitive extension for interaction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for interaction. List of `FHIRPrimitiveExtension` """
         
         self.operation = None
         """ Definition of a resource operation.
         List of `CapabilityStatementRestResourceOperation` items (represented as `dict` in JSON). """
         self._operation = None
-        """ Primitive extension for operation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for operation. List of `FHIRPrimitiveExtension` """
         
         self.profile = None
         """ Base System profile for all uses of resource.
@@ -690,31 +690,31 @@ class CapabilityStatementRestResource(backboneelement.BackboneElement):
         """ literal | logical | resolves | enforced | local.
         List of `str` items. """
         self._referencePolicy = None
-        """ Primitive extension for referencePolicy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referencePolicy. List of `FHIRPrimitiveExtension` """
         
         self.searchInclude = None
         """ _include values supported by the server.
         List of `str` items. """
         self._searchInclude = None
-        """ Primitive extension for searchInclude. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for searchInclude. List of `FHIRPrimitiveExtension` """
         
         self.searchParam = None
         """ Search parameters supported by implementation.
         List of `CapabilityStatementRestResourceSearchParam` items (represented as `dict` in JSON). """
         self._searchParam = None
-        """ Primitive extension for searchParam. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for searchParam. List of `FHIRPrimitiveExtension` """
         
         self.searchRevInclude = None
         """ _revinclude values supported by the server.
         List of `str` items. """
         self._searchRevInclude = None
-        """ Primitive extension for searchRevInclude. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for searchRevInclude. List of `FHIRPrimitiveExtension` """
         
         self.supportedProfile = None
         """ Profiles for use cases supported.
         List of `str` items. """
         self._supportedProfile = None
-        """ Primitive extension for supportedProfile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportedProfile. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ A resource type that is supported.
@@ -750,23 +750,23 @@ class CapabilityStatementRestResource(backboneelement.BackboneElement):
             ("documentation", "documentation", str, False, None, False),
             ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("interaction", "interaction", CapabilityStatementRestResourceInteraction, True, None, False),
-            ("_interaction", "_interaction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_interaction", "_interaction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("operation", "operation", CapabilityStatementRestResourceOperation, True, None, False),
-            ("_operation", "_operation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_operation", "_operation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("profile", "profile", str, False, None, False),
             ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("readHistory", "readHistory", bool, False, None, False),
             ("_readHistory", "_readHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referencePolicy", "referencePolicy", str, True, None, False),
-            ("_referencePolicy", "_referencePolicy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referencePolicy", "_referencePolicy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("searchInclude", "searchInclude", str, True, None, False),
-            ("_searchInclude", "_searchInclude", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_searchInclude", "_searchInclude", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("searchParam", "searchParam", CapabilityStatementRestResourceSearchParam, True, None, False),
-            ("_searchParam", "_searchParam", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_searchParam", "_searchParam", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("searchRevInclude", "searchRevInclude", str, True, None, False),
-            ("_searchRevInclude", "_searchRevInclude", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_searchRevInclude", "_searchRevInclude", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("supportedProfile", "supportedProfile", str, True, None, False),
-            ("_supportedProfile", "_supportedProfile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportedProfile", "_supportedProfile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", str, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("updateCreate", "updateCreate", bool, False, None, False),
@@ -963,7 +963,7 @@ class CapabilityStatementRestSecurity(backboneelement.BackboneElement):
         """ OAuth | SMART-on-FHIR | NTLM | Basic | Kerberos | Certificates.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._service = None
-        """ Primitive extension for service. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for service. List of `FHIRPrimitiveExtension` """
         
         super(CapabilityStatementRestSecurity, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -975,7 +975,7 @@ class CapabilityStatementRestSecurity(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("service", "service", codeableconcept.CodeableConcept, True, None, False),
-            ("_service", "_service", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_service", "_service", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -27,7 +27,7 @@ class ImplementationGuide(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -51,7 +51,7 @@ class ImplementationGuide(domainresource.DomainResource):
         """ Another Implementation guide this depends on.
         List of `ImplementationGuideDependsOn` items (represented as `dict` in JSON). """
         self._dependsOn = None
-        """ Primitive extension for dependsOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dependsOn. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Natural language description of the implementation guide.
@@ -69,19 +69,19 @@ class ImplementationGuide(domainresource.DomainResource):
         """ FHIR Version(s) this Implementation Guide targets.
         List of `str` items. """
         self._fhirVersion = None
-        """ Primitive extension for fhirVersion. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for fhirVersion. List of `FHIRPrimitiveExtension` """
         
         self.global_fhir = None
         """ Profiles that apply globally.
         List of `ImplementationGuideGlobal` items (represented as `dict` in JSON). """
         self._global_fhir = None
-        """ Primitive extension for global_fhir. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for global_fhir. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for implementation guide (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.license = None
         """ SPDX license code for this IG (or not-open-source).
@@ -136,7 +136,7 @@ class ImplementationGuide(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the implementation guide.
@@ -150,7 +150,7 @@ class ImplementationGuide(domainresource.DomainResource):
         js = super(ImplementationGuide, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -158,17 +158,17 @@ class ImplementationGuide(domainresource.DomainResource):
             ("definition", "definition", ImplementationGuideDefinition, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("dependsOn", "dependsOn", ImplementationGuideDependsOn, True, None, False),
-            ("_dependsOn", "_dependsOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dependsOn", "_dependsOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("fhirVersion", "fhirVersion", str, True, None, True),
-            ("_fhirVersion", "_fhirVersion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_fhirVersion", "_fhirVersion", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("global_fhir", "global", ImplementationGuideGlobal, True, None, False),
-            ("_global_fhir", "_global_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_global_fhir", "_global_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("license", "license", str, False, None, False),
             ("_license", "_license", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("manifest", "manifest", ImplementationGuideManifest, False, None, False),
@@ -186,7 +186,7 @@ class ImplementationGuide(domainresource.DomainResource):
             ("url", "url", str, False, None, True),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -216,7 +216,7 @@ class ImplementationGuideDefinition(backboneelement.BackboneElement):
         """ Grouping used to present related resources in the IG.
         List of `ImplementationGuideDefinitionGrouping` items (represented as `dict` in JSON). """
         self._grouping = None
-        """ Primitive extension for grouping. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for grouping. List of `FHIRPrimitiveExtension` """
         
         self.page = None
         """ Page/Section in the Guide.
@@ -228,19 +228,19 @@ class ImplementationGuideDefinition(backboneelement.BackboneElement):
         """ Defines how IG is built by tools.
         List of `ImplementationGuideDefinitionParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.resource = None
         """ Resource in the implementation guide.
         List of `ImplementationGuideDefinitionResource` items (represented as `dict` in JSON). """
         self._resource = None
-        """ Primitive extension for resource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resource. List of `FHIRPrimitiveExtension` """
         
         self.template = None
         """ A template for building resources.
         List of `ImplementationGuideDefinitionTemplate` items (represented as `dict` in JSON). """
         self._template = None
-        """ Primitive extension for template. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for template. List of `FHIRPrimitiveExtension` """
         
         super(ImplementationGuideDefinition, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -248,15 +248,15 @@ class ImplementationGuideDefinition(backboneelement.BackboneElement):
         js = super(ImplementationGuideDefinition, self).elementProperties()
         js.extend([
             ("grouping", "grouping", ImplementationGuideDefinitionGrouping, True, None, False),
-            ("_grouping", "_grouping", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_grouping", "_grouping", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("page", "page", ImplementationGuideDefinitionPage, False, None, False),
             ("_page", "_page", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameter", "parameter", ImplementationGuideDefinitionParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("resource", "resource", ImplementationGuideDefinitionResource, True, None, True),
-            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("template", "template", ImplementationGuideDefinitionTemplate, True, None, False),
-            ("_template", "_template", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_template", "_template", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -342,7 +342,7 @@ class ImplementationGuideDefinitionPage(backboneelement.BackboneElement):
         """ Nested Pages / Sections.
         List of `ImplementationGuideDefinitionPage` items (represented as `dict` in JSON). """
         self._page = None
-        """ Primitive extension for page. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for page. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Short title shown for navigational assistance.
@@ -362,7 +362,7 @@ class ImplementationGuideDefinitionPage(backboneelement.BackboneElement):
             ("nameUrl", "nameUrl", str, False, "name", True),
             ("_nameUrl", "_nameUrl", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("page", "page", ImplementationGuideDefinitionPage, True, None, False),
-            ("_page", "_page", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_page", "_page", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, True),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -451,7 +451,7 @@ class ImplementationGuideDefinitionResource(backboneelement.BackboneElement):
         """ Versions this applies to (if different to IG).
         List of `str` items. """
         self._fhirVersion = None
-        """ Primitive extension for fhirVersion. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for fhirVersion. List of `FHIRPrimitiveExtension` """
         
         self.groupingId = None
         """ Grouping this is part of.
@@ -483,7 +483,7 @@ class ImplementationGuideDefinitionResource(backboneelement.BackboneElement):
             ("exampleCanonical", "exampleCanonical", str, False, "example", False),
             ("_exampleCanonical", "_exampleCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("fhirVersion", "fhirVersion", str, True, None, False),
-            ("_fhirVersion", "_fhirVersion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_fhirVersion", "_fhirVersion", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("groupingId", "groupingId", str, False, None, False),
             ("_groupingId", "_groupingId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
@@ -655,19 +655,19 @@ class ImplementationGuideManifest(backboneelement.BackboneElement):
         """ Image within the IG.
         List of `str` items. """
         self._image = None
-        """ Primitive extension for image. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for image. List of `FHIRPrimitiveExtension` """
         
         self.other = None
         """ Additional linkable file in IG.
         List of `str` items. """
         self._other = None
-        """ Primitive extension for other. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for other. List of `FHIRPrimitiveExtension` """
         
         self.page = None
         """ HTML page within the parent IG.
         List of `ImplementationGuideManifestPage` items (represented as `dict` in JSON). """
         self._page = None
-        """ Primitive extension for page. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for page. List of `FHIRPrimitiveExtension` """
         
         self.rendering = None
         """ Location of rendered implementation guide.
@@ -679,7 +679,7 @@ class ImplementationGuideManifest(backboneelement.BackboneElement):
         """ Resource in the implementation guide.
         List of `ImplementationGuideManifestResource` items (represented as `dict` in JSON). """
         self._resource = None
-        """ Primitive extension for resource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for resource. List of `FHIRPrimitiveExtension` """
         
         super(ImplementationGuideManifest, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -687,15 +687,15 @@ class ImplementationGuideManifest(backboneelement.BackboneElement):
         js = super(ImplementationGuideManifest, self).elementProperties()
         js.extend([
             ("image", "image", str, True, None, False),
-            ("_image", "_image", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_image", "_image", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("other", "other", str, True, None, False),
-            ("_other", "_other", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_other", "_other", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("page", "page", ImplementationGuideManifestPage, True, None, False),
-            ("_page", "_page", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_page", "_page", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("rendering", "rendering", str, False, None, False),
             ("_rendering", "_rendering", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("resource", "resource", ImplementationGuideManifestResource, True, None, True),
-            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_resource", "_resource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -720,7 +720,7 @@ class ImplementationGuideManifestPage(backboneelement.BackboneElement):
         """ Anchor available on the page.
         List of `str` items. """
         self._anchor = None
-        """ Primitive extension for anchor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for anchor. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ HTML page name.
@@ -740,7 +740,7 @@ class ImplementationGuideManifestPage(backboneelement.BackboneElement):
         js = super(ImplementationGuideManifestPage, self).elementProperties()
         js.extend([
             ("anchor", "anchor", str, True, None, False),
-            ("_anchor", "_anchor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_anchor", "_anchor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("title", "title", str, False, None, False),

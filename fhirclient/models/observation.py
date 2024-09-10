@@ -25,7 +25,7 @@ class Observation(domainresource.DomainResource):
         """ Fulfills plan, proposal or order.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ Observed body part.
@@ -37,7 +37,7 @@ class Observation(domainresource.DomainResource):
         """ Classification of  type of observation.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Type of observation (code / type).
@@ -49,7 +49,7 @@ class Observation(domainresource.DomainResource):
         """ Component results.
         List of `ObservationComponent` items (represented as `dict` in JSON). """
         self._component = None
-        """ Primitive extension for component. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for component. List of `FHIRPrimitiveExtension` """
         
         self.dataAbsentReason = None
         """ Why the result is missing.
@@ -61,7 +61,7 @@ class Observation(domainresource.DomainResource):
         """ Related measurements the observation is made from.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._derivedFrom = None
-        """ Primitive extension for derivedFrom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for derivedFrom. List of `FHIRPrimitiveExtension` """
         
         self.device = None
         """ (Measurement) Device.
@@ -104,25 +104,25 @@ class Observation(domainresource.DomainResource):
         record.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._focus = None
-        """ Primitive extension for focus. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for focus. List of `FHIRPrimitiveExtension` """
         
         self.hasMember = None
         """ Related resource that belongs to the Observation group.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._hasMember = None
-        """ Primitive extension for hasMember. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for hasMember. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business Identifier for observation.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.interpretation = None
         """ High, low, normal, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._interpretation = None
-        """ Primitive extension for interpretation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for interpretation. List of `FHIRPrimitiveExtension` """
         
         self.issued = None
         """ Date/Time this version was made available.
@@ -140,25 +140,25 @@ class Observation(domainresource.DomainResource):
         """ Comments about the observation.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Part of referenced event.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.performer = None
         """ Who is responsible for the observation.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.referenceRange = None
         """ Provides guide for interpretation.
         List of `ObservationReferenceRange` items (represented as `dict` in JSON). """
         self._referenceRange = None
-        """ Primitive extension for referenceRange. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referenceRange. List of `FHIRPrimitiveExtension` """
         
         self.specimen = None
         """ Specimen used for this observation.
@@ -250,19 +250,19 @@ class Observation(domainresource.DomainResource):
         js = super(Observation, self).elementProperties()
         js.extend([
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, False, None, False),
             ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("component", "component", ObservationComponent, True, None, False),
-            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dataAbsentReason", "dataAbsentReason", codeableconcept.CodeableConcept, False, None, False),
             ("_dataAbsentReason", "_dataAbsentReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("derivedFrom", "derivedFrom", fhirreference.FHIRReference, True, None, False),
-            ("_derivedFrom", "_derivedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_derivedFrom", "_derivedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("device", "device", fhirreference.FHIRReference, False, None, False),
             ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("effectiveDateTime", "effectiveDateTime", fhirdatetime.FHIRDateTime, False, "effective", False),
@@ -276,25 +276,25 @@ class Observation(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("focus", "focus", fhirreference.FHIRReference, True, None, False),
-            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("hasMember", "hasMember", fhirreference.FHIRReference, True, None, False),
-            ("_hasMember", "_hasMember", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_hasMember", "_hasMember", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("interpretation", "interpretation", codeableconcept.CodeableConcept, True, None, False),
-            ("_interpretation", "_interpretation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_interpretation", "_interpretation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("issued", "issued", fhirinstant.FHIRInstant, False, None, False),
             ("_issued", "_issued", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("method", "method", codeableconcept.CodeableConcept, False, None, False),
             ("_method", "_method", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performer", "performer", fhirreference.FHIRReference, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("referenceRange", "referenceRange", ObservationReferenceRange, True, None, False),
-            ("_referenceRange", "_referenceRange", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referenceRange", "_referenceRange", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specimen", "specimen", fhirreference.FHIRReference, False, None, False),
             ("_specimen", "_specimen", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
@@ -365,13 +365,13 @@ class ObservationComponent(backboneelement.BackboneElement):
         """ High, low, normal, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._interpretation = None
-        """ Primitive extension for interpretation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for interpretation. List of `FHIRPrimitiveExtension` """
         
         self.referenceRange = None
         """ Provides guide for interpretation of component result.
         List of `ObservationReferenceRange` items (represented as `dict` in JSON). """
         self._referenceRange = None
-        """ Primitive extension for referenceRange. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referenceRange. List of `FHIRPrimitiveExtension` """
         
         self.valueBoolean = None
         """ Actual component result.
@@ -449,9 +449,9 @@ class ObservationComponent(backboneelement.BackboneElement):
             ("dataAbsentReason", "dataAbsentReason", codeableconcept.CodeableConcept, False, None, False),
             ("_dataAbsentReason", "_dataAbsentReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("interpretation", "interpretation", codeableconcept.CodeableConcept, True, None, False),
-            ("_interpretation", "_interpretation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_interpretation", "_interpretation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("referenceRange", "referenceRange", ObservationReferenceRange, True, None, False),
-            ("_referenceRange", "_referenceRange", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referenceRange", "_referenceRange", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("valueBoolean", "valueBoolean", bool, False, "value", False),
             ("_valueBoolean", "_valueBoolean", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("valueCodeableConcept", "valueCodeableConcept", codeableconcept.CodeableConcept, False, "value", False),
@@ -507,7 +507,7 @@ class ObservationReferenceRange(backboneelement.BackboneElement):
         """ Reference range population.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._appliesTo = None
-        """ Primitive extension for appliesTo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for appliesTo. List of `FHIRPrimitiveExtension` """
         
         self.high = None
         """ High Range, if relevant.
@@ -541,7 +541,7 @@ class ObservationReferenceRange(backboneelement.BackboneElement):
             ("age", "age", range.Range, False, None, False),
             ("_age", "_age", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("appliesTo", "appliesTo", codeableconcept.CodeableConcept, True, None, False),
-            ("_appliesTo", "_appliesTo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_appliesTo", "_appliesTo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("high", "high", quantity.Quantity, False, None, False),
             ("_high", "_high", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("low", "low", quantity.Quantity, False, None, False),

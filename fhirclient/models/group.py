@@ -39,7 +39,7 @@ class Group(domainresource.DomainResource):
         """ Include / Exclude group members by Trait.
         List of `GroupCharacteristic` items (represented as `dict` in JSON). """
         self._characteristic = None
-        """ Primitive extension for characteristic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for characteristic. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Kind of Group members.
@@ -51,7 +51,7 @@ class Group(domainresource.DomainResource):
         """ Unique id.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.managingEntity = None
         """ Entity that is the custodian of the Group's definition.
@@ -63,7 +63,7 @@ class Group(domainresource.DomainResource):
         """ Who or what is in group.
         List of `GroupMember` items (represented as `dict` in JSON). """
         self._member = None
-        """ Primitive extension for member. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for member. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Label for Group.
@@ -93,15 +93,15 @@ class Group(domainresource.DomainResource):
             ("actual", "actual", bool, False, None, True),
             ("_actual", "_actual", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("characteristic", "characteristic", GroupCharacteristic, True, None, False),
-            ("_characteristic", "_characteristic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_characteristic", "_characteristic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("managingEntity", "managingEntity", fhirreference.FHIRReference, False, None, False),
             ("_managingEntity", "_managingEntity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("member", "member", GroupMember, True, None, False),
-            ("_member", "_member", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_member", "_member", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("quantity", "quantity", int, False, None, False),

@@ -34,13 +34,13 @@ class Goal(domainresource.DomainResource):
         """ Issues addressed by this goal.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._addresses = None
-        """ Primitive extension for addresses. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for addresses. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ E.g. Treatment, dietary, behavioral, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Code or text describing goal.
@@ -58,7 +58,7 @@ class Goal(domainresource.DomainResource):
         """ External Ids for this goal.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.lifecycleStatus = None
         """ proposed | planned | accepted | active | on-hold | completed |
@@ -71,19 +71,19 @@ class Goal(domainresource.DomainResource):
         """ Comments about the goal.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.outcomeCode = None
         """ What result was achieved regarding the goal?.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._outcomeCode = None
-        """ Primitive extension for outcomeCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for outcomeCode. List of `FHIRPrimitiveExtension` """
         
         self.outcomeReference = None
         """ Observation that resulted from goal.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._outcomeReference = None
-        """ Primitive extension for outcomeReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for outcomeReference. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ high-priority | medium-priority | low-priority.
@@ -125,7 +125,7 @@ class Goal(domainresource.DomainResource):
         """ Target outcome for the goal.
         List of `GoalTarget` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(Goal, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -135,23 +135,23 @@ class Goal(domainresource.DomainResource):
             ("achievementStatus", "achievementStatus", codeableconcept.CodeableConcept, False, None, False),
             ("_achievementStatus", "_achievementStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("addresses", "addresses", fhirreference.FHIRReference, True, None, False),
-            ("_addresses", "_addresses", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_addresses", "_addresses", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", codeableconcept.CodeableConcept, False, None, True),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("expressedBy", "expressedBy", fhirreference.FHIRReference, False, None, False),
             ("_expressedBy", "_expressedBy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lifecycleStatus", "lifecycleStatus", str, False, None, True),
             ("_lifecycleStatus", "_lifecycleStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcomeCode", "outcomeCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_outcomeCode", "_outcomeCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_outcomeCode", "_outcomeCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcomeReference", "outcomeReference", fhirreference.FHIRReference, True, None, False),
-            ("_outcomeReference", "_outcomeReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_outcomeReference", "_outcomeReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", codeableconcept.CodeableConcept, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("startCodeableConcept", "startCodeableConcept", codeableconcept.CodeableConcept, False, "start", False),
@@ -165,7 +165,7 @@ class Goal(domainresource.DomainResource):
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("target", "target", GoalTarget, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -27,7 +27,7 @@ class MessageDefinition(domainresource.DomainResource):
         """ Responses to this message.
         List of `MessageDefinitionAllowedResponse` items (represented as `dict` in JSON). """
         self._allowedResponse = None
-        """ Primitive extension for allowedResponse. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for allowedResponse. List of `FHIRPrimitiveExtension` """
         
         self.base = None
         """ Definition this one is based on.
@@ -45,7 +45,7 @@ class MessageDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -87,25 +87,25 @@ class MessageDefinition(domainresource.DomainResource):
         """ Resource(s) that are the subject of the event.
         List of `MessageDefinitionFocus` items (represented as `dict` in JSON). """
         self._focus = None
-        """ Primitive extension for focus. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for focus. List of `FHIRPrimitiveExtension` """
         
         self.graph = None
         """ Canonical reference to a GraphDefinition.
         List of `str` items. """
         self._graph = None
-        """ Primitive extension for graph. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for graph. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Primary key for the message definition on a given server.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for message definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this message definition (computer friendly).
@@ -117,7 +117,7 @@ class MessageDefinition(domainresource.DomainResource):
         """ Protocol/workflow this is part of.
         List of `str` items. """
         self._parent = None
-        """ Primitive extension for parent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parent. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -135,7 +135,7 @@ class MessageDefinition(domainresource.DomainResource):
         """ Takes the place of.
         List of `str` items. """
         self._replaces = None
-        """ Primitive extension for replaces. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for replaces. List of `FHIRPrimitiveExtension` """
         
         self.responseRequired = None
         """ always | on-error | never | on-success.
@@ -165,7 +165,7 @@ class MessageDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the message definition.
@@ -179,13 +179,13 @@ class MessageDefinition(domainresource.DomainResource):
         js = super(MessageDefinition, self).elementProperties()
         js.extend([
             ("allowedResponse", "allowedResponse", MessageDefinitionAllowedResponse, True, None, False),
-            ("_allowedResponse", "_allowedResponse", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_allowedResponse", "_allowedResponse", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("base", "base", str, False, None, False),
             ("_base", "_base", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("category", "category", str, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, True),
@@ -199,23 +199,23 @@ class MessageDefinition(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("focus", "focus", MessageDefinitionFocus, True, None, False),
-            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("graph", "graph", str, True, None, False),
-            ("_graph", "_graph", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_graph", "_graph", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parent", "parent", str, True, None, False),
-            ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parent", "_parent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("replaces", "replaces", str, True, None, False),
-            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("responseRequired", "responseRequired", str, False, None, False),
             ("_responseRequired", "_responseRequired", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
@@ -225,7 +225,7 @@ class MessageDefinition(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

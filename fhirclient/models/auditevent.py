@@ -32,13 +32,13 @@ class AuditEvent(domainresource.DomainResource):
         """ Actor involved in the event.
         List of `AuditEventAgent` items (represented as `dict` in JSON). """
         self._agent = None
-        """ Primitive extension for agent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for agent. List of `FHIRPrimitiveExtension` """
         
         self.entity = None
         """ Data or objects used.
         List of `AuditEventEntity` items (represented as `dict` in JSON). """
         self._entity = None
-        """ Primitive extension for entity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for entity. List of `FHIRPrimitiveExtension` """
         
         self.outcome = None
         """ Whether the event succeeded or failed.
@@ -62,7 +62,7 @@ class AuditEvent(domainresource.DomainResource):
         """ The purposeOfUse of the event.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._purposeOfEvent = None
-        """ Primitive extension for purposeOfEvent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for purposeOfEvent. List of `FHIRPrimitiveExtension` """
         
         self.recorded = None
         """ Time when the event was recorded.
@@ -80,7 +80,7 @@ class AuditEvent(domainresource.DomainResource):
         """ More specific type/id for the event.
         List of `Coding` items (represented as `dict` in JSON). """
         self._subtype = None
-        """ Primitive extension for subtype. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subtype. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type/identifier of event.
@@ -96,9 +96,9 @@ class AuditEvent(domainresource.DomainResource):
             ("action", "action", str, False, None, False),
             ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("agent", "agent", AuditEventAgent, True, None, True),
-            ("_agent", "_agent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_agent", "_agent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("entity", "entity", AuditEventEntity, True, None, False),
-            ("_entity", "_entity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_entity", "_entity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcome", "outcome", str, False, None, False),
             ("_outcome", "_outcome", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("outcomeDesc", "outcomeDesc", str, False, None, False),
@@ -106,13 +106,13 @@ class AuditEvent(domainresource.DomainResource):
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purposeOfEvent", "purposeOfEvent", codeableconcept.CodeableConcept, True, None, False),
-            ("_purposeOfEvent", "_purposeOfEvent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_purposeOfEvent", "_purposeOfEvent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recorded", "recorded", fhirinstant.FHIRInstant, False, None, True),
             ("_recorded", "_recorded", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", AuditEventSource, False, None, True),
             ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subtype", "subtype", coding.Coding, True, None, False),
-            ("_subtype", "_subtype", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subtype", "_subtype", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", coding.Coding, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -171,13 +171,13 @@ class AuditEventAgent(backboneelement.BackboneElement):
         """ Policy that authorized event.
         List of `str` items. """
         self._policy = None
-        """ Primitive extension for policy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for policy. List of `FHIRPrimitiveExtension` """
         
         self.purposeOfUse = None
         """ Reason given for this user.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._purposeOfUse = None
-        """ Primitive extension for purposeOfUse. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for purposeOfUse. List of `FHIRPrimitiveExtension` """
         
         self.requestor = None
         """ Whether user is initiator.
@@ -189,7 +189,7 @@ class AuditEventAgent(backboneelement.BackboneElement):
         """ Agent role in the event.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._role = None
-        """ Primitive extension for role. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for role. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ How agent participated.
@@ -219,13 +219,13 @@ class AuditEventAgent(backboneelement.BackboneElement):
             ("network", "network", AuditEventAgentNetwork, False, None, False),
             ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("policy", "policy", str, True, None, False),
-            ("_policy", "_policy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_policy", "_policy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("purposeOfUse", "purposeOfUse", codeableconcept.CodeableConcept, True, None, False),
-            ("_purposeOfUse", "_purposeOfUse", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_purposeOfUse", "_purposeOfUse", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requestor", "requestor", bool, False, None, True),
             ("_requestor", "_requestor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("role", "role", codeableconcept.CodeableConcept, True, None, False),
-            ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("who", "who", fhirreference.FHIRReference, False, None, False),
@@ -302,7 +302,7 @@ class AuditEventEntity(backboneelement.BackboneElement):
         """ Additional Information about the entity.
         List of `AuditEventEntityDetail` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.lifecycle = None
         """ Life-cycle stage for the entity.
@@ -332,7 +332,7 @@ class AuditEventEntity(backboneelement.BackboneElement):
         """ Security labels on the entity.
         List of `Coding` items (represented as `dict` in JSON). """
         self._securityLabel = None
-        """ Primitive extension for securityLabel. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabel. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of entity involved.
@@ -354,7 +354,7 @@ class AuditEventEntity(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detail", "detail", AuditEventEntityDetail, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lifecycle", "lifecycle", coding.Coding, False, None, False),
             ("_lifecycle", "_lifecycle", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
@@ -364,7 +364,7 @@ class AuditEventEntity(backboneelement.BackboneElement):
             ("role", "role", coding.Coding, False, None, False),
             ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("securityLabel", "securityLabel", coding.Coding, True, None, False),
-            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", coding.Coding, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("what", "what", fhirreference.FHIRReference, False, None, False),
@@ -454,7 +454,7 @@ class AuditEventSource(backboneelement.BackboneElement):
         """ The type of source where event originated.
         List of `Coding` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(AuditEventSource, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -466,7 +466,7 @@ class AuditEventSource(backboneelement.BackboneElement):
             ("site", "site", str, False, None, False),
             ("_site", "_site", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", coding.Coding, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

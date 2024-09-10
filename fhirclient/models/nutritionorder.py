@@ -26,7 +26,7 @@ class NutritionOrder(domainresource.DomainResource):
         intolerances.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._allergyIntolerance = None
-        """ Primitive extension for allergyIntolerance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for allergyIntolerance. List of `FHIRPrimitiveExtension` """
         
         self.dateTime = None
         """ Date and time the nutrition order was requested.
@@ -51,37 +51,37 @@ class NutritionOrder(domainresource.DomainResource):
         given.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._excludeFoodModifier = None
-        """ Primitive extension for excludeFoodModifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for excludeFoodModifier. List of `FHIRPrimitiveExtension` """
         
         self.foodPreferenceModifier = None
         """ Order-specific modifier about the type of food that should be given.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._foodPreferenceModifier = None
-        """ Primitive extension for foodPreferenceModifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for foodPreferenceModifier. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Identifiers assigned to this order.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiates = None
         """ Instantiates protocol or definition.
         List of `str` items. """
         self._instantiates = None
-        """ Primitive extension for instantiates. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiates. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.intent = None
         """ proposal | plan | directive | order | original-order | reflex-order
@@ -94,7 +94,7 @@ class NutritionOrder(domainresource.DomainResource):
         """ Comments.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.oralDiet = None
         """ Oral diet components.
@@ -125,7 +125,7 @@ class NutritionOrder(domainresource.DomainResource):
         """ Supplement components.
         List of `NutritionOrderSupplement` items (represented as `dict` in JSON). """
         self._supplement = None
-        """ Primitive extension for supplement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supplement. List of `FHIRPrimitiveExtension` """
         
         super(NutritionOrder, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -133,7 +133,7 @@ class NutritionOrder(domainresource.DomainResource):
         js = super(NutritionOrder, self).elementProperties()
         js.extend([
             ("allergyIntolerance", "allergyIntolerance", fhirreference.FHIRReference, True, None, False),
-            ("_allergyIntolerance", "_allergyIntolerance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_allergyIntolerance", "_allergyIntolerance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dateTime", "dateTime", fhirdatetime.FHIRDateTime, False, None, True),
             ("_dateTime", "_dateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
@@ -141,21 +141,21 @@ class NutritionOrder(domainresource.DomainResource):
             ("enteralFormula", "enteralFormula", NutritionOrderEnteralFormula, False, None, False),
             ("_enteralFormula", "_enteralFormula", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("excludeFoodModifier", "excludeFoodModifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_excludeFoodModifier", "_excludeFoodModifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_excludeFoodModifier", "_excludeFoodModifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("foodPreferenceModifier", "foodPreferenceModifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_foodPreferenceModifier", "_foodPreferenceModifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_foodPreferenceModifier", "_foodPreferenceModifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiates", "instantiates", str, True, None, False),
-            ("_instantiates", "_instantiates", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiates", "_instantiates", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intent", "intent", str, False, None, True),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("oralDiet", "oralDiet", NutritionOrderOralDiet, False, None, False),
             ("_oralDiet", "_oralDiet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("orderer", "orderer", fhirreference.FHIRReference, False, None, False),
@@ -165,7 +165,7 @@ class NutritionOrder(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supplement", "supplement", NutritionOrderSupplement, True, None, False),
-            ("_supplement", "_supplement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supplement", "_supplement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -205,7 +205,7 @@ class NutritionOrderEnteralFormula(backboneelement.BackboneElement):
         """ Formula feeding instruction as structured data.
         List of `NutritionOrderEnteralFormulaAdministration` items (represented as `dict` in JSON). """
         self._administration = None
-        """ Primitive extension for administration. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for administration. List of `FHIRPrimitiveExtension` """
         
         self.administrationInstruction = None
         """ Formula feeding instructions expressed as text.
@@ -253,7 +253,7 @@ class NutritionOrderEnteralFormula(backboneelement.BackboneElement):
             ("additiveType", "additiveType", codeableconcept.CodeableConcept, False, None, False),
             ("_additiveType", "_additiveType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("administration", "administration", NutritionOrderEnteralFormulaAdministration, True, None, False),
-            ("_administration", "_administration", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_administration", "_administration", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("administrationInstruction", "administrationInstruction", str, False, None, False),
             ("_administrationInstruction", "_administrationInstruction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("baseFormulaProductName", "baseFormulaProductName", str, False, None, False),
@@ -351,7 +351,7 @@ class NutritionOrderOralDiet(backboneelement.BackboneElement):
         patient.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._fluidConsistencyType = None
-        """ Primitive extension for fluidConsistencyType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for fluidConsistencyType. List of `FHIRPrimitiveExtension` """
         
         self.instruction = None
         """ Instructions or additional information about the oral diet.
@@ -363,26 +363,26 @@ class NutritionOrderOralDiet(backboneelement.BackboneElement):
         """ Required  nutrient modifications.
         List of `NutritionOrderOralDietNutrient` items (represented as `dict` in JSON). """
         self._nutrient = None
-        """ Primitive extension for nutrient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for nutrient. List of `FHIRPrimitiveExtension` """
         
         self.schedule = None
         """ Scheduled frequency of diet.
         List of `Timing` items (represented as `dict` in JSON). """
         self._schedule = None
-        """ Primitive extension for schedule. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for schedule. List of `FHIRPrimitiveExtension` """
         
         self.texture = None
         """ Required  texture modifications.
         List of `NutritionOrderOralDietTexture` items (represented as `dict` in JSON). """
         self._texture = None
-        """ Primitive extension for texture. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for texture. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of oral diet or diet restrictions that describe what can be
         consumed orally.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(NutritionOrderOralDiet, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -390,17 +390,17 @@ class NutritionOrderOralDiet(backboneelement.BackboneElement):
         js = super(NutritionOrderOralDiet, self).elementProperties()
         js.extend([
             ("fluidConsistencyType", "fluidConsistencyType", codeableconcept.CodeableConcept, True, None, False),
-            ("_fluidConsistencyType", "_fluidConsistencyType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_fluidConsistencyType", "_fluidConsistencyType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instruction", "instruction", str, False, None, False),
             ("_instruction", "_instruction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("nutrient", "nutrient", NutritionOrderOralDietNutrient, True, None, False),
-            ("_nutrient", "_nutrient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_nutrient", "_nutrient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("schedule", "schedule", timing.Timing, True, None, False),
-            ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("texture", "texture", NutritionOrderOralDietTexture, True, None, False),
-            ("_texture", "_texture", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_texture", "_texture", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -529,7 +529,7 @@ class NutritionOrderSupplement(backboneelement.BackboneElement):
         """ Scheduled frequency of supplement.
         List of `Timing` items (represented as `dict` in JSON). """
         self._schedule = None
-        """ Primitive extension for schedule. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for schedule. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of supplement product requested.
@@ -549,7 +549,7 @@ class NutritionOrderSupplement(backboneelement.BackboneElement):
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("schedule", "schedule", timing.Timing, True, None, False),
-            ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

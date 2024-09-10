@@ -35,7 +35,7 @@ class SubstanceProtein(domainresource.DomainResource):
         acid Cysteine at the respective positions.
         List of `str` items. """
         self._disulfideLinkage = None
-        """ Primitive extension for disulfideLinkage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for disulfideLinkage. List of `FHIRPrimitiveExtension` """
         
         self.numberOfSubunits = None
         """ Number of linear sequences of amino acids linked through peptide
@@ -66,7 +66,7 @@ class SubstanceProtein(domainresource.DomainResource):
         will be repeated multiple times.
         List of `SubstanceProteinSubunit` items (represented as `dict` in JSON). """
         self._subunit = None
-        """ Primitive extension for subunit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subunit. List of `FHIRPrimitiveExtension` """
         
         super(SubstanceProtein, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -74,13 +74,13 @@ class SubstanceProtein(domainresource.DomainResource):
         js = super(SubstanceProtein, self).elementProperties()
         js.extend([
             ("disulfideLinkage", "disulfideLinkage", str, True, None, False),
-            ("_disulfideLinkage", "_disulfideLinkage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_disulfideLinkage", "_disulfideLinkage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("numberOfSubunits", "numberOfSubunits", int, False, None, False),
             ("_numberOfSubunits", "_numberOfSubunits", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sequenceType", "sequenceType", codeableconcept.CodeableConcept, False, None, False),
             ("_sequenceType", "_sequenceType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subunit", "subunit", SubstanceProteinSubunit, True, None, False),
-            ("_subunit", "_subunit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subunit", "_subunit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

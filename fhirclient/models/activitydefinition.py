@@ -33,13 +33,13 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Who authored the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ What part of body to perform on.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._bodySite = None
-        """ Primitive extension for bodySite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for bodySite. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Detail type of activity.
@@ -51,7 +51,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -81,19 +81,19 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Detailed dosage instructions.
         List of `Dosage` items (represented as `dict` in JSON). """
         self._dosage = None
-        """ Primitive extension for dosage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dosage. List of `FHIRPrimitiveExtension` """
         
         self.dynamicValue = None
         """ Dynamic aspects of the definition.
         List of `ActivityDefinitionDynamicValue` items (represented as `dict` in JSON). """
         self._dynamicValue = None
-        """ Primitive extension for dynamicValue. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dynamicValue. List of `FHIRPrimitiveExtension` """
         
         self.editor = None
         """ Who edited the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._editor = None
-        """ Primitive extension for editor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for editor. List of `FHIRPrimitiveExtension` """
         
         self.effectivePeriod = None
         """ When the activity definition is expected to be used.
@@ -105,7 +105,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Who endorsed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._endorser = None
-        """ Primitive extension for endorser. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endorser. List of `FHIRPrimitiveExtension` """
         
         self.experimental = None
         """ For testing purposes, not real usage.
@@ -117,7 +117,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Additional identifier for the activity definition.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.intent = None
         """ proposal | plan | directive | order | original-order | reflex-order
@@ -130,7 +130,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Intended jurisdiction for activity definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ Kind of resource.
@@ -148,7 +148,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Logic used by the activity definition.
         List of `str` items. """
         self._library = None
-        """ Primitive extension for library. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for library. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Where it should happen.
@@ -166,19 +166,19 @@ class ActivityDefinition(domainresource.DomainResource):
         """ What observations are required to perform this action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._observationRequirement = None
-        """ Primitive extension for observationRequirement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for observationRequirement. List of `FHIRPrimitiveExtension` """
         
         self.observationResultRequirement = None
         """ What observations must be produced by this action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._observationResultRequirement = None
-        """ Primitive extension for observationResultRequirement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for observationResultRequirement. List of `FHIRPrimitiveExtension` """
         
         self.participant = None
         """ Who should participate in the action.
         List of `ActivityDefinitionParticipant` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -226,19 +226,19 @@ class ActivityDefinition(domainresource.DomainResource):
         """ Additional documentation, citations, etc..
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.reviewer = None
         """ Who reviewed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._reviewer = None
-        """ Primitive extension for reviewer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reviewer. List of `FHIRPrimitiveExtension` """
         
         self.specimenRequirement = None
         """ What specimens are required to perform this action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._specimenRequirement = None
-        """ Primitive extension for specimenRequirement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specimenRequirement. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -310,7 +310,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ E.g. Education, Treatment, Assessment, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._topic = None
-        """ Primitive extension for topic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for topic. List of `FHIRPrimitiveExtension` """
         
         self.transform = None
         """ Transform to apply the template.
@@ -335,7 +335,7 @@ class ActivityDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the activity definition.
@@ -351,13 +351,13 @@ class ActivityDefinition(domainresource.DomainResource):
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", contactdetail.ContactDetail, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, True, None, False),
-            ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -367,39 +367,39 @@ class ActivityDefinition(domainresource.DomainResource):
             ("doNotPerform", "doNotPerform", bool, False, None, False),
             ("_doNotPerform", "_doNotPerform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("dosage", "dosage", dosage.Dosage, True, None, False),
-            ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dosage", "_dosage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dynamicValue", "dynamicValue", ActivityDefinitionDynamicValue, True, None, False),
-            ("_dynamicValue", "_dynamicValue", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dynamicValue", "_dynamicValue", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("editor", "editor", contactdetail.ContactDetail, True, None, False),
-            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endorser", "endorser", contactdetail.ContactDetail, True, None, False),
-            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intent", "intent", str, False, None, False),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, False),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("library", "library", str, True, None, False),
-            ("_library", "_library", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_library", "_library", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("observationRequirement", "observationRequirement", fhirreference.FHIRReference, True, None, False),
-            ("_observationRequirement", "_observationRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_observationRequirement", "_observationRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("observationResultRequirement", "observationResultRequirement", fhirreference.FHIRReference, True, None, False),
-            ("_observationResultRequirement", "_observationResultRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_observationResultRequirement", "_observationResultRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("participant", "participant", ActivityDefinitionParticipant, True, None, False),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("productCodeableConcept", "productCodeableConcept", codeableconcept.CodeableConcept, False, "product", False),
@@ -415,11 +415,11 @@ class ActivityDefinition(domainresource.DomainResource):
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reviewer", "reviewer", contactdetail.ContactDetail, True, None, False),
-            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specimenRequirement", "specimenRequirement", fhirreference.FHIRReference, True, None, False),
-            ("_specimenRequirement", "_specimenRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specimenRequirement", "_specimenRequirement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subjectCodeableConcept", "subjectCodeableConcept", codeableconcept.CodeableConcept, False, "subject", False),
@@ -443,7 +443,7 @@ class ActivityDefinition(domainresource.DomainResource):
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", codeableconcept.CodeableConcept, True, None, False),
-            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("transform", "transform", str, False, None, False),
             ("_transform", "_transform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("url", "url", str, False, None, False),
@@ -451,7 +451,7 @@ class ActivityDefinition(domainresource.DomainResource):
             ("usage", "usage", str, False, None, False),
             ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

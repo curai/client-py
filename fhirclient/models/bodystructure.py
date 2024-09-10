@@ -38,13 +38,13 @@ class BodyStructure(domainresource.DomainResource):
         """ Bodystructure identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.image = None
         """ Attached images.
         List of `Attachment` items (represented as `dict` in JSON). """
         self._image = None
-        """ Primitive extension for image. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for image. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Body site.
@@ -56,7 +56,7 @@ class BodyStructure(domainresource.DomainResource):
         """ Body site modifier.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._locationQualifier = None
-        """ Primitive extension for locationQualifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for locationQualifier. List of `FHIRPrimitiveExtension` """
         
         self.morphology = None
         """ Kind of Structure.
@@ -80,13 +80,13 @@ class BodyStructure(domainresource.DomainResource):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("image", "image", attachment.Attachment, True, None, False),
-            ("_image", "_image", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_image", "_image", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", codeableconcept.CodeableConcept, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("locationQualifier", "locationQualifier", codeableconcept.CodeableConcept, True, None, False),
-            ("_locationQualifier", "_locationQualifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_locationQualifier", "_locationQualifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("morphology", "morphology", codeableconcept.CodeableConcept, False, None, False),
             ("_morphology", "_morphology", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),

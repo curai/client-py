@@ -37,7 +37,7 @@ class ImmunizationRecommendation(domainresource.DomainResource):
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Who this profile is for.
@@ -49,7 +49,7 @@ class ImmunizationRecommendation(domainresource.DomainResource):
         """ Vaccine administration recommendations.
         List of `ImmunizationRecommendationRecommendation` items (represented as `dict` in JSON). """
         self._recommendation = None
-        """ Primitive extension for recommendation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for recommendation. List of `FHIRPrimitiveExtension` """
         
         super(ImmunizationRecommendation, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -61,11 +61,11 @@ class ImmunizationRecommendation(domainresource.DomainResource):
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, True),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("recommendation", "recommendation", ImmunizationRecommendationRecommendation, True, None, True),
-            ("_recommendation", "_recommendation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_recommendation", "_recommendation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -90,13 +90,13 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
         """ Vaccine which is contraindicated to fulfill the recommendation.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._contraindicatedVaccineCode = None
-        """ Primitive extension for contraindicatedVaccineCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contraindicatedVaccineCode. List of `FHIRPrimitiveExtension` """
         
         self.dateCriterion = None
         """ Dates governing proposed immunization.
         List of `ImmunizationRecommendationRecommendationDateCriterion` items (represented as `dict` in JSON). """
         self._dateCriterion = None
-        """ Primitive extension for dateCriterion. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dateCriterion. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Protocol details.
@@ -120,7 +120,7 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
         """ Vaccine administration status reason.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._forecastReason = None
-        """ Primitive extension for forecastReason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for forecastReason. List of `FHIRPrimitiveExtension` """
         
         self.forecastStatus = None
         """ Vaccine recommendation status.
@@ -150,13 +150,13 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
         """ Past immunizations supporting recommendation.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingImmunization = None
-        """ Primitive extension for supportingImmunization. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingImmunization. List of `FHIRPrimitiveExtension` """
         
         self.supportingPatientInformation = None
         """ Patient observations supporting recommendation.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingPatientInformation = None
-        """ Primitive extension for supportingPatientInformation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingPatientInformation. List of `FHIRPrimitiveExtension` """
         
         self.targetDisease = None
         """ Disease to be immunized against.
@@ -168,7 +168,7 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
         """ Vaccine  or vaccine group recommendation applies to.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._vaccineCode = None
-        """ Primitive extension for vaccineCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for vaccineCode. List of `FHIRPrimitiveExtension` """
         
         super(ImmunizationRecommendationRecommendation, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -176,9 +176,9 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
         js = super(ImmunizationRecommendationRecommendation, self).elementProperties()
         js.extend([
             ("contraindicatedVaccineCode", "contraindicatedVaccineCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_contraindicatedVaccineCode", "_contraindicatedVaccineCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contraindicatedVaccineCode", "_contraindicatedVaccineCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dateCriterion", "dateCriterion", ImmunizationRecommendationRecommendationDateCriterion, True, None, False),
-            ("_dateCriterion", "_dateCriterion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dateCriterion", "_dateCriterion", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("doseNumberPositiveInt", "doseNumberPositiveInt", int, False, "doseNumber", False),
@@ -186,7 +186,7 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
             ("doseNumberString", "doseNumberString", str, False, "doseNumber", False),
             ("_doseNumberString", "_doseNumberString", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("forecastReason", "forecastReason", codeableconcept.CodeableConcept, True, None, False),
-            ("_forecastReason", "_forecastReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_forecastReason", "_forecastReason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("forecastStatus", "forecastStatus", codeableconcept.CodeableConcept, False, None, True),
             ("_forecastStatus", "_forecastStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("series", "series", str, False, None, False),
@@ -196,13 +196,13 @@ class ImmunizationRecommendationRecommendation(backboneelement.BackboneElement):
             ("seriesDosesString", "seriesDosesString", str, False, "seriesDoses", False),
             ("_seriesDosesString", "_seriesDosesString", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingImmunization", "supportingImmunization", fhirreference.FHIRReference, True, None, False),
-            ("_supportingImmunization", "_supportingImmunization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingImmunization", "_supportingImmunization", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("supportingPatientInformation", "supportingPatientInformation", fhirreference.FHIRReference, True, None, False),
-            ("_supportingPatientInformation", "_supportingPatientInformation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingPatientInformation", "_supportingPatientInformation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("targetDisease", "targetDisease", codeableconcept.CodeableConcept, False, None, False),
             ("_targetDisease", "_targetDisease", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("vaccineCode", "vaccineCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_vaccineCode", "_vaccineCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_vaccineCode", "_vaccineCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

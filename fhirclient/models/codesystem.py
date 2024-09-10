@@ -39,13 +39,13 @@ class CodeSystem(domainresource.DomainResource):
         """ Concepts in the code system.
         List of `CodeSystemConcept` items (represented as `dict` in JSON). """
         self._concept = None
-        """ Primitive extension for concept. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for concept. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.content = None
         """ not-present | example | fragment | complete | supplement.
@@ -87,7 +87,7 @@ class CodeSystem(domainresource.DomainResource):
         """ Filter that can be used in a value set.
         List of `CodeSystemFilter` items (represented as `dict` in JSON). """
         self._filter = None
-        """ Primitive extension for filter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for filter. List of `FHIRPrimitiveExtension` """
         
         self.hierarchyMeaning = None
         """ grouped-by | is-a | part-of | classified-with.
@@ -99,13 +99,13 @@ class CodeSystem(domainresource.DomainResource):
         """ Additional identifier for the code system (business identifier).
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for code system (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this code system (computer friendly).
@@ -117,7 +117,7 @@ class CodeSystem(domainresource.DomainResource):
         """ Additional information supplied about each concept.
         List of `CodeSystemProperty` items (represented as `dict` in JSON). """
         self._property = None
-        """ Primitive extension for property. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for property. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -161,7 +161,7 @@ class CodeSystem(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.valueSet = None
         """ Canonical reference to the value set with entire code system.
@@ -191,9 +191,9 @@ class CodeSystem(domainresource.DomainResource):
             ("compositional", "compositional", bool, False, None, False),
             ("_compositional", "_compositional", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("concept", "concept", CodeSystemConcept, True, None, False),
-            ("_concept", "_concept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_concept", "_concept", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("content", "content", str, False, None, True),
             ("_content", "_content", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("copyright", "copyright", str, False, None, False),
@@ -207,17 +207,17 @@ class CodeSystem(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("filter", "filter", CodeSystemFilter, True, None, False),
-            ("_filter", "_filter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_filter", "_filter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("hierarchyMeaning", "hierarchyMeaning", str, False, None, False),
             ("_hierarchyMeaning", "_hierarchyMeaning", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("property", "property", CodeSystemProperty, True, None, False),
-            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, False, None, False),
@@ -231,7 +231,7 @@ class CodeSystem(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("valueSet", "valueSet", str, False, None, False),
             ("_valueSet", "_valueSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("version", "version", str, False, None, False),
@@ -272,7 +272,7 @@ class CodeSystemConcept(backboneelement.BackboneElement):
         """ Child Concepts (is-a/contains/categorizes).
         List of `CodeSystemConcept` items (represented as `dict` in JSON). """
         self._concept = None
-        """ Primitive extension for concept. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for concept. List of `FHIRPrimitiveExtension` """
         
         self.definition = None
         """ Formal definition.
@@ -284,7 +284,7 @@ class CodeSystemConcept(backboneelement.BackboneElement):
         """ Additional representations for the concept.
         List of `CodeSystemConceptDesignation` items (represented as `dict` in JSON). """
         self._designation = None
-        """ Primitive extension for designation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for designation. List of `FHIRPrimitiveExtension` """
         
         self.display = None
         """ Text to display to the user.
@@ -296,7 +296,7 @@ class CodeSystemConcept(backboneelement.BackboneElement):
         """ Property value for the concept.
         List of `CodeSystemConceptProperty` items (represented as `dict` in JSON). """
         self._property = None
-        """ Primitive extension for property. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for property. List of `FHIRPrimitiveExtension` """
         
         super(CodeSystemConcept, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -306,15 +306,15 @@ class CodeSystemConcept(backboneelement.BackboneElement):
             ("code", "code", str, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("concept", "concept", CodeSystemConcept, True, None, False),
-            ("_concept", "_concept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_concept", "_concept", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("definition", "definition", str, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("designation", "designation", CodeSystemConceptDesignation, True, None, False),
-            ("_designation", "_designation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_designation", "_designation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("display", "display", str, False, None, False),
             ("_display", "_display", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("property", "property", CodeSystemConceptProperty, True, None, False),
-            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -492,7 +492,7 @@ class CodeSystemFilter(backboneelement.BackboneElement):
         generalizes | exists.
         List of `str` items. """
         self._operator = None
-        """ Primitive extension for operator. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for operator. List of `FHIRPrimitiveExtension` """
         
         self.value = None
         """ What to use for the value.
@@ -510,7 +510,7 @@ class CodeSystemFilter(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("operator", "operator", str, True, None, True),
-            ("_operator", "_operator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_operator", "_operator", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("value", "value", str, False, None, True),
             ("_value", "_value", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

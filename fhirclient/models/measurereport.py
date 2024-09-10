@@ -32,19 +32,19 @@ class MeasureReport(domainresource.DomainResource):
         """ What data was used to calculate the measure score.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._evaluatedResource = None
-        """ Primitive extension for evaluatedResource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for evaluatedResource. List of `FHIRPrimitiveExtension` """
         
         self.group = None
         """ Measure results for each group.
         List of `MeasureReportGroup` items (represented as `dict` in JSON). """
         self._group = None
-        """ Primitive extension for group. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for group. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Additional identifier for the MeasureReport.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.improvementNotation = None
         """ increase | decrease.
@@ -96,11 +96,11 @@ class MeasureReport(domainresource.DomainResource):
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("evaluatedResource", "evaluatedResource", fhirreference.FHIRReference, True, None, False),
-            ("_evaluatedResource", "_evaluatedResource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_evaluatedResource", "_evaluatedResource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("group", "group", MeasureReportGroup, True, None, False),
-            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("improvementNotation", "improvementNotation", codeableconcept.CodeableConcept, False, None, False),
             ("_improvementNotation", "_improvementNotation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("measure", "measure", str, False, None, True),
@@ -154,13 +154,13 @@ class MeasureReportGroup(backboneelement.BackboneElement):
         """ The populations in the group.
         List of `MeasureReportGroupPopulation` items (represented as `dict` in JSON). """
         self._population = None
-        """ Primitive extension for population. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for population. List of `FHIRPrimitiveExtension` """
         
         self.stratifier = None
         """ Stratification results.
         List of `MeasureReportGroupStratifier` items (represented as `dict` in JSON). """
         self._stratifier = None
-        """ Primitive extension for stratifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for stratifier. List of `FHIRPrimitiveExtension` """
         
         super(MeasureReportGroup, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -172,9 +172,9 @@ class MeasureReportGroup(backboneelement.BackboneElement):
             ("measureScore", "measureScore", quantity.Quantity, False, None, False),
             ("_measureScore", "_measureScore", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("population", "population", MeasureReportGroupPopulation, True, None, False),
-            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("stratifier", "stratifier", MeasureReportGroupStratifier, True, None, False),
-            ("_stratifier", "_stratifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_stratifier", "_stratifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -252,14 +252,14 @@ class MeasureReportGroupStratifier(backboneelement.BackboneElement):
         """ What stratifier of the group.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.stratum = None
         """ Stratum results, one for each unique value, or set of values, in
         the stratifier, or stratifier components.
         List of `MeasureReportGroupStratifierStratum` items (represented as `dict` in JSON). """
         self._stratum = None
-        """ Primitive extension for stratum. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for stratum. List of `FHIRPrimitiveExtension` """
         
         super(MeasureReportGroupStratifier, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -267,9 +267,9 @@ class MeasureReportGroupStratifier(backboneelement.BackboneElement):
         js = super(MeasureReportGroupStratifier, self).elementProperties()
         js.extend([
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("stratum", "stratum", MeasureReportGroupStratifierStratum, True, None, False),
-            ("_stratum", "_stratum", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_stratum", "_stratum", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -297,7 +297,7 @@ class MeasureReportGroupStratifierStratum(backboneelement.BackboneElement):
         """ Stratifier component values.
         List of `MeasureReportGroupStratifierStratumComponent` items (represented as `dict` in JSON). """
         self._component = None
-        """ Primitive extension for component. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for component. List of `FHIRPrimitiveExtension` """
         
         self.measureScore = None
         """ What score this stratum achieved.
@@ -309,7 +309,7 @@ class MeasureReportGroupStratifierStratum(backboneelement.BackboneElement):
         """ Population results in this stratum.
         List of `MeasureReportGroupStratifierStratumPopulation` items (represented as `dict` in JSON). """
         self._population = None
-        """ Primitive extension for population. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for population. List of `FHIRPrimitiveExtension` """
         
         self.value = None
         """ The stratum value, e.g. male.
@@ -323,11 +323,11 @@ class MeasureReportGroupStratifierStratum(backboneelement.BackboneElement):
         js = super(MeasureReportGroupStratifierStratum, self).elementProperties()
         js.extend([
             ("component", "component", MeasureReportGroupStratifierStratumComponent, True, None, False),
-            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("measureScore", "measureScore", quantity.Quantity, False, None, False),
             ("_measureScore", "_measureScore", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("population", "population", MeasureReportGroupStratifierStratumPopulation, True, None, False),
-            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("value", "value", codeableconcept.CodeableConcept, False, None, False),
             ("_value", "_value", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

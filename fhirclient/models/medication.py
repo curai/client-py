@@ -50,13 +50,13 @@ class Medication(domainresource.DomainResource):
         """ Business identifier for this medication.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.ingredient = None
         """ Active or inactive ingredient.
         List of `MedicationIngredient` items (represented as `dict` in JSON). """
         self._ingredient = None
-        """ Primitive extension for ingredient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for ingredient. List of `FHIRPrimitiveExtension` """
         
         self.manufacturer = None
         """ Manufacturer of the item.
@@ -84,9 +84,9 @@ class Medication(domainresource.DomainResource):
             ("form", "form", codeableconcept.CodeableConcept, False, None, False),
             ("_form", "_form", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("ingredient", "ingredient", MedicationIngredient, True, None, False),
-            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("manufacturer", "manufacturer", fhirreference.FHIRReference, False, None, False),
             ("_manufacturer", "_manufacturer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, False),

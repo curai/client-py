@@ -38,19 +38,19 @@ class StructureDefinition(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.context = None
         """ If an extension, where it can be used in instances.
         List of `StructureDefinitionContext` items (represented as `dict` in JSON). """
         self._context = None
-        """ Primitive extension for context. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for context. List of `FHIRPrimitiveExtension` """
         
         self.contextInvariant = None
         """ FHIRPath invariants - when the extension can be used.
         List of `str` items. """
         self._contextInvariant = None
-        """ Primitive extension for contextInvariant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contextInvariant. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -98,19 +98,19 @@ class StructureDefinition(domainresource.DomainResource):
         """ Additional identifier for the structure definition.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for structure definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.keyword = None
         """ Assist with indexing and finding.
         List of `Coding` items (represented as `dict` in JSON). """
         self._keyword = None
-        """ Primitive extension for keyword. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for keyword. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ primitive-type | complex-type | resource | logical.
@@ -122,7 +122,7 @@ class StructureDefinition(domainresource.DomainResource):
         """ External specification that the content is mapped to.
         List of `StructureDefinitionMapping` items (represented as `dict` in JSON). """
         self._mapping = None
-        """ Primitive extension for mapping. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for mapping. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this structure definition (computer friendly).
@@ -177,7 +177,7 @@ class StructureDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the structure definition.
@@ -195,11 +195,11 @@ class StructureDefinition(domainresource.DomainResource):
             ("baseDefinition", "baseDefinition", str, False, None, False),
             ("_baseDefinition", "_baseDefinition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("context", "context", StructureDefinitionContext, True, None, False),
-            ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contextInvariant", "contextInvariant", str, True, None, False),
-            ("_contextInvariant", "_contextInvariant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contextInvariant", "_contextInvariant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -215,15 +215,15 @@ class StructureDefinition(domainresource.DomainResource):
             ("fhirVersion", "fhirVersion", str, False, None, False),
             ("_fhirVersion", "_fhirVersion", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("keyword", "keyword", coding.Coding, True, None, False),
-            ("_keyword", "_keyword", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_keyword", "_keyword", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, True),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("mapping", "mapping", StructureDefinitionMapping, True, None, False),
-            ("_mapping", "_mapping", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_mapping", "_mapping", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -241,7 +241,7 @@ class StructureDefinition(domainresource.DomainResource):
             ("url", "url", str, False, None, True),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -313,7 +313,7 @@ class StructureDefinitionDifferential(backboneelement.BackboneElement):
         """ Definition of elements in the resource (if no StructureDefinition).
         List of `ElementDefinition` items (represented as `dict` in JSON). """
         self._element = None
-        """ Primitive extension for element. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for element. List of `FHIRPrimitiveExtension` """
         
         super(StructureDefinitionDifferential, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -321,7 +321,7 @@ class StructureDefinitionDifferential(backboneelement.BackboneElement):
         js = super(StructureDefinitionDifferential, self).elementProperties()
         js.extend([
             ("element", "element", elementdefinition.ElementDefinition, True, None, True),
-            ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -404,7 +404,7 @@ class StructureDefinitionSnapshot(backboneelement.BackboneElement):
         """ Definition of elements in the resource (if no StructureDefinition).
         List of `ElementDefinition` items (represented as `dict` in JSON). """
         self._element = None
-        """ Primitive extension for element. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for element. List of `FHIRPrimitiveExtension` """
         
         super(StructureDefinitionSnapshot, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -412,7 +412,7 @@ class StructureDefinitionSnapshot(backboneelement.BackboneElement):
         js = super(StructureDefinitionSnapshot, self).elementProperties()
         js.extend([
             ("element", "element", elementdefinition.ElementDefinition, True, None, True),
-            ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

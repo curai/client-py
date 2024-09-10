@@ -28,7 +28,7 @@ class PlanDefinition(domainresource.DomainResource):
         """ Action defined by the plan.
         List of `PlanDefinitionAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.approvalDate = None
         """ When the plan definition was approved by publisher.
@@ -40,13 +40,13 @@ class PlanDefinition(domainresource.DomainResource):
         """ Who authored the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -70,7 +70,7 @@ class PlanDefinition(domainresource.DomainResource):
         """ Who edited the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._editor = None
-        """ Primitive extension for editor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for editor. List of `FHIRPrimitiveExtension` """
         
         self.effectivePeriod = None
         """ When the plan definition is expected to be used.
@@ -82,7 +82,7 @@ class PlanDefinition(domainresource.DomainResource):
         """ Who endorsed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._endorser = None
-        """ Primitive extension for endorser. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endorser. List of `FHIRPrimitiveExtension` """
         
         self.experimental = None
         """ For testing purposes, not real usage.
@@ -94,19 +94,19 @@ class PlanDefinition(domainresource.DomainResource):
         """ What the plan is trying to accomplish.
         List of `PlanDefinitionGoal` items (represented as `dict` in JSON). """
         self._goal = None
-        """ Primitive extension for goal. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for goal. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Additional identifier for the plan definition.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for plan definition (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the plan definition was last reviewed.
@@ -118,7 +118,7 @@ class PlanDefinition(domainresource.DomainResource):
         """ Logic used by the plan definition.
         List of `str` items. """
         self._library = None
-        """ Primitive extension for library. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for library. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this plan definition (computer friendly).
@@ -142,13 +142,13 @@ class PlanDefinition(domainresource.DomainResource):
         """ Additional documentation, citations.
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.reviewer = None
         """ Who reviewed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._reviewer = None
-        """ Primitive extension for reviewer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reviewer. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -184,7 +184,7 @@ class PlanDefinition(domainresource.DomainResource):
         """ E.g. Education, Treatment, Assessment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._topic = None
-        """ Primitive extension for topic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for topic. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ order-set | clinical-protocol | eca-rule | workflow-definition.
@@ -209,7 +209,7 @@ class PlanDefinition(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the plan definition.
@@ -223,13 +223,13 @@ class PlanDefinition(domainresource.DomainResource):
         js = super(PlanDefinition, self).elementProperties()
         js.extend([
             ("action", "action", PlanDefinitionAction, True, None, False),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", contactdetail.ContactDetail, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -237,23 +237,23 @@ class PlanDefinition(domainresource.DomainResource):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("editor", "editor", contactdetail.ContactDetail, True, None, False),
-            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endorser", "endorser", contactdetail.ContactDetail, True, None, False),
-            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("goal", "goal", PlanDefinitionGoal, True, None, False),
-            ("_goal", "_goal", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_goal", "_goal", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("library", "library", str, True, None, False),
-            ("_library", "_library", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_library", "_library", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -261,9 +261,9 @@ class PlanDefinition(domainresource.DomainResource):
             ("purpose", "purpose", str, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reviewer", "reviewer", contactdetail.ContactDetail, True, None, False),
-            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subjectCodeableConcept", "subjectCodeableConcept", codeableconcept.CodeableConcept, False, "subject", False),
@@ -275,7 +275,7 @@ class PlanDefinition(domainresource.DomainResource):
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", codeableconcept.CodeableConcept, True, None, False),
-            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("url", "url", str, False, None, False),
@@ -283,7 +283,7 @@ class PlanDefinition(domainresource.DomainResource):
             ("usage", "usage", str, False, None, False),
             ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -312,7 +312,7 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         """ A sub-action.
         List of `PlanDefinitionAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.cardinalityBehavior = None
         """ single | multiple.
@@ -324,13 +324,13 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         """ Code representing the meaning of the action or sub-actions.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.condition = None
         """ Whether or not the action is applicable.
         List of `PlanDefinitionActionCondition` items (represented as `dict` in JSON). """
         self._condition = None
-        """ Primitive extension for condition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for condition. List of `FHIRPrimitiveExtension` """
         
         self.definitionCanonical = None
         """ Description of the activity to be performed.
@@ -354,19 +354,19 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         """ Supporting documentation for the intended performer of the action.
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._documentation = None
-        """ Primitive extension for documentation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for documentation. List of `FHIRPrimitiveExtension` """
         
         self.dynamicValue = None
         """ Dynamic aspects of the definition.
         List of `PlanDefinitionActionDynamicValue` items (represented as `dict` in JSON). """
         self._dynamicValue = None
-        """ Primitive extension for dynamicValue. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dynamicValue. List of `FHIRPrimitiveExtension` """
         
         self.goalId = None
         """ What goals this action supports.
         List of `str` items. """
         self._goalId = None
-        """ Primitive extension for goalId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for goalId. List of `FHIRPrimitiveExtension` """
         
         self.groupingBehavior = None
         """ visual-group | logical-group | sentence-group.
@@ -378,19 +378,19 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         """ Input data requirements.
         List of `DataRequirement` items (represented as `dict` in JSON). """
         self._input = None
-        """ Primitive extension for input. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for input. List of `FHIRPrimitiveExtension` """
         
         self.output = None
         """ Output data definition.
         List of `DataRequirement` items (represented as `dict` in JSON). """
         self._output = None
-        """ Primitive extension for output. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for output. List of `FHIRPrimitiveExtension` """
         
         self.participant = None
         """ Who should participate in the action.
         List of `PlanDefinitionActionParticipant` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.precheckBehavior = None
         """ yes | no.
@@ -414,13 +414,13 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         """ Why the action should be performed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reason = None
-        """ Primitive extension for reason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reason. List of `FHIRPrimitiveExtension` """
         
         self.relatedAction = None
         """ Relationship to another action.
         List of `PlanDefinitionActionRelatedAction` items (represented as `dict` in JSON). """
         self._relatedAction = None
-        """ Primitive extension for relatedAction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedAction. List of `FHIRPrimitiveExtension` """
         
         self.requiredBehavior = None
         """ must | could | must-unless-documented.
@@ -505,7 +505,7 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         """ When the action should be triggered.
         List of `TriggerDefinition` items (represented as `dict` in JSON). """
         self._trigger = None
-        """ Primitive extension for trigger. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for trigger. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ create | update | remove | fire-event.
@@ -519,13 +519,13 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
         js = super(PlanDefinitionAction, self).elementProperties()
         js.extend([
             ("action", "action", PlanDefinitionAction, True, None, False),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("cardinalityBehavior", "cardinalityBehavior", str, False, None, False),
             ("_cardinalityBehavior", "_cardinalityBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("condition", "condition", PlanDefinitionActionCondition, True, None, False),
-            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("definitionCanonical", "definitionCanonical", str, False, "definition", False),
             ("_definitionCanonical", "_definitionCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("definitionUri", "definitionUri", str, False, "definition", False),
@@ -533,19 +533,19 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("documentation", "documentation", relatedartifact.RelatedArtifact, True, None, False),
-            ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dynamicValue", "dynamicValue", PlanDefinitionActionDynamicValue, True, None, False),
-            ("_dynamicValue", "_dynamicValue", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dynamicValue", "_dynamicValue", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("goalId", "goalId", str, True, None, False),
-            ("_goalId", "_goalId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_goalId", "_goalId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("groupingBehavior", "groupingBehavior", str, False, None, False),
             ("_groupingBehavior", "_groupingBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("input", "input", datarequirement.DataRequirement, True, None, False),
-            ("_input", "_input", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_input", "_input", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("output", "output", datarequirement.DataRequirement, True, None, False),
-            ("_output", "_output", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_output", "_output", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("participant", "participant", PlanDefinitionActionParticipant, True, None, False),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("precheckBehavior", "precheckBehavior", str, False, None, False),
             ("_precheckBehavior", "_precheckBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prefix", "prefix", str, False, None, False),
@@ -553,9 +553,9 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reason", "reason", codeableconcept.CodeableConcept, True, None, False),
-            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("relatedAction", "relatedAction", PlanDefinitionActionRelatedAction, True, None, False),
-            ("_relatedAction", "_relatedAction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedAction", "_relatedAction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requiredBehavior", "requiredBehavior", str, False, None, False),
             ("_requiredBehavior", "_requiredBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("selectionBehavior", "selectionBehavior", str, False, None, False),
@@ -583,7 +583,7 @@ class PlanDefinitionAction(backboneelement.BackboneElement):
             ("transform", "transform", str, False, None, False),
             ("_transform", "_transform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("trigger", "trigger", triggerdefinition.TriggerDefinition, True, None, False),
-            ("_trigger", "_trigger", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_trigger", "_trigger", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -800,7 +800,7 @@ class PlanDefinitionGoal(backboneelement.BackboneElement):
         """ What does the goal address.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._addresses = None
-        """ Primitive extension for addresses. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for addresses. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ E.g. Treatment, dietary, behavioral.
@@ -818,7 +818,7 @@ class PlanDefinitionGoal(backboneelement.BackboneElement):
         """ Supporting documentation for the goal.
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._documentation = None
-        """ Primitive extension for documentation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for documentation. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ high-priority | medium-priority | low-priority.
@@ -836,7 +836,7 @@ class PlanDefinitionGoal(backboneelement.BackboneElement):
         """ Target outcome for the goal.
         List of `PlanDefinitionGoalTarget` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(PlanDefinitionGoal, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -844,19 +844,19 @@ class PlanDefinitionGoal(backboneelement.BackboneElement):
         js = super(PlanDefinitionGoal, self).elementProperties()
         js.extend([
             ("addresses", "addresses", codeableconcept.CodeableConcept, True, None, False),
-            ("_addresses", "_addresses", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_addresses", "_addresses", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", codeableconcept.CodeableConcept, False, None, True),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("documentation", "documentation", relatedartifact.RelatedArtifact, True, None, False),
-            ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", codeableconcept.CodeableConcept, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("start", "start", codeableconcept.CodeableConcept, False, None, False),
             ("_start", "_start", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("target", "target", PlanDefinitionGoalTarget, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

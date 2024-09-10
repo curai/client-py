@@ -25,7 +25,7 @@ class MedicinalProductContraindication(domainresource.DomainResource):
         """ A comorbidity (concurrent condition) or coinfection.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._comorbidity = None
-        """ Primitive extension for comorbidity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for comorbidity. List of `FHIRPrimitiveExtension` """
         
         self.disease = None
         """ The disease, symptom or procedure for the contraindication.
@@ -44,26 +44,26 @@ class MedicinalProductContraindication(domainresource.DomainResource):
         other therapies described as part of the indication.
         List of `MedicinalProductContraindicationOtherTherapy` items (represented as `dict` in JSON). """
         self._otherTherapy = None
-        """ Primitive extension for otherTherapy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for otherTherapy. List of `FHIRPrimitiveExtension` """
         
         self.population = None
         """ The population group to which this applies.
         List of `Population` items (represented as `dict` in JSON). """
         self._population = None
-        """ Primitive extension for population. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for population. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ The medication for which this is an indication.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         self.therapeuticIndication = None
         """ Information about the use of the medicinal product in relation to
         other therapies as part of the indication.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._therapeuticIndication = None
-        """ Primitive extension for therapeuticIndication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for therapeuticIndication. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductContraindication, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -71,19 +71,19 @@ class MedicinalProductContraindication(domainresource.DomainResource):
         js = super(MedicinalProductContraindication, self).elementProperties()
         js.extend([
             ("comorbidity", "comorbidity", codeableconcept.CodeableConcept, True, None, False),
-            ("_comorbidity", "_comorbidity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_comorbidity", "_comorbidity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("disease", "disease", codeableconcept.CodeableConcept, False, None, False),
             ("_disease", "_disease", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("diseaseStatus", "diseaseStatus", codeableconcept.CodeableConcept, False, None, False),
             ("_diseaseStatus", "_diseaseStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("otherTherapy", "otherTherapy", MedicinalProductContraindicationOtherTherapy, True, None, False),
-            ("_otherTherapy", "_otherTherapy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_otherTherapy", "_otherTherapy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("population", "population", population.Population, True, None, False),
-            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("therapeuticIndication", "therapeuticIndication", fhirreference.FHIRReference, True, None, False),
-            ("_therapeuticIndication", "_therapeuticIndication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_therapeuticIndication", "_therapeuticIndication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -61,13 +61,13 @@ class Condition(domainresource.DomainResource):
         """ Anatomical location, if relevant.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._bodySite = None
-        """ Primitive extension for bodySite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for bodySite. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ problem-list-item | encounter-diagnosis.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.clinicalStatus = None
         """ active | recurrence | relapse | inactive | remission | resolved.
@@ -91,19 +91,19 @@ class Condition(domainresource.DomainResource):
         """ Supporting evidence.
         List of `ConditionEvidence` items (represented as `dict` in JSON). """
         self._evidence = None
-        """ Primitive extension for evidence. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for evidence. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ External Ids for this condition.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Additional information about the Condition.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.onsetAge = None
         """ Estimated or actual date,  date-time, or age.
@@ -157,7 +157,7 @@ class Condition(domainresource.DomainResource):
         """ Stage/grade, usually assessed formally.
         List of `ConditionStage` items (represented as `dict` in JSON). """
         self._stage = None
-        """ Primitive extension for stage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for stage. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ Who has the condition?.
@@ -190,9 +190,9 @@ class Condition(domainresource.DomainResource):
             ("asserter", "asserter", fhirreference.FHIRReference, False, None, False),
             ("_asserter", "_asserter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, True, None, False),
-            ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("clinicalStatus", "clinicalStatus", codeableconcept.CodeableConcept, False, None, False),
             ("_clinicalStatus", "_clinicalStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
@@ -200,11 +200,11 @@ class Condition(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("evidence", "evidence", ConditionEvidence, True, None, False),
-            ("_evidence", "_evidence", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_evidence", "_evidence", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("onsetAge", "onsetAge", age.Age, False, "onset", False),
             ("_onsetAge", "_onsetAge", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("onsetDateTime", "onsetDateTime", fhirdatetime.FHIRDateTime, False, "onset", False),
@@ -222,7 +222,7 @@ class Condition(domainresource.DomainResource):
             ("severity", "severity", codeableconcept.CodeableConcept, False, None, False),
             ("_severity", "_severity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("stage", "stage", ConditionStage, True, None, False),
-            ("_stage", "_stage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_stage", "_stage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("verificationStatus", "verificationStatus", codeableconcept.CodeableConcept, False, None, False),
@@ -255,13 +255,13 @@ class ConditionEvidence(backboneelement.BackboneElement):
         """ Manifestation/symptom.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.detail = None
         """ Supporting information found elsewhere.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         super(ConditionEvidence, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -269,9 +269,9 @@ class ConditionEvidence(backboneelement.BackboneElement):
         js = super(ConditionEvidence, self).elementProperties()
         js.extend([
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detail", "detail", fhirreference.FHIRReference, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -297,7 +297,7 @@ class ConditionStage(backboneelement.BackboneElement):
         """ Formal record of assessment.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._assessment = None
-        """ Primitive extension for assessment. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for assessment. List of `FHIRPrimitiveExtension` """
         
         self.summary = None
         """ Simple summary (disease specific).
@@ -317,7 +317,7 @@ class ConditionStage(backboneelement.BackboneElement):
         js = super(ConditionStage, self).elementProperties()
         js.extend([
             ("assessment", "assessment", fhirreference.FHIRReference, True, None, False),
-            ("_assessment", "_assessment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_assessment", "_assessment", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("summary", "summary", codeableconcept.CodeableConcept, False, None, False),
             ("_summary", "_summary", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),

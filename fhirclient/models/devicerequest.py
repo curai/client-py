@@ -32,7 +32,7 @@ class DeviceRequest(domainresource.DomainResource):
         """ What request fulfills.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.codeCodeableConcept = None
         """ Device requested.
@@ -62,25 +62,25 @@ class DeviceRequest(domainresource.DomainResource):
         """ External Request identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.insurance = None
         """ Associated insurance coverage.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._insurance = None
-        """ Primitive extension for insurance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for insurance. List of `FHIRPrimitiveExtension` """
         
         self.intent = None
         """ proposal | plan | directive | order | original-order | reflex-order
@@ -93,7 +93,7 @@ class DeviceRequest(domainresource.DomainResource):
         """ Notes or comments.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ Desired time or schedule for use.
@@ -117,7 +117,7 @@ class DeviceRequest(domainresource.DomainResource):
         """ Device details.
         List of `DeviceRequestParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.performer = None
         """ Requested Filler.
@@ -135,7 +135,7 @@ class DeviceRequest(domainresource.DomainResource):
         """ What request replaces.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._priorRequest = None
-        """ Primitive extension for priorRequest. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for priorRequest. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -147,19 +147,19 @@ class DeviceRequest(domainresource.DomainResource):
         """ Coded Reason for request.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Linked Reason for request.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.relevantHistory = None
         """ Request provenance.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._relevantHistory = None
-        """ Primitive extension for relevantHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relevantHistory. List of `FHIRPrimitiveExtension` """
         
         self.requester = None
         """ Who/what is requesting diagnostics.
@@ -184,7 +184,7 @@ class DeviceRequest(domainresource.DomainResource):
         """ Additional clinical information.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInfo = None
-        """ Primitive extension for supportingInfo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfo. List of `FHIRPrimitiveExtension` """
         
         super(DeviceRequest, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -194,7 +194,7 @@ class DeviceRequest(domainresource.DomainResource):
             ("authoredOn", "authoredOn", fhirdatetime.FHIRDateTime, False, None, False),
             ("_authoredOn", "_authoredOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("codeCodeableConcept", "codeCodeableConcept", codeableconcept.CodeableConcept, False, "code", True),
             ("_codeCodeableConcept", "_codeCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("codeReference", "codeReference", fhirreference.FHIRReference, False, "code", True),
@@ -204,17 +204,17 @@ class DeviceRequest(domainresource.DomainResource):
             ("groupIdentifier", "groupIdentifier", identifier.Identifier, False, None, False),
             ("_groupIdentifier", "_groupIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("insurance", "insurance", fhirreference.FHIRReference, True, None, False),
-            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_insurance", "_insurance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("intent", "intent", str, False, None, True),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrencePeriod", "occurrencePeriod", period.Period, False, "occurrence", False),
@@ -222,21 +222,21 @@ class DeviceRequest(domainresource.DomainResource):
             ("occurrenceTiming", "occurrenceTiming", timing.Timing, False, "occurrence", False),
             ("_occurrenceTiming", "_occurrenceTiming", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameter", "parameter", DeviceRequestParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performer", "performer", fhirreference.FHIRReference, False, None, False),
             ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performerType", "performerType", codeableconcept.CodeableConcept, False, None, False),
             ("_performerType", "_performerType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("priorRequest", "priorRequest", fhirreference.FHIRReference, True, None, False),
-            ("_priorRequest", "_priorRequest", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_priorRequest", "_priorRequest", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("relevantHistory", "relevantHistory", fhirreference.FHIRReference, True, None, False),
-            ("_relevantHistory", "_relevantHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relevantHistory", "_relevantHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requester", "requester", fhirreference.FHIRReference, False, None, False),
             ("_requester", "_requester", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, False),
@@ -244,7 +244,7 @@ class DeviceRequest(domainresource.DomainResource):
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfo", "supportingInfo", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

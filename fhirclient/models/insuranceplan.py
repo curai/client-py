@@ -28,37 +28,37 @@ class InsurancePlan(domainresource.DomainResource):
         """ Alternate names.
         List of `str` items. """
         self._alias = None
-        """ Primitive extension for alias. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alias. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact for the product.
         List of `InsurancePlanContact` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.coverage = None
         """ Coverage details.
         List of `InsurancePlanCoverage` items (represented as `dict` in JSON). """
         self._coverage = None
-        """ Primitive extension for coverage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for coverage. List of `FHIRPrimitiveExtension` """
         
         self.coverageArea = None
         """ Where product applies.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._coverageArea = None
-        """ Primitive extension for coverageArea. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for coverageArea. List of `FHIRPrimitiveExtension` """
         
         self.endpoint = None
         """ Technical endpoint.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business Identifier for Product.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Official name.
@@ -70,7 +70,7 @@ class InsurancePlan(domainresource.DomainResource):
         """ What networks are Included.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._network = None
-        """ Primitive extension for network. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for network. List of `FHIRPrimitiveExtension` """
         
         self.ownedBy = None
         """ Plan issuer.
@@ -88,7 +88,7 @@ class InsurancePlan(domainresource.DomainResource):
         """ Plan details.
         List of `InsurancePlanPlan` items (represented as `dict` in JSON). """
         self._plan = None
-        """ Primitive extension for plan. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for plan. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -100,7 +100,7 @@ class InsurancePlan(domainresource.DomainResource):
         """ Kind of product.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(InsurancePlan, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -110,31 +110,31 @@ class InsurancePlan(domainresource.DomainResource):
             ("administeredBy", "administeredBy", fhirreference.FHIRReference, False, None, False),
             ("_administeredBy", "_administeredBy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("alias", "alias", str, True, None, False),
-            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", InsurancePlanContact, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("coverage", "coverage", InsurancePlanCoverage, True, None, False),
-            ("_coverage", "_coverage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_coverage", "_coverage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("coverageArea", "coverageArea", fhirreference.FHIRReference, True, None, False),
-            ("_coverageArea", "_coverageArea", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_coverageArea", "_coverageArea", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("network", "network", fhirreference.FHIRReference, True, None, False),
-            ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("ownedBy", "ownedBy", fhirreference.FHIRReference, False, None, False),
             ("_ownedBy", "_ownedBy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("plan", "plan", InsurancePlanPlan, True, None, False),
-            ("_plan", "_plan", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_plan", "_plan", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -179,7 +179,7 @@ class InsurancePlanContact(backboneelement.BackboneElement):
         """ Contact details (telephone, email, etc.)  for a contact.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(InsurancePlanContact, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -193,7 +193,7 @@ class InsurancePlanContact(backboneelement.BackboneElement):
             ("purpose", "purpose", codeableconcept.CodeableConcept, False, None, False),
             ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -218,13 +218,13 @@ class InsurancePlanCoverage(backboneelement.BackboneElement):
         """ List of benefits.
         List of `InsurancePlanCoverageBenefit` items (represented as `dict` in JSON). """
         self._benefit = None
-        """ Primitive extension for benefit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for benefit. List of `FHIRPrimitiveExtension` """
         
         self.network = None
         """ What networks provide coverage.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._network = None
-        """ Primitive extension for network. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for network. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of coverage.
@@ -238,9 +238,9 @@ class InsurancePlanCoverage(backboneelement.BackboneElement):
         js = super(InsurancePlanCoverage, self).elementProperties()
         js.extend([
             ("benefit", "benefit", InsurancePlanCoverageBenefit, True, None, True),
-            ("_benefit", "_benefit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_benefit", "_benefit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("network", "network", fhirreference.FHIRReference, True, None, False),
-            ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -267,7 +267,7 @@ class InsurancePlanCoverageBenefit(backboneelement.BackboneElement):
         """ Benefit limits.
         List of `InsurancePlanCoverageBenefitLimit` items (represented as `dict` in JSON). """
         self._limit = None
-        """ Primitive extension for limit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for limit. List of `FHIRPrimitiveExtension` """
         
         self.requirement = None
         """ Referral requirements.
@@ -287,7 +287,7 @@ class InsurancePlanCoverageBenefit(backboneelement.BackboneElement):
         js = super(InsurancePlanCoverageBenefit, self).elementProperties()
         js.extend([
             ("limit", "limit", InsurancePlanCoverageBenefitLimit, True, None, False),
-            ("_limit", "_limit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_limit", "_limit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requirement", "requirement", str, False, None, False),
             ("_requirement", "_requirement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
@@ -357,31 +357,31 @@ class InsurancePlanPlan(backboneelement.BackboneElement):
         """ Where product applies.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._coverageArea = None
-        """ Primitive extension for coverageArea. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for coverageArea. List of `FHIRPrimitiveExtension` """
         
         self.generalCost = None
         """ Overall costs.
         List of `InsurancePlanPlanGeneralCost` items (represented as `dict` in JSON). """
         self._generalCost = None
-        """ Primitive extension for generalCost. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for generalCost. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business Identifier for Product.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.network = None
         """ What networks provide coverage.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._network = None
-        """ Primitive extension for network. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for network. List of `FHIRPrimitiveExtension` """
         
         self.specificCost = None
         """ Specific costs.
         List of `InsurancePlanPlanSpecificCost` items (represented as `dict` in JSON). """
         self._specificCost = None
-        """ Primitive extension for specificCost. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specificCost. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of plan.
@@ -395,15 +395,15 @@ class InsurancePlanPlan(backboneelement.BackboneElement):
         js = super(InsurancePlanPlan, self).elementProperties()
         js.extend([
             ("coverageArea", "coverageArea", fhirreference.FHIRReference, True, None, False),
-            ("_coverageArea", "_coverageArea", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_coverageArea", "_coverageArea", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("generalCost", "generalCost", InsurancePlanPlanGeneralCost, True, None, False),
-            ("_generalCost", "_generalCost", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_generalCost", "_generalCost", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("network", "network", fhirreference.FHIRReference, True, None, False),
-            ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_network", "_network", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specificCost", "specificCost", InsurancePlanPlanSpecificCost, True, None, False),
-            ("_specificCost", "_specificCost", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specificCost", "_specificCost", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -487,7 +487,7 @@ class InsurancePlanPlanSpecificCost(backboneelement.BackboneElement):
         """ Benefits list.
         List of `InsurancePlanPlanSpecificCostBenefit` items (represented as `dict` in JSON). """
         self._benefit = None
-        """ Primitive extension for benefit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for benefit. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ General category of benefit.
@@ -501,7 +501,7 @@ class InsurancePlanPlanSpecificCost(backboneelement.BackboneElement):
         js = super(InsurancePlanPlanSpecificCost, self).elementProperties()
         js.extend([
             ("benefit", "benefit", InsurancePlanPlanSpecificCostBenefit, True, None, False),
-            ("_benefit", "_benefit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_benefit", "_benefit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, True),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -528,7 +528,7 @@ class InsurancePlanPlanSpecificCostBenefit(backboneelement.BackboneElement):
         """ List of the costs.
         List of `InsurancePlanPlanSpecificCostBenefitCost` items (represented as `dict` in JSON). """
         self._cost = None
-        """ Primitive extension for cost. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for cost. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of specific benefit.
@@ -542,7 +542,7 @@ class InsurancePlanPlanSpecificCostBenefit(backboneelement.BackboneElement):
         js = super(InsurancePlanPlanSpecificCostBenefit, self).elementProperties()
         js.extend([
             ("cost", "cost", InsurancePlanPlanSpecificCostBenefitCost, True, None, False),
-            ("_cost", "_cost", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_cost", "_cost", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -575,7 +575,7 @@ class InsurancePlanPlanSpecificCostBenefitCost(backboneelement.BackboneElement):
         """ Additional information about the cost.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._qualifiers = None
-        """ Primitive extension for qualifiers. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for qualifiers. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of cost.
@@ -597,7 +597,7 @@ class InsurancePlanPlanSpecificCostBenefitCost(backboneelement.BackboneElement):
             ("applicability", "applicability", codeableconcept.CodeableConcept, False, None, False),
             ("_applicability", "_applicability", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("qualifiers", "qualifiers", codeableconcept.CodeableConcept, True, None, False),
-            ("_qualifiers", "_qualifiers", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_qualifiers", "_qualifiers", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("value", "value", quantity.Quantity, False, None, False),

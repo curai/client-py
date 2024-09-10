@@ -40,7 +40,7 @@ class MessageHeader(domainresource.DomainResource):
         """ Message destination application(s).
         List of `MessageHeaderDestination` items (represented as `dict` in JSON). """
         self._destination = None
-        """ Primitive extension for destination. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for destination. List of `FHIRPrimitiveExtension` """
         
         self.enterer = None
         """ The source of the data entry.
@@ -66,7 +66,7 @@ class MessageHeader(domainresource.DomainResource):
         """ The actual content of the message.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._focus = None
-        """ Primitive extension for focus. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for focus. List of `FHIRPrimitiveExtension` """
         
         self.reason = None
         """ Cause of event.
@@ -108,7 +108,7 @@ class MessageHeader(domainresource.DomainResource):
             ("definition", "definition", str, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("destination", "destination", MessageHeaderDestination, True, None, False),
-            ("_destination", "_destination", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_destination", "_destination", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("enterer", "enterer", fhirreference.FHIRReference, False, None, False),
             ("_enterer", "_enterer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("eventCoding", "eventCoding", coding.Coding, False, "event", True),
@@ -116,7 +116,7 @@ class MessageHeader(domainresource.DomainResource):
             ("eventUri", "eventUri", str, False, "event", True),
             ("_eventUri", "_eventUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("focus", "focus", fhirreference.FHIRReference, True, None, False),
-            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reason", "reason", codeableconcept.CodeableConcept, False, None, False),
             ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("response", "response", MessageHeaderResponse, False, None, False),

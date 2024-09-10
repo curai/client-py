@@ -60,7 +60,7 @@ class VerificationResult(domainresource.DomainResource):
         """ Information about the primary source(s) involved in validation.
         List of `VerificationResultPrimarySource` items (represented as `dict` in JSON). """
         self._primarySource = None
-        """ Primitive extension for primarySource. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for primarySource. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ attested | validated | in-process | req-revalid | val-fail | reval-
@@ -79,13 +79,13 @@ class VerificationResult(domainresource.DomainResource):
         """ A resource that was validated.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         self.targetLocation = None
         """ The fhirpath location(s) within the resource that was validated.
         List of `str` items. """
         self._targetLocation = None
-        """ Primitive extension for targetLocation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for targetLocation. List of `FHIRPrimitiveExtension` """
         
         self.validationProcess = None
         """ The primary process by which the target is validated (edit check;
@@ -93,7 +93,7 @@ class VerificationResult(domainresource.DomainResource):
         context).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._validationProcess = None
-        """ Primitive extension for validationProcess. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for validationProcess. List of `FHIRPrimitiveExtension` """
         
         self.validationType = None
         """ nothing | primary | multiple.
@@ -105,7 +105,7 @@ class VerificationResult(domainresource.DomainResource):
         """ Information about the entity validating information.
         List of `VerificationResultValidator` items (represented as `dict` in JSON). """
         self._validator = None
-        """ Primitive extension for validator. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for validator. List of `FHIRPrimitiveExtension` """
         
         super(VerificationResult, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -125,21 +125,21 @@ class VerificationResult(domainresource.DomainResource):
             ("nextScheduled", "nextScheduled", fhirdate.FHIRDate, False, None, False),
             ("_nextScheduled", "_nextScheduled", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("primarySource", "primarySource", VerificationResultPrimarySource, True, None, False),
-            ("_primarySource", "_primarySource", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_primarySource", "_primarySource", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusDate", "statusDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_statusDate", "_statusDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("target", "target", fhirreference.FHIRReference, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("targetLocation", "targetLocation", str, True, None, False),
-            ("_targetLocation", "_targetLocation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_targetLocation", "_targetLocation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("validationProcess", "validationProcess", codeableconcept.CodeableConcept, True, None, False),
-            ("_validationProcess", "_validationProcess", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_validationProcess", "_validationProcess", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("validationType", "validationType", codeableconcept.CodeableConcept, False, None, False),
             ("_validationType", "_validationType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("validator", "validator", VerificationResultValidator, True, None, False),
-            ("_validator", "_validator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_validator", "_validator", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -260,13 +260,13 @@ class VerificationResultPrimarySource(backboneelement.BackboneElement):
         """ Method for exchanging information with the primary source.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._communicationMethod = None
-        """ Primitive extension for communicationMethod. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for communicationMethod. List of `FHIRPrimitiveExtension` """
         
         self.pushTypeAvailable = None
         """ specific | any | source.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._pushTypeAvailable = None
-        """ Primitive extension for pushTypeAvailable. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for pushTypeAvailable. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of primary source (License Board; Primary Education;
@@ -275,7 +275,7 @@ class VerificationResultPrimarySource(backboneelement.BackboneElement):
         source).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         self.validationDate = None
         """ When the target was validated against the primary source.
@@ -303,11 +303,11 @@ class VerificationResultPrimarySource(backboneelement.BackboneElement):
             ("canPushUpdates", "canPushUpdates", codeableconcept.CodeableConcept, False, None, False),
             ("_canPushUpdates", "_canPushUpdates", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("communicationMethod", "communicationMethod", codeableconcept.CodeableConcept, True, None, False),
-            ("_communicationMethod", "_communicationMethod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_communicationMethod", "_communicationMethod", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("pushTypeAvailable", "pushTypeAvailable", codeableconcept.CodeableConcept, True, None, False),
-            ("_pushTypeAvailable", "_pushTypeAvailable", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_pushTypeAvailable", "_pushTypeAvailable", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("validationDate", "validationDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_validationDate", "_validationDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("validationStatus", "validationStatus", codeableconcept.CodeableConcept, False, None, False),

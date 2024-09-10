@@ -23,7 +23,7 @@ class StructureMap(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -53,25 +53,25 @@ class StructureMap(domainresource.DomainResource):
         """ Named sections for reader convenience.
         List of `StructureMapGroup` items (represented as `dict` in JSON). """
         self._group = None
-        """ Primitive extension for group. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for group. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Additional identifier for the structure map.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.import_fhir = None
         """ Other maps used by this map (canonical URLs).
         List of `str` items. """
         self._import_fhir = None
-        """ Primitive extension for import_fhir. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for import_fhir. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for structure map (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this structure map (computer friendly).
@@ -101,7 +101,7 @@ class StructureMap(domainresource.DomainResource):
         """ Structure Definition used by this map.
         List of `StructureMapStructure` items (represented as `dict` in JSON). """
         self._structure = None
-        """ Primitive extension for structure. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for structure. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Name for this structure map (human friendly).
@@ -120,7 +120,7 @@ class StructureMap(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the structure map.
@@ -134,7 +134,7 @@ class StructureMap(domainresource.DomainResource):
         js = super(StructureMap, self).elementProperties()
         js.extend([
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -144,13 +144,13 @@ class StructureMap(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("group", "group", StructureMapGroup, True, None, True),
-            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("import_fhir", "import", str, True, None, False),
-            ("_import_fhir", "_import_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_import_fhir", "_import_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -160,13 +160,13 @@ class StructureMap(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("structure", "structure", StructureMapStructure, True, None, False),
-            ("_structure", "_structure", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_structure", "_structure", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("url", "url", str, False, None, True),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -208,7 +208,7 @@ class StructureMapGroup(backboneelement.BackboneElement):
         """ Named instance provided when invoking the map.
         List of `StructureMapGroupInput` items (represented as `dict` in JSON). """
         self._input = None
-        """ Primitive extension for input. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for input. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Human-readable label.
@@ -220,7 +220,7 @@ class StructureMapGroup(backboneelement.BackboneElement):
         """ Transform Rule from source to target.
         List of `StructureMapGroupRule` items (represented as `dict` in JSON). """
         self._rule = None
-        """ Primitive extension for rule. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rule. List of `FHIRPrimitiveExtension` """
         
         self.typeMode = None
         """ none | types | type-and-types.
@@ -238,11 +238,11 @@ class StructureMapGroup(backboneelement.BackboneElement):
             ("extends", "extends", str, False, None, False),
             ("_extends", "_extends", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("input", "input", StructureMapGroupInput, True, None, True),
-            ("_input", "_input", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_input", "_input", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("rule", "rule", StructureMapGroupRule, True, None, True),
-            ("_rule", "_rule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rule", "_rule", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("typeMode", "typeMode", str, False, None, True),
             ("_typeMode", "_typeMode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -325,7 +325,7 @@ class StructureMapGroupRule(backboneelement.BackboneElement):
         """ Which other rules to apply in the context of this rule.
         List of `StructureMapGroupRuleDependent` items (represented as `dict` in JSON). """
         self._dependent = None
-        """ Primitive extension for dependent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dependent. List of `FHIRPrimitiveExtension` """
         
         self.documentation = None
         """ Documentation for this instance of data.
@@ -343,19 +343,19 @@ class StructureMapGroupRule(backboneelement.BackboneElement):
         """ Rules contained in this rule.
         List of `StructureMapGroupRule` items (represented as `dict` in JSON). """
         self._rule = None
-        """ Primitive extension for rule. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rule. List of `FHIRPrimitiveExtension` """
         
         self.source = None
         """ Source inputs to the mapping.
         List of `StructureMapGroupRuleSource` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.target = None
         """ Content to create because of this mapping rule.
         List of `StructureMapGroupRuleTarget` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(StructureMapGroupRule, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -363,17 +363,17 @@ class StructureMapGroupRule(backboneelement.BackboneElement):
         js = super(StructureMapGroupRule, self).elementProperties()
         js.extend([
             ("dependent", "dependent", StructureMapGroupRuleDependent, True, None, False),
-            ("_dependent", "_dependent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dependent", "_dependent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("documentation", "documentation", str, False, None, False),
             ("_documentation", "_documentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("rule", "rule", StructureMapGroupRule, True, None, False),
-            ("_rule", "_rule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rule", "_rule", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("source", "source", StructureMapGroupRuleSource, True, None, True),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("target", "target", StructureMapGroupRuleTarget, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -402,7 +402,7 @@ class StructureMapGroupRuleDependent(backboneelement.BackboneElement):
         """ Variable to pass to the rule or group.
         List of `str` items. """
         self._variable = None
-        """ Primitive extension for variable. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for variable. List of `FHIRPrimitiveExtension` """
         
         super(StructureMapGroupRuleDependent, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -412,7 +412,7 @@ class StructureMapGroupRuleDependent(backboneelement.BackboneElement):
             ("name", "name", str, False, None, True),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("variable", "variable", str, True, None, True),
-            ("_variable", "_variable", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_variable", "_variable", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -957,7 +957,7 @@ class StructureMapGroupRuleTarget(backboneelement.BackboneElement):
         """ first | share | last | collate.
         List of `str` items. """
         self._listMode = None
-        """ Primitive extension for listMode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for listMode. List of `FHIRPrimitiveExtension` """
         
         self.listRuleId = None
         """ Internal rule reference for shared list items.
@@ -969,7 +969,7 @@ class StructureMapGroupRuleTarget(backboneelement.BackboneElement):
         """ Parameters to the transform.
         List of `StructureMapGroupRuleTargetParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.transform = None
         """ create | copy +.
@@ -995,11 +995,11 @@ class StructureMapGroupRuleTarget(backboneelement.BackboneElement):
             ("element", "element", str, False, None, False),
             ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("listMode", "listMode", str, True, None, False),
-            ("_listMode", "_listMode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_listMode", "_listMode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("listRuleId", "listRuleId", str, False, None, False),
             ("_listRuleId", "_listRuleId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameter", "parameter", StructureMapGroupRuleTargetParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("transform", "transform", str, False, None, False),
             ("_transform", "_transform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("variable", "variable", str, False, None, False),

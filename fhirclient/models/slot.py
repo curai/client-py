@@ -42,7 +42,7 @@ class Slot(domainresource.DomainResource):
         """ External Ids for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.overbooked = None
         """ This slot has already been overbooked, appointments are unlikely to
@@ -63,7 +63,7 @@ class Slot(domainresource.DomainResource):
         during this appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceCategory = None
-        """ Primitive extension for serviceCategory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceCategory. List of `FHIRPrimitiveExtension` """
         
         self.serviceType = None
         """ The type of appointments that can be booked into this slot (ideally
@@ -72,14 +72,14 @@ class Slot(domainresource.DomainResource):
         the value provided on the availability resource.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceType = None
-        """ Primitive extension for serviceType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceType. List of `FHIRPrimitiveExtension` """
         
         self.specialty = None
         """ The specialty of a practitioner that would be required to perform
         the service requested in this appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialty = None
-        """ Primitive extension for specialty. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialty. List of `FHIRPrimitiveExtension` """
         
         self.start = None
         """ Date/Time that the slot is to begin.
@@ -105,17 +105,17 @@ class Slot(domainresource.DomainResource):
             ("end", "end", fhirinstant.FHIRInstant, False, None, True),
             ("_end", "_end", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("overbooked", "overbooked", bool, False, None, False),
             ("_overbooked", "_overbooked", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("schedule", "schedule", fhirreference.FHIRReference, False, None, True),
             ("_schedule", "_schedule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("serviceCategory", "serviceCategory", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceCategory", "_serviceCategory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceCategory", "_serviceCategory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serviceType", "serviceType", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceType", "_serviceType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceType", "_serviceType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialty", "specialty", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("start", "start", fhirinstant.FHIRInstant, False, None, True),
             ("_start", "_start", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),

@@ -38,7 +38,7 @@ class MolecularSequence(domainresource.DomainResource):
         """ Unique ID for this particular sequence. This is a FHIR-defined id.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.observedSeq = None
         """ Sequence that was observed.
@@ -62,13 +62,13 @@ class MolecularSequence(domainresource.DomainResource):
         """ Pointer to next atomic sequence.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._pointer = None
-        """ Primitive extension for pointer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for pointer. List of `FHIRPrimitiveExtension` """
         
         self.quality = None
         """ An set of value as quality of sequence.
         List of `MolecularSequenceQuality` items (represented as `dict` in JSON). """
         self._quality = None
-        """ Primitive extension for quality. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for quality. List of `FHIRPrimitiveExtension` """
         
         self.quantity = None
         """ The number of copies of the sequence of interest.  (RNASeq).
@@ -94,7 +94,7 @@ class MolecularSequence(domainresource.DomainResource):
         observedSeq in this resource.
         List of `MolecularSequenceRepository` items (represented as `dict` in JSON). """
         self._repository = None
-        """ Primitive extension for repository. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for repository. List of `FHIRPrimitiveExtension` """
         
         self.specimen = None
         """ Specimen used for sequencing.
@@ -106,7 +106,7 @@ class MolecularSequence(domainresource.DomainResource):
         """ Structural variant.
         List of `MolecularSequenceStructureVariant` items (represented as `dict` in JSON). """
         self._structureVariant = None
-        """ Primitive extension for structureVariant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for structureVariant. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ aa | dna | rna.
@@ -118,7 +118,7 @@ class MolecularSequence(domainresource.DomainResource):
         """ Variant in sequence.
         List of `MolecularSequenceVariant` items (represented as `dict` in JSON). """
         self._variant = None
-        """ Primitive extension for variant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for variant. List of `FHIRPrimitiveExtension` """
         
         super(MolecularSequence, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -130,7 +130,7 @@ class MolecularSequence(domainresource.DomainResource):
             ("device", "device", fhirreference.FHIRReference, False, None, False),
             ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("observedSeq", "observedSeq", str, False, None, False),
             ("_observedSeq", "_observedSeq", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, False),
@@ -138,9 +138,9 @@ class MolecularSequence(domainresource.DomainResource):
             ("performer", "performer", fhirreference.FHIRReference, False, None, False),
             ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("pointer", "pointer", fhirreference.FHIRReference, True, None, False),
-            ("_pointer", "_pointer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_pointer", "_pointer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quality", "quality", MolecularSequenceQuality, True, None, False),
-            ("_quality", "_quality", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_quality", "_quality", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("readCoverage", "readCoverage", int, False, None, False),
@@ -148,15 +148,15 @@ class MolecularSequence(domainresource.DomainResource):
             ("referenceSeq", "referenceSeq", MolecularSequenceReferenceSeq, False, None, False),
             ("_referenceSeq", "_referenceSeq", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("repository", "repository", MolecularSequenceRepository, True, None, False),
-            ("_repository", "_repository", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_repository", "_repository", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specimen", "specimen", fhirreference.FHIRReference, False, None, False),
             ("_specimen", "_specimen", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("structureVariant", "structureVariant", MolecularSequenceStructureVariant, True, None, False),
-            ("_structureVariant", "_structureVariant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_structureVariant", "_structureVariant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", str, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("variant", "variant", MolecularSequenceVariant, True, None, False),
-            ("_variant", "_variant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_variant", "_variant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -332,43 +332,43 @@ class MolecularSequenceQualityRoc(backboneelement.BackboneElement):
         """ FScore of the GQ score.
         List of `float` items. """
         self._fMeasure = None
-        """ Primitive extension for fMeasure. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for fMeasure. List of `FHIRPrimitiveExtension` """
         
         self.numFN = None
         """ Roc score false negative numbers.
         List of `int` items. """
         self._numFN = None
-        """ Primitive extension for numFN. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for numFN. List of `FHIRPrimitiveExtension` """
         
         self.numFP = None
         """ Roc score false positive numbers.
         List of `int` items. """
         self._numFP = None
-        """ Primitive extension for numFP. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for numFP. List of `FHIRPrimitiveExtension` """
         
         self.numTP = None
         """ Roc score true positive numbers.
         List of `int` items. """
         self._numTP = None
-        """ Primitive extension for numTP. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for numTP. List of `FHIRPrimitiveExtension` """
         
         self.precision = None
         """ Precision of the GQ score.
         List of `float` items. """
         self._precision = None
-        """ Primitive extension for precision. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for precision. List of `FHIRPrimitiveExtension` """
         
         self.score = None
         """ Genotype quality score.
         List of `int` items. """
         self._score = None
-        """ Primitive extension for score. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for score. List of `FHIRPrimitiveExtension` """
         
         self.sensitivity = None
         """ Sensitivity of the GQ score.
         List of `float` items. """
         self._sensitivity = None
-        """ Primitive extension for sensitivity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for sensitivity. List of `FHIRPrimitiveExtension` """
         
         super(MolecularSequenceQualityRoc, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -376,19 +376,19 @@ class MolecularSequenceQualityRoc(backboneelement.BackboneElement):
         js = super(MolecularSequenceQualityRoc, self).elementProperties()
         js.extend([
             ("fMeasure", "fMeasure", float, True, None, False),
-            ("_fMeasure", "_fMeasure", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_fMeasure", "_fMeasure", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("numFN", "numFN", int, True, None, False),
-            ("_numFN", "_numFN", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_numFN", "_numFN", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("numFP", "numFP", int, True, None, False),
-            ("_numFP", "_numFP", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_numFP", "_numFP", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("numTP", "numTP", int, True, None, False),
-            ("_numTP", "_numTP", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_numTP", "_numTP", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("precision", "precision", float, True, None, False),
-            ("_precision", "_precision", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_precision", "_precision", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("score", "score", int, True, None, False),
-            ("_score", "_score", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_score", "_score", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sensitivity", "sensitivity", float, True, None, False),
-            ("_sensitivity", "_sensitivity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_sensitivity", "_sensitivity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

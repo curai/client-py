@@ -47,7 +47,7 @@ class Address(element.Element):
         """ Street name, number, direction & P.O. Box etc..
         List of `str` items. """
         self._line = None
-        """ Primitive extension for line. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for line. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ Time period when address was/is in use.
@@ -97,7 +97,7 @@ class Address(element.Element):
             ("district", "district", str, False, None, False),
             ("_district", "_district", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("line", "line", str, True, None, False),
-            ("_line", "_line", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_line", "_line", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("postalCode", "postalCode", str, False, None, False),

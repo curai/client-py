@@ -26,7 +26,7 @@ class CommunicationRequest(domainresource.DomainResource):
         """ Resources that pertain to this communication request.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._about = None
-        """ Primitive extension for about. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for about. List of `FHIRPrimitiveExtension` """
         
         self.authoredOn = None
         """ When request transitioned to being actionable.
@@ -38,13 +38,13 @@ class CommunicationRequest(domainresource.DomainResource):
         """ Fulfills plan or proposal.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Message category.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.doNotPerform = None
         """ True if request is prohibiting action.
@@ -68,19 +68,19 @@ class CommunicationRequest(domainresource.DomainResource):
         """ Unique identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.medium = None
         """ A channel of communication.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._medium = None
-        """ Primitive extension for medium. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for medium. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments made about communication request.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ When scheduled.
@@ -98,7 +98,7 @@ class CommunicationRequest(domainresource.DomainResource):
         """ Message payload.
         List of `CommunicationRequestPayload` items (represented as `dict` in JSON). """
         self._payload = None
-        """ Primitive extension for payload. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for payload. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -110,25 +110,25 @@ class CommunicationRequest(domainresource.DomainResource):
         """ Why is communication needed?.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why is communication needed?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.recipient = None
         """ Message recipient.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._recipient = None
-        """ Primitive extension for recipient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for recipient. List of `FHIRPrimitiveExtension` """
         
         self.replaces = None
         """ Request(s) replaced by this request.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._replaces = None
-        """ Primitive extension for replaces. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for replaces. List of `FHIRPrimitiveExtension` """
         
         self.requester = None
         """ Who/what is requesting service.
@@ -167,13 +167,13 @@ class CommunicationRequest(domainresource.DomainResource):
         js = super(CommunicationRequest, self).elementProperties()
         js.extend([
             ("about", "about", fhirreference.FHIRReference, True, None, False),
-            ("_about", "_about", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_about", "_about", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("authoredOn", "authoredOn", fhirdatetime.FHIRDateTime, False, None, False),
             ("_authoredOn", "_authoredOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("doNotPerform", "doNotPerform", bool, False, None, False),
             ("_doNotPerform", "_doNotPerform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
@@ -181,27 +181,27 @@ class CommunicationRequest(domainresource.DomainResource):
             ("groupIdentifier", "groupIdentifier", identifier.Identifier, False, None, False),
             ("_groupIdentifier", "_groupIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("medium", "medium", codeableconcept.CodeableConcept, True, None, False),
-            ("_medium", "_medium", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_medium", "_medium", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrencePeriod", "occurrencePeriod", period.Period, False, "occurrence", False),
             ("_occurrencePeriod", "_occurrencePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("payload", "payload", CommunicationRequestPayload, True, None, False),
-            ("_payload", "_payload", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_payload", "_payload", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recipient", "recipient", fhirreference.FHIRReference, True, None, False),
-            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("replaces", "replaces", fhirreference.FHIRReference, True, None, False),
-            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_replaces", "_replaces", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requester", "requester", fhirreference.FHIRReference, False, None, False),
             ("_requester", "_requester", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sender", "sender", fhirreference.FHIRReference, False, None, False),

@@ -30,7 +30,7 @@ class Measure(domainresource.DomainResource):
         """ Who authored the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.clinicalRecommendationStatement = None
         """ Summary of clinical guidelines.
@@ -48,7 +48,7 @@ class Measure(domainresource.DomainResource):
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -66,7 +66,7 @@ class Measure(domainresource.DomainResource):
         """ Defined terms used in the measure documentation.
         List of `str` items. """
         self._definition = None
-        """ Primitive extension for definition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for definition. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Natural language description of the measure.
@@ -84,7 +84,7 @@ class Measure(domainresource.DomainResource):
         """ Who edited the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._editor = None
-        """ Primitive extension for editor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for editor. List of `FHIRPrimitiveExtension` """
         
         self.effectivePeriod = None
         """ When the measure is expected to be used.
@@ -96,7 +96,7 @@ class Measure(domainresource.DomainResource):
         """ Who endorsed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._endorser = None
-        """ Primitive extension for endorser. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endorser. List of `FHIRPrimitiveExtension` """
         
         self.experimental = None
         """ For testing purposes, not real usage.
@@ -108,7 +108,7 @@ class Measure(domainresource.DomainResource):
         """ Population criteria group.
         List of `MeasureGroup` items (represented as `dict` in JSON). """
         self._group = None
-        """ Primitive extension for group. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for group. List of `FHIRPrimitiveExtension` """
         
         self.guidance = None
         """ Additional guidance for implementers.
@@ -120,7 +120,7 @@ class Measure(domainresource.DomainResource):
         """ Additional identifier for the measure.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.improvementNotation = None
         """ increase | decrease.
@@ -132,7 +132,7 @@ class Measure(domainresource.DomainResource):
         """ Intended jurisdiction for measure (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the measure was last reviewed.
@@ -144,7 +144,7 @@ class Measure(domainresource.DomainResource):
         """ Logic used by the measure.
         List of `str` items. """
         self._library = None
-        """ Primitive extension for library. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for library. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this measure (computer friendly).
@@ -180,13 +180,13 @@ class Measure(domainresource.DomainResource):
         """ Additional documentation, citations, etc..
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.reviewer = None
         """ Who reviewed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._reviewer = None
-        """ Primitive extension for reviewer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reviewer. List of `FHIRPrimitiveExtension` """
         
         self.riskAdjustment = None
         """ How risk adjustment is applied for this measure.
@@ -230,7 +230,7 @@ class Measure(domainresource.DomainResource):
         """ What other data should be reported with the measure.
         List of `MeasureSupplementalData` items (represented as `dict` in JSON). """
         self._supplementalData = None
-        """ Primitive extension for supplementalData. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supplementalData. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Name for this measure (human friendly).
@@ -243,14 +243,14 @@ class Measure(domainresource.DomainResource):
         Assessment, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._topic = None
-        """ Primitive extension for topic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for topic. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ process | outcome | structure | patient-reported-outcome |
         composite.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         self.url = None
         """ Canonical identifier for this measure, represented as a URI
@@ -269,7 +269,7 @@ class Measure(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the measure.
@@ -285,45 +285,45 @@ class Measure(domainresource.DomainResource):
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", contactdetail.ContactDetail, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("clinicalRecommendationStatement", "clinicalRecommendationStatement", str, False, None, False),
             ("_clinicalRecommendationStatement", "_clinicalRecommendationStatement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("compositeScoring", "compositeScoring", codeableconcept.CodeableConcept, False, None, False),
             ("_compositeScoring", "_compositeScoring", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("definition", "definition", str, True, None, False),
-            ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("disclaimer", "disclaimer", str, False, None, False),
             ("_disclaimer", "_disclaimer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("editor", "editor", contactdetail.ContactDetail, True, None, False),
-            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endorser", "endorser", contactdetail.ContactDetail, True, None, False),
-            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("group", "group", MeasureGroup, True, None, False),
-            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("guidance", "guidance", str, False, None, False),
             ("_guidance", "_guidance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("improvementNotation", "improvementNotation", codeableconcept.CodeableConcept, False, None, False),
             ("_improvementNotation", "_improvementNotation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("library", "library", str, True, None, False),
-            ("_library", "_library", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_library", "_library", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("publisher", "publisher", str, False, None, False),
@@ -335,9 +335,9 @@ class Measure(domainresource.DomainResource):
             ("rationale", "rationale", str, False, None, False),
             ("_rationale", "_rationale", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reviewer", "reviewer", contactdetail.ContactDetail, True, None, False),
-            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("riskAdjustment", "riskAdjustment", str, False, None, False),
             ("_riskAdjustment", "_riskAdjustment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("scoring", "scoring", codeableconcept.CodeableConcept, False, None, False),
@@ -351,19 +351,19 @@ class Measure(domainresource.DomainResource):
             ("subtitle", "subtitle", str, False, None, False),
             ("_subtitle", "_subtitle", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supplementalData", "supplementalData", MeasureSupplementalData, True, None, False),
-            ("_supplementalData", "_supplementalData", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supplementalData", "_supplementalData", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", codeableconcept.CodeableConcept, True, None, False),
-            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("usage", "usage", str, False, None, False),
             ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -404,13 +404,13 @@ class MeasureGroup(backboneelement.BackboneElement):
         """ Population criteria.
         List of `MeasureGroupPopulation` items (represented as `dict` in JSON). """
         self._population = None
-        """ Primitive extension for population. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for population. List of `FHIRPrimitiveExtension` """
         
         self.stratifier = None
         """ Stratifier criteria for the measure.
         List of `MeasureGroupStratifier` items (represented as `dict` in JSON). """
         self._stratifier = None
-        """ Primitive extension for stratifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for stratifier. List of `FHIRPrimitiveExtension` """
         
         super(MeasureGroup, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -422,9 +422,9 @@ class MeasureGroup(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("population", "population", MeasureGroupPopulation, True, None, False),
-            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_population", "_population", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("stratifier", "stratifier", MeasureGroupStratifier, True, None, False),
-            ("_stratifier", "_stratifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_stratifier", "_stratifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -508,7 +508,7 @@ class MeasureGroupStratifier(backboneelement.BackboneElement):
         """ Stratifier criteria component for the measure.
         List of `MeasureGroupStratifierComponent` items (represented as `dict` in JSON). """
         self._component = None
-        """ Primitive extension for component. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for component. List of `FHIRPrimitiveExtension` """
         
         self.criteria = None
         """ How the measure should be stratified.
@@ -530,7 +530,7 @@ class MeasureGroupStratifier(backboneelement.BackboneElement):
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("component", "component", MeasureGroupStratifierComponent, True, None, False),
-            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("criteria", "criteria", expression.Expression, False, None, False),
             ("_criteria", "_criteria", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("description", "description", str, False, None, False),
@@ -630,7 +630,7 @@ class MeasureSupplementalData(backboneelement.BackboneElement):
         """ supplemental-data | risk-adjustment-factor.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._usage = None
-        """ Primitive extension for usage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for usage. List of `FHIRPrimitiveExtension` """
         
         super(MeasureSupplementalData, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -644,7 +644,7 @@ class MeasureSupplementalData(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("usage", "usage", codeableconcept.CodeableConcept, True, None, False),
-            ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_usage", "_usage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

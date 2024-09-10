@@ -28,7 +28,7 @@ class SubstancePolymer(domainresource.DomainResource):
         """ Todo.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._copolymerConnectivity = None
-        """ Primitive extension for copolymerConnectivity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for copolymerConnectivity. List of `FHIRPrimitiveExtension` """
         
         self.geometry = None
         """ Todo.
@@ -40,19 +40,19 @@ class SubstancePolymer(domainresource.DomainResource):
         """ Todo.
         List of `str` items. """
         self._modification = None
-        """ Primitive extension for modification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modification. List of `FHIRPrimitiveExtension` """
         
         self.monomerSet = None
         """ Todo.
         List of `SubstancePolymerMonomerSet` items (represented as `dict` in JSON). """
         self._monomerSet = None
-        """ Primitive extension for monomerSet. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for monomerSet. List of `FHIRPrimitiveExtension` """
         
         self.repeat = None
         """ Todo.
         List of `SubstancePolymerRepeat` items (represented as `dict` in JSON). """
         self._repeat = None
-        """ Primitive extension for repeat. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for repeat. List of `FHIRPrimitiveExtension` """
         
         super(SubstancePolymer, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -62,15 +62,15 @@ class SubstancePolymer(domainresource.DomainResource):
             ("class_fhir", "class", codeableconcept.CodeableConcept, False, None, False),
             ("_class_fhir", "_class_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("copolymerConnectivity", "copolymerConnectivity", codeableconcept.CodeableConcept, True, None, False),
-            ("_copolymerConnectivity", "_copolymerConnectivity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_copolymerConnectivity", "_copolymerConnectivity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("geometry", "geometry", codeableconcept.CodeableConcept, False, None, False),
             ("_geometry", "_geometry", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("modification", "modification", str, True, None, False),
-            ("_modification", "_modification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modification", "_modification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("monomerSet", "monomerSet", SubstancePolymerMonomerSet, True, None, False),
-            ("_monomerSet", "_monomerSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_monomerSet", "_monomerSet", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("repeat", "repeat", SubstancePolymerRepeat, True, None, False),
-            ("_repeat", "_repeat", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_repeat", "_repeat", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -101,7 +101,7 @@ class SubstancePolymerMonomerSet(backboneelement.BackboneElement):
         """ Todo.
         List of `SubstancePolymerMonomerSetStartingMaterial` items (represented as `dict` in JSON). """
         self._startingMaterial = None
-        """ Primitive extension for startingMaterial. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for startingMaterial. List of `FHIRPrimitiveExtension` """
         
         super(SubstancePolymerMonomerSet, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -111,7 +111,7 @@ class SubstancePolymerMonomerSet(backboneelement.BackboneElement):
             ("ratioType", "ratioType", codeableconcept.CodeableConcept, False, None, False),
             ("_ratioType", "_ratioType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("startingMaterial", "startingMaterial", SubstancePolymerMonomerSetStartingMaterial, True, None, False),
-            ("_startingMaterial", "_startingMaterial", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_startingMaterial", "_startingMaterial", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -201,7 +201,7 @@ class SubstancePolymerRepeat(backboneelement.BackboneElement):
         """ Todo.
         List of `SubstancePolymerRepeatRepeatUnit` items (represented as `dict` in JSON). """
         self._repeatUnit = None
-        """ Primitive extension for repeatUnit. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for repeatUnit. List of `FHIRPrimitiveExtension` """
         
         self.repeatUnitAmountType = None
         """ Todo.
@@ -219,7 +219,7 @@ class SubstancePolymerRepeat(backboneelement.BackboneElement):
             ("numberOfUnits", "numberOfUnits", int, False, None, False),
             ("_numberOfUnits", "_numberOfUnits", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("repeatUnit", "repeatUnit", SubstancePolymerRepeatRepeatUnit, True, None, False),
-            ("_repeatUnit", "_repeatUnit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_repeatUnit", "_repeatUnit", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("repeatUnitAmountType", "repeatUnitAmountType", codeableconcept.CodeableConcept, False, None, False),
             ("_repeatUnitAmountType", "_repeatUnitAmountType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -250,7 +250,7 @@ class SubstancePolymerRepeatRepeatUnit(backboneelement.BackboneElement):
         """ Todo.
         List of `SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation` items (represented as `dict` in JSON). """
         self._degreeOfPolymerisation = None
-        """ Primitive extension for degreeOfPolymerisation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for degreeOfPolymerisation. List of `FHIRPrimitiveExtension` """
         
         self.orientationOfPolymerisation = None
         """ Todo.
@@ -268,7 +268,7 @@ class SubstancePolymerRepeatRepeatUnit(backboneelement.BackboneElement):
         """ Todo.
         List of `SubstancePolymerRepeatRepeatUnitStructuralRepresentation` items (represented as `dict` in JSON). """
         self._structuralRepresentation = None
-        """ Primitive extension for structuralRepresentation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for structuralRepresentation. List of `FHIRPrimitiveExtension` """
         
         super(SubstancePolymerRepeatRepeatUnit, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -278,13 +278,13 @@ class SubstancePolymerRepeatRepeatUnit(backboneelement.BackboneElement):
             ("amount", "amount", substanceamount.SubstanceAmount, False, None, False),
             ("_amount", "_amount", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("degreeOfPolymerisation", "degreeOfPolymerisation", SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, True, None, False),
-            ("_degreeOfPolymerisation", "_degreeOfPolymerisation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_degreeOfPolymerisation", "_degreeOfPolymerisation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("orientationOfPolymerisation", "orientationOfPolymerisation", codeableconcept.CodeableConcept, False, None, False),
             ("_orientationOfPolymerisation", "_orientationOfPolymerisation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("repeatUnit", "repeatUnit", str, False, None, False),
             ("_repeatUnit", "_repeatUnit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("structuralRepresentation", "structuralRepresentation", SubstancePolymerRepeatRepeatUnitStructuralRepresentation, True, None, False),
-            ("_structuralRepresentation", "_structuralRepresentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_structuralRepresentation", "_structuralRepresentation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

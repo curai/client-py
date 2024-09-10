@@ -32,19 +32,19 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ Who authored the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.certainty = None
         """ How certain is the risk.
         List of `RiskEvidenceSynthesisCertainty` items (represented as `dict` in JSON). """
         self._certainty = None
-        """ Primitive extension for certainty. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for certainty. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -68,7 +68,7 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ Who edited the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._editor = None
-        """ Primitive extension for editor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for editor. List of `FHIRPrimitiveExtension` """
         
         self.effectivePeriod = None
         """ When the risk evidence synthesis is expected to be used.
@@ -80,7 +80,7 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ Who endorsed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._endorser = None
-        """ Primitive extension for endorser. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endorser. List of `FHIRPrimitiveExtension` """
         
         self.exposure = None
         """ What exposure?.
@@ -92,13 +92,13 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ Additional identifier for the risk evidence synthesis.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for risk evidence synthesis (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the risk evidence synthesis was last reviewed.
@@ -116,7 +116,7 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ Used for footnotes or explanatory notes.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.outcome = None
         """ What outcome?.
@@ -140,13 +140,13 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ Additional documentation, citations, etc..
         List of `RelatedArtifact` items (represented as `dict` in JSON). """
         self._relatedArtifact = None
-        """ Primitive extension for relatedArtifact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedArtifact. List of `FHIRPrimitiveExtension` """
         
         self.reviewer = None
         """ Who reviewed the content.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._reviewer = None
-        """ Primitive extension for reviewer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reviewer. List of `FHIRPrimitiveExtension` """
         
         self.riskEstimate = None
         """ What was the estimated risk.
@@ -189,7 +189,7 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         Treatment, Assessment, etc..
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._topic = None
-        """ Primitive extension for topic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for topic. List of `FHIRPrimitiveExtension` """
         
         self.url = None
         """ Canonical identifier for this risk evidence synthesis, represented
@@ -202,7 +202,7 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the risk evidence synthesis.
@@ -218,11 +218,11 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", contactdetail.ContactDetail, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("certainty", "certainty", RiskEvidenceSynthesisCertainty, True, None, False),
-            ("_certainty", "_certainty", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_certainty", "_certainty", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -230,23 +230,23 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("editor", "editor", contactdetail.ContactDetail, True, None, False),
-            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_editor", "_editor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
             ("_effectivePeriod", "_effectivePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("endorser", "endorser", contactdetail.ContactDetail, True, None, False),
-            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endorser", "_endorser", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("exposure", "exposure", fhirreference.FHIRReference, False, None, False),
             ("_exposure", "_exposure", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcome", "outcome", fhirreference.FHIRReference, False, None, True),
             ("_outcome", "_outcome", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("population", "population", fhirreference.FHIRReference, False, None, True),
@@ -254,9 +254,9 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedArtifact", "relatedArtifact", relatedartifact.RelatedArtifact, True, None, False),
-            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedArtifact", "_relatedArtifact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reviewer", "reviewer", contactdetail.ContactDetail, True, None, False),
-            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reviewer", "_reviewer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("riskEstimate", "riskEstimate", RiskEvidenceSynthesisRiskEstimate, False, None, False),
             ("_riskEstimate", "_riskEstimate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sampleSize", "sampleSize", RiskEvidenceSynthesisSampleSize, False, None, False),
@@ -270,11 +270,11 @@ class RiskEvidenceSynthesis(domainresource.DomainResource):
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", codeableconcept.CodeableConcept, True, None, False),
-            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_topic", "_topic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -303,19 +303,19 @@ class RiskEvidenceSynthesisCertainty(backboneelement.BackboneElement):
         """ A component that contributes to the overall certainty.
         List of `RiskEvidenceSynthesisCertaintyCertaintySubcomponent` items (represented as `dict` in JSON). """
         self._certaintySubcomponent = None
-        """ Primitive extension for certaintySubcomponent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for certaintySubcomponent. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Used for footnotes or explanatory notes.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.rating = None
         """ Certainty rating.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._rating = None
-        """ Primitive extension for rating. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rating. List of `FHIRPrimitiveExtension` """
         
         super(RiskEvidenceSynthesisCertainty, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -323,11 +323,11 @@ class RiskEvidenceSynthesisCertainty(backboneelement.BackboneElement):
         js = super(RiskEvidenceSynthesisCertainty, self).elementProperties()
         js.extend([
             ("certaintySubcomponent", "certaintySubcomponent", RiskEvidenceSynthesisCertaintyCertaintySubcomponent, True, None, False),
-            ("_certaintySubcomponent", "_certaintySubcomponent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_certaintySubcomponent", "_certaintySubcomponent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("rating", "rating", codeableconcept.CodeableConcept, True, None, False),
-            ("_rating", "_rating", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rating", "_rating", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -352,13 +352,13 @@ class RiskEvidenceSynthesisCertaintyCertaintySubcomponent(backboneelement.Backbo
         """ Used for footnotes or explanatory notes.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.rating = None
         """ Subcomponent certainty rating.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._rating = None
-        """ Primitive extension for rating. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rating. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of subcomponent of certainty rating.
@@ -372,9 +372,9 @@ class RiskEvidenceSynthesisCertaintyCertaintySubcomponent(backboneelement.Backbo
         js = super(RiskEvidenceSynthesisCertaintyCertaintySubcomponent, self).elementProperties()
         js.extend([
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("rating", "rating", codeableconcept.CodeableConcept, True, None, False),
-            ("_rating", "_rating", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rating", "_rating", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -419,7 +419,7 @@ class RiskEvidenceSynthesisRiskEstimate(backboneelement.BackboneElement):
         """ How precise the estimate is.
         List of `RiskEvidenceSynthesisRiskEstimatePrecisionEstimate` items (represented as `dict` in JSON). """
         self._precisionEstimate = None
-        """ Primitive extension for precisionEstimate. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for precisionEstimate. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type of risk estimate.
@@ -451,7 +451,7 @@ class RiskEvidenceSynthesisRiskEstimate(backboneelement.BackboneElement):
             ("numeratorCount", "numeratorCount", int, False, None, False),
             ("_numeratorCount", "_numeratorCount", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("precisionEstimate", "precisionEstimate", RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, True, None, False),
-            ("_precisionEstimate", "_precisionEstimate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_precisionEstimate", "_precisionEstimate", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("unitOfMeasure", "unitOfMeasure", codeableconcept.CodeableConcept, False, None, False),

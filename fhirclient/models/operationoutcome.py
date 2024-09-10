@@ -25,7 +25,7 @@ class OperationOutcome(domainresource.DomainResource):
         """ A single issue associated with the action.
         List of `OperationOutcomeIssue` items (represented as `dict` in JSON). """
         self._issue = None
-        """ Primitive extension for issue. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for issue. List of `FHIRPrimitiveExtension` """
         
         super(OperationOutcome, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -33,7 +33,7 @@ class OperationOutcome(domainresource.DomainResource):
         js = super(OperationOutcome, self).elementProperties()
         js.extend([
             ("issue", "issue", OperationOutcomeIssue, True, None, True),
-            ("_issue", "_issue", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_issue", "_issue", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -79,13 +79,13 @@ class OperationOutcomeIssue(backboneelement.BackboneElement):
         """ FHIRPath of element(s) related to issue.
         List of `str` items. """
         self._expression = None
-        """ Primitive extension for expression. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for expression. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Deprecated: Path of element(s) related to issue.
         List of `str` items. """
         self._location = None
-        """ Primitive extension for location. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for location. List of `FHIRPrimitiveExtension` """
         
         self.severity = None
         """ fatal | error | warning | information.
@@ -105,9 +105,9 @@ class OperationOutcomeIssue(backboneelement.BackboneElement):
             ("diagnostics", "diagnostics", str, False, None, False),
             ("_diagnostics", "_diagnostics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("expression", "expression", str, True, None, False),
-            ("_expression", "_expression", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_expression", "_expression", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", str, True, None, False),
-            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("severity", "severity", str, False, None, True),
             ("_severity", "_severity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

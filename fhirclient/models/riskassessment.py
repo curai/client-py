@@ -31,7 +31,7 @@ class RiskAssessment(domainresource.DomainResource):
         """ Information used in assessment.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basis = None
-        """ Primitive extension for basis. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basis. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Type of assessment.
@@ -55,7 +55,7 @@ class RiskAssessment(domainresource.DomainResource):
         """ Unique identifier for the assessment.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.method = None
         """ Evaluation mechanism.
@@ -73,7 +73,7 @@ class RiskAssessment(domainresource.DomainResource):
         """ Comments on the risk assessment.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ When was assessment made?.
@@ -103,19 +103,19 @@ class RiskAssessment(domainresource.DomainResource):
         """ Outcome predicted.
         List of `RiskAssessmentPrediction` items (represented as `dict` in JSON). """
         self._prediction = None
-        """ Primitive extension for prediction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for prediction. List of `FHIRPrimitiveExtension` """
         
         self.reasonCode = None
         """ Why the assessment was necessary?.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why the assessment was necessary?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ registered | preliminary | final | amended +.
@@ -137,7 +137,7 @@ class RiskAssessment(domainresource.DomainResource):
             ("basedOn", "basedOn", fhirreference.FHIRReference, False, None, False),
             ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basis", "basis", fhirreference.FHIRReference, True, None, False),
-            ("_basis", "_basis", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basis", "_basis", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("condition", "condition", fhirreference.FHIRReference, False, None, False),
@@ -145,13 +145,13 @@ class RiskAssessment(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("method", "method", codeableconcept.CodeableConcept, False, None, False),
             ("_method", "_method", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("mitigation", "mitigation", str, False, None, False),
             ("_mitigation", "_mitigation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrencePeriod", "occurrencePeriod", period.Period, False, "occurrence", False),
@@ -161,11 +161,11 @@ class RiskAssessment(domainresource.DomainResource):
             ("performer", "performer", fhirreference.FHIRReference, False, None, False),
             ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("prediction", "prediction", RiskAssessmentPrediction, True, None, False),
-            ("_prediction", "_prediction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_prediction", "_prediction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),

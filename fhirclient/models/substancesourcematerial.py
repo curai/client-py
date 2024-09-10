@@ -40,7 +40,7 @@ class SubstanceSourceMaterial(domainresource.DomainResource):
         Crioprecipitate.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._countryOfOrigin = None
-        """ Primitive extension for countryOfOrigin. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for countryOfOrigin. List of `FHIRPrimitiveExtension` """
         
         self.developmentStage = None
         """ Stage of life for animals, plants, insects and microorganisms. This
@@ -63,14 +63,14 @@ class SubstanceSourceMaterial(domainresource.DomainResource):
         levels.
         List of `SubstanceSourceMaterialFractionDescription` items (represented as `dict` in JSON). """
         self._fractionDescription = None
-        """ Primitive extension for fractionDescription. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for fractionDescription. List of `FHIRPrimitiveExtension` """
         
         self.geographicalLocation = None
         """ The place/region where the plant is harvested or the places/regions
         where the animal source material has its habitat.
         List of `str` items. """
         self._geographicalLocation = None
-        """ Primitive extension for geographicalLocation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for geographicalLocation. List of `FHIRPrimitiveExtension` """
         
         self.organism = None
         """ This subclause describes the organism which the substance is
@@ -101,19 +101,19 @@ class SubstanceSourceMaterial(domainresource.DomainResource):
         (Whole plant).
         List of `Identifier` items (represented as `dict` in JSON). """
         self._parentSubstanceId = None
-        """ Primitive extension for parentSubstanceId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parentSubstanceId. List of `FHIRPrimitiveExtension` """
         
         self.parentSubstanceName = None
         """ The parent substance of the Herbal Drug, or Herbal preparation.
         List of `str` items. """
         self._parentSubstanceName = None
-        """ Primitive extension for parentSubstanceName. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parentSubstanceName. List of `FHIRPrimitiveExtension` """
         
         self.partDescription = None
         """ To do.
         List of `SubstanceSourceMaterialPartDescription` items (represented as `dict` in JSON). """
         self._partDescription = None
-        """ Primitive extension for partDescription. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partDescription. List of `FHIRPrimitiveExtension` """
         
         self.sourceMaterialClass = None
         """ General high level classification of the source material specific
@@ -142,13 +142,13 @@ class SubstanceSourceMaterial(domainresource.DomainResource):
         js = super(SubstanceSourceMaterial, self).elementProperties()
         js.extend([
             ("countryOfOrigin", "countryOfOrigin", codeableconcept.CodeableConcept, True, None, False),
-            ("_countryOfOrigin", "_countryOfOrigin", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_countryOfOrigin", "_countryOfOrigin", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("developmentStage", "developmentStage", codeableconcept.CodeableConcept, False, None, False),
             ("_developmentStage", "_developmentStage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("fractionDescription", "fractionDescription", SubstanceSourceMaterialFractionDescription, True, None, False),
-            ("_fractionDescription", "_fractionDescription", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_fractionDescription", "_fractionDescription", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("geographicalLocation", "geographicalLocation", str, True, None, False),
-            ("_geographicalLocation", "_geographicalLocation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_geographicalLocation", "_geographicalLocation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("organism", "organism", SubstanceSourceMaterialOrganism, False, None, False),
             ("_organism", "_organism", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("organismId", "organismId", identifier.Identifier, False, None, False),
@@ -156,11 +156,11 @@ class SubstanceSourceMaterial(domainresource.DomainResource):
             ("organismName", "organismName", str, False, None, False),
             ("_organismName", "_organismName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parentSubstanceId", "parentSubstanceId", identifier.Identifier, True, None, False),
-            ("_parentSubstanceId", "_parentSubstanceId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parentSubstanceId", "_parentSubstanceId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("parentSubstanceName", "parentSubstanceName", str, True, None, False),
-            ("_parentSubstanceName", "_parentSubstanceName", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parentSubstanceName", "_parentSubstanceName", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partDescription", "partDescription", SubstanceSourceMaterialPartDescription, True, None, False),
-            ("_partDescription", "_partDescription", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partDescription", "_partDescription", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sourceMaterialClass", "sourceMaterialClass", codeableconcept.CodeableConcept, False, None, False),
             ("_sourceMaterialClass", "_sourceMaterialClass", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sourceMaterialState", "sourceMaterialState", codeableconcept.CodeableConcept, False, None, False),
@@ -244,7 +244,7 @@ class SubstanceSourceMaterialOrganism(backboneelement.BackboneElement):
         """ 4.9.13.6.1 Author type (Conditional).
         List of `SubstanceSourceMaterialOrganismAuthor` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.family = None
         """ The family of an organism shall be specified.
@@ -301,7 +301,7 @@ class SubstanceSourceMaterialOrganism(backboneelement.BackboneElement):
         js = super(SubstanceSourceMaterialOrganism, self).elementProperties()
         js.extend([
             ("author", "author", SubstanceSourceMaterialOrganismAuthor, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("family", "family", codeableconcept.CodeableConcept, False, None, False),
             ("_family", "_family", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("genus", "genus", codeableconcept.CodeableConcept, False, None, False),

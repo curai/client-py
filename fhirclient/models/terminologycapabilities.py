@@ -40,13 +40,13 @@ class TerminologyCapabilities(domainresource.DomainResource):
         """ A code system supported by the server.
         List of `TerminologyCapabilitiesCodeSystem` items (represented as `dict` in JSON). """
         self._codeSystem = None
-        """ Primitive extension for codeSystem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for codeSystem. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -89,7 +89,7 @@ class TerminologyCapabilities(domainresource.DomainResource):
         """ Intended jurisdiction for terminology capabilities (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.kind = None
         """ instance | capability | requirements.
@@ -157,7 +157,7 @@ class TerminologyCapabilities(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.validateCode = None
         """ Information about the [ValueSet/$validate-code](valueset-operation-
@@ -182,9 +182,9 @@ class TerminologyCapabilities(domainresource.DomainResource):
             ("codeSearch", "codeSearch", str, False, None, False),
             ("_codeSearch", "_codeSearch", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("codeSystem", "codeSystem", TerminologyCapabilitiesCodeSystem, True, None, False),
-            ("_codeSystem", "_codeSystem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_codeSystem", "_codeSystem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, True),
@@ -198,7 +198,7 @@ class TerminologyCapabilities(domainresource.DomainResource):
             ("implementation", "implementation", TerminologyCapabilitiesImplementation, False, None, False),
             ("_implementation", "_implementation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("kind", "kind", str, False, None, True),
             ("_kind", "_kind", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("lockedDate", "lockedDate", bool, False, None, False),
@@ -220,7 +220,7 @@ class TerminologyCapabilities(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("validateCode", "validateCode", TerminologyCapabilitiesValidateCode, False, None, False),
             ("_validateCode", "_validateCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("version", "version", str, False, None, False),
@@ -299,7 +299,7 @@ class TerminologyCapabilitiesCodeSystem(backboneelement.BackboneElement):
         """ Version of Code System supported.
         List of `TerminologyCapabilitiesCodeSystemVersion` items (represented as `dict` in JSON). """
         self._version = None
-        """ Primitive extension for version. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for version. List of `FHIRPrimitiveExtension` """
         
         super(TerminologyCapabilitiesCodeSystem, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -311,7 +311,7 @@ class TerminologyCapabilitiesCodeSystem(backboneelement.BackboneElement):
             ("uri", "uri", str, False, None, False),
             ("_uri", "_uri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("version", "version", TerminologyCapabilitiesCodeSystemVersion, True, None, False),
-            ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -348,7 +348,7 @@ class TerminologyCapabilitiesCodeSystemVersion(backboneelement.BackboneElement):
         """ Filter Properties supported.
         List of `TerminologyCapabilitiesCodeSystemVersionFilter` items (represented as `dict` in JSON). """
         self._filter = None
-        """ Primitive extension for filter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for filter. List of `FHIRPrimitiveExtension` """
         
         self.isDefault = None
         """ If this is the default version for this code system.
@@ -360,13 +360,13 @@ class TerminologyCapabilitiesCodeSystemVersion(backboneelement.BackboneElement):
         """ Language Displays supported.
         List of `str` items. """
         self._language = None
-        """ Primitive extension for language. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for language. List of `FHIRPrimitiveExtension` """
         
         self.property = None
         """ Properties supported for $lookup.
         List of `str` items. """
         self._property = None
-        """ Primitive extension for property. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for property. List of `FHIRPrimitiveExtension` """
         
         super(TerminologyCapabilitiesCodeSystemVersion, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -378,13 +378,13 @@ class TerminologyCapabilitiesCodeSystemVersion(backboneelement.BackboneElement):
             ("compositional", "compositional", bool, False, None, False),
             ("_compositional", "_compositional", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("filter", "filter", TerminologyCapabilitiesCodeSystemVersionFilter, True, None, False),
-            ("_filter", "_filter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_filter", "_filter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("isDefault", "isDefault", bool, False, None, False),
             ("_isDefault", "_isDefault", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("language", "language", str, True, None, False),
-            ("_language", "_language", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_language", "_language", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("property", "property", str, True, None, False),
-            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_property", "_property", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -413,7 +413,7 @@ class TerminologyCapabilitiesCodeSystemVersionFilter(backboneelement.BackboneEle
         """ Operations supported for the property.
         List of `str` items. """
         self._op = None
-        """ Primitive extension for op. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for op. List of `FHIRPrimitiveExtension` """
         
         super(TerminologyCapabilitiesCodeSystemVersionFilter, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -423,7 +423,7 @@ class TerminologyCapabilitiesCodeSystemVersionFilter(backboneelement.BackboneEle
             ("code", "code", str, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("op", "op", str, True, None, True),
-            ("_op", "_op", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_op", "_op", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -465,7 +465,7 @@ class TerminologyCapabilitiesExpansion(backboneelement.BackboneElement):
         """ Supported expansion parameter.
         List of `TerminologyCapabilitiesExpansionParameter` items (represented as `dict` in JSON). """
         self._parameter = None
-        """ Primitive extension for parameter. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for parameter. List of `FHIRPrimitiveExtension` """
         
         self.textFilter = None
         """ Documentation about text searching works.
@@ -485,7 +485,7 @@ class TerminologyCapabilitiesExpansion(backboneelement.BackboneElement):
             ("paging", "paging", bool, False, None, False),
             ("_paging", "_paging", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("parameter", "parameter", TerminologyCapabilitiesExpansionParameter, True, None, False),
-            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_parameter", "_parameter", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("textFilter", "textFilter", str, False, None, False),
             ("_textFilter", "_textFilter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

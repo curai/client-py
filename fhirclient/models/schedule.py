@@ -29,7 +29,7 @@ class Schedule(domainresource.DomainResource):
         """ Resource(s) that availability information is being provided for.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._actor = None
-        """ Primitive extension for actor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for actor. List of `FHIRPrimitiveExtension` """
         
         self.comment = None
         """ Comments on availability.
@@ -41,7 +41,7 @@ class Schedule(domainresource.DomainResource):
         """ External Ids for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.planningHorizon = None
         """ Period of time covered by schedule.
@@ -53,19 +53,19 @@ class Schedule(domainresource.DomainResource):
         """ High-level category.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceCategory = None
-        """ Primitive extension for serviceCategory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceCategory. List of `FHIRPrimitiveExtension` """
         
         self.serviceType = None
         """ Specific service.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceType = None
-        """ Primitive extension for serviceType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceType. List of `FHIRPrimitiveExtension` """
         
         self.specialty = None
         """ Type of specialty needed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialty = None
-        """ Primitive extension for specialty. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialty. List of `FHIRPrimitiveExtension` """
         
         super(Schedule, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -75,19 +75,19 @@ class Schedule(domainresource.DomainResource):
             ("active", "active", bool, False, None, False),
             ("_active", "_active", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("actor", "actor", fhirreference.FHIRReference, True, None, True),
-            ("_actor", "_actor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_actor", "_actor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("planningHorizon", "planningHorizon", period.Period, False, None, False),
             ("_planningHorizon", "_planningHorizon", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("serviceCategory", "serviceCategory", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceCategory", "_serviceCategory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceCategory", "_serviceCategory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serviceType", "serviceType", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceType", "_serviceType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceType", "_serviceType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialty", "specialty", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

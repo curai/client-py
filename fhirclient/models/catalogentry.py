@@ -25,32 +25,32 @@ class CatalogEntry(domainresource.DomainResource):
         """ Additional characteristics of the catalog entry.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._additionalCharacteristic = None
-        """ Primitive extension for additionalCharacteristic. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for additionalCharacteristic. List of `FHIRPrimitiveExtension` """
         
         self.additionalClassification = None
         """ Additional classification of the catalog entry.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._additionalClassification = None
-        """ Primitive extension for additionalClassification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for additionalClassification. List of `FHIRPrimitiveExtension` """
         
         self.additionalIdentifier = None
         """ Any additional identifier(s) for the catalog item, in the same
         granularity or concept.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._additionalIdentifier = None
-        """ Primitive extension for additionalIdentifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for additionalIdentifier. List of `FHIRPrimitiveExtension` """
         
         self.classification = None
         """ Classification (category or class) of the item entry.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._classification = None
-        """ Primitive extension for classification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for classification. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Unique identifier of the catalog item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.lastUpdated = None
         """ When was this catalog last updated.
@@ -74,7 +74,7 @@ class CatalogEntry(domainresource.DomainResource):
         """ An item that this catalog entry is related to.
         List of `CatalogEntryRelatedEntry` items (represented as `dict` in JSON). """
         self._relatedEntry = None
-        """ Primitive extension for relatedEntry. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatedEntry. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ draft | active | retired | unknown.
@@ -107,15 +107,15 @@ class CatalogEntry(domainresource.DomainResource):
         js = super(CatalogEntry, self).elementProperties()
         js.extend([
             ("additionalCharacteristic", "additionalCharacteristic", codeableconcept.CodeableConcept, True, None, False),
-            ("_additionalCharacteristic", "_additionalCharacteristic", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_additionalCharacteristic", "_additionalCharacteristic", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("additionalClassification", "additionalClassification", codeableconcept.CodeableConcept, True, None, False),
-            ("_additionalClassification", "_additionalClassification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_additionalClassification", "_additionalClassification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("additionalIdentifier", "additionalIdentifier", identifier.Identifier, True, None, False),
-            ("_additionalIdentifier", "_additionalIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_additionalIdentifier", "_additionalIdentifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("classification", "classification", codeableconcept.CodeableConcept, True, None, False),
-            ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastUpdated", "lastUpdated", fhirdatetime.FHIRDateTime, False, None, False),
             ("_lastUpdated", "_lastUpdated", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("orderable", "orderable", bool, False, None, True),
@@ -123,7 +123,7 @@ class CatalogEntry(domainresource.DomainResource):
             ("referencedItem", "referencedItem", fhirreference.FHIRReference, False, None, True),
             ("_referencedItem", "_referencedItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatedEntry", "relatedEntry", CatalogEntryRelatedEntry, True, None, False),
-            ("_relatedEntry", "_relatedEntry", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatedEntry", "_relatedEntry", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),

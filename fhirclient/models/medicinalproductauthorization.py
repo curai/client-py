@@ -22,7 +22,7 @@ class MedicinalProductAuthorization(domainresource.DomainResource):
         """ The country in which the marketing authorization has been granted.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._country = None
-        """ Primitive extension for country. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for country. List of `FHIRPrimitiveExtension` """
         
         self.dataExclusivityPeriod = None
         """ A period of time after authorization before generic product
@@ -49,7 +49,7 @@ class MedicinalProductAuthorization(domainresource.DomainResource):
         a regulator.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.internationalBirthDate = None
         """ Date of first marketing authorization for a company's new medicinal
@@ -62,13 +62,13 @@ class MedicinalProductAuthorization(domainresource.DomainResource):
         """ Jurisdiction within a country.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.jurisdictionalAuthorization = None
         """ Authorization in areas within a country.
         List of `MedicinalProductAuthorizationJurisdictionalAuthorization` items (represented as `dict` in JSON). """
         self._jurisdictionalAuthorization = None
-        """ Primitive extension for jurisdictionalAuthorization. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdictionalAuthorization. List of `FHIRPrimitiveExtension` """
         
         self.legalBasis = None
         """ The legal framework against which this authorization is granted.
@@ -129,7 +129,7 @@ class MedicinalProductAuthorization(domainresource.DomainResource):
         js = super(MedicinalProductAuthorization, self).elementProperties()
         js.extend([
             ("country", "country", codeableconcept.CodeableConcept, True, None, False),
-            ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dataExclusivityPeriod", "dataExclusivityPeriod", period.Period, False, None, False),
             ("_dataExclusivityPeriod", "_dataExclusivityPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("dateOfFirstAuthorization", "dateOfFirstAuthorization", fhirdatetime.FHIRDateTime, False, None, False),
@@ -137,13 +137,13 @@ class MedicinalProductAuthorization(domainresource.DomainResource):
             ("holder", "holder", fhirreference.FHIRReference, False, None, False),
             ("_holder", "_holder", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("internationalBirthDate", "internationalBirthDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_internationalBirthDate", "_internationalBirthDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdictionalAuthorization", "jurisdictionalAuthorization", MedicinalProductAuthorizationJurisdictionalAuthorization, True, None, False),
-            ("_jurisdictionalAuthorization", "_jurisdictionalAuthorization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdictionalAuthorization", "_jurisdictionalAuthorization", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("legalBasis", "legalBasis", codeableconcept.CodeableConcept, False, None, False),
             ("_legalBasis", "_legalBasis", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("procedure", "procedure", MedicinalProductAuthorizationProcedure, False, None, False),
@@ -190,13 +190,13 @@ class MedicinalProductAuthorizationJurisdictionalAuthorization(backboneelement.B
         """ The assigned number for the marketing authorization.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Jurisdiction within a country.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.legalStatusOfSupply = None
         """ The legal status of supply in a jurisdiction or region.
@@ -218,9 +218,9 @@ class MedicinalProductAuthorizationJurisdictionalAuthorization(backboneelement.B
             ("country", "country", codeableconcept.CodeableConcept, False, None, False),
             ("_country", "_country", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("legalStatusOfSupply", "legalStatusOfSupply", codeableconcept.CodeableConcept, False, None, False),
             ("_legalStatusOfSupply", "_legalStatusOfSupply", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("validityPeriod", "validityPeriod", period.Period, False, None, False),
@@ -247,7 +247,7 @@ class MedicinalProductAuthorizationProcedure(backboneelement.BackboneElement):
         """ Applcations submitted to obtain a marketing authorization.
         List of `MedicinalProductAuthorizationProcedure` items (represented as `dict` in JSON). """
         self._application = None
-        """ Primitive extension for application. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for application. List of `FHIRPrimitiveExtension` """
         
         self.dateDateTime = None
         """ Date of procedure.
@@ -279,7 +279,7 @@ class MedicinalProductAuthorizationProcedure(backboneelement.BackboneElement):
         js = super(MedicinalProductAuthorizationProcedure, self).elementProperties()
         js.extend([
             ("application", "application", MedicinalProductAuthorizationProcedure, True, None, False),
-            ("_application", "_application", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_application", "_application", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dateDateTime", "dateDateTime", fhirdatetime.FHIRDateTime, False, "date", False),
             ("_dateDateTime", "_dateDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("datePeriod", "datePeriod", period.Period, False, "date", False),

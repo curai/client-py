@@ -34,7 +34,7 @@ class Timing(backboneelement.BackboneElement):
         """ When the event occurs.
         List of `FHIRDateTime` items (represented as `str` in JSON). """
         self._event = None
-        """ Primitive extension for event. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for event. List of `FHIRPrimitiveExtension` """
         
         self.repeat = None
         """ When the event is to occur.
@@ -50,7 +50,7 @@ class Timing(backboneelement.BackboneElement):
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("event", "event", fhirdatetime.FHIRDateTime, True, None, False),
-            ("_event", "_event", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_event", "_event", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("repeat", "repeat", TimingRepeat, False, None, False),
             ("_repeat", "_repeat", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -109,7 +109,7 @@ class TimingRepeat(element.Element):
         """ mon | tue | wed | thu | fri | sat | sun.
         List of `str` items. """
         self._dayOfWeek = None
-        """ Primitive extension for dayOfWeek. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for dayOfWeek. List of `FHIRPrimitiveExtension` """
         
         self.duration = None
         """ How long when it happens.
@@ -169,13 +169,13 @@ class TimingRepeat(element.Element):
         """ Time of day for action.
         List of `FHIRTime` items (represented as `str` in JSON). """
         self._timeOfDay = None
-        """ Primitive extension for timeOfDay. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for timeOfDay. List of `FHIRPrimitiveExtension` """
         
         self.when = None
         """ Code for time period of occurrence.
         List of `str` items. """
         self._when = None
-        """ Primitive extension for when. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for when. List of `FHIRPrimitiveExtension` """
         
         super(TimingRepeat, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -193,7 +193,7 @@ class TimingRepeat(element.Element):
             ("countMax", "countMax", int, False, None, False),
             ("_countMax", "_countMax", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("dayOfWeek", "dayOfWeek", str, True, None, False),
-            ("_dayOfWeek", "_dayOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_dayOfWeek", "_dayOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("duration", "duration", float, False, None, False),
             ("_duration", "_duration", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("durationMax", "durationMax", float, False, None, False),
@@ -213,9 +213,9 @@ class TimingRepeat(element.Element):
             ("periodUnit", "periodUnit", str, False, None, False),
             ("_periodUnit", "_periodUnit", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("timeOfDay", "timeOfDay", fhirtime.FHIRTime, True, None, False),
-            ("_timeOfDay", "_timeOfDay", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_timeOfDay", "_timeOfDay", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("when", "when", str, True, None, False),
-            ("_when", "_when", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_when", "_when", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

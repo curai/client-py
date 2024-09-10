@@ -26,19 +26,19 @@ class Communication(domainresource.DomainResource):
         """ Resources that pertain to this communication.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._about = None
-        """ Primitive extension for about. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for about. List of `FHIRPrimitiveExtension` """
         
         self.basedOn = None
         """ Request fulfilled by this communication.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Message category.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.encounter = None
         """ Encounter created as part of.
@@ -50,49 +50,49 @@ class Communication(domainresource.DomainResource):
         """ Unique identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.inResponseTo = None
         """ Reply to.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._inResponseTo = None
-        """ Primitive extension for inResponseTo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for inResponseTo. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.medium = None
         """ A channel of communication.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._medium = None
-        """ Primitive extension for medium. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for medium. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments made about the communication.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Part of this action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.payload = None
         """ Message payload.
         List of `CommunicationPayload` items (represented as `dict` in JSON). """
         self._payload = None
-        """ Primitive extension for payload. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for payload. List of `FHIRPrimitiveExtension` """
         
         self.priority = None
         """ routine | urgent | asap | stat.
@@ -104,13 +104,13 @@ class Communication(domainresource.DomainResource):
         """ Indication for message.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why was communication done?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.received = None
         """ When received.
@@ -122,7 +122,7 @@ class Communication(domainresource.DomainResource):
         """ Message recipient.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._recipient = None
-        """ Primitive extension for recipient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for recipient. List of `FHIRPrimitiveExtension` """
         
         self.sender = None
         """ Message sender.
@@ -167,39 +167,39 @@ class Communication(domainresource.DomainResource):
         js = super(Communication, self).elementProperties()
         js.extend([
             ("about", "about", fhirreference.FHIRReference, True, None, False),
-            ("_about", "_about", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_about", "_about", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("inResponseTo", "inResponseTo", fhirreference.FHIRReference, True, None, False),
-            ("_inResponseTo", "_inResponseTo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_inResponseTo", "_inResponseTo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("medium", "medium", codeableconcept.CodeableConcept, True, None, False),
-            ("_medium", "_medium", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_medium", "_medium", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("payload", "payload", CommunicationPayload, True, None, False),
-            ("_payload", "_payload", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_payload", "_payload", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("priority", "priority", str, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("received", "received", fhirdatetime.FHIRDateTime, False, None, False),
             ("_received", "_received", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("recipient", "recipient", fhirreference.FHIRReference, True, None, False),
-            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_recipient", "_recipient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("sender", "sender", fhirreference.FHIRReference, False, None, False),
             ("_sender", "_sender", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("sent", "sent", fhirdatetime.FHIRDateTime, False, None, False),

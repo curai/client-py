@@ -31,7 +31,7 @@ class Person(domainresource.DomainResource):
         """ One or more addresses for the person.
         List of `Address` items (represented as `dict` in JSON). """
         self._address = None
-        """ Primitive extension for address. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for address. List of `FHIRPrimitiveExtension` """
         
         self.birthDate = None
         """ The date on which the person was born.
@@ -49,13 +49,13 @@ class Person(domainresource.DomainResource):
         """ A human identifier for this person.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.link = None
         """ Link to a resource that concerns the same actual person.
         List of `PersonLink` items (represented as `dict` in JSON). """
         self._link = None
-        """ Primitive extension for link. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for link. List of `FHIRPrimitiveExtension` """
         
         self.managingOrganization = None
         """ The organization that is the custodian of the person record.
@@ -67,7 +67,7 @@ class Person(domainresource.DomainResource):
         """ A name associated with the person.
         List of `HumanName` items (represented as `dict` in JSON). """
         self._name = None
-        """ Primitive extension for name. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for name. List of `FHIRPrimitiveExtension` """
         
         self.photo = None
         """ Image of the person.
@@ -79,7 +79,7 @@ class Person(domainresource.DomainResource):
         """ A contact detail for the person.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(Person, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -89,23 +89,23 @@ class Person(domainresource.DomainResource):
             ("active", "active", bool, False, None, False),
             ("_active", "_active", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("address", "address", address.Address, True, None, False),
-            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_address", "_address", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("birthDate", "birthDate", fhirdate.FHIRDate, False, None, False),
             ("_birthDate", "_birthDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("gender", "gender", str, False, None, False),
             ("_gender", "_gender", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("link", "link", PersonLink, True, None, False),
-            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_link", "_link", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("managingOrganization", "managingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_managingOrganization", "_managingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", humanname.HumanName, True, None, False),
-            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("photo", "photo", attachment.Attachment, False, None, False),
             ("_photo", "_photo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

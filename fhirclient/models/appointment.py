@@ -31,7 +31,7 @@ class Appointment(domainresource.DomainResource):
         """ The service request this appointment is allocated to assess.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.cancelationReason = None
         """ The coded reason for the appointment being cancelled.
@@ -67,7 +67,7 @@ class Appointment(domainresource.DomainResource):
         """ External Ids for this item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.minutesDuration = None
         """ Can be less than start/end (e.g. estimate).
@@ -79,7 +79,7 @@ class Appointment(domainresource.DomainResource):
         """ Participants involved in appointment.
         List of `AppointmentParticipant` items (represented as `dict` in JSON). """
         self._participant = None
-        """ Primitive extension for participant. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for participant. List of `FHIRPrimitiveExtension` """
         
         self.patientInstruction = None
         """ Detailed information and instructions for the patient.
@@ -97,47 +97,47 @@ class Appointment(domainresource.DomainResource):
         """ Coded reason this appointment is scheduled.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Reason the appointment is to take place (resource).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.requestedPeriod = None
         """ Potential date/time interval(s) requested to allocate the
         appointment within.
         List of `Period` items (represented as `dict` in JSON). """
         self._requestedPeriod = None
-        """ Primitive extension for requestedPeriod. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for requestedPeriod. List of `FHIRPrimitiveExtension` """
         
         self.serviceCategory = None
         """ A broad categorization of the service that is to be performed
         during this appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceCategory = None
-        """ Primitive extension for serviceCategory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceCategory. List of `FHIRPrimitiveExtension` """
         
         self.serviceType = None
         """ The specific service that is to be performed during this
         appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._serviceType = None
-        """ Primitive extension for serviceType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for serviceType. List of `FHIRPrimitiveExtension` """
         
         self.slot = None
         """ The slots that this appointment is filling.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._slot = None
-        """ Primitive extension for slot. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for slot. List of `FHIRPrimitiveExtension` """
         
         self.specialty = None
         """ The specialty of a practitioner that would be required to perform
         the service requested in this appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialty = None
-        """ Primitive extension for specialty. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialty. List of `FHIRPrimitiveExtension` """
         
         self.start = None
         """ When appointment is to take place.
@@ -156,7 +156,7 @@ class Appointment(domainresource.DomainResource):
         """ Additional information to support the appointment.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInformation = None
-        """ Primitive extension for supportingInformation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInformation. List of `FHIRPrimitiveExtension` """
         
         super(Appointment, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -166,7 +166,7 @@ class Appointment(domainresource.DomainResource):
             ("appointmentType", "appointmentType", codeableconcept.CodeableConcept, False, None, False),
             ("_appointmentType", "_appointmentType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("cancelationReason", "cancelationReason", codeableconcept.CodeableConcept, False, None, False),
             ("_cancelationReason", "_cancelationReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("comment", "comment", str, False, None, False),
@@ -178,35 +178,35 @@ class Appointment(domainresource.DomainResource):
             ("end", "end", fhirinstant.FHIRInstant, False, None, False),
             ("_end", "_end", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("minutesDuration", "minutesDuration", int, False, None, False),
             ("_minutesDuration", "_minutesDuration", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("participant", "participant", AppointmentParticipant, True, None, True),
-            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_participant", "_participant", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patientInstruction", "patientInstruction", str, False, None, False),
             ("_patientInstruction", "_patientInstruction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("priority", "priority", int, False, None, False),
             ("_priority", "_priority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requestedPeriod", "requestedPeriod", period.Period, True, None, False),
-            ("_requestedPeriod", "_requestedPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_requestedPeriod", "_requestedPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serviceCategory", "serviceCategory", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceCategory", "_serviceCategory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceCategory", "_serviceCategory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("serviceType", "serviceType", codeableconcept.CodeableConcept, True, None, False),
-            ("_serviceType", "_serviceType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_serviceType", "_serviceType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("slot", "slot", fhirreference.FHIRReference, True, None, False),
-            ("_slot", "_slot", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_slot", "_slot", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("specialty", "specialty", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("start", "start", fhirinstant.FHIRInstant, False, None, False),
             ("_start", "_start", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInformation", "supportingInformation", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInformation", "_supportingInformation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInformation", "_supportingInformation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -257,7 +257,7 @@ class AppointmentParticipant(backboneelement.BackboneElement):
         """ Role of participant in the appointment.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(AppointmentParticipant, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -273,7 +273,7 @@ class AppointmentParticipant(backboneelement.BackboneElement):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -39,13 +39,13 @@ class Provenance(domainresource.DomainResource):
         """ Actor involved.
         List of `ProvenanceAgent` items (represented as `dict` in JSON). """
         self._agent = None
-        """ Primitive extension for agent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for agent. List of `FHIRPrimitiveExtension` """
         
         self.entity = None
         """ An entity used in this activity.
         List of `ProvenanceEntity` items (represented as `dict` in JSON). """
         self._entity = None
-        """ Primitive extension for entity. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for entity. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Where the activity occurred, if relevant.
@@ -69,13 +69,13 @@ class Provenance(domainresource.DomainResource):
         """ Policy or plan the activity was defined by.
         List of `str` items. """
         self._policy = None
-        """ Primitive extension for policy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for policy. List of `FHIRPrimitiveExtension` """
         
         self.reason = None
         """ Reason the activity is occurring.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reason = None
-        """ Primitive extension for reason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reason. List of `FHIRPrimitiveExtension` """
         
         self.recorded = None
         """ When the activity was recorded / updated.
@@ -87,13 +87,13 @@ class Provenance(domainresource.DomainResource):
         """ Signature on target.
         List of `Signature` items (represented as `dict` in JSON). """
         self._signature = None
-        """ Primitive extension for signature. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for signature. List of `FHIRPrimitiveExtension` """
         
         self.target = None
         """ Target Reference(s) (usually version specific).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(Provenance, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -103,9 +103,9 @@ class Provenance(domainresource.DomainResource):
             ("activity", "activity", codeableconcept.CodeableConcept, False, None, False),
             ("_activity", "_activity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("agent", "agent", ProvenanceAgent, True, None, True),
-            ("_agent", "_agent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_agent", "_agent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("entity", "entity", ProvenanceEntity, True, None, False),
-            ("_entity", "_entity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_entity", "_entity", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurredDateTime", "occurredDateTime", fhirdatetime.FHIRDateTime, False, "occurred", False),
@@ -113,15 +113,15 @@ class Provenance(domainresource.DomainResource):
             ("occurredPeriod", "occurredPeriod", period.Period, False, "occurred", False),
             ("_occurredPeriod", "_occurredPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("policy", "policy", str, True, None, False),
-            ("_policy", "_policy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_policy", "_policy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reason", "reason", codeableconcept.CodeableConcept, True, None, False),
-            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recorded", "recorded", fhirinstant.FHIRInstant, False, None, True),
             ("_recorded", "_recorded", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("signature", "signature", signature.Signature, True, None, False),
-            ("_signature", "_signature", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_signature", "_signature", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("target", "target", fhirreference.FHIRReference, True, None, True),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -155,7 +155,7 @@ class ProvenanceAgent(backboneelement.BackboneElement):
         """ What the agents role was.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._role = None
-        """ Primitive extension for role. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for role. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ How the agent participated.
@@ -177,7 +177,7 @@ class ProvenanceAgent(backboneelement.BackboneElement):
             ("onBehalfOf", "onBehalfOf", fhirreference.FHIRReference, False, None, False),
             ("_onBehalfOf", "_onBehalfOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("role", "role", codeableconcept.CodeableConcept, True, None, False),
-            ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("who", "who", fhirreference.FHIRReference, False, None, True),
@@ -204,7 +204,7 @@ class ProvenanceEntity(backboneelement.BackboneElement):
         """ Entity is attributed to this agent.
         List of `ProvenanceAgent` items (represented as `dict` in JSON). """
         self._agent = None
-        """ Primitive extension for agent. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for agent. List of `FHIRPrimitiveExtension` """
         
         self.role = None
         """ derivation | revision | quotation | source | removal.
@@ -224,7 +224,7 @@ class ProvenanceEntity(backboneelement.BackboneElement):
         js = super(ProvenanceEntity, self).elementProperties()
         js.extend([
             ("agent", "agent", ProvenanceAgent, True, None, False),
-            ("_agent", "_agent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_agent", "_agent", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("role", "role", str, False, None, True),
             ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("what", "what", fhirreference.FHIRReference, False, None, True),

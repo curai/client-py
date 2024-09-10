@@ -73,25 +73,25 @@ class ClinicalImpression(domainresource.DomainResource):
         """ Possible or likely findings and diagnoses.
         List of `ClinicalImpressionFinding` items (represented as `dict` in JSON). """
         self._finding = None
-        """ Primitive extension for finding. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for finding. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.investigation = None
         """ One or more sets of investigations (signs, symptoms, etc.).
         List of `ClinicalImpressionInvestigation` items (represented as `dict` in JSON). """
         self._investigation = None
-        """ Primitive extension for investigation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for investigation. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments made about the ClinicalImpression.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.previous = None
         """ Reference to last assessment.
@@ -103,25 +103,25 @@ class ClinicalImpression(domainresource.DomainResource):
         """ Relevant impressions of patient state.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._problem = None
-        """ Primitive extension for problem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for problem. List of `FHIRPrimitiveExtension` """
         
         self.prognosisCodeableConcept = None
         """ Estimate of likely outcome.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._prognosisCodeableConcept = None
-        """ Primitive extension for prognosisCodeableConcept. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for prognosisCodeableConcept. List of `FHIRPrimitiveExtension` """
         
         self.prognosisReference = None
         """ RiskAssessment expressing likely outcome.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._prognosisReference = None
-        """ Primitive extension for prognosisReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for prognosisReference. List of `FHIRPrimitiveExtension` """
         
         self.protocol = None
         """ Clinical Protocol followed.
         List of `str` items. """
         self._protocol = None
-        """ Primitive extension for protocol. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for protocol. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ in-progress | completed | entered-in-error.
@@ -151,7 +151,7 @@ class ClinicalImpression(domainresource.DomainResource):
         """ Information supporting the clinical impression.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInfo = None
-        """ Primitive extension for supportingInfo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfo. List of `FHIRPrimitiveExtension` """
         
         super(ClinicalImpression, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -173,23 +173,23 @@ class ClinicalImpression(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("finding", "finding", ClinicalImpressionFinding, True, None, False),
-            ("_finding", "_finding", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_finding", "_finding", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("investigation", "investigation", ClinicalImpressionInvestigation, True, None, False),
-            ("_investigation", "_investigation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_investigation", "_investigation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("previous", "previous", fhirreference.FHIRReference, False, None, False),
             ("_previous", "_previous", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("problem", "problem", fhirreference.FHIRReference, True, None, False),
-            ("_problem", "_problem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_problem", "_problem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("prognosisCodeableConcept", "prognosisCodeableConcept", codeableconcept.CodeableConcept, True, None, False),
-            ("_prognosisCodeableConcept", "_prognosisCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_prognosisCodeableConcept", "_prognosisCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("prognosisReference", "prognosisReference", fhirreference.FHIRReference, True, None, False),
-            ("_prognosisReference", "_prognosisReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_prognosisReference", "_prognosisReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("protocol", "protocol", str, True, None, False),
-            ("_protocol", "_protocol", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_protocol", "_protocol", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusReason", "statusReason", codeableconcept.CodeableConcept, False, None, False),
@@ -199,7 +199,7 @@ class ClinicalImpression(domainresource.DomainResource):
             ("summary", "summary", str, False, None, False),
             ("_summary", "_summary", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfo", "supportingInfo", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -286,7 +286,7 @@ class ClinicalImpressionInvestigation(backboneelement.BackboneElement):
         """ Record of a specific investigation.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         super(ClinicalImpressionInvestigation, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -296,7 +296,7 @@ class ClinicalImpressionInvestigation(backboneelement.BackboneElement):
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("item", "item", fhirreference.FHIRReference, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

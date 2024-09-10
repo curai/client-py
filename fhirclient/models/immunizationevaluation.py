@@ -62,13 +62,13 @@ class ImmunizationEvaluation(domainresource.DomainResource):
         """ Reason for the dose status.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._doseStatusReason = None
-        """ Primitive extension for doseStatusReason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for doseStatusReason. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business identifier.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.immunizationEvent = None
         """ Immunization being evaluated.
@@ -130,9 +130,9 @@ class ImmunizationEvaluation(domainresource.DomainResource):
             ("doseStatus", "doseStatus", codeableconcept.CodeableConcept, False, None, True),
             ("_doseStatus", "_doseStatus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("doseStatusReason", "doseStatusReason", codeableconcept.CodeableConcept, True, None, False),
-            ("_doseStatusReason", "_doseStatusReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_doseStatusReason", "_doseStatusReason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("immunizationEvent", "immunizationEvent", fhirreference.FHIRReference, False, None, True),
             ("_immunizationEvent", "_immunizationEvent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),

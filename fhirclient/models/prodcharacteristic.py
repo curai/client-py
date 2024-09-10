@@ -26,7 +26,7 @@ class ProdCharacteristic(backboneelement.BackboneElement):
         identifier shall be used.
         List of `str` items. """
         self._color = None
-        """ Primitive extension for color. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for color. List of `FHIRPrimitiveExtension` """
         
         self.depth = None
         """ Where applicable, the depth can be specified using a numerical
@@ -60,13 +60,13 @@ class ProdCharacteristic(backboneelement.BackboneElement):
         attachment shall be specified by regional implementations.
         List of `Attachment` items (represented as `dict` in JSON). """
         self._image = None
-        """ Primitive extension for image. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for image. List of `FHIRPrimitiveExtension` """
         
         self.imprint = None
         """ Where applicable, the imprint can be specified as text.
         List of `str` items. """
         self._imprint = None
-        """ Primitive extension for imprint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for imprint. List of `FHIRPrimitiveExtension` """
         
         self.nominalVolume = None
         """ Where applicable, the nominal volume can be specified using a
@@ -117,7 +117,7 @@ class ProdCharacteristic(backboneelement.BackboneElement):
         js = super(ProdCharacteristic, self).elementProperties()
         js.extend([
             ("color", "color", str, True, None, False),
-            ("_color", "_color", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_color", "_color", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("depth", "depth", quantity.Quantity, False, None, False),
             ("_depth", "_depth", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("externalDiameter", "externalDiameter", quantity.Quantity, False, None, False),
@@ -125,9 +125,9 @@ class ProdCharacteristic(backboneelement.BackboneElement):
             ("height", "height", quantity.Quantity, False, None, False),
             ("_height", "_height", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("image", "image", attachment.Attachment, True, None, False),
-            ("_image", "_image", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_image", "_image", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("imprint", "imprint", str, True, None, False),
-            ("_imprint", "_imprint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_imprint", "_imprint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("nominalVolume", "nominalVolume", quantity.Quantity, False, None, False),
             ("_nominalVolume", "_nominalVolume", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("scoring", "scoring", codeableconcept.CodeableConcept, False, None, False),

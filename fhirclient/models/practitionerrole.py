@@ -37,45 +37,45 @@ class PractitionerRole(domainresource.DomainResource):
         """ Times the Service Site is available.
         List of `PractitionerRoleAvailableTime` items (represented as `dict` in JSON). """
         self._availableTime = None
-        """ Primitive extension for availableTime. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for availableTime. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Roles which this practitioner may perform.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.endpoint = None
         """ Technical endpoints providing access to services operated for the
         practitioner with this role.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._endpoint = None
-        """ Primitive extension for endpoint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for endpoint. List of `FHIRPrimitiveExtension` """
         
         self.healthcareService = None
         """ The list of healthcare services that this worker provides for this
         role's Organization/Location(s).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._healthcareService = None
-        """ Primitive extension for healthcareService. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for healthcareService. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business Identifiers that are specific to a role/location.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ The location(s) at which this practitioner provides care.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._location = None
-        """ Primitive extension for location. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for location. List of `FHIRPrimitiveExtension` """
         
         self.notAvailable = None
         """ Not available during this time due to provided reason.
         List of `PractitionerRoleNotAvailable` items (represented as `dict` in JSON). """
         self._notAvailable = None
-        """ Primitive extension for notAvailable. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for notAvailable. List of `FHIRPrimitiveExtension` """
         
         self.organization = None
         """ Organization where the roles are available.
@@ -101,13 +101,13 @@ class PractitionerRole(domainresource.DomainResource):
         """ Specific specialty of the practitioner.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._specialty = None
-        """ Primitive extension for specialty. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for specialty. List of `FHIRPrimitiveExtension` """
         
         self.telecom = None
         """ Contact details that are specific to the role/location/service.
         List of `ContactPoint` items (represented as `dict` in JSON). """
         self._telecom = None
-        """ Primitive extension for telecom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for telecom. List of `FHIRPrimitiveExtension` """
         
         super(PractitionerRole, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -119,19 +119,19 @@ class PractitionerRole(domainresource.DomainResource):
             ("availabilityExceptions", "availabilityExceptions", str, False, None, False),
             ("_availabilityExceptions", "_availabilityExceptions", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("availableTime", "availableTime", PractitionerRoleAvailableTime, True, None, False),
-            ("_availableTime", "_availableTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_availableTime", "_availableTime", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("endpoint", "endpoint", fhirreference.FHIRReference, True, None, False),
-            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_endpoint", "_endpoint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("healthcareService", "healthcareService", fhirreference.FHIRReference, True, None, False),
-            ("_healthcareService", "_healthcareService", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_healthcareService", "_healthcareService", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, True, None, False),
-            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("notAvailable", "notAvailable", PractitionerRoleNotAvailable, True, None, False),
-            ("_notAvailable", "_notAvailable", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_notAvailable", "_notAvailable", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("organization", "organization", fhirreference.FHIRReference, False, None, False),
             ("_organization", "_organization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),
@@ -139,9 +139,9 @@ class PractitionerRole(domainresource.DomainResource):
             ("practitioner", "practitioner", fhirreference.FHIRReference, False, None, False),
             ("_practitioner", "_practitioner", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("specialty", "specialty", codeableconcept.CodeableConcept, True, None, False),
-            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_specialty", "_specialty", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("telecom", "telecom", contactpoint.ContactPoint, True, None, False),
-            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_telecom", "_telecom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -187,7 +187,7 @@ class PractitionerRoleAvailableTime(backboneelement.BackboneElement):
         """ mon | tue | wed | thu | fri | sat | sun.
         List of `str` items. """
         self._daysOfWeek = None
-        """ Primitive extension for daysOfWeek. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for daysOfWeek. List of `FHIRPrimitiveExtension` """
         
         super(PractitionerRoleAvailableTime, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -201,7 +201,7 @@ class PractitionerRoleAvailableTime(backboneelement.BackboneElement):
             ("availableStartTime", "availableStartTime", fhirtime.FHIRTime, False, None, False),
             ("_availableStartTime", "_availableStartTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("daysOfWeek", "daysOfWeek", str, True, None, False),
-            ("_daysOfWeek", "_daysOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_daysOfWeek", "_daysOfWeek", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

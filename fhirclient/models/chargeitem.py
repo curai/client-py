@@ -30,13 +30,13 @@ class ChargeItem(domainresource.DomainResource):
         """ Account to place this charge.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._account = None
-        """ Primitive extension for account. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for account. List of `FHIRPrimitiveExtension` """
         
         self.bodysite = None
         """ Anatomical location, if relevant.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._bodysite = None
-        """ Primitive extension for bodysite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for bodysite. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ A code that identifies the charge, like a billing code.
@@ -60,13 +60,13 @@ class ChargeItem(domainresource.DomainResource):
         """ Resource defining the code of this ChargeItem.
         List of `str` items. """
         self._definitionCanonical = None
-        """ Primitive extension for definitionCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for definitionCanonical. List of `FHIRPrimitiveExtension` """
         
         self.definitionUri = None
         """ Defining information about the code of this charge item.
         List of `str` items. """
         self._definitionUri = None
-        """ Primitive extension for definitionUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for definitionUri. List of `FHIRPrimitiveExtension` """
         
         self.enteredDate = None
         """ Date the charge item was entered.
@@ -90,13 +90,13 @@ class ChargeItem(domainresource.DomainResource):
         """ Business Identifier for item.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments made about the ChargeItem.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ When the charged service was applied.
@@ -126,13 +126,13 @@ class ChargeItem(domainresource.DomainResource):
         """ Part of referenced ChargeItem.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.performer = None
         """ Who performed charged service.
         List of `ChargeItemPerformer` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.performingOrganization = None
         """ Organization providing the charged service.
@@ -168,7 +168,7 @@ class ChargeItem(domainresource.DomainResource):
         """ Why was the charged  service rendered?.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reason = None
-        """ Primitive extension for reason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reason. List of `FHIRPrimitiveExtension` """
         
         self.requestingOrganization = None
         """ Organization requesting the charged service.
@@ -180,7 +180,7 @@ class ChargeItem(domainresource.DomainResource):
         """ Which rendered service is being charged?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._service = None
-        """ Primitive extension for service. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for service. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ planned | billable | not-billable | aborted | billed | entered-in-
@@ -199,7 +199,7 @@ class ChargeItem(domainresource.DomainResource):
         """ Further information supporting this charge.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInformation = None
-        """ Primitive extension for supportingInformation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInformation. List of `FHIRPrimitiveExtension` """
         
         super(ChargeItem, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -207,9 +207,9 @@ class ChargeItem(domainresource.DomainResource):
         js = super(ChargeItem, self).elementProperties()
         js.extend([
             ("account", "account", fhirreference.FHIRReference, True, None, False),
-            ("_account", "_account", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_account", "_account", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodysite", "bodysite", codeableconcept.CodeableConcept, True, None, False),
-            ("_bodysite", "_bodysite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_bodysite", "_bodysite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("context", "context", fhirreference.FHIRReference, False, None, False),
@@ -217,9 +217,9 @@ class ChargeItem(domainresource.DomainResource):
             ("costCenter", "costCenter", fhirreference.FHIRReference, False, None, False),
             ("_costCenter", "_costCenter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("definitionCanonical", "definitionCanonical", str, True, None, False),
-            ("_definitionCanonical", "_definitionCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_definitionCanonical", "_definitionCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("definitionUri", "definitionUri", str, True, None, False),
-            ("_definitionUri", "_definitionUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_definitionUri", "_definitionUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("enteredDate", "enteredDate", fhirdatetime.FHIRDateTime, False, None, False),
             ("_enteredDate", "_enteredDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("enterer", "enterer", fhirreference.FHIRReference, False, None, False),
@@ -227,9 +227,9 @@ class ChargeItem(domainresource.DomainResource):
             ("factorOverride", "factorOverride", float, False, None, False),
             ("_factorOverride", "_factorOverride", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrencePeriod", "occurrencePeriod", period.Period, False, "occurrence", False),
@@ -239,9 +239,9 @@ class ChargeItem(domainresource.DomainResource):
             ("overrideReason", "overrideReason", str, False, None, False),
             ("_overrideReason", "_overrideReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performer", "performer", ChargeItemPerformer, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performingOrganization", "performingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_performingOrganization", "_performingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("priceOverride", "priceOverride", money.Money, False, None, False),
@@ -253,17 +253,17 @@ class ChargeItem(domainresource.DomainResource):
             ("quantity", "quantity", quantity.Quantity, False, None, False),
             ("_quantity", "_quantity", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("reason", "reason", codeableconcept.CodeableConcept, True, None, False),
-            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requestingOrganization", "requestingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_requestingOrganization", "_requestingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("service", "service", fhirreference.FHIRReference, True, None, False),
-            ("_service", "_service", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_service", "_service", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInformation", "supportingInformation", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInformation", "_supportingInformation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInformation", "_supportingInformation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

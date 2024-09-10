@@ -31,7 +31,7 @@ class PaymentReconciliation(domainresource.DomainResource):
         """ Settlement particulars.
         List of `PaymentReconciliationDetail` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.disposition = None
         """ Disposition message.
@@ -49,7 +49,7 @@ class PaymentReconciliation(domainresource.DomainResource):
         """ Business Identifier for a payment reconciliation.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.outcome = None
         """ queued | complete | error | partial.
@@ -91,7 +91,7 @@ class PaymentReconciliation(domainresource.DomainResource):
         """ Note concerning processing.
         List of `PaymentReconciliationProcessNote` items (represented as `dict` in JSON). """
         self._processNote = None
-        """ Primitive extension for processNote. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for processNote. List of `FHIRPrimitiveExtension` """
         
         self.request = None
         """ Reference to requesting resource.
@@ -119,13 +119,13 @@ class PaymentReconciliation(domainresource.DomainResource):
             ("created", "created", fhirdatetime.FHIRDateTime, False, None, True),
             ("_created", "_created", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("detail", "detail", PaymentReconciliationDetail, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("disposition", "disposition", str, False, None, False),
             ("_disposition", "_disposition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("formCode", "formCode", codeableconcept.CodeableConcept, False, None, False),
             ("_formCode", "_formCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcome", "outcome", str, False, None, False),
             ("_outcome", "_outcome", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("paymentAmount", "paymentAmount", money.Money, False, None, True),
@@ -139,7 +139,7 @@ class PaymentReconciliation(domainresource.DomainResource):
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("processNote", "processNote", PaymentReconciliationProcessNote, True, None, False),
-            ("_processNote", "_processNote", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_processNote", "_processNote", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("request", "request", fhirreference.FHIRReference, False, None, False),
             ("_request", "_request", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("requestor", "requestor", fhirreference.FHIRReference, False, None, False),

@@ -25,7 +25,7 @@ class CodeableConcept(element.Element):
         """ Code defined by a terminology system.
         List of `Coding` items (represented as `dict` in JSON). """
         self._coding = None
-        """ Primitive extension for coding. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for coding. List of `FHIRPrimitiveExtension` """
         
         self.text = None
         """ Plain text representation of the concept.
@@ -39,7 +39,7 @@ class CodeableConcept(element.Element):
         js = super(CodeableConcept, self).elementProperties()
         js.extend([
             ("coding", "coding", coding.Coding, True, None, False),
-            ("_coding", "_coding", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_coding", "_coding", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("text", "text", str, False, None, False),
             ("_text", "_text", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

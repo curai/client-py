@@ -25,7 +25,7 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ Other names.
         List of `str` items. """
         self._alias = None
-        """ Primitive extension for alias. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alias. List of `FHIRPrimitiveExtension` """
         
         self.base = None
         """ Base definition information for tools.
@@ -43,7 +43,7 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ Corresponding codes in terminologies.
         List of `Coding` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.comment = None
         """ Comments about the use of this element.
@@ -55,13 +55,13 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ Reference to invariant about presence.
         List of `str` items. """
         self._condition = None
-        """ Primitive extension for condition. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for condition. List of `FHIRPrimitiveExtension` """
         
         self.constraint = None
         """ Condition that must evaluate to true.
         List of `ElementDefinitionConstraint` items (represented as `dict` in JSON). """
         self._constraint = None
-        """ Primitive extension for constraint. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for constraint. List of `FHIRPrimitiveExtension` """
         
         self.contentReference = None
         """ Reference to definition of content for the element.
@@ -379,7 +379,7 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ Example value (as defined for type).
         List of `ElementDefinitionExample` items (represented as `dict` in JSON). """
         self._example = None
-        """ Primitive extension for example. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for example. List of `FHIRPrimitiveExtension` """
         
         self.fixedAddress = None
         """ Value must be exactly this.
@@ -709,7 +709,7 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ Map element to another set of definitions.
         List of `ElementDefinitionMapping` items (represented as `dict` in JSON). """
         self._mapping = None
-        """ Primitive extension for mapping. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for mapping. List of `FHIRPrimitiveExtension` """
         
         self.max = None
         """ Maximum Cardinality (a number or *).
@@ -1165,7 +1165,7 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ xmlAttr | xmlText | typeAttr | cdaText | xhtml.
         List of `str` items. """
         self._representation = None
-        """ Primitive extension for representation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for representation. List of `FHIRPrimitiveExtension` """
         
         self.requirements = None
         """ Why this resource has been created.
@@ -1202,7 +1202,7 @@ class ElementDefinition(backboneelement.BackboneElement):
         """ Data type and Profile for this element.
         List of `ElementDefinitionType` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(ElementDefinition, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -1210,19 +1210,19 @@ class ElementDefinition(backboneelement.BackboneElement):
         js = super(ElementDefinition, self).elementProperties()
         js.extend([
             ("alias", "alias", str, True, None, False),
-            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("base", "base", ElementDefinitionBase, False, None, False),
             ("_base", "_base", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("binding", "binding", ElementDefinitionBinding, False, None, False),
             ("_binding", "_binding", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", coding.Coding, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("condition", "condition", str, True, None, False),
-            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("constraint", "constraint", ElementDefinitionConstraint, True, None, False),
-            ("_constraint", "_constraint", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_constraint", "_constraint", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contentReference", "contentReference", str, False, None, False),
             ("_contentReference", "_contentReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("defaultValueAddress", "defaultValueAddress", address.Address, False, "defaultValue", False),
@@ -1328,7 +1328,7 @@ class ElementDefinition(backboneelement.BackboneElement):
             ("definition", "definition", str, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("example", "example", ElementDefinitionExample, True, None, False),
-            ("_example", "_example", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_example", "_example", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("fixedAddress", "fixedAddress", address.Address, False, "fixed", False),
             ("_fixedAddress", "_fixedAddress", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("fixedAge", "fixedAge", age.Age, False, "fixed", False),
@@ -1438,7 +1438,7 @@ class ElementDefinition(backboneelement.BackboneElement):
             ("label", "label", str, False, None, False),
             ("_label", "_label", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("mapping", "mapping", ElementDefinitionMapping, True, None, False),
-            ("_mapping", "_mapping", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_mapping", "_mapping", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("max", "max", str, False, None, False),
             ("_max", "_max", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("maxLength", "maxLength", int, False, None, False),
@@ -1590,7 +1590,7 @@ class ElementDefinition(backboneelement.BackboneElement):
             ("patternUuid", "patternUuid", str, False, "pattern", False),
             ("_patternUuid", "_patternUuid", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("representation", "representation", str, True, None, False),
-            ("_representation", "_representation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_representation", "_representation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requirements", "requirements", str, False, None, False),
             ("_requirements", "_requirements", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("short", "short", str, False, None, False),
@@ -1602,7 +1602,7 @@ class ElementDefinition(backboneelement.BackboneElement):
             ("slicing", "slicing", ElementDefinitionSlicing, False, None, False),
             ("_slicing", "_slicing", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", ElementDefinitionType, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -2321,7 +2321,7 @@ class ElementDefinitionSlicing(element.Element):
         """ Element values that are used to distinguish the slices.
         List of `ElementDefinitionSlicingDiscriminator` items (represented as `dict` in JSON). """
         self._discriminator = None
-        """ Primitive extension for discriminator. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for discriminator. List of `FHIRPrimitiveExtension` """
         
         self.ordered = None
         """ If elements must be in same order as slices.
@@ -2343,7 +2343,7 @@ class ElementDefinitionSlicing(element.Element):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("discriminator", "discriminator", ElementDefinitionSlicingDiscriminator, True, None, False),
-            ("_discriminator", "_discriminator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_discriminator", "_discriminator", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("ordered", "ordered", bool, False, None, False),
             ("_ordered", "_ordered", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("rules", "rules", str, False, None, True),
@@ -2418,7 +2418,7 @@ class ElementDefinitionType(element.Element):
         """ contained | referenced | bundled - how aggregated.
         List of `str` items. """
         self._aggregation = None
-        """ Primitive extension for aggregation. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for aggregation. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Data type or Resource (reference to definition).
@@ -2430,14 +2430,14 @@ class ElementDefinitionType(element.Element):
         """ Profiles (StructureDefinition or IG) - one must apply.
         List of `str` items. """
         self._profile = None
-        """ Primitive extension for profile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for profile. List of `FHIRPrimitiveExtension` """
         
         self.targetProfile = None
         """ Profile (StructureDefinition or IG) on the Reference/canonical
         target - one must apply.
         List of `str` items. """
         self._targetProfile = None
-        """ Primitive extension for targetProfile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for targetProfile. List of `FHIRPrimitiveExtension` """
         
         self.versioning = None
         """ either | independent | specific.
@@ -2451,13 +2451,13 @@ class ElementDefinitionType(element.Element):
         js = super(ElementDefinitionType, self).elementProperties()
         js.extend([
             ("aggregation", "aggregation", str, True, None, False),
-            ("_aggregation", "_aggregation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_aggregation", "_aggregation", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", str, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("profile", "profile", str, True, None, False),
-            ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("targetProfile", "targetProfile", str, True, None, False),
-            ("_targetProfile", "_targetProfile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_targetProfile", "_targetProfile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("versioning", "versioning", str, False, None, False),
             ("_versioning", "_versioning", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

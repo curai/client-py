@@ -25,7 +25,7 @@ class Contract(domainresource.DomainResource):
         """ Acronym or short name.
         List of `str` items. """
         self._alias = None
-        """ Primitive extension for alias. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alias. List of `FHIRPrimitiveExtension` """
         
         self.applies = None
         """ Effective time.
@@ -43,7 +43,7 @@ class Contract(domainresource.DomainResource):
         """ Authority under which this Contract has standing.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._authority = None
-        """ Primitive extension for authority. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for authority. List of `FHIRPrimitiveExtension` """
         
         self.contentDefinition = None
         """ Contract precursor content.
@@ -62,7 +62,7 @@ class Contract(domainresource.DomainResource):
         organization, or person.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._domain = None
-        """ Primitive extension for domain. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for domain. List of `FHIRPrimitiveExtension` """
         
         self.expirationType = None
         """ Contract cessation cause.
@@ -74,13 +74,13 @@ class Contract(domainresource.DomainResource):
         """ Contract Friendly Language.
         List of `ContractFriendly` items (represented as `dict` in JSON). """
         self._friendly = None
-        """ Primitive extension for friendly. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for friendly. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Contract number.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Source Contract Definition.
@@ -104,7 +104,7 @@ class Contract(domainresource.DomainResource):
         """ Contract Legal Language.
         List of `ContractLegal` items (represented as `dict` in JSON). """
         self._legal = None
-        """ Primitive extension for legal. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for legal. List of `FHIRPrimitiveExtension` """
         
         self.legalState = None
         """ Negotiation status.
@@ -134,13 +134,13 @@ class Contract(domainresource.DomainResource):
         """ Key event in Contract History.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._relevantHistory = None
-        """ Primitive extension for relevantHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relevantHistory. List of `FHIRPrimitiveExtension` """
         
         self.rule = None
         """ Computable Contract Language.
         List of `ContractRule` items (represented as `dict` in JSON). """
         self._rule = None
-        """ Primitive extension for rule. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for rule. List of `FHIRPrimitiveExtension` """
         
         self.scope = None
         """ Range of Legal Concerns.
@@ -152,13 +152,13 @@ class Contract(domainresource.DomainResource):
         """ Contract Signatory.
         List of `ContractSigner` items (represented as `dict` in JSON). """
         self._signer = None
-        """ Primitive extension for signer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for signer. List of `FHIRPrimitiveExtension` """
         
         self.site = None
         """ Specific Location.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._site = None
-        """ Primitive extension for site. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for site. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ amended | appended | cancelled | disputed | entered-in-error |
@@ -172,13 +172,13 @@ class Contract(domainresource.DomainResource):
         """ Subtype within the context of type.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subType = None
-        """ Primitive extension for subType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subType. List of `FHIRPrimitiveExtension` """
         
         self.subject = None
         """ Contract Target Entity.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         self.subtitle = None
         """ Subordinate Friendly name.
@@ -190,13 +190,13 @@ class Contract(domainresource.DomainResource):
         """ Extra Information.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._supportingInfo = None
-        """ Primitive extension for supportingInfo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for supportingInfo. List of `FHIRPrimitiveExtension` """
         
         self.term = None
         """ Contract Term List.
         List of `ContractTerm` items (represented as `dict` in JSON). """
         self._term = None
-        """ Primitive extension for term. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for term. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Human Friendly name.
@@ -240,25 +240,25 @@ class Contract(domainresource.DomainResource):
         js = super(Contract, self).elementProperties()
         js.extend([
             ("alias", "alias", str, True, None, False),
-            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alias", "_alias", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("applies", "applies", period.Period, False, None, False),
             ("_applies", "_applies", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("author", "author", fhirreference.FHIRReference, False, None, False),
             ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("authority", "authority", fhirreference.FHIRReference, True, None, False),
-            ("_authority", "_authority", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_authority", "_authority", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contentDefinition", "contentDefinition", ContractContentDefinition, False, None, False),
             ("_contentDefinition", "_contentDefinition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contentDerivative", "contentDerivative", codeableconcept.CodeableConcept, False, None, False),
             ("_contentDerivative", "_contentDerivative", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("domain", "domain", fhirreference.FHIRReference, True, None, False),
-            ("_domain", "_domain", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_domain", "_domain", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("expirationType", "expirationType", codeableconcept.CodeableConcept, False, None, False),
             ("_expirationType", "_expirationType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("friendly", "friendly", ContractFriendly, True, None, False),
-            ("_friendly", "_friendly", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_friendly", "_friendly", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", fhirreference.FHIRReference, False, None, False),
             ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("instantiatesUri", "instantiatesUri", str, False, None, False),
@@ -266,7 +266,7 @@ class Contract(domainresource.DomainResource):
             ("issued", "issued", fhirdatetime.FHIRDateTime, False, None, False),
             ("_issued", "_issued", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("legal", "legal", ContractLegal, True, None, False),
-            ("_legal", "_legal", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_legal", "_legal", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("legalState", "legalState", codeableconcept.CodeableConcept, False, None, False),
             ("_legalState", "_legalState", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("legallyBindingAttachment", "legallyBindingAttachment", attachment.Attachment, False, "legallyBinding", False),
@@ -276,27 +276,27 @@ class Contract(domainresource.DomainResource):
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relevantHistory", "relevantHistory", fhirreference.FHIRReference, True, None, False),
-            ("_relevantHistory", "_relevantHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relevantHistory", "_relevantHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("rule", "rule", ContractRule, True, None, False),
-            ("_rule", "_rule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_rule", "_rule", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("scope", "scope", codeableconcept.CodeableConcept, False, None, False),
             ("_scope", "_scope", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("signer", "signer", ContractSigner, True, None, False),
-            ("_signer", "_signer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_signer", "_signer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("site", "site", fhirreference.FHIRReference, True, None, False),
-            ("_site", "_site", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_site", "_site", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, False),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subType", "subType", codeableconcept.CodeableConcept, True, None, False),
-            ("_subType", "_subType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subType", "_subType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subject", "subject", fhirreference.FHIRReference, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subtitle", "subtitle", str, False, None, False),
             ("_subtitle", "_subtitle", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("supportingInfo", "supportingInfo", fhirreference.FHIRReference, True, None, False),
-            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_supportingInfo", "_supportingInfo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("term", "term", ContractTerm, True, None, False),
-            ("_term", "_term", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_term", "_term", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topicCodeableConcept", "topicCodeableConcept", codeableconcept.CodeableConcept, False, "topic", False),
@@ -550,7 +550,7 @@ class ContractSigner(backboneelement.BackboneElement):
         """ Contract Documentation Signature.
         List of `Signature` items (represented as `dict` in JSON). """
         self._signature = None
-        """ Primitive extension for signature. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for signature. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Contract Signatory Role.
@@ -566,7 +566,7 @@ class ContractSigner(backboneelement.BackboneElement):
             ("party", "party", fhirreference.FHIRReference, False, None, True),
             ("_party", "_party", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("signature", "signature", signature.Signature, True, None, True),
-            ("_signature", "_signature", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_signature", "_signature", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", coding.Coding, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -594,7 +594,7 @@ class ContractTerm(backboneelement.BackboneElement):
         """ Entity being ascribed responsibility.
         List of `ContractTermAction` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.applies = None
         """ Contract Term Effective Time.
@@ -606,13 +606,13 @@ class ContractTerm(backboneelement.BackboneElement):
         """ Contract Term Asset List.
         List of `ContractTermAsset` items (represented as `dict` in JSON). """
         self._asset = None
-        """ Primitive extension for asset. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for asset. List of `FHIRPrimitiveExtension` """
         
         self.group = None
         """ Nested Contract Term Group.
         List of `ContractTerm` items (represented as `dict` in JSON). """
         self._group = None
-        """ Primitive extension for group. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for group. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Contract Term Number.
@@ -636,7 +636,7 @@ class ContractTerm(backboneelement.BackboneElement):
         """ Protection for the Term.
         List of `ContractTermSecurityLabel` items (represented as `dict` in JSON). """
         self._securityLabel = None
-        """ Primitive extension for securityLabel. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabel. List of `FHIRPrimitiveExtension` """
         
         self.subType = None
         """ Contract Term Type specific classification.
@@ -674,13 +674,13 @@ class ContractTerm(backboneelement.BackboneElement):
         js = super(ContractTerm, self).elementProperties()
         js.extend([
             ("action", "action", ContractTermAction, True, None, False),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("applies", "applies", period.Period, False, None, False),
             ("_applies", "_applies", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("asset", "asset", ContractTermAsset, True, None, False),
-            ("_asset", "_asset", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_asset", "_asset", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("group", "group", ContractTerm, True, None, False),
-            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_group", "_group", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("issued", "issued", fhirdatetime.FHIRDateTime, False, None, False),
@@ -688,7 +688,7 @@ class ContractTerm(backboneelement.BackboneElement):
             ("offer", "offer", ContractTermOffer, False, None, True),
             ("_offer", "_offer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("securityLabel", "securityLabel", ContractTermSecurityLabel, True, None, False),
-            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subType", "subType", codeableconcept.CodeableConcept, False, None, False),
             ("_subType", "_subType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("text", "text", str, False, None, False),
@@ -730,7 +730,7 @@ class ContractTermAction(backboneelement.BackboneElement):
         """ Pointer to specific item.
         List of `str` items. """
         self._contextLinkId = None
-        """ Primitive extension for contextLinkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contextLinkId. List of `FHIRPrimitiveExtension` """
         
         self.doNotPerform = None
         """ True if the term prohibits the  action.
@@ -748,13 +748,13 @@ class ContractTermAction(backboneelement.BackboneElement):
         """ Pointer to specific item.
         List of `str` items. """
         self._linkId = None
-        """ Primitive extension for linkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for linkId. List of `FHIRPrimitiveExtension` """
         
         self.note = None
         """ Comments about the action.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.occurrenceDateTime = None
         """ When action happens.
@@ -784,7 +784,7 @@ class ContractTermAction(backboneelement.BackboneElement):
         """ Pointer to specific item.
         List of `str` items. """
         self._performerLinkId = None
-        """ Primitive extension for performerLinkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performerLinkId. List of `FHIRPrimitiveExtension` """
         
         self.performerRole = None
         """ Competency of the performer.
@@ -796,49 +796,49 @@ class ContractTermAction(backboneelement.BackboneElement):
         """ Kind of service performer.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._performerType = None
-        """ Primitive extension for performerType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performerType. List of `FHIRPrimitiveExtension` """
         
         self.reason = None
         """ Why action is to be performed.
         List of `str` items. """
         self._reason = None
-        """ Primitive extension for reason. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reason. List of `FHIRPrimitiveExtension` """
         
         self.reasonCode = None
         """ Why is action (not) needed?.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonLinkId = None
         """ Pointer to specific item.
         List of `str` items. """
         self._reasonLinkId = None
-        """ Primitive extension for reasonLinkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonLinkId. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ Why is action (not) needed?.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.requester = None
         """ Who asked for action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._requester = None
-        """ Primitive extension for requester. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for requester. List of `FHIRPrimitiveExtension` """
         
         self.requesterLinkId = None
         """ Pointer to specific item.
         List of `str` items. """
         self._requesterLinkId = None
-        """ Primitive extension for requesterLinkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for requesterLinkId. List of `FHIRPrimitiveExtension` """
         
         self.securityLabelNumber = None
         """ Action restriction numbers.
         List of `int` items. """
         self._securityLabelNumber = None
-        """ Primitive extension for securityLabelNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabelNumber. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ State of the action.
@@ -850,7 +850,7 @@ class ContractTermAction(backboneelement.BackboneElement):
         """ Entity of the action.
         List of `ContractTermActionSubject` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type or form of the action.
@@ -866,15 +866,15 @@ class ContractTermAction(backboneelement.BackboneElement):
             ("context", "context", fhirreference.FHIRReference, False, None, False),
             ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("contextLinkId", "contextLinkId", str, True, None, False),
-            ("_contextLinkId", "_contextLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contextLinkId", "_contextLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("doNotPerform", "doNotPerform", bool, False, None, False),
             ("_doNotPerform", "_doNotPerform", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("intent", "intent", codeableconcept.CodeableConcept, False, None, True),
             ("_intent", "_intent", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("linkId", "linkId", str, True, None, False),
-            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("occurrenceDateTime", "occurrenceDateTime", fhirdatetime.FHIRDateTime, False, "occurrence", False),
             ("_occurrenceDateTime", "_occurrenceDateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("occurrencePeriod", "occurrencePeriod", period.Period, False, "occurrence", False),
@@ -884,29 +884,29 @@ class ContractTermAction(backboneelement.BackboneElement):
             ("performer", "performer", fhirreference.FHIRReference, False, None, False),
             ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performerLinkId", "performerLinkId", str, True, None, False),
-            ("_performerLinkId", "_performerLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performerLinkId", "_performerLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performerRole", "performerRole", codeableconcept.CodeableConcept, False, None, False),
             ("_performerRole", "_performerRole", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performerType", "performerType", codeableconcept.CodeableConcept, True, None, False),
-            ("_performerType", "_performerType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performerType", "_performerType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reason", "reason", str, True, None, False),
-            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reason", "_reason", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonLinkId", "reasonLinkId", str, True, None, False),
-            ("_reasonLinkId", "_reasonLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonLinkId", "_reasonLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requester", "requester", fhirreference.FHIRReference, True, None, False),
-            ("_requester", "_requester", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_requester", "_requester", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("requesterLinkId", "requesterLinkId", str, True, None, False),
-            ("_requesterLinkId", "_requesterLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_requesterLinkId", "_requesterLinkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("securityLabelNumber", "securityLabelNumber", int, True, None, False),
-            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", codeableconcept.CodeableConcept, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", ContractTermActionSubject, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -931,7 +931,7 @@ class ContractTermActionSubject(backboneelement.BackboneElement):
         """ Entity of the action.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reference = None
-        """ Primitive extension for reference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reference. List of `FHIRPrimitiveExtension` """
         
         self.role = None
         """ Role type of the agent.
@@ -945,7 +945,7 @@ class ContractTermActionSubject(backboneelement.BackboneElement):
         js = super(ContractTermActionSubject, self).elementProperties()
         js.extend([
             ("reference", "reference", fhirreference.FHIRReference, True, None, True),
-            ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("role", "role", codeableconcept.CodeableConcept, False, None, False),
             ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -970,7 +970,7 @@ class ContractTermAsset(backboneelement.BackboneElement):
         """ Response to assets.
         List of `ContractTermOfferAnswer` items (represented as `dict` in JSON). """
         self._answer = None
-        """ Primitive extension for answer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for answer. List of `FHIRPrimitiveExtension` """
         
         self.condition = None
         """ Quality desctiption of asset.
@@ -982,25 +982,25 @@ class ContractTermAsset(backboneelement.BackboneElement):
         """ Circumstance of the asset.
         List of `ContractTermAssetContext` items (represented as `dict` in JSON). """
         self._context = None
-        """ Primitive extension for context. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for context. List of `FHIRPrimitiveExtension` """
         
         self.linkId = None
         """ Pointer to asset text.
         List of `str` items. """
         self._linkId = None
-        """ Primitive extension for linkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for linkId. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ Time period of the asset.
         List of `Period` items (represented as `dict` in JSON). """
         self._period = None
-        """ Primitive extension for period. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for period. List of `FHIRPrimitiveExtension` """
         
         self.periodType = None
         """ Asset availability types.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._periodType = None
-        """ Primitive extension for periodType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for periodType. List of `FHIRPrimitiveExtension` """
         
         self.relationship = None
         """ Kinship of the asset.
@@ -1018,13 +1018,13 @@ class ContractTermAsset(backboneelement.BackboneElement):
         """ Asset restriction numbers.
         List of `int` items. """
         self._securityLabelNumber = None
-        """ Primitive extension for securityLabelNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabelNumber. List of `FHIRPrimitiveExtension` """
         
         self.subtype = None
         """ Asset sub-category.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subtype = None
-        """ Primitive extension for subtype. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subtype. List of `FHIRPrimitiveExtension` """
         
         self.text = None
         """ Asset clause or question text.
@@ -1036,25 +1036,25 @@ class ContractTermAsset(backboneelement.BackboneElement):
         """ Asset category.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         self.typeReference = None
         """ Associated entities.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._typeReference = None
-        """ Primitive extension for typeReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for typeReference. List of `FHIRPrimitiveExtension` """
         
         self.usePeriod = None
         """ Time period.
         List of `Period` items (represented as `dict` in JSON). """
         self._usePeriod = None
-        """ Primitive extension for usePeriod. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for usePeriod. List of `FHIRPrimitiveExtension` """
         
         self.valuedItem = None
         """ Contract Valued Item List.
         List of `ContractTermAssetValuedItem` items (represented as `dict` in JSON). """
         self._valuedItem = None
-        """ Primitive extension for valuedItem. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for valuedItem. List of `FHIRPrimitiveExtension` """
         
         super(ContractTermAsset, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -1062,35 +1062,35 @@ class ContractTermAsset(backboneelement.BackboneElement):
         js = super(ContractTermAsset, self).elementProperties()
         js.extend([
             ("answer", "answer", ContractTermOfferAnswer, True, None, False),
-            ("_answer", "_answer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_answer", "_answer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("condition", "condition", str, False, None, False),
             ("_condition", "_condition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("context", "context", ContractTermAssetContext, True, None, False),
-            ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_context", "_context", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("linkId", "linkId", str, True, None, False),
-            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, True, None, False),
-            ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("periodType", "periodType", codeableconcept.CodeableConcept, True, None, False),
-            ("_periodType", "_periodType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_periodType", "_periodType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("relationship", "relationship", coding.Coding, False, None, False),
             ("_relationship", "_relationship", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("scope", "scope", codeableconcept.CodeableConcept, False, None, False),
             ("_scope", "_scope", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("securityLabelNumber", "securityLabelNumber", int, True, None, False),
-            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subtype", "subtype", codeableconcept.CodeableConcept, True, None, False),
-            ("_subtype", "_subtype", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subtype", "_subtype", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("text", "text", str, False, None, False),
             ("_text", "_text", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("typeReference", "typeReference", fhirreference.FHIRReference, True, None, False),
-            ("_typeReference", "_typeReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_typeReference", "_typeReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("usePeriod", "usePeriod", period.Period, True, None, False),
-            ("_usePeriod", "_usePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_usePeriod", "_usePeriod", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("valuedItem", "valuedItem", ContractTermAssetValuedItem, True, None, False),
-            ("_valuedItem", "_valuedItem", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_valuedItem", "_valuedItem", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -1113,7 +1113,7 @@ class ContractTermAssetContext(backboneelement.BackboneElement):
         """ Codeable asset context.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.reference = None
         """ Creator,custodian or owner.
@@ -1133,7 +1133,7 @@ class ContractTermAssetContext(backboneelement.BackboneElement):
         js = super(ContractTermAssetContext, self).elementProperties()
         js.extend([
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reference", "reference", fhirreference.FHIRReference, False, None, False),
             ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("text", "text", str, False, None, False),
@@ -1190,7 +1190,7 @@ class ContractTermAssetValuedItem(backboneelement.BackboneElement):
         """ Pointer to specific item.
         List of `str` items. """
         self._linkId = None
-        """ Primitive extension for linkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for linkId. List of `FHIRPrimitiveExtension` """
         
         self.net = None
         """ Total Contract Valued Item Value.
@@ -1238,7 +1238,7 @@ class ContractTermAssetValuedItem(backboneelement.BackboneElement):
         """ Security Labels that define affected terms.
         List of `int` items. """
         self._securityLabelNumber = None
-        """ Primitive extension for securityLabelNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabelNumber. List of `FHIRPrimitiveExtension` """
         
         self.unitPrice = None
         """ Contract Valued Item fee, charge, or cost.
@@ -1262,7 +1262,7 @@ class ContractTermAssetValuedItem(backboneelement.BackboneElement):
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("linkId", "linkId", str, True, None, False),
-            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("net", "net", money.Money, False, None, False),
             ("_net", "_net", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("payment", "payment", str, False, None, False),
@@ -1278,7 +1278,7 @@ class ContractTermAssetValuedItem(backboneelement.BackboneElement):
             ("responsible", "responsible", fhirreference.FHIRReference, False, None, False),
             ("_responsible", "_responsible", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("securityLabelNumber", "securityLabelNumber", int, True, None, False),
-            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitPrice", "unitPrice", money.Money, False, None, False),
             ("_unitPrice", "_unitPrice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -1305,7 +1305,7 @@ class ContractTermOffer(backboneelement.BackboneElement):
         """ Response to offer text.
         List of `ContractTermOfferAnswer` items (represented as `dict` in JSON). """
         self._answer = None
-        """ Primitive extension for answer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for answer. List of `FHIRPrimitiveExtension` """
         
         self.decision = None
         """ Accepting party choice.
@@ -1317,31 +1317,31 @@ class ContractTermOffer(backboneelement.BackboneElement):
         """ How decision is conveyed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._decisionMode = None
-        """ Primitive extension for decisionMode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for decisionMode. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Offer business ID.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.linkId = None
         """ Pointer to text.
         List of `str` items. """
         self._linkId = None
-        """ Primitive extension for linkId. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for linkId. List of `FHIRPrimitiveExtension` """
         
         self.party = None
         """ Offer Recipient.
         List of `ContractTermOfferParty` items (represented as `dict` in JSON). """
         self._party = None
-        """ Primitive extension for party. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for party. List of `FHIRPrimitiveExtension` """
         
         self.securityLabelNumber = None
         """ Offer restriction numbers.
         List of `int` items. """
         self._securityLabelNumber = None
-        """ Primitive extension for securityLabelNumber. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabelNumber. List of `FHIRPrimitiveExtension` """
         
         self.text = None
         """ Human readable offer text.
@@ -1367,19 +1367,19 @@ class ContractTermOffer(backboneelement.BackboneElement):
         js = super(ContractTermOffer, self).elementProperties()
         js.extend([
             ("answer", "answer", ContractTermOfferAnswer, True, None, False),
-            ("_answer", "_answer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_answer", "_answer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("decision", "decision", codeableconcept.CodeableConcept, False, None, False),
             ("_decision", "_decision", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("decisionMode", "decisionMode", codeableconcept.CodeableConcept, True, None, False),
-            ("_decisionMode", "_decisionMode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_decisionMode", "_decisionMode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("linkId", "linkId", str, True, None, False),
-            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("party", "party", ContractTermOfferParty, True, None, False),
-            ("_party", "_party", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_party", "_party", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("securityLabelNumber", "securityLabelNumber", int, True, None, False),
-            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabelNumber", "_securityLabelNumber", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("text", "text", str, False, None, False),
             ("_text", "_text", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("topic", "topic", fhirreference.FHIRReference, False, None, False),
@@ -1527,7 +1527,7 @@ class ContractTermOfferParty(backboneelement.BackboneElement):
         """ Referenced entity.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reference = None
-        """ Primitive extension for reference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reference. List of `FHIRPrimitiveExtension` """
         
         self.role = None
         """ Participant engagement type.
@@ -1541,7 +1541,7 @@ class ContractTermOfferParty(backboneelement.BackboneElement):
         js = super(ContractTermOfferParty, self).elementProperties()
         js.extend([
             ("reference", "reference", fhirreference.FHIRReference, True, None, True),
-            ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reference", "_reference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("role", "role", codeableconcept.CodeableConcept, False, None, True),
             ("_role", "_role", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -1569,7 +1569,7 @@ class ContractTermSecurityLabel(backboneelement.BackboneElement):
         """ Applicable Policy.
         List of `Coding` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.classification = None
         """ Confidentiality Protection.
@@ -1581,13 +1581,13 @@ class ContractTermSecurityLabel(backboneelement.BackboneElement):
         """ Handling Instructions.
         List of `Coding` items (represented as `dict` in JSON). """
         self._control = None
-        """ Primitive extension for control. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for control. List of `FHIRPrimitiveExtension` """
         
         self.number = None
         """ Link to Security Labels.
         List of `int` items. """
         self._number = None
-        """ Primitive extension for number. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for number. List of `FHIRPrimitiveExtension` """
         
         super(ContractTermSecurityLabel, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -1595,13 +1595,13 @@ class ContractTermSecurityLabel(backboneelement.BackboneElement):
         js = super(ContractTermSecurityLabel, self).elementProperties()
         js.extend([
             ("category", "category", coding.Coding, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("classification", "classification", coding.Coding, False, None, True),
             ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("control", "control", coding.Coding, True, None, False),
-            ("_control", "_control", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_control", "_control", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("number", "number", int, True, None, False),
-            ("_number", "_number", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_number", "_number", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

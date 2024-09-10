@@ -32,13 +32,13 @@ class Procedure(domainresource.DomainResource):
         """ A request for this procedure.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._basedOn = None
-        """ Primitive extension for basedOn. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for basedOn. List of `FHIRPrimitiveExtension` """
         
         self.bodySite = None
         """ Target body sites.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._bodySite = None
-        """ Primitive extension for bodySite. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for bodySite. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Classification of the procedure.
@@ -56,13 +56,13 @@ class Procedure(domainresource.DomainResource):
         """ Complication following the procedure.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._complication = None
-        """ Primitive extension for complication. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for complication. List of `FHIRPrimitiveExtension` """
         
         self.complicationDetail = None
         """ A condition that is a result of the procedure.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._complicationDetail = None
-        """ Primitive extension for complicationDetail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for complicationDetail. List of `FHIRPrimitiveExtension` """
         
         self.encounter = None
         """ Encounter created as part of.
@@ -74,31 +74,31 @@ class Procedure(domainresource.DomainResource):
         """ Manipulated, implanted, or removed device.
         List of `ProcedureFocalDevice` items (represented as `dict` in JSON). """
         self._focalDevice = None
-        """ Primitive extension for focalDevice. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for focalDevice. List of `FHIRPrimitiveExtension` """
         
         self.followUp = None
         """ Instructions for follow up.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._followUp = None
-        """ Primitive extension for followUp. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for followUp. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ External Identifiers for this procedure.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesCanonical = None
         """ Instantiates FHIR protocol or definition.
         List of `str` items. """
         self._instantiatesCanonical = None
-        """ Primitive extension for instantiatesCanonical. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesCanonical. List of `FHIRPrimitiveExtension` """
         
         self.instantiatesUri = None
         """ Instantiates external protocol or definition.
         List of `str` items. """
         self._instantiatesUri = None
-        """ Primitive extension for instantiatesUri. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instantiatesUri. List of `FHIRPrimitiveExtension` """
         
         self.location = None
         """ Where the procedure happened.
@@ -110,7 +110,7 @@ class Procedure(domainresource.DomainResource):
         """ Additional information about the procedure.
         List of `Annotation` items (represented as `dict` in JSON). """
         self._note = None
-        """ Primitive extension for note. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for note. List of `FHIRPrimitiveExtension` """
         
         self.outcome = None
         """ The result of procedure.
@@ -122,7 +122,7 @@ class Procedure(domainresource.DomainResource):
         """ Part of referenced event.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._partOf = None
-        """ Primitive extension for partOf. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for partOf. List of `FHIRPrimitiveExtension` """
         
         self.performedAge = None
         """ When the procedure was performed.
@@ -158,19 +158,19 @@ class Procedure(domainresource.DomainResource):
         """ The people who performed the procedure.
         List of `ProcedurePerformer` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.reasonCode = None
         """ Coded reason procedure performed.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._reasonCode = None
-        """ Primitive extension for reasonCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonCode. List of `FHIRPrimitiveExtension` """
         
         self.reasonReference = None
         """ The justification that the procedure was performed.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._reasonReference = None
-        """ Primitive extension for reasonReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for reasonReference. List of `FHIRPrimitiveExtension` """
         
         self.recorder = None
         """ Who recorded the procedure.
@@ -182,7 +182,7 @@ class Procedure(domainresource.DomainResource):
         """ Any report resulting from the procedure.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._report = None
-        """ Primitive extension for report. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for report. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ preparation | in-progress | not-done | on-hold | stopped |
@@ -207,13 +207,13 @@ class Procedure(domainresource.DomainResource):
         """ Coded items used during the procedure.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._usedCode = None
-        """ Primitive extension for usedCode. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for usedCode. List of `FHIRPrimitiveExtension` """
         
         self.usedReference = None
         """ Items used during procedure.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._usedReference = None
-        """ Primitive extension for usedReference. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for usedReference. List of `FHIRPrimitiveExtension` """
         
         super(Procedure, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -223,37 +223,37 @@ class Procedure(domainresource.DomainResource):
             ("asserter", "asserter", fhirreference.FHIRReference, False, None, False),
             ("_asserter", "_asserter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("basedOn", "basedOn", fhirreference.FHIRReference, True, None, False),
-            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_basedOn", "_basedOn", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("bodySite", "bodySite", codeableconcept.CodeableConcept, True, None, False),
-            ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_bodySite", "_bodySite", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, False, None, False),
             ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("complication", "complication", codeableconcept.CodeableConcept, True, None, False),
-            ("_complication", "_complication", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_complication", "_complication", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("complicationDetail", "complicationDetail", fhirreference.FHIRReference, True, None, False),
-            ("_complicationDetail", "_complicationDetail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_complicationDetail", "_complicationDetail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("focalDevice", "focalDevice", ProcedureFocalDevice, True, None, False),
-            ("_focalDevice", "_focalDevice", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_focalDevice", "_focalDevice", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("followUp", "followUp", codeableconcept.CodeableConcept, True, None, False),
-            ("_followUp", "_followUp", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_followUp", "_followUp", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesCanonical", "instantiatesCanonical", str, True, None, False),
-            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesCanonical", "_instantiatesCanonical", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instantiatesUri", "instantiatesUri", str, True, None, False),
-            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instantiatesUri", "_instantiatesUri", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("location", "location", fhirreference.FHIRReference, False, None, False),
             ("_location", "_location", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("note", "note", annotation.Annotation, True, None, False),
-            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_note", "_note", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("outcome", "outcome", codeableconcept.CodeableConcept, False, None, False),
             ("_outcome", "_outcome", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, True, None, False),
-            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("performedAge", "performedAge", age.Age, False, "performed", False),
             ("_performedAge", "_performedAge", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performedDateTime", "performedDateTime", fhirdatetime.FHIRDateTime, False, "performed", False),
@@ -265,15 +265,15 @@ class Procedure(domainresource.DomainResource):
             ("performedString", "performedString", str, False, "performed", False),
             ("_performedString", "_performedString", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performer", "performer", ProcedurePerformer, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonCode", "reasonCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonCode", "_reasonCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("reasonReference", "reasonReference", fhirreference.FHIRReference, True, None, False),
-            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_reasonReference", "_reasonReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("recorder", "recorder", fhirreference.FHIRReference, False, None, False),
             ("_recorder", "_recorder", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("report", "report", fhirreference.FHIRReference, True, None, False),
-            ("_report", "_report", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_report", "_report", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusReason", "statusReason", codeableconcept.CodeableConcept, False, None, False),
@@ -281,9 +281,9 @@ class Procedure(domainresource.DomainResource):
             ("subject", "subject", fhirreference.FHIRReference, False, None, True),
             ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("usedCode", "usedCode", codeableconcept.CodeableConcept, True, None, False),
-            ("_usedCode", "_usedCode", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_usedCode", "_usedCode", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("usedReference", "usedReference", fhirreference.FHIRReference, True, None, False),
-            ("_usedReference", "_usedReference", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_usedReference", "_usedReference", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

@@ -29,32 +29,32 @@ class MedicinalProductPharmaceutical(domainresource.DomainResource):
         """ Characteristics e.g. a products onset of action.
         List of `MedicinalProductPharmaceuticalCharacteristics` items (represented as `dict` in JSON). """
         self._characteristics = None
-        """ Primitive extension for characteristics. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for characteristics. List of `FHIRPrimitiveExtension` """
         
         self.device = None
         """ Accompanying device.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._device = None
-        """ Primitive extension for device. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for device. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ An identifier for the pharmaceutical medicinal product.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.ingredient = None
         """ Ingredient.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._ingredient = None
-        """ Primitive extension for ingredient. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for ingredient. List of `FHIRPrimitiveExtension` """
         
         self.routeOfAdministration = None
         """ The path by which the pharmaceutical product is taken into or makes
         contact with the body.
         List of `MedicinalProductPharmaceuticalRouteOfAdministration` items (represented as `dict` in JSON). """
         self._routeOfAdministration = None
-        """ Primitive extension for routeOfAdministration. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for routeOfAdministration. List of `FHIRPrimitiveExtension` """
         
         self.unitOfPresentation = None
         """ Todo.
@@ -70,15 +70,15 @@ class MedicinalProductPharmaceutical(domainresource.DomainResource):
             ("administrableDoseForm", "administrableDoseForm", codeableconcept.CodeableConcept, False, None, True),
             ("_administrableDoseForm", "_administrableDoseForm", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("characteristics", "characteristics", MedicinalProductPharmaceuticalCharacteristics, True, None, False),
-            ("_characteristics", "_characteristics", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_characteristics", "_characteristics", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("device", "device", fhirreference.FHIRReference, True, None, False),
-            ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_device", "_device", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("ingredient", "ingredient", fhirreference.FHIRReference, True, None, False),
-            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_ingredient", "_ingredient", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("routeOfAdministration", "routeOfAdministration", MedicinalProductPharmaceuticalRouteOfAdministration, True, None, True),
-            ("_routeOfAdministration", "_routeOfAdministration", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_routeOfAdministration", "_routeOfAdministration", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("unitOfPresentation", "unitOfPresentation", codeableconcept.CodeableConcept, False, None, False),
             ("_unitOfPresentation", "_unitOfPresentation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -190,7 +190,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(backboneelement.Backbo
         """ A species for which this route applies.
         List of `MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies` items (represented as `dict` in JSON). """
         self._targetSpecies = None
-        """ Primitive extension for targetSpecies. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for targetSpecies. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductPharmaceuticalRouteOfAdministration, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -210,7 +210,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(backboneelement.Backbo
             ("maxTreatmentPeriod", "maxTreatmentPeriod", duration.Duration, False, None, False),
             ("_maxTreatmentPeriod", "_maxTreatmentPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("targetSpecies", "targetSpecies", MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, True, None, False),
-            ("_targetSpecies", "_targetSpecies", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_targetSpecies", "_targetSpecies", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -240,7 +240,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies(backbonee
         is not appropriate.
         List of `MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod` items (represented as `dict` in JSON). """
         self._withdrawalPeriod = None
-        """ Primitive extension for withdrawalPeriod. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for withdrawalPeriod. List of `FHIRPrimitiveExtension` """
         
         super(MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -250,7 +250,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies(backbonee
             ("code", "code", codeableconcept.CodeableConcept, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("withdrawalPeriod", "withdrawalPeriod", MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, True, None, False),
-            ("_withdrawalPeriod", "_withdrawalPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_withdrawalPeriod", "_withdrawalPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 

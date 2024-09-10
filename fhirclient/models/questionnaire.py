@@ -33,13 +33,13 @@ class Questionnaire(domainresource.DomainResource):
         """ Concept that represents the overall questionnaire.
         List of `Coding` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -57,7 +57,7 @@ class Questionnaire(domainresource.DomainResource):
         """ Instantiates protocol or definition.
         List of `str` items. """
         self._derivedFrom = None
-        """ Primitive extension for derivedFrom. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for derivedFrom. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Natural language description of the questionnaire.
@@ -81,19 +81,19 @@ class Questionnaire(domainresource.DomainResource):
         """ Additional identifier for the questionnaire.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.item = None
         """ Questions and sections within the Questionnaire.
         List of `QuestionnaireItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for questionnaire (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.lastReviewDate = None
         """ When the questionnaire was last reviewed.
@@ -129,7 +129,7 @@ class Questionnaire(domainresource.DomainResource):
         """ Resource that can be subject of QuestionnaireResponse.
         List of `str` items. """
         self._subjectType = None
-        """ Primitive extension for subjectType. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subjectType. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Name for this questionnaire (human friendly).
@@ -148,7 +148,7 @@ class Questionnaire(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the questionnaire.
@@ -164,15 +164,15 @@ class Questionnaire(domainresource.DomainResource):
             ("approvalDate", "approvalDate", fhirdate.FHIRDate, False, None, False),
             ("_approvalDate", "_approvalDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", coding.Coding, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("derivedFrom", "derivedFrom", str, True, None, False),
-            ("_derivedFrom", "_derivedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_derivedFrom", "_derivedFrom", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("effectivePeriod", "effectivePeriod", period.Period, False, None, False),
@@ -180,11 +180,11 @@ class Questionnaire(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("item", "item", QuestionnaireItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("lastReviewDate", "lastReviewDate", fhirdate.FHIRDate, False, None, False),
             ("_lastReviewDate", "_lastReviewDate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
@@ -196,13 +196,13 @@ class Questionnaire(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subjectType", "subjectType", str, True, None, False),
-            ("_subjectType", "_subjectType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subjectType", "_subjectType", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, False),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -232,7 +232,7 @@ class QuestionnaireItem(backboneelement.BackboneElement):
         """ Permitted answer.
         List of `QuestionnaireItemAnswerOption` items (represented as `dict` in JSON). """
         self._answerOption = None
-        """ Primitive extension for answerOption. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for answerOption. List of `FHIRPrimitiveExtension` """
         
         self.answerValueSet = None
         """ Valueset containing permitted answers.
@@ -244,7 +244,7 @@ class QuestionnaireItem(backboneelement.BackboneElement):
         """ Corresponding concept for this item in a terminology.
         List of `Coding` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.definition = None
         """ ElementDefinition - details for the item.
@@ -262,19 +262,19 @@ class QuestionnaireItem(backboneelement.BackboneElement):
         """ Only allow data when.
         List of `QuestionnaireItemEnableWhen` items (represented as `dict` in JSON). """
         self._enableWhen = None
-        """ Primitive extension for enableWhen. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for enableWhen. List of `FHIRPrimitiveExtension` """
         
         self.initial = None
         """ Initial value(s) when item is first rendered.
         List of `QuestionnaireItemInitial` items (represented as `dict` in JSON). """
         self._initial = None
-        """ Primitive extension for initial. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for initial. List of `FHIRPrimitiveExtension` """
         
         self.item = None
         """ Nested questionnaire items.
         List of `QuestionnaireItem` items (represented as `dict` in JSON). """
         self._item = None
-        """ Primitive extension for item. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for item. List of `FHIRPrimitiveExtension` """
         
         self.linkId = None
         """ Unique id for item in questionnaire.
@@ -330,21 +330,21 @@ class QuestionnaireItem(backboneelement.BackboneElement):
         js = super(QuestionnaireItem, self).elementProperties()
         js.extend([
             ("answerOption", "answerOption", QuestionnaireItemAnswerOption, True, None, False),
-            ("_answerOption", "_answerOption", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_answerOption", "_answerOption", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("answerValueSet", "answerValueSet", str, False, None, False),
             ("_answerValueSet", "_answerValueSet", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("code", "code", coding.Coding, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("definition", "definition", str, False, None, False),
             ("_definition", "_definition", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("enableBehavior", "enableBehavior", str, False, None, False),
             ("_enableBehavior", "_enableBehavior", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("enableWhen", "enableWhen", QuestionnaireItemEnableWhen, True, None, False),
-            ("_enableWhen", "_enableWhen", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_enableWhen", "_enableWhen", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("initial", "initial", QuestionnaireItemInitial, True, None, False),
-            ("_initial", "_initial", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_initial", "_initial", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("item", "item", QuestionnaireItem, True, None, False),
-            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_item", "_item", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("linkId", "linkId", str, False, None, True),
             ("_linkId", "_linkId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("maxLength", "maxLength", int, False, None, False),

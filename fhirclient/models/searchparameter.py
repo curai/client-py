@@ -25,13 +25,13 @@ class SearchParameter(domainresource.DomainResource):
         """ The resource type(s) this search parameter applies to.
         List of `str` items. """
         self._base = None
-        """ Primitive extension for base. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for base. List of `FHIRPrimitiveExtension` """
         
         self.chain = None
         """ Chained names supported.
         List of `str` items. """
         self._chain = None
-        """ Primitive extension for chain. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for chain. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Code used in URL.
@@ -43,19 +43,19 @@ class SearchParameter(domainresource.DomainResource):
         """ eq | ne | gt | lt | ge | le | sa | eb | ap.
         List of `str` items. """
         self._comparator = None
-        """ Primitive extension for comparator. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for comparator. List of `FHIRPrimitiveExtension` """
         
         self.component = None
         """ For Composite resources to define the parts.
         List of `SearchParameterComponent` items (represented as `dict` in JSON). """
         self._component = None
-        """ Primitive extension for component. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for component. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.date = None
         """ Date last changed.
@@ -91,14 +91,14 @@ class SearchParameter(domainresource.DomainResource):
         """ Intended jurisdiction for search parameter (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.modifier = None
         """ missing | exact | contains | not | text | in | not-in | below |
         above | type | identifier | ofType.
         List of `str` items. """
         self._modifier = None
-        """ Primitive extension for modifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for modifier. List of `FHIRPrimitiveExtension` """
         
         self.multipleAnd = None
         """ Allow multiple parameters (and).
@@ -140,7 +140,7 @@ class SearchParameter(domainresource.DomainResource):
         """ Types of resource (if a resource reference).
         List of `str` items. """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ number | date | string | token | reference | composite | quantity |
@@ -160,7 +160,7 @@ class SearchParameter(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the search parameter.
@@ -186,17 +186,17 @@ class SearchParameter(domainresource.DomainResource):
         js = super(SearchParameter, self).elementProperties()
         js.extend([
             ("base", "base", str, True, None, True),
-            ("_base", "_base", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_base", "_base", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("chain", "chain", str, True, None, False),
-            ("_chain", "_chain", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_chain", "_chain", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", str, False, None, True),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("comparator", "comparator", str, True, None, False),
-            ("_comparator", "_comparator", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_comparator", "_comparator", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("component", "component", SearchParameterComponent, True, None, False),
-            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_component", "_component", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
             ("_date", "_date", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("derivedFrom", "derivedFrom", str, False, None, False),
@@ -208,9 +208,9 @@ class SearchParameter(domainresource.DomainResource):
             ("expression", "expression", str, False, None, False),
             ("_expression", "_expression", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("modifier", "modifier", str, True, None, False),
-            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_modifier", "_modifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("multipleAnd", "multipleAnd", bool, False, None, False),
             ("_multipleAnd", "_multipleAnd", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("multipleOr", "multipleOr", bool, False, None, False),
@@ -224,13 +224,13 @@ class SearchParameter(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("target", "target", str, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", str, False, None, True),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("url", "url", str, False, None, True),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("xpath", "xpath", str, False, None, False),

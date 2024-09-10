@@ -32,13 +32,13 @@ class Meta(element.Element):
         """ Profiles this resource claims to conform to.
         List of `str` items. """
         self._profile = None
-        """ Primitive extension for profile. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for profile. List of `FHIRPrimitiveExtension` """
         
         self.security = None
         """ Security Labels applied to this resource.
         List of `Coding` items (represented as `dict` in JSON). """
         self._security = None
-        """ Primitive extension for security. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for security. List of `FHIRPrimitiveExtension` """
         
         self.source = None
         """ Identifies where the resource comes from.
@@ -50,7 +50,7 @@ class Meta(element.Element):
         """ Tags applied to this resource.
         List of `Coding` items (represented as `dict` in JSON). """
         self._tag = None
-        """ Primitive extension for tag. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for tag. List of `FHIRPrimitiveExtension` """
         
         self.versionId = None
         """ Version specific identifier.
@@ -66,13 +66,13 @@ class Meta(element.Element):
             ("lastUpdated", "lastUpdated", fhirinstant.FHIRInstant, False, None, False),
             ("_lastUpdated", "_lastUpdated", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("profile", "profile", str, True, None, False),
-            ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_profile", "_profile", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("security", "security", coding.Coding, True, None, False),
-            ("_security", "_security", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_security", "_security", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("source", "source", str, False, None, False),
             ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("tag", "tag", coding.Coding, True, None, False),
-            ("_tag", "_tag", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_tag", "_tag", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("versionId", "versionId", str, False, None, False),
             ("_versionId", "_versionId", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

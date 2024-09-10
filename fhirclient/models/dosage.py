@@ -26,7 +26,7 @@ class Dosage(backboneelement.BackboneElement):
         meals", "may cause drowsiness".
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._additionalInstruction = None
-        """ Primitive extension for additionalInstruction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for additionalInstruction. List of `FHIRPrimitiveExtension` """
         
         self.asNeededBoolean = None
         """ Take "as needed" (for x).
@@ -44,7 +44,7 @@ class Dosage(backboneelement.BackboneElement):
         """ Amount of medication administered.
         List of `DosageDoseAndRate` items (represented as `dict` in JSON). """
         self._doseAndRate = None
-        """ Primitive extension for doseAndRate. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for doseAndRate. List of `FHIRPrimitiveExtension` """
         
         self.maxDosePerAdministration = None
         """ Upper limit on medication per administration.
@@ -112,13 +112,13 @@ class Dosage(backboneelement.BackboneElement):
         js = super(Dosage, self).elementProperties()
         js.extend([
             ("additionalInstruction", "additionalInstruction", codeableconcept.CodeableConcept, True, None, False),
-            ("_additionalInstruction", "_additionalInstruction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_additionalInstruction", "_additionalInstruction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("asNeededBoolean", "asNeededBoolean", bool, False, "asNeeded", False),
             ("_asNeededBoolean", "_asNeededBoolean", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("asNeededCodeableConcept", "asNeededCodeableConcept", codeableconcept.CodeableConcept, False, "asNeeded", False),
             ("_asNeededCodeableConcept", "_asNeededCodeableConcept", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("doseAndRate", "doseAndRate", DosageDoseAndRate, True, None, False),
-            ("_doseAndRate", "_doseAndRate", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_doseAndRate", "_doseAndRate", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("maxDosePerAdministration", "maxDosePerAdministration", quantity.Quantity, False, None, False),
             ("_maxDosePerAdministration", "_maxDosePerAdministration", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("maxDosePerLifetime", "maxDosePerLifetime", quantity.Quantity, False, None, False),

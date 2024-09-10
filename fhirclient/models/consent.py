@@ -27,7 +27,7 @@ class Consent(domainresource.DomainResource):
         """ Classification of the consent statement - for indexing/retrieval.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.dateTime = None
         """ When this Consent was created or indexed.
@@ -39,13 +39,13 @@ class Consent(domainresource.DomainResource):
         """ Identifier for this record (external references).
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.organization = None
         """ Custodian of the consent.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._organization = None
-        """ Primitive extension for organization. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for organization. List of `FHIRPrimitiveExtension` """
         
         self.patient = None
         """ Who the consent applies to.
@@ -57,13 +57,13 @@ class Consent(domainresource.DomainResource):
         """ Who is agreeing to the policy and rules.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._performer = None
-        """ Primitive extension for performer. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for performer. List of `FHIRPrimitiveExtension` """
         
         self.policy = None
         """ Policies covered by this consent.
         List of `ConsentPolicy` items (represented as `dict` in JSON). """
         self._policy = None
-        """ Primitive extension for policy. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for policy. List of `FHIRPrimitiveExtension` """
         
         self.policyRule = None
         """ Regulation that this consents to.
@@ -105,7 +105,7 @@ class Consent(domainresource.DomainResource):
         """ Consent Verified by patient or family.
         List of `ConsentVerification` items (represented as `dict` in JSON). """
         self._verification = None
-        """ Primitive extension for verification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for verification. List of `FHIRPrimitiveExtension` """
         
         super(Consent, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -113,19 +113,19 @@ class Consent(domainresource.DomainResource):
         js = super(Consent, self).elementProperties()
         js.extend([
             ("category", "category", codeableconcept.CodeableConcept, True, None, True),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dateTime", "dateTime", fhirdatetime.FHIRDateTime, False, None, False),
             ("_dateTime", "_dateTime", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("organization", "organization", fhirreference.FHIRReference, True, None, False),
-            ("_organization", "_organization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_organization", "_organization", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, False),
             ("_patient", "_patient", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("performer", "performer", fhirreference.FHIRReference, True, None, False),
-            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_performer", "_performer", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("policy", "policy", ConsentPolicy, True, None, False),
-            ("_policy", "_policy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_policy", "_policy", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("policyRule", "policyRule", codeableconcept.CodeableConcept, False, None, False),
             ("_policyRule", "_policyRule", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("provision", "provision", ConsentProvision, False, None, False),
@@ -139,7 +139,7 @@ class Consent(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("verification", "verification", ConsentVerification, True, None, False),
-            ("_verification", "_verification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_verification", "_verification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -210,31 +210,31 @@ class ConsentProvision(backboneelement.BackboneElement):
         """ Actions controlled by this rule.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._action = None
-        """ Primitive extension for action. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for action. List of `FHIRPrimitiveExtension` """
         
         self.actor = None
         """ Who|what controlled by this rule (or group, by role).
         List of `ConsentProvisionActor` items (represented as `dict` in JSON). """
         self._actor = None
-        """ Primitive extension for actor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for actor. List of `FHIRPrimitiveExtension` """
         
         self.class_fhir = None
         """ e.g. Resource Type, Profile, CDA, etc..
         List of `Coding` items (represented as `dict` in JSON). """
         self._class_fhir = None
-        """ Primitive extension for class_fhir. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for class_fhir. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ e.g. LOINC or SNOMED CT code, etc. in the content.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.data = None
         """ Data controlled by this rule.
         List of `ConsentProvisionData` items (represented as `dict` in JSON). """
         self._data = None
-        """ Primitive extension for data. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for data. List of `FHIRPrimitiveExtension` """
         
         self.dataPeriod = None
         """ Timeframe for data controlled by this rule.
@@ -252,19 +252,19 @@ class ConsentProvision(backboneelement.BackboneElement):
         """ Nested Exception Rules.
         List of `ConsentProvision` items (represented as `dict` in JSON). """
         self._provision = None
-        """ Primitive extension for provision. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for provision. List of `FHIRPrimitiveExtension` """
         
         self.purpose = None
         """ Context of activities covered by this rule.
         List of `Coding` items (represented as `dict` in JSON). """
         self._purpose = None
-        """ Primitive extension for purpose. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for purpose. List of `FHIRPrimitiveExtension` """
         
         self.securityLabel = None
         """ Security Labels that define affected resources.
         List of `Coding` items (represented as `dict` in JSON). """
         self._securityLabel = None
-        """ Primitive extension for securityLabel. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for securityLabel. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ deny | permit.
@@ -278,25 +278,25 @@ class ConsentProvision(backboneelement.BackboneElement):
         js = super(ConsentProvision, self).elementProperties()
         js.extend([
             ("action", "action", codeableconcept.CodeableConcept, True, None, False),
-            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_action", "_action", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("actor", "actor", ConsentProvisionActor, True, None, False),
-            ("_actor", "_actor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_actor", "_actor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("class_fhir", "class", coding.Coding, True, None, False),
-            ("_class_fhir", "_class_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_class_fhir", "_class_fhir", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("data", "data", ConsentProvisionData, True, None, False),
-            ("_data", "_data", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_data", "_data", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("dataPeriod", "dataPeriod", period.Period, False, None, False),
             ("_dataPeriod", "_dataPeriod", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("provision", "provision", ConsentProvision, True, None, False),
-            ("_provision", "_provision", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_provision", "_provision", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("purpose", "purpose", coding.Coding, True, None, False),
-            ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_purpose", "_purpose", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("securityLabel", "securityLabel", coding.Coding, True, None, False),
-            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_securityLabel", "_securityLabel", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", str, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

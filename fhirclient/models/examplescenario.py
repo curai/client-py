@@ -22,13 +22,13 @@ class ExampleScenario(domainresource.DomainResource):
         """ Actor participating in the resource.
         List of `ExampleScenarioActor` items (represented as `dict` in JSON). """
         self._actor = None
-        """ Primitive extension for actor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for actor. List of `FHIRPrimitiveExtension` """
         
         self.contact = None
         """ Contact details for the publisher.
         List of `ContactDetail` items (represented as `dict` in JSON). """
         self._contact = None
-        """ Primitive extension for contact. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for contact. List of `FHIRPrimitiveExtension` """
         
         self.copyright = None
         """ Use and/or publishing restrictions.
@@ -52,19 +52,19 @@ class ExampleScenario(domainresource.DomainResource):
         """ Additional identifier for the example scenario.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.instance = None
         """ Each resource and each version that is present in the workflow.
         List of `ExampleScenarioInstance` items (represented as `dict` in JSON). """
         self._instance = None
-        """ Primitive extension for instance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for instance. List of `FHIRPrimitiveExtension` """
         
         self.jurisdiction = None
         """ Intended jurisdiction for example scenario (if applicable).
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._jurisdiction = None
-        """ Primitive extension for jurisdiction. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for jurisdiction. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Name for this example scenario (computer friendly).
@@ -76,7 +76,7 @@ class ExampleScenario(domainresource.DomainResource):
         """ Each major process - a group of operations.
         List of `ExampleScenarioProcess` items (represented as `dict` in JSON). """
         self._process = None
-        """ Primitive extension for process. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for process. List of `FHIRPrimitiveExtension` """
         
         self.publisher = None
         """ Name of the publisher (organization or individual).
@@ -107,7 +107,7 @@ class ExampleScenario(domainresource.DomainResource):
         """ The context that the content is intended to support.
         List of `UsageContext` items (represented as `dict` in JSON). """
         self._useContext = None
-        """ Primitive extension for useContext. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for useContext. List of `FHIRPrimitiveExtension` """
         
         self.version = None
         """ Business version of the example scenario.
@@ -119,7 +119,7 @@ class ExampleScenario(domainresource.DomainResource):
         """ Another nested workflow.
         List of `str` items. """
         self._workflow = None
-        """ Primitive extension for workflow. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for workflow. List of `FHIRPrimitiveExtension` """
         
         super(ExampleScenario, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -127,9 +127,9 @@ class ExampleScenario(domainresource.DomainResource):
         js = super(ExampleScenario, self).elementProperties()
         js.extend([
             ("actor", "actor", ExampleScenarioActor, True, None, False),
-            ("_actor", "_actor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_actor", "_actor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("contact", "contact", contactdetail.ContactDetail, True, None, False),
-            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_contact", "_contact", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("copyright", "copyright", str, False, None, False),
             ("_copyright", "_copyright", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("date", "date", fhirdatetime.FHIRDateTime, False, None, False),
@@ -137,15 +137,15 @@ class ExampleScenario(domainresource.DomainResource):
             ("experimental", "experimental", bool, False, None, False),
             ("_experimental", "_experimental", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("instance", "instance", ExampleScenarioInstance, True, None, False),
-            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_instance", "_instance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("jurisdiction", "jurisdiction", codeableconcept.CodeableConcept, True, None, False),
-            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_jurisdiction", "_jurisdiction", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("process", "process", ExampleScenarioProcess, True, None, False),
-            ("_process", "_process", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_process", "_process", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("publisher", "publisher", str, False, None, False),
             ("_publisher", "_publisher", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("purpose", "purpose", str, False, None, False),
@@ -155,11 +155,11 @@ class ExampleScenario(domainresource.DomainResource):
             ("url", "url", str, False, None, False),
             ("_url", "_url", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("useContext", "useContext", usagecontext.UsageContext, True, None, False),
-            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_useContext", "_useContext", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("version", "version", str, False, None, False),
             ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("workflow", "workflow", str, True, None, False),
-            ("_workflow", "_workflow", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_workflow", "_workflow", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -239,7 +239,7 @@ class ExampleScenarioInstance(backboneelement.BackboneElement):
         """ Resources contained in the instance.
         List of `ExampleScenarioInstanceContainedInstance` items (represented as `dict` in JSON). """
         self._containedInstance = None
-        """ Primitive extension for containedInstance. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for containedInstance. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Human-friendly description of the resource instance.
@@ -269,7 +269,7 @@ class ExampleScenarioInstance(backboneelement.BackboneElement):
         """ A specific version of the resource.
         List of `ExampleScenarioInstanceVersion` items (represented as `dict` in JSON). """
         self._version = None
-        """ Primitive extension for version. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for version. List of `FHIRPrimitiveExtension` """
         
         super(ExampleScenarioInstance, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -277,7 +277,7 @@ class ExampleScenarioInstance(backboneelement.BackboneElement):
         js = super(ExampleScenarioInstance, self).elementProperties()
         js.extend([
             ("containedInstance", "containedInstance", ExampleScenarioInstanceContainedInstance, True, None, False),
-            ("_containedInstance", "_containedInstance", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_containedInstance", "_containedInstance", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("name", "name", str, False, None, False),
@@ -287,7 +287,7 @@ class ExampleScenarioInstance(backboneelement.BackboneElement):
             ("resourceType", "resourceType", str, False, None, True),
             ("_resourceType", "_resourceType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("version", "version", ExampleScenarioInstanceVersion, True, None, False),
-            ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_version", "_version", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -409,7 +409,7 @@ class ExampleScenarioProcess(backboneelement.BackboneElement):
         """ Each step of the process.
         List of `ExampleScenarioProcessStep` items (represented as `dict` in JSON). """
         self._step = None
-        """ Primitive extension for step. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for step. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ The diagram title of the group of operations.
@@ -429,7 +429,7 @@ class ExampleScenarioProcess(backboneelement.BackboneElement):
             ("preConditions", "preConditions", str, False, None, False),
             ("_preConditions", "_preConditions", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("step", "step", ExampleScenarioProcessStep, True, None, False),
-            ("_step", "_step", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_step", "_step", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, True),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -454,7 +454,7 @@ class ExampleScenarioProcessStep(backboneelement.BackboneElement):
         """ Alternate non-typical step action.
         List of `ExampleScenarioProcessStepAlternative` items (represented as `dict` in JSON). """
         self._alternative = None
-        """ Primitive extension for alternative. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for alternative. List of `FHIRPrimitiveExtension` """
         
         self.operation = None
         """ Each interaction or action.
@@ -472,7 +472,7 @@ class ExampleScenarioProcessStep(backboneelement.BackboneElement):
         """ Nested process.
         List of `ExampleScenarioProcess` items (represented as `dict` in JSON). """
         self._process = None
-        """ Primitive extension for process. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for process. List of `FHIRPrimitiveExtension` """
         
         super(ExampleScenarioProcessStep, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -480,13 +480,13 @@ class ExampleScenarioProcessStep(backboneelement.BackboneElement):
         js = super(ExampleScenarioProcessStep, self).elementProperties()
         js.extend([
             ("alternative", "alternative", ExampleScenarioProcessStepAlternative, True, None, False),
-            ("_alternative", "_alternative", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_alternative", "_alternative", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("operation", "operation", ExampleScenarioProcessStepOperation, False, None, False),
             ("_operation", "_operation", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("pause", "pause", bool, False, None, False),
             ("_pause", "_pause", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("process", "process", ExampleScenarioProcess, True, None, False),
-            ("_process", "_process", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_process", "_process", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -518,7 +518,7 @@ class ExampleScenarioProcessStepAlternative(backboneelement.BackboneElement):
         """ What happens in each alternative option.
         List of `ExampleScenarioProcessStep` items (represented as `dict` in JSON). """
         self._step = None
-        """ Primitive extension for step. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for step. List of `FHIRPrimitiveExtension` """
         
         self.title = None
         """ Label for alternative.
@@ -534,7 +534,7 @@ class ExampleScenarioProcessStepAlternative(backboneelement.BackboneElement):
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("step", "step", ExampleScenarioProcessStep, True, None, False),
-            ("_step", "_step", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_step", "_step", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("title", "title", str, False, None, True),
             ("_title", "_title", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

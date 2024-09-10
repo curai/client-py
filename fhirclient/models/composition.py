@@ -33,19 +33,19 @@ class Composition(domainresource.DomainResource):
         """ Attests to accuracy of composition.
         List of `CompositionAttester` items (represented as `dict` in JSON). """
         self._attester = None
-        """ Primitive extension for attester. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for attester. List of `FHIRPrimitiveExtension` """
         
         self.author = None
         """ Who and/or what authored the composition.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.category = None
         """ Categorization of Composition.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._category = None
-        """ Primitive extension for category. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for category. List of `FHIRPrimitiveExtension` """
         
         self.confidentiality = None
         """ As defined by affinity domain.
@@ -75,7 +75,7 @@ class Composition(domainresource.DomainResource):
         """ The clinical service(s) being documented.
         List of `CompositionEvent` items (represented as `dict` in JSON). """
         self._event = None
-        """ Primitive extension for event. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for event. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Version-independent identifier for the Composition.
@@ -87,13 +87,13 @@ class Composition(domainresource.DomainResource):
         """ Relationships to other compositions/documents.
         List of `CompositionRelatesTo` items (represented as `dict` in JSON). """
         self._relatesTo = None
-        """ Primitive extension for relatesTo. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for relatesTo. List of `FHIRPrimitiveExtension` """
         
         self.section = None
         """ Composition is broken into sections.
         List of `CompositionSection` items (represented as `dict` in JSON). """
         self._section = None
-        """ Primitive extension for section. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for section. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ preliminary | final | amended | entered-in-error.
@@ -125,11 +125,11 @@ class Composition(domainresource.DomainResource):
         js = super(Composition, self).elementProperties()
         js.extend([
             ("attester", "attester", CompositionAttester, True, None, False),
-            ("_attester", "_attester", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_attester", "_attester", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("author", "author", fhirreference.FHIRReference, True, None, True),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("category", "category", codeableconcept.CodeableConcept, True, None, False),
-            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_category", "_category", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("confidentiality", "confidentiality", str, False, None, False),
             ("_confidentiality", "_confidentiality", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("custodian", "custodian", fhirreference.FHIRReference, False, None, False),
@@ -139,13 +139,13 @@ class Composition(domainresource.DomainResource):
             ("encounter", "encounter", fhirreference.FHIRReference, False, None, False),
             ("_encounter", "_encounter", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("event", "event", CompositionEvent, True, None, False),
-            ("_event", "_event", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_event", "_event", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, False, None, False),
             ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("relatesTo", "relatesTo", CompositionRelatesTo, True, None, False),
-            ("_relatesTo", "_relatesTo", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_relatesTo", "_relatesTo", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("section", "section", CompositionSection, True, None, False),
-            ("_section", "_section", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_section", "_section", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, False, None, False),
@@ -230,13 +230,13 @@ class CompositionEvent(backboneelement.BackboneElement):
         """ Code(s) that apply to the event being documented.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._code = None
-        """ Primitive extension for code. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for code. List of `FHIRPrimitiveExtension` """
         
         self.detail = None
         """ The event(s) being documented.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._detail = None
-        """ Primitive extension for detail. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for detail. List of `FHIRPrimitiveExtension` """
         
         self.period = None
         """ The period covered by the documentation.
@@ -250,9 +250,9 @@ class CompositionEvent(backboneelement.BackboneElement):
         js = super(CompositionEvent, self).elementProperties()
         js.extend([
             ("code", "code", codeableconcept.CodeableConcept, True, None, False),
-            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("detail", "detail", fhirreference.FHIRReference, True, None, False),
-            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_detail", "_detail", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -329,7 +329,7 @@ class CompositionSection(backboneelement.BackboneElement):
         """ Who and/or what authored the section.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._author = None
-        """ Primitive extension for author. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for author. List of `FHIRPrimitiveExtension` """
         
         self.code = None
         """ Classification of section (recommended).
@@ -347,7 +347,7 @@ class CompositionSection(backboneelement.BackboneElement):
         """ A reference to data that supports this section.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._entry = None
-        """ Primitive extension for entry. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for entry. List of `FHIRPrimitiveExtension` """
         
         self.focus = None
         """ Who/what the section is about, when it is not about the subject of
@@ -372,7 +372,7 @@ class CompositionSection(backboneelement.BackboneElement):
         """ Nested Section.
         List of `CompositionSection` items (represented as `dict` in JSON). """
         self._section = None
-        """ Primitive extension for section. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for section. List of `FHIRPrimitiveExtension` """
         
         self.text = None
         """ Text summary of the section, for human interpretation.
@@ -392,13 +392,13 @@ class CompositionSection(backboneelement.BackboneElement):
         js = super(CompositionSection, self).elementProperties()
         js.extend([
             ("author", "author", fhirreference.FHIRReference, True, None, False),
-            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_author", "_author", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("code", "code", codeableconcept.CodeableConcept, False, None, False),
             ("_code", "_code", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("emptyReason", "emptyReason", codeableconcept.CodeableConcept, False, None, False),
             ("_emptyReason", "_emptyReason", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("entry", "entry", fhirreference.FHIRReference, True, None, False),
-            ("_entry", "_entry", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_entry", "_entry", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("focus", "focus", fhirreference.FHIRReference, False, None, False),
             ("_focus", "_focus", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("mode", "mode", str, False, None, False),
@@ -406,7 +406,7 @@ class CompositionSection(backboneelement.BackboneElement):
             ("orderedBy", "orderedBy", codeableconcept.CodeableConcept, False, None, False),
             ("_orderedBy", "_orderedBy", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("section", "section", CompositionSection, True, None, False),
-            ("_section", "_section", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_section", "_section", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("text", "text", narrative.Narrative, False, None, False),
             ("_text", "_text", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("title", "title", str, False, None, False),

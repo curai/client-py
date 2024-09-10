@@ -22,7 +22,7 @@ class SubstanceReferenceInformation(domainresource.DomainResource):
         """ Todo.
         List of `SubstanceReferenceInformationClassification` items (represented as `dict` in JSON). """
         self._classification = None
-        """ Primitive extension for classification. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for classification. List of `FHIRPrimitiveExtension` """
         
         self.comment = None
         """ Todo.
@@ -34,19 +34,19 @@ class SubstanceReferenceInformation(domainresource.DomainResource):
         """ Todo.
         List of `SubstanceReferenceInformationGene` items (represented as `dict` in JSON). """
         self._gene = None
-        """ Primitive extension for gene. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for gene. List of `FHIRPrimitiveExtension` """
         
         self.geneElement = None
         """ Todo.
         List of `SubstanceReferenceInformationGeneElement` items (represented as `dict` in JSON). """
         self._geneElement = None
-        """ Primitive extension for geneElement. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for geneElement. List of `FHIRPrimitiveExtension` """
         
         self.target = None
         """ Todo.
         List of `SubstanceReferenceInformationTarget` items (represented as `dict` in JSON). """
         self._target = None
-        """ Primitive extension for target. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for target. List of `FHIRPrimitiveExtension` """
         
         super(SubstanceReferenceInformation, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -54,15 +54,15 @@ class SubstanceReferenceInformation(domainresource.DomainResource):
         js = super(SubstanceReferenceInformation, self).elementProperties()
         js.extend([
             ("classification", "classification", SubstanceReferenceInformationClassification, True, None, False),
-            ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_classification", "_classification", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("comment", "comment", str, False, None, False),
             ("_comment", "_comment", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("gene", "gene", SubstanceReferenceInformationGene, True, None, False),
-            ("_gene", "_gene", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_gene", "_gene", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("geneElement", "geneElement", SubstanceReferenceInformationGeneElement, True, None, False),
-            ("_geneElement", "_geneElement", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_geneElement", "_geneElement", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("target", "target", SubstanceReferenceInformationTarget, True, None, False),
-            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -99,13 +99,13 @@ class SubstanceReferenceInformationClassification(backboneelement.BackboneElemen
         """ Todo.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.subtype = None
         """ Todo.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._subtype = None
-        """ Primitive extension for subtype. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subtype. List of `FHIRPrimitiveExtension` """
         
         super(SubstanceReferenceInformationClassification, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -117,9 +117,9 @@ class SubstanceReferenceInformationClassification(backboneelement.BackboneElemen
             ("domain", "domain", codeableconcept.CodeableConcept, False, None, False),
             ("_domain", "_domain", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("subtype", "subtype", codeableconcept.CodeableConcept, True, None, False),
-            ("_subtype", "_subtype", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subtype", "_subtype", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -154,7 +154,7 @@ class SubstanceReferenceInformationGene(backboneelement.BackboneElement):
         """ Todo.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         super(SubstanceReferenceInformationGene, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -166,7 +166,7 @@ class SubstanceReferenceInformationGene(backboneelement.BackboneElement):
             ("geneSequenceOrigin", "geneSequenceOrigin", codeableconcept.CodeableConcept, False, None, False),
             ("_geneSequenceOrigin", "_geneSequenceOrigin", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
@@ -195,7 +195,7 @@ class SubstanceReferenceInformationGeneElement(backboneelement.BackboneElement):
         """ Todo.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Todo.
@@ -211,7 +211,7 @@ class SubstanceReferenceInformationGeneElement(backboneelement.BackboneElement):
             ("element", "element", identifier.Identifier, False, None, False),
             ("_element", "_element", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])
@@ -278,7 +278,7 @@ class SubstanceReferenceInformationTarget(backboneelement.BackboneElement):
         """ Todo.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._source = None
-        """ Primitive extension for source. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for source. List of `FHIRPrimitiveExtension` """
         
         self.target = None
         """ Todo.
@@ -312,7 +312,7 @@ class SubstanceReferenceInformationTarget(backboneelement.BackboneElement):
             ("organismType", "organismType", codeableconcept.CodeableConcept, False, None, False),
             ("_organismType", "_organismType", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("source", "source", fhirreference.FHIRReference, True, None, False),
-            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_source", "_source", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("target", "target", identifier.Identifier, False, None, False),
             ("_target", "_target", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),

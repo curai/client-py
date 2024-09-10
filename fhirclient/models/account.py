@@ -27,7 +27,7 @@ class Account(domainresource.DomainResource):
         account, and what order should they be applied to the account.
         List of `AccountCoverage` items (represented as `dict` in JSON). """
         self._coverage = None
-        """ Primitive extension for coverage. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for coverage. List of `FHIRPrimitiveExtension` """
         
         self.description = None
         """ Explanation of purpose/use.
@@ -39,13 +39,13 @@ class Account(domainresource.DomainResource):
         """ The parties ultimately responsible for balancing the Account.
         List of `AccountGuarantor` items (represented as `dict` in JSON). """
         self._guarantor = None
-        """ Primitive extension for guarantor. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for guarantor. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Account number.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.name = None
         """ Human-readable label.
@@ -56,8 +56,6 @@ class Account(domainresource.DomainResource):
         self.owner = None
         """ Entity managing the Account.
         Type `FHIRReference` (represented as `dict` in JSON). """
-        self._owner = None
-        """ Primitive extension for owner. Type `FHIRPrimitiveExtension` """
         
         self.partOf = None
         """ Reference to a parent Account.
@@ -81,7 +79,7 @@ class Account(domainresource.DomainResource):
         """ The entity that caused the expenses.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._subject = None
-        """ Primitive extension for subject. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for subject. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ E.g. patient, expense, depreciation.
@@ -95,17 +93,16 @@ class Account(domainresource.DomainResource):
         js = super(Account, self).elementProperties()
         js.extend([
             ("coverage", "coverage", AccountCoverage, True, None, False),
-            ("_coverage", "_coverage", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_coverage", "_coverage", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("description", "description", str, False, None, False),
             ("_description", "_description", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("guarantor", "guarantor", AccountGuarantor, True, None, False),
-            ("_guarantor", "_guarantor", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_guarantor", "_guarantor", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("name", "name", str, False, None, False),
             ("_name", "_name", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("owner", "owner", fhirreference.FHIRReference, False, None, False),
-            ("_owner", "_owner", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("partOf", "partOf", fhirreference.FHIRReference, False, None, False),
             ("_partOf", "_partOf", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("servicePeriod", "servicePeriod", period.Period, False, None, False),
@@ -113,7 +110,7 @@ class Account(domainresource.DomainResource):
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("subject", "subject", fhirreference.FHIRReference, True, None, False),
-            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_subject", "_subject", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, False, None, False),
             ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
         ])

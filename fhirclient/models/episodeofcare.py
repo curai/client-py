@@ -30,7 +30,7 @@ class EpisodeOfCare(domainresource.DomainResource):
         EpisodeOfCare.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._account = None
-        """ Primitive extension for account. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for account. List of `FHIRPrimitiveExtension` """
         
         self.careManager = None
         """ Care manager/care coordinator for the patient.
@@ -42,13 +42,13 @@ class EpisodeOfCare(domainresource.DomainResource):
         """ The list of diagnosis relevant to this episode of care.
         List of `EpisodeOfCareDiagnosis` items (represented as `dict` in JSON). """
         self._diagnosis = None
-        """ Primitive extension for diagnosis. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for diagnosis. List of `FHIRPrimitiveExtension` """
         
         self.identifier = None
         """ Business Identifier(s) relevant for this EpisodeOfCare.
         List of `Identifier` items (represented as `dict` in JSON). """
         self._identifier = None
-        """ Primitive extension for identifier. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for identifier. List of `FHIRPrimitiveExtension` """
         
         self.managingOrganization = None
         """ Organization that assumes care.
@@ -72,7 +72,7 @@ class EpisodeOfCare(domainresource.DomainResource):
         """ Originating Referral Request(s).
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._referralRequest = None
-        """ Primitive extension for referralRequest. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for referralRequest. List of `FHIRPrimitiveExtension` """
         
         self.status = None
         """ planned | waitlist | active | onhold | finished | cancelled |
@@ -86,19 +86,19 @@ class EpisodeOfCare(domainresource.DomainResource):
         cover the start date of the status).
         List of `EpisodeOfCareStatusHistory` items (represented as `dict` in JSON). """
         self._statusHistory = None
-        """ Primitive extension for statusHistory. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for statusHistory. List of `FHIRPrimitiveExtension` """
         
         self.team = None
         """ Other practitioners facilitating this episode of care.
         List of `FHIRReference` items (represented as `dict` in JSON). """
         self._team = None
-        """ Primitive extension for team. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for team. List of `FHIRPrimitiveExtension` """
         
         self.type = None
         """ Type/class  - e.g. specialist referral, disease management.
         List of `CodeableConcept` items (represented as `dict` in JSON). """
         self._type = None
-        """ Primitive extension for type. Type `FHIRPrimitiveExtension` """
+        """ Primitive extension for type. List of `FHIRPrimitiveExtension` """
         
         super(EpisodeOfCare, self).__init__(jsondict=jsondict, strict=strict)
     
@@ -106,13 +106,13 @@ class EpisodeOfCare(domainresource.DomainResource):
         js = super(EpisodeOfCare, self).elementProperties()
         js.extend([
             ("account", "account", fhirreference.FHIRReference, True, None, False),
-            ("_account", "_account", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_account", "_account", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("careManager", "careManager", fhirreference.FHIRReference, False, None, False),
             ("_careManager", "_careManager", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("diagnosis", "diagnosis", EpisodeOfCareDiagnosis, True, None, False),
-            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_diagnosis", "_diagnosis", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("identifier", "identifier", identifier.Identifier, True, None, False),
-            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_identifier", "_identifier", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("managingOrganization", "managingOrganization", fhirreference.FHIRReference, False, None, False),
             ("_managingOrganization", "_managingOrganization", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("patient", "patient", fhirreference.FHIRReference, False, None, True),
@@ -120,15 +120,15 @@ class EpisodeOfCare(domainresource.DomainResource):
             ("period", "period", period.Period, False, None, False),
             ("_period", "_period", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("referralRequest", "referralRequest", fhirreference.FHIRReference, True, None, False),
-            ("_referralRequest", "_referralRequest", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_referralRequest", "_referralRequest", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("status", "status", str, False, None, True),
             ("_status", "_status", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
             ("statusHistory", "statusHistory", EpisodeOfCareStatusHistory, True, None, False),
-            ("_statusHistory", "_statusHistory", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_statusHistory", "_statusHistory", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("team", "team", fhirreference.FHIRReference, True, None, False),
-            ("_team", "_team", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_team", "_team", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
             ("type", "type", codeableconcept.CodeableConcept, True, None, False),
-            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, False, None, False),
+            ("_type", "_type", fhirprimitiveextension.FHIRPrimitiveExtension, True, None, False),
         ])
         return js
 
