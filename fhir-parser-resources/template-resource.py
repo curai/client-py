@@ -83,3 +83,4 @@ from . import fhirprimitiveextension
 {% for imp in imports %}{% if imp.module not in imported %}
 from . import {{ imp.module }}
 {%- endif %}{% endfor %}
+
